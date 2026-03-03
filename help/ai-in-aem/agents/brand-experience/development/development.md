@@ -4,9 +4,9 @@ description: Läs om hur utvecklingsjobbet i AEM analyserar misslyckade pipeline
 feature: Agentic AI, AI Assistant, AI Tools, User Roles
 role: User, Admin, Architect, Developer
 exl-id: 2194556f-aac2-4cdd-8f7f-00c92c8c4424
-source-git-commit: 71e3770a7a26b8d3144717513f3ec1c997b3b435
+source-git-commit: a38d153194f977cf305bece1d9cae676800f52d6
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '625'
 ht-degree: 0%
 
 ---
@@ -18,13 +18,17 @@ ht-degree: 0%
 
 Jobbet kan hämta pipeline-status och hjälpa dig att felsöka misslyckade konstruktionssteg genom att föreslå korrigeringar, vilket sparar tid vid felsökning av AEM as a Cloud Service-distributioner i utvecklings-, scen- och produktionsmiljöer. Den undersöker byggloggar och relaterad kod för att rekommendera en korrigering som du kan tillämpa manuellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3478011?captions=swe&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3478006?quality=12&learn=on)
 
 >[!IMPORTANT]
 >
 >AI-genererade svar kan vara felaktiga eller vilseledande. Kontrollera att du dubbelkontrollerar föreslagna korrigeringar och svar.
 >
->Se även [Adobe Experience Cloud Generative AI User Guidelines.](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html)
+>Se även [Adobe Experience Cloud Generative AI User Guidelines](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html).
+
+>[!NOTE]
+>
+>Felsökning av pipeline är begränsad till rörledningar i full hög (driftsättnings- och kodkvalitet), men stöd för **konfigurationspipeline för webbnivå** är nu tillgängligt i betaversion. Om du vill begära åtkomst skickar du ett e-postmeddelande till [aem-devagent@adobe.com](mailto:aem-devagent@adobe.com). Åtkomst till agenter i AEM krävs.
 
 <!-- 
 ## Cloud Manager Pipeline Troubleshooting  {#cloud-manager-pipeline-troubleshooting}
@@ -32,7 +36,7 @@ Jobbet kan hämta pipeline-status och hjälpa dig att felsöka misslyckade konst
 
 Information om hur du registrerar dig i betaprogrammet finns i [versionsinformationen](/help/release-notes/release-notes-cloud/release-notes-current.md#aem-beta-programs). Där finns information om hur du registrerar dig och hur du är intresserad av utvecklingsjobbet. Du kan även skicka jobbspecifik feedback via e-post till [aem-devagent@adobe.com.](mailto:aem-devagent@adobe.com)
 
-[Följ en självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/ai/development-agent-troubleshoot-ci-cd-pipeline) för att lära dig hur du använder utvecklingsagenten för att felsöka pipeline-fel.
+[Följ en självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/development-agent-troubleshoot-ci-cd-pipeline) för att lära dig hur du använder utvecklingsagenten för att felsöka pipeline-fel.
 
 ## Gå till utvecklingsjobbet via Cloud Manager {#how-to-access-the-job}
 
@@ -50,7 +54,7 @@ Du kommer åt utvecklingsjobbet via AI Assistant som finns i användargränssnit
    >
    >Vilka widgetar, verktyg och artefakter som visas beror på användarens personlighet, berättiganden och AEM driftsättningstyp (AEM as a Cloud Service eller Managed Services 6.5/6.5 LTS).
 
-1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under &#x200B;](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
+1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under ](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
 
 1. Klicka på en pipeline på sidan **Programöversikt** på kortet **Pipelines**.
 
@@ -91,6 +95,6 @@ Utvecklingsjobbet kräver antingen Cloud Manager - Developer eller Cloud Manager
 
 ## Funktioner som inte är tillgängliga {#out-of-scope-features}
 
-Felsökning av pipeline utförs i slutstackspipeline-byggsteget. Om du vill se andra typer av pipeline och steg felsöker du genom att hämta och inspektera loggarna.
+Felsökning av pipeline utförs i steget Build &amp; Unit Testing och steget Code Scanning i pipelines för fullständig driftsättning och kodkvalitet. Om du vill se andra typer av pipeline och steg felsöker du genom att hämta och inspektera loggarna.
 
 Mer information finns i [Åtkomst- och hämtningsloggar](/help/implementing/cloud-manager/manage-logs.md).

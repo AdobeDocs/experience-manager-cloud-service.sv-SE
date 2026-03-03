@@ -3,11 +3,10 @@ title: Tysta timmar och uppdatera lediga perioder
 description: Lär dig hur du minimerar effekten av AEM as a Cloud Service automatiska uppdateringar genom att använda tysta timmar och uppdateringsfria perioder.
 feature: Deploying
 role: Admin
-badge: label="Begränsad tillgänglighet" type="Positive"
 exl-id: 54f86a58-eb56-43e6-ab51-7af7466a2d40
-source-git-commit: 19ef83258bf2cf8fa69411977d40ebbb8ac6432b
+source-git-commit: 09dec0a073b3e97d5c796f490ccdf88fcd7e1c72
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '720'
 ht-degree: 0%
 
 ---
@@ -15,9 +14,6 @@ ht-degree: 0%
 # Tysta timmar och Uppdatera lediga perioder {#quiet-hours-update-free-periods}
 
 >[!NOTE]
->Den här funktionen kommer att vara tillgänglig som en **begränsad tillgänglighet** med början den 25 september. Skicka ett e-postmeddelande till [aemcs-update-free@adobe.com](mailto:aemcs-update-free@adobe.com) om du vill aktivera funktionen i dina program.
-
->[!WARNING]
 >Du kan bara använda funktionerna tysta timmar och Uppdatera lediga perioder efter att du har anslutit till [automatiska underhållsuppdateringar](/help/implementing/deploying/aem-version-updates.md).
 
 AEM as a Cloud Service [automatiska underhållsuppdateringar](/help/implementing/deploying/aem-version-updates.md) säkerställer att dina instanser är säkra och uppdaterade med de senaste underhållsversionerna. Men i vissa fall (som live-event) kan du behöva &quot;skydda&quot; dessa viktiga arbetstider från eventuella avbrott. Därför har AEM as a Cloud Service möjlighet att ange en tidsram där automatiska uppdateringar inte görs för dina pågående program.
@@ -29,7 +25,7 @@ Du kan konfigurera dessa tidsramar med två schemaläggningsalternativ:
 
 De kostnadsfria uppdateringsperioderna och funktionerna för tysta timmar konfigureras per program. Kom ihåg att endast användare med användarrollen **Business Owner** och **Deployment Manager** kan visa och använda dessa funktioner.
 
-Mer information om schemalagda automatiska underhållsperioder för AEM as a Cloud Service finns på sidan [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) .
+Mer information om schemalagda automatiska underhållsperioder för AEM as a Cloud Service finns på sidan [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) .
 
 ## Tysta timmar {#quiet-hours}
 
@@ -79,7 +75,7 @@ En **aktiv**-ikon visas nära den aktiva uppdateringens lediga period och en **C
 
 ## Planerade undantagsperioder för underhåll {#planned-maintenance}
 
-Adobe har ett antal planerade undantagsperioder för underhåll. Dessa perioder definieras av Adobe för att minimera riskerna vid kritiska händelser och inträffar vanligen två eller tre gånger per år. Du kan visa det exakta schemat för uteslutningsperioder för underhåll på sidan [Underhållsreleaser](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Adobe har ett antal planerade undantagsperioder för underhåll. Dessa perioder definieras av Adobe för att minimera riskerna vid kritiska händelser och inträffar vanligen två eller tre gånger per år. Du kan visa det exakta schemat för uteslutningsperioder för underhåll på sidan [Underhållsreleaser](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 För att du lättare ska kunna konfigurera dina uppdateringsfria perioder visas även undantagsperioder för underhåll i användargränssnittet Tysta timmar och Uppdatera kostnadsfria perioder.
 

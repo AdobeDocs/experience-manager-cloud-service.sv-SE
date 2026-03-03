@@ -3,13 +3,13 @@ title: Använda MCP med AEM as a Cloud Service
 description: Lär dig hur du använder Model Context Protocol med AEM as a Cloud Service
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: a5eeb2cedb16f7d0ba0b31e838b3b9fa27b0bf3f
+exl-id: ddb7fc8c-affc-4374-8e08-d45d96017109
+source-git-commit: 5cbe2ae5afd6b6052f486cccc245fbc14e9569aa
 workflow-type: tm+mt
-source-wordcount: '2064'
+source-wordcount: '2100'
 ht-degree: 0%
 
 ---
-
 
 # Använda MCP med AEM as a Cloud Service {#using-mcp-with-aem-as-a-cloud-service}
 
@@ -54,6 +54,7 @@ AEM visar MCP-servrar som HTTP-slutpunkter. Slutpunkterna som anges nedan är re
 |---|---|----------------------------------------------------------------------------------------------------------------------|
 | **Innehåll** | `/content` | Alla lågnivååtgärder för innehåll, inklusive skapa, läsa, uppdatera och ta bort (CRUD) för sidor, fragment och resurser. |
 | **Innehåll (skrivskyddat)** | `/content-readonly` | Skrivskyddade innehållsåtgärder (Hämta, Lista/Sök) för sidor, fragment och resurser. |
+| **Cloud Manager** | `/cloudmanager` | Hantera Cloud Manager-enheter som program, miljöer, databaser och rörledningar som också kan aktiveras. <br><br>*Den här MCP-servern är nu i **beta**. Om du vill begära åtkomst skickar du ett e-postmeddelande till [aemcs-mcp-feedback@adobe.com](mailto:aemcs-mcp-feedback@adobe.com) med en beskrivning av ditt användningsfall.* |
 
 De specifika verktyg som visas av varje MCP-server kan utvecklas över tid. I praktiken kan du be ditt MCP-aktiverade program att hitta verktyg via en uppmaning som:
 
