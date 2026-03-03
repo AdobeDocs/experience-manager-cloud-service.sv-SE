@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -96,7 +96,7 @@ Med den attributbaserade åtkomstkontrollen (ABAC) kan administratörer styra å
 
 >[!NOTE]
 >
->Attributbaserad åtkomstkontroll (ABAC) för Dynamic Media med OpenAPI är en begränsad tillgänglighetsfunktion. Du kan aktivera det genom att skapa en [supportanmälan](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
+>Attributbaserad åtkomstkontroll (ABAC) för Dynamic Media med OpenAPI är en begränsad tillgänglighetsfunktion. Du kan aktivera det genom att skapa en [supportanmälan](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
@@ -104,7 +104,7 @@ Med den attributbaserade åtkomstkontrollen (ABAC) kan administratörer styra å
 
 * **Visningsetiketter för flervalslistrutan i Submission PDF**: Flervalskomponenter i Adaptive Forms återger nu de valda visningsetiketterna i det [genererade Submission PDF](/help/forms/generate-document-of-record-core-components.md) så att dokumentet korrekt återspeglar vad användarna ser i formuläret.
 
-* **Förbättrad tillgänglighet för kryssrutekomponenter, alternativknappar och panelkomponenter**: Adaptiva Forms Core-komponenter inför WCAG 2.2-kompatibel semantisk markering för [kryssrutegrupper(v2)](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox-group), [alternativknappsgrupper(v2)](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/radio-button) och [panelkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel). De här komponenterna utnyttjar `<fieldset>`- och `<legend>` HTML-element för att skapa meningsfulla relationer mellan gruppetiketter och deras alternativ, vilket möjliggör korrekt tolkning av skärmläsare och andra hjälpmedelstekniker.
+* **Förbättrad tillgänglighet för kryssrutekomponenter, alternativknappar och panelkomponenter**: Adaptiva Forms Core-komponenter inför WCAG 2.2-kompatibel semantisk markering för [kryssrutegrupper(v2)](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox-group), [alternativknappsgrupper(v2)](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/radio-button) och [panelkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel). De här komponenterna utnyttjar `<fieldset>`- och `<legend>` HTML-element för att skapa meningsfulla relationer mellan gruppetiketter och deras alternativ, vilket möjliggör korrekt tolkning av skärmläsare och andra hjälpmedelstekniker.
 
 * **Versionsstöd i Forms Manager**: Forms Manager har nu stöd för versionshantering för adaptiva Forms (Core Components and Foundation Components), formulärfragment, teman, XDP-mallar och binära resurser. Skapa versioner, se hela versionshistoriken och återställ tidigare lägen för formulärresurserna direkt från Forms &amp; Documents-konsolen.
 
@@ -239,11 +239,11 @@ Skicka ett e-postmeddelande till [aemcs-rde-support@adobe.com](mailto:aemcs-rde-
 
 #### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
 
-AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
+AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -263,4 +263,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).

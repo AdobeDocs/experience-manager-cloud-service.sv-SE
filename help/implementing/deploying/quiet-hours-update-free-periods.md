@@ -25,7 +25,7 @@ Du kan konfigurera dessa tidsramar med två schemaläggningsalternativ:
 
 De kostnadsfria uppdateringsperioderna och funktionerna för tysta timmar konfigureras per program. Kom ihåg att endast användare med användarrollen **Business Owner** och **Deployment Manager** kan visa och använda dessa funktioner.
 
-Mer information om schemalagda automatiska underhållsperioder för AEM as a Cloud Service finns på sidan [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) .
+Mer information om schemalagda automatiska underhållsperioder för AEM as a Cloud Service finns på sidan [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) .
 
 ## Tysta timmar {#quiet-hours}
 
@@ -75,7 +75,7 @@ En **aktiv**-ikon visas nära den aktiva uppdateringens lediga period och en **C
 
 ## Planerade undantagsperioder för underhåll {#planned-maintenance}
 
-Adobe har ett antal planerade undantagsperioder för underhåll. Dessa perioder definieras av Adobe för att minimera riskerna vid kritiska händelser och inträffar vanligen två eller tre gånger per år. Du kan visa det exakta schemat för uteslutningsperioder för underhåll på sidan [Underhållsreleaser](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Adobe har ett antal planerade undantagsperioder för underhåll. Dessa perioder definieras av Adobe för att minimera riskerna vid kritiska händelser och inträffar vanligen två eller tre gånger per år. Du kan visa det exakta schemat för uteslutningsperioder för underhåll på sidan [Underhållsreleaser](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 För att du lättare ska kunna konfigurera dina uppdateringsfria perioder visas även undantagsperioder för underhåll i användargränssnittet Tysta timmar och Uppdatera kostnadsfria perioder.
 
