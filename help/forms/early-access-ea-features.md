@@ -6,9 +6,9 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: c5c63e4ecfa099f953c1cf01861c0342ba4bae18
+source-git-commit: 800bbd2adf423b4eb00e91b7bb4dd26a37a2e032
 workflow-type: tm+mt
-source-wordcount: '3133'
+source-wordcount: '3229'
 ht-degree: 0%
 
 ---
@@ -261,7 +261,7 @@ AEM Forms har förbättrat sina säkerhetsfunktioner genom att lägga till stöd
 
 Genom att erbjuda flera CAPTCHA-alternativ har AEM Forms gett dig möjlighet att välja den lösning som bäst passar just dina behov.
 
-Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
+Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
 
 ### Doc Assurance API:er
 
@@ -295,7 +295,7 @@ Forms-tjänsten genererar interaktiv PDF forms för datainhämtning. Den kan ock
 
 ### API för dokumentgenerering
 
-API:t för dokumentgenerering innehåller en valfri funktion som tillåter direkt överföring av genererade PDF-filer till Azure Blob Storage. Några viktiga fördelar med att överföra PDF-filer direkt till Azure Blob Storage med hjälp av dokumentgenererings-API:t är:
+API:t för dokumentgenerering innehåller en valfri funktion som tillåter direkt överföring av genererade PDF-filer till Azure Blob Storage. Några viktiga fördelar med att överföra PDF-filer direkt till Azure Blob Storage med hjälp av API:t för dokumentgenerering är:
 
 * **Smidig integrering med molnlagring**:
 Direktöverföring av genererade PDF:er till Azure Blob Storage eliminerar behovet av ytterligare manuella eller programmatiska steg för att överföra filer, effektivisera arbetsflödena och öka effektiviteten.
@@ -316,6 +316,14 @@ Genom att lagra PDF-filer i Azure Blob Storage kan man centralisera hanteringen 
 * [Stöd för funktioner och matematiska uttryck i indataparametrar](/help/forms/rule-editor-core-components-user-interface.md#function-and-mathematical-expression-support-in-input-parameters): Indataparametrarna har nu stöd för både funktionsanrop och matematiska uttryck, vilket gör att formulärförfattare kan skicka dynamiskt beräknade värden direkt.
 
 * [Hämta egenskapsvärden från en JSON-array](/help/forms/invoke-service-enhancements-rule-editor.md#retrieve-property-values-from-a-json-array): Anropa ett API med en anpassad funktion för att extrahera värden från en JSON-array och binda dem direkt till formulärfält.
+
+### Versionshantering i Forms Manager
+
+Forms Manager har nu stöd för versionshantering för adaptiva Forms (Core Components and Foundation Components), formulärfragment, teman, XDP-mallar och binära resurser. Du kan skapa versioner, visa historik och återställa tidigare lägen från Forms &amp; Documents-konsolen. Se [Hantera formulärversioner i Forms Manager](/help/forms/manage-form-versions-forms-manager.md).
+
+### Förbättrad tillgänglighet för formulärkomponenter
+
+Adaptiva Forms Core Components innehåller WCAG-kompatibla semantiska markeringar för kryssrutegrupper, alternativknappsgrupper och paneler. Dessa komponenter utnyttjar nu elementen `<fieldset>` och `<legend>` för att upprätta meningsfulla relationer mellan gruppetiketter och deras alternativ för hjälpmedelstekniker. Se [Stöd för fält och teckenförklaringar i Adaptiv Forms](/help/forms/creating-accessible-adaptive-forms.md#fieldset-legend-accessibility).
 
 ## Se även
 

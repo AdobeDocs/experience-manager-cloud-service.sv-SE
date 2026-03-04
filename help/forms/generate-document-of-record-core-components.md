@@ -4,14 +4,14 @@ description: Lär dig generera en inskickningsversion av PDF från formulärinsk
 feature: Adaptive Forms, Core Components
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
 role: User, Developer
-source-git-commit: 24068cb5219b81dc85769137e985cfa60486dd9e
+source-git-commit: 7a033951bdf94e5b9d7553be77697d47121eb826
 workflow-type: tm+mt
-source-wordcount: '3100'
+source-wordcount: '3206'
 ht-degree: 0%
 
 ---
 
-# Generera en inskickningsversion av PDF (f.d. arkivhandling) för adaptiv Forms (kärnkomponenter)
+# Skapa en inskickningsversion av PDF (arkivdokument) för adaptiv Forms (kärnkomponenter)
 
 ## Ökning {#overview}
 
@@ -359,6 +359,12 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
       * **Alternativ Justering**: Du kan välja önskad justering (Vågrät, Lodrät, Samma som adaptiv form) för att ange justeringen för fält som kryssruta eller alternativknapp som ska visas i [!UICONTROL Document of Record]. Som standard är den lodräta justeringen inställd för fälten i [!UICONTROL Document of Record]. Om du ställer in egenskaperna från [!UICONTROL Form Field Properties] i DoR skrivs egenskaperna som angetts i [!UICONTROL Item Alignment] för fälten i ett adaptivt formulär över. Om du väljer alternativet [!UICONTROL Same as Aaptive form] används justeringen som konfigurerats i en författarinstans för adaptiva formulär för [!UICONTROL Document of Record]-fält.
       * **Antal alternativ för vågrät justering**:You kan ange hur många alternativ som ska visas på Skicka-PDF för den vågräta justeringen.
 
+      **Visa etiketter för flervalslistruta**
+
+      <span class="preview"> Den här funktionen är tillgänglig via programmet Tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com). </span>
+
+      I PDF Submission (Skicka) visas nu de markerade visningsetiketterna för flervalskomponenter i stället för interna lagrade värden. Om en användare t.ex. väljer &quot;Kalifornien&quot; och &quot;New York&quot; i en listruta, visar Submission PDF de markerade etiketterna i stället för de interna värdena som `CA` och `NY`. Varje markerat alternativ visas på en separat rad i stället för som kommaavgränsade värden, vilket är kompatibelt med beteendet i [Foundation Component-based Adaptive Forms](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
+
    1. **Egenskaper för mallsida**:
 
       * **Logotypbild**: Du kan antingen välja att använda logotypbilden från det adaptiva formuläret, välja en från DAM eller överföra en från datorn.
@@ -367,24 +373,6 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
       * **Ansvarsfriskrivning**: Etikett för friskrivning.
       * **Ansvarsfriskrivning**: Text som anger omfattningen av rättigheter och skyldigheter i PDF Submission.
       * **Ansvarsfriskrivning**: Ansvarsfriskrivning.
-
-      <!--![Master Page Properties](/help/forms/assets/dorpropertiesimg.png)-->
-
-      >[!NOTE]
-      >
-      >Om du använder en mall för adaptiva formulär som har skapats med en tidigare version av Designer än 6.3 måste du se till att följande finns i mallen för adaptiva färger och teckensnittsfamiljer under rotdelformuläret:
-
-      ```xml
-      <proto>
-      <font typeface="Arial"/>
-      <fill>
-      <color value="4,166,203"/>
-      </fill>
-      <edge>
-      <color value="4,166,203"/>
-      </edge>
-      </proto>
-      ```
 
 1. Välj **[!UICONTROL Done]** om du vill spara profileringsändringarna.
 
@@ -402,11 +390,11 @@ Det anpassade formuläret kan vara långt och innehålla flera formulärfält. D
 
 Innan du genererar en Submission PDF-fil ska du i inställningarna för en panel välja Layout för postdokumentet för den panelen som Tabell eller Kolumn. Fälten i panelen ordnas därefter i PDF Submission.
 
-![Fält i en panel återges i en tabelllayout i PDF Submission &#x200B;](assets/dortablelayout.png)
+![Fält i en panel återges i en tabelllayout i PDF Submission ](assets/dortablelayout.png)
 
 Fält i en panel återges i en tabellayout i PDF Submit
 
-![Fält i en panel återges i en kolumnlayout i PDF Submission &#x200B;](assets/dorcolumnlayout.png)
+![Fält i en panel återges i en kolumnlayout i PDF Submission ](assets/dorcolumnlayout.png)
 
 Fält i en panel återges i en kolumnlayout i PDF Submit
 
@@ -428,6 +416,11 @@ Inställningen för dokumentkomponenten är tillgänglig under dess egenskaper. 
 **Inställningar på formulärnivå**
 
 * **Inkludera obundna fält i DoR:** Inställning av egenskapen inkluderar obundna fält från schemabaserat anpassat formulär i Submission PDF. Som standard är det sant.
+
+## Vanliga frågor {#faq}
+
+**Q: Ändringar visas inte i Submission PDF.**
+**Ans:** Öppna formuläret i Adaptiv Forms-redigerare, gör en mindre redigering (till exempel justera en fältetikett eller ordna om ett fält) och spara formuläret. Detta genererar om mallen Submission PDF och ändringarna visas i nästa genererade PDF.
 
 ## Se även {#see-also}
 

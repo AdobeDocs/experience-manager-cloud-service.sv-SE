@@ -4,9 +4,9 @@ description: Lär dig att generera en inskickningsversion av PDF från inskickad
 feature: Adaptive Forms, Foundation Components
 exl-id: 16d07932-3308-4b62-8fa4-88c4e42ca7b6
 role: User, Developer
-source-git-commit: 0b112a5a1830fac9d0170771e052bbb2ef3cadbf
+source-git-commit: 7a033951bdf94e5b9d7553be77697d47121eb826
 workflow-type: tm+mt
-source-wordcount: '3977'
+source-wordcount: '4062'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 ## Ökning {#overview}
@@ -367,6 +367,12 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
       ![Egenskaper för formulärfält](/help/forms/assets/formfieldpropertiesdor.png)
 
+      **Visa etiketter för flervalslistruta**
+
+      <span class="preview"> Den här funktionen är tillgänglig via programmet Tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com). </span>
+
+      I PDF Submission (Skicka) visas nu de markerade visningsetiketterna för flervalskomponenter i stället för interna lagrade värden. Om en användare t.ex. väljer &quot;Kalifornien&quot; och &quot;New York&quot; i en listruta, visar Submission PDF de markerade etiketterna i stället för de interna värdena som `CA` och `NY`.
+
    3. **Egenskaper för mallsida**:
       * **Logotypbild**: Du kan antingen välja att använda logotypbilden från det adaptiva formuläret, välja en från DAM eller överföra en från datorn.
       * **Formulärtitel**: Titel på DoR.
@@ -377,9 +383,10 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
       ![Egenskaper för mallsida](/help/forms/assets/masterpagepropertiesdor.png)
 
-   >[!NOTE]
+   <!--
+   [!NOTE]
    >
-   >Om du använder en mall för adaptiva formulär som har skapats med en tidigare version av Designer än 6.3 måste du se till att följande finns i mallen för adaptiva färger och teckensnittsfamiljer under rotdelformuläret:
+   >If you are using an Adaptive Form template created with a version of Designer prior to 6.3, for Accent Color and Font Family properties to work, ensure that the following is present in your Adaptive Form template under the root subform:
 
    ```xml
    <proto>
@@ -391,7 +398,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
    <color value="4,166,203"/>
    </edge>
    </proto>
-   ```
+   ```-->
 
 1. Välj **[!UICONTROL Done]** om du vill spara profileringsändringarna.
 
@@ -430,11 +437,11 @@ Det anpassade formuläret kan vara långt och innehålla flera formulärfält. D
 
 Innan du genererar en Submission PDF-fil ska du i inställningarna för en panel välja Layout för postdokumentet för den panelen som Tabell eller Kolumn. Fälten i panelen ordnas därefter i PDF Submission.
 
-![Fält i en panel återges i en tabelllayout i PDF Submission &#x200B;](assets/dortablelayout.png)
+![Fält i en panel återges i en tabelllayout i PDF Submission ](assets/dortablelayout.png)
 
 Fält i en panel återges i en tabellayout i PDF Submit
 
-![Fält i en panel återges i en kolumnlayout i PDF Submission &#x200B;](assets/dorcolumnlayout.png)
+![Fält i en panel återges i en kolumnlayout i PDF Submission ](assets/dorcolumnlayout.png)
 
 Fält i en panel återges i en kolumnlayout i PDF Submit
 
@@ -524,6 +531,11 @@ En XCI-fil hjälper dig att ange olika egenskaper för ett dokument. Forms as a 
 1. Leta reda på och öppna **[!UICONTROL Adaptive Forms and Interactive Communication Web Channel]**-konfigurationen.
 1. Ange sökvägen till XCI-filen och klicka på **[!UICONTROL Save]**.
 
+
+## Vanliga frågor {#faq}
+
+**Q: Ändringar visas inte i Submission PDF.**
+**Ans:** Öppna formuläret i Adaptiv Forms-redigerare, gör en mindre redigering (till exempel justera en fältetikett eller ordna om ett fält) och spara formuläret. Detta genererar om mallen Submission PDF och ändringarna visas i nästa genererade PDF.
 
 ## Se även {#see-also}
 
