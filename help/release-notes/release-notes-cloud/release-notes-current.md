@@ -109,7 +109,7 @@ Flervalskomponenter i listrutan Adaptive Forms återger nu de valda visningsetik
 Med adaptiva Forms Core Components introduceras WCAG 2.2-kompatibel semantisk markering för [kryssrutegrupper(v2)](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox-group), [alternativknappsgrupper(v2)](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/radio-button) och [panelkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) . De här komponenterna utnyttjar `<fieldset>`- och `<legend>` HTML-element för att skapa meningsfulla relationer mellan gruppetiketter och deras alternativ, vilket möjliggör korrekt tolkning av skärmläsare och andra hjälpmedelstekniker.
 
 **Versionsstöd i Forms Manager**
-Forms Manager har nu [ stöd för versionshantering för adaptiva Forms (Core Components and Foundation Components) ](/help/forms/manage-form-versions-forms-manager.md) , formulärfragment, teman, XDP-mallar och binära resurser. Skapa versioner, se hela versionshistoriken och återställ tidigare lägen för formulärresurserna direkt från Forms &amp; Documents-konsolen.
+Forms Manager har nu [&#x200B; stöd för versionshantering för adaptiva Forms (Core Components and Foundation Components) &#x200B;](/help/forms/manage-form-versions-forms-manager.md) , formulärfragment, teman, XDP-mallar och binära resurser. Skapa versioner, se hela versionshistoriken och återställ tidigare lägen för formulärresurserna direkt från Forms &amp; Documents-konsolen.
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
