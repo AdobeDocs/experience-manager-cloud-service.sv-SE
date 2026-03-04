@@ -4,9 +4,9 @@ description: Läs om hur AEM Governance Agent skyddar varumärkets integritet oc
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: 2c73c578-6655-43bf-b03a-cb3eb2284d07
-source-git-commit: 568fd17353da93df0fa20e0c10e48d35890e7ed6
+source-git-commit: 1f40d8201456f5c1a735e2d92988607c25d34a09
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,8 @@ Styrningsagenten kan validera innehåll mot varumärkesriktlinjer för att säke
 * *Följer `https://www.website/en.html` riktlinjer för varumärkesmeddelanden?*
 * *Kontrollera om `https://www.website/homepage` följer varumärkesriktlinjerna*
 * *Visa mina varumärkesriktlinjer*
+
+Styrningsagenten har också en funktion för import av varumärkespolicyer med AI som använder AI för att omvandla kundernas befintliga varumärkesriktlinjer till strukturerade, verkställbara policykontroller som automatiskt styr, validerar och vägleder framtagning av kompatibelt innehåll. Mer information finns i [Importera en varumärkesprofil](/help/ai-in-aem/agents/governance/how-to-import-a-brand-policy.md).
 
 ### Behörighet och Digital Rights Management {#permission-and-digital-rights-management}
 
