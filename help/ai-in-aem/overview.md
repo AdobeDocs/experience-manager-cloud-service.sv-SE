@@ -4,9 +4,9 @@ description: Läs mer om AI i Adobe Experience Manager as a Cloud Service
 feature: Generative AI, AI Assistant, AI Tools, Agentic AI
 role: Admin, Developer, User
 exl-id: 60fd4c57-53ed-4b4a-aea1-1c132184916f
-source-git-commit: 92941c325f7702be8cf5f7f5b2ef3f9bd32c6354
+source-git-commit: 51127359588edce96b87fc13447370063e9ca93b
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '436'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,6 @@ AEM har ett intervall med [agenter](/help/ai-in-aem/agents/overview.md) som gör
 
 * [Varumärkesupplevelseagenten](/help/ai-in-aem/agents/brand-experience/overview.md)
 * [Agent för Content Advisor](/help/ai-in-aem/agents/content-advisor/overview.md)
-* [Agent för upplevelsemodernisering](/help/ai-in-aem/agents/modernization/overview.md)
 * [Styrningsagent](/help/ai-in-aem/agents/governance/overview.md)
 
 ## Generativ AI i AEM {#generative-ai-in-aem}
@@ -72,6 +71,6 @@ Det finns många resurser, bland annat:
 
 * [Ansvarig AI på Adobe](https://www.adobe.com/trust/responsible-ai.html)
 
-* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai)
+* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai)
 
-   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai#aem)
+   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai#aem)

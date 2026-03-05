@@ -1,18 +1,18 @@
 ---
 title: Kommunikationsskapande
-description: Läs om hur Brand Experience Agents skapar kommunikation och hur man använder naturligt språk för att skapa interaktiv kommunikation.
+description: Läs om Experience Production Agents kommunikationsarbete och hur man använder naturligt språk för att skapa interaktiv kommunikation.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: 49111cdb-e714-4590-8b81-382377083d6e
-source-git-commit: 9be60c79ef001edf7590a8fd3fd64c1a9a1ab9f9
+source-git-commit: baf12e49dadc7b25f5169279a52d5712380445de
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
 
 
-# Kunskap att skapa kommunikation {#ic-creation-skill}
+# Kommunikationsskapande {#ic-creation-skill}
 
 <!-- UNCOMMENT ACTIVATION SECTION AT THE BOTTOM ONCE THIS IS NO LONGER ALPHA -->
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 [Interaktiv kommunikation](/help/forms/introduction-to-interactive-communication.md) är personaliserade, datadrivna dokument som utformats för affärskorrespondens, till exempel kontoutdrag, policydokument, räkningar, välkomstpaket och förmånsmeddelanden. Till skillnad från formulär som samlar in data från användare genererar interaktiv kommunikation utdatadokument med dynamiskt, mottagarspecifikt innehåll.
 
-Kommunikationsskapandet är en funktion hos [varumärkesupplevelseagenten](/help/ai-in-aem/agents/brand-experience/overview.md) som är utformad för att utveckla interaktiv kommunikation med hjälp av naturliga språkuppmaningar. Det här jobbet genererar automatiskt skräddarsydd, datadriven korrespondens för tryck (i PDF-format). Jobbet nås via AI Assistant.
+Kommunikationsjobbet ingår i [Experience Production Agent](/help/ai-in-aem/agents/brand-experience/experience-production/overview.md) som är utformat för att utveckla interaktiv kommunikation med hjälp av naturliga språkinställningar. Det här jobbet genererar automatiskt skräddarsydd, datadriven korrespondens för tryck (i PDF-format). Jobbet nås via AI Assistant.
 
 Några av fördelarna med att skapa kommunikationsjobb:
 

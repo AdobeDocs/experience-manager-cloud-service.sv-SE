@@ -4,9 +4,9 @@ description: Läs om de agenter som finns i AEM för att snabba upp framtagninge
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: f0b82ecf-0f5c-432f-9944-f99597aacd6a
-source-git-commit: 4070808ad3ac99f6112cb748a1f4288ffa974915
+source-git-commit: 51127359588edce96b87fc13447370063e9ca93b
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
@@ -27,11 +27,11 @@ Dessa agenter finns i Adobe Experience Manager (AEM) as a Cloud Service för att
 
 Du har tre alternativ för att komma åt agenter.
 
-1. Du kan ha möjlighet att komma åt AEM Agents via programmet [Try Before You Buy,](http://experienceleague.adobe.com/sv/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) som lanseras i faser. Din CSM eller TAM kan hjälpa till att bekräfta tillgängligheten för din organisation.
+1. Du kan ha möjlighet att komma åt AEM Agents via programmet [Try Before You Buy,](http://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) som lanseras i faser. Din CSM eller TAM kan hjälpa till att bekräfta tillgängligheten för din organisation.
 1. Utforska AEM-agenter [via en testversion.](https://www.aem.live/developer/aem-playground)
 1. Kontakta din CSM eller TAM för att diskutera åtkomst via din SKU om detta är i linje med din plan och utvärderingsplaner.
 
-I takt med att nya kunskaper lanseras i förtid kommer vi att erbjuda ytterligare möjligheter att delta och dela med oss av feedback. Vi rekommenderar att du tittar på [den här sidan](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs) efter uppdateringar.
+I takt med att nya kunskaper lanseras i förtid kommer vi att erbjuda ytterligare möjligheter att delta och dela med oss av feedback. Vi rekommenderar att du tittar på [den här sidan](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs) efter uppdateringar.
 
 ## Varumärkesupplevelseagent {#brand-experience-agent}
 
@@ -51,10 +51,6 @@ Brand Experience Agent ger team möjlighet att omvandla manuella, veckovisa proc
 * **Optimering av innehåll** - Omvandla hur användare förfinar och anpassar resurser genom att tillämpa naturliga språkinstruktioner för att skapa kanalanpassade variationer. Tolka användarnas avsikter och utför komplexa redigeringsuppgifter automatiskt för att utföra uppgifter som att generera nya renderingar, justera visuella egenskaper, ändra bakgrunder eller förbereda material för specifika digitala kanaler.
 
 Agenten tolkar användarmetoden och utför komplexa redigeringsuppgifter automatiskt, inklusive generering av nya renderingar, justering av visuella egenskaper, ändring av bakgrunder eller förberedelse av resurser för specifika digitala kanaler.
-
-## Agent för upplevelsemodernisering {#site-modernization}
-
-[Experience Modernization Agent](/help/ai-in-aem/agents/modernization/overview.md) låser upp hela värdet av Edge Delivery Services (inklusive AEM-redigering) genom att göra jobbet med webbplatsmigreringar och pågående utveckling snabbt och smidigt.
 
 ## Styrningsagent {#governance-agent}
 

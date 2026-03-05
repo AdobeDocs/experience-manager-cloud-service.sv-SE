@@ -4,7 +4,7 @@ description: Lär dig vad uppdateringsjobbet för varumärkesupplevelseagenten �
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: e2d1dae8-38de-4357-bb14-ad35acb71aee
-source-git-commit: a3b00916c0d949fe9fac50bc0c3056b0a1b05358
+source-git-commit: baf12e49dadc7b25f5169279a52d5712380445de
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Innehållsuppdateringsjobb {#content-update}
 
-Innehållsuppdateringsjobbet för [varumärkesagenten](/help/ai-in-aem/agents/brand-experience/overview.md) automatiserar innehållsproduktionen för att snabba upp rutinuppgifterna för Adobe Experience Manager (AEM) as a Cloud Service och Edge Delivery Services.
+Innehållsuppdateringsjobbet för [Experience Production Agent](/help/ai-in-aem/agents/brand-experience/experience-production/overview.md) automatiserar innehållsproduktionen för att snabba upp rutinuppgifterna för Adobe Experience Manager (AEM) as a Cloud Service och Edge Delivery Services.
 
 ## Ökning {#overview}
 
 Innehållsuppdateringsjobbet uppdaterar befintligt innehåll, inklusive innehållsfragment, sidor, formulär och resurser. Jobbet kan utföra åtgärder som att uppdatera, ta bort, ersätta eller lägga till innehållselement för att hålla upplevelsen korrekt och aktuell. Inmatningar kan vara naturliga språkbeskrivningar, och när de används med Jira PDF-filer och skärmbilder kan de också ge inmatning.
 
-Innehållsuppdateringsjobbet omvandlar den information du anger, antingen på det naturliga språket eller visuellt, till innehållsuppdateringar på sidan. Du anger URL-adressen till en sida som behöver uppdateras, tillsammans med information om vad som behöver uppdateras, och agentens kompetens slutför uppgiften. När det används med Adobe Experience Manager (AEM) as a Cloud Service skapas en ny [start](/help/sites-cloud/authoring/launches/overview.md) så att du kan granska uppdateringarna innan du tillämpar dem. När det används med dokumentredigering skapar jobbet en ny [version](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/sites/document-authoring/how-to/document-versions#).
+Innehållsuppdateringsjobbet omvandlar den information du anger, antingen på det naturliga språket eller visuellt, till innehållsuppdateringar på sidan. Du anger URL-adressen till en sida som behöver uppdateras, tillsammans med information om vad som behöver uppdateras, och agentens kompetens slutför uppgiften. När det används med Adobe Experience Manager (AEM) as a Cloud Service skapas en ny [start](/help/sites-cloud/authoring/launches/overview.md) så att du kan granska uppdateringarna innan du tillämpar dem. När det används med dokumentredigering skapar jobbet en ny [version](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/document-authoring/how-to/document-versions#).
 
 ## Funktioner {#capabilities}
 

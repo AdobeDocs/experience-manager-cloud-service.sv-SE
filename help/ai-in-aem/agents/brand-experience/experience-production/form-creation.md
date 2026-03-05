@@ -4,9 +4,9 @@ description: Läs mer om hur Brand Experience Agent skapar formulär och hur man
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: 24ad5f36-405b-4ea2-9819-de6aea856a7a
-source-git-commit: 36f4ba8207da67b8e68c9c9851311defc909b495
+source-git-commit: baf12e49dadc7b25f5169279a52d5712380445de
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Skapad av formulär {#form-creation-job}
 
-Jobbet för att skapa formulär är en funktion hos [varumärkesagenten](/help/ai-in-aem/agents/brand-experience/overview.md) som har utvecklats för att utveckla formulär med hjälp av naturliga språkuppmaningar. Det här jobbet genererar automatiskt lämplig formulärstruktur och fälttyper. Jobbet nås via AI Assistant.
+Jobbet för att skapa formulär är en del av [Experience Production Agent](/help/ai-in-aem/agents/brand-experience/experience-production/overview.md) som har utvecklats för att utveckla formulär med hjälp av naturliga språkuppmaningar. Det här jobbet genererar automatiskt lämplig formulärstruktur och fälttyper. Jobbet nås via AI Assistant.
 
 Några av fördelarna med att skapa formulär:
 

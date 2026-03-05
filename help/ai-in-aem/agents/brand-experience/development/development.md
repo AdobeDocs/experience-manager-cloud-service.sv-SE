@@ -1,10 +1,10 @@
 ---
-title: Översikt över utvecklingsjobb
-description: Läs om hur utvecklingsjobbet i AEM analyserar misslyckade pipelines i Cloud Manager och skapar loggar som föreslår kodkorrigeringar och snabbar upp felsökningen.
+title: Översikt över utvecklingsagenten
+description: Läs om hur utvecklingsagenten i AEM analyserar misslyckade pipelines i Cloud Manager och skapar loggar som föreslår kodkorrigeringar och snabbar upp felsökningen.
 feature: Agentic AI, AI Assistant, AI Tools, User Roles
 role: User, Admin, Architect, Developer
 exl-id: 2194556f-aac2-4cdd-8f7f-00c92c8c4424
-source-git-commit: a38d153194f977cf305bece1d9cae676800f52d6
+source-git-commit: 95b54c3c90a4fd221a91e538b6c5c43e03b74b14
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 0%
@@ -12,13 +12,13 @@ ht-degree: 0%
 ---
 
 
-# Översikt över utvecklingsjobb {#development-job-overview}
+# Översikt över utvecklingsagenten {#development-agent-overview}
 
-[Som en del av Brand Experience Agent](/help/ai-in-aem/agents/brand-experience/overview.md) hjälper utvecklingsjobbet AEM-utvecklare och -administratörer att skapa, felsöka, distribuera och optimera kod effektivare.
+[Som en del av varumärkesutvecklingsagenten](/help/ai-in-aem/agents/brand-experience/overview.md) hjälper utvecklingsagenten AEM-utvecklare och -administratörer att skapa, felsöka, distribuera och optimera kod effektivare.
 
-Jobbet kan hämta pipeline-status och hjälpa dig att felsöka misslyckade konstruktionssteg genom att föreslå korrigeringar, vilket sparar tid vid felsökning av AEM as a Cloud Service-distributioner i utvecklings-, scen- och produktionsmiljöer. Den undersöker byggloggar och relaterad kod för att rekommendera en korrigering som du kan tillämpa manuellt.
+Agenten kan hämta status för pipeline och hjälpa dig att felsöka misslyckade konstruktionssteg genom att föreslå korrigeringar, vilket sparar tid vid felsökning av AEM as a Cloud Service-distributioner i utvecklings-, scen- och produktionsmiljöer. Den undersöker byggloggar och relaterad kod för att rekommendera en korrigering som du kan tillämpa manuellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3478011?captions=swe&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3478006?quality=12&learn=on)
 
 >[!IMPORTANT]
 >
@@ -34,13 +34,13 @@ Jobbet kan hämta pipeline-status och hjälpa dig att felsöka misslyckade konst
 ## Cloud Manager Pipeline Troubleshooting  {#cloud-manager-pipeline-troubleshooting}
 -->
 
-Information om hur du registrerar dig i betaprogrammet finns i [versionsinformationen](/help/release-notes/release-notes-cloud/release-notes-current.md#aem-beta-programs). Där finns information om hur du registrerar dig och hur du är intresserad av utvecklingsjobbet. Du kan även skicka jobbspecifik feedback via e-post till [aem-devagent@adobe.com.](mailto:aem-devagent@adobe.com)
+Om du vill få åtkomst till den här agenten kan du läsa [versionsinformationen](/help/release-notes/release-notes-cloud/release-notes-current.md#aem-beta-programs) för instruktioner om hur du registrerar dig i betaprogrammet, och se till att du är intresserad av utvecklingsagenten. Du kan även skicka feedback specifikt för utvecklingsagenten via e-post till [aem-devagent@adobe.com.](mailto:aem-devagent@adobe.com)
 
-[Följ en självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/ai/development-agent-troubleshoot-ci-cd-pipeline) för att lära dig hur du använder utvecklingsagenten för att felsöka pipeline-fel.
+[Följ en självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/development-agent-troubleshoot-ci-cd-pipeline) för att lära dig hur du använder utvecklingsagenten för att felsöka pipeline-fel.
 
-## Gå till utvecklingsjobbet via Cloud Manager {#how-to-access-the-job}
+## Gå till utvecklingsagenten via Cloud Manager {#how-to-access-the-agent}
 
-Du kommer åt utvecklingsjobbet via AI Assistant som finns i användargränssnitt som Cloud Manager eller Experience Hub.
+Du kommer åt utvecklingsagenten via AI-assistenten i användargränssnitt som Cloud Manager eller Experience Hub.
 
 1. Kom igång genom att klicka på [Adobe Experience Cloud](https://experience.adobe.com/#/@foundationinternal/home) för att öppna startsidan.
 
@@ -54,7 +54,7 @@ Du kommer åt utvecklingsjobbet via AI Assistant som finns i användargränssnit
    >
    >Vilka widgetar, verktyg och artefakter som visas beror på användarens personlighet, berättiganden och AEM driftsättningstyp (AEM as a Cloud Service eller Managed Services 6.5/6.5 LTS).
 
-1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under &#x200B;](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
+1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under ](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
 
 1. Klicka på en pipeline på sidan **Programöversikt** på kortet **Pipelines**.
 
@@ -79,10 +79,9 @@ Du kommer åt utvecklingsjobbet via AI Assistant som finns i användargränssnit
 
    ![AI Assistant-fråga och resulterande svar](/help/ai-in-aem/agents/brand-experience/development/assets/dev-agent-prompt-response.png)
 
-
 ## Behörigheter {#permissions}
 
-Utvecklingsjobbet kräver antingen Cloud Manager - Developer eller Cloud Manager - Program Manager.
+Utvecklingsagenten kräver antingen rollen Cloud Manager - utvecklare eller Cloud Manager - programhanterare.
 
 ## Exempeluppmaningar {#sample-prompts}
 
