@@ -27,11 +27,11 @@ Dessa agenter finns i Adobe Experience Manager (AEM) as a Cloud Service för att
 
 Du har tre alternativ för att komma åt agenter.
 
-1. Du kan ha möjlighet att komma åt AEM Agents via programmet [Try Before You Buy,](http://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) som lanseras i faser. Din CSM eller TAM kan hjälpa till att bekräfta tillgängligheten för din organisation.
+1. Du kan ha möjlighet att komma åt AEM Agents via programmet [Try Before You Buy,](http://experienceleague.adobe.com/sv/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) som lanseras i faser. Din CSM eller TAM kan hjälpa till att bekräfta tillgängligheten för din organisation.
 1. Utforska AEM-agenter [via en testversion.](https://www.aem.live/developer/aem-playground)
 1. Kontakta din CSM eller TAM för att diskutera åtkomst via din SKU om detta är i linje med din plan och utvärderingsplaner.
 
-I takt med att nya kunskaper lanseras i förtid kommer vi att erbjuda ytterligare möjligheter att delta och dela med oss av feedback. Vi rekommenderar att du tittar på [den här sidan](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs) efter uppdateringar.
+I takt med att nya kunskaper lanseras i förtid kommer vi att erbjuda ytterligare möjligheter att delta och dela med oss av feedback. Vi rekommenderar att du tittar på [den här sidan](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs) efter uppdateringar.
 
 ## Varumärkesupplevelseagent {#brand-experience-agent}
 
