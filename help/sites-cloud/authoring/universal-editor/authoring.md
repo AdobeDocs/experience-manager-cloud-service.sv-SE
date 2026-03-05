@@ -6,9 +6,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
+source-git-commit: 1de2a860d96397863312f62b3c3c73e6deddd9d8
 workflow-type: tm+mt
-source-wordcount: '2908'
+source-wordcount: '2990'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ Tryck eller klicka på **Avbryt** eller **Klar** för att ignorera eller spara �
 
 #### RTF-formateringsalternativ {#formatting-options}
 
-RTF-redigeraren i Universal Editor gör att författaren kan använda standardtextformatering. Som standard är följande alternativ tillgängliga.
+RTF-redigeraren i Universal Editor gör att författaren kan använda standardtextformatering. Följande alternativ är tillgängliga.
 
 * **Styckeformat**
    * Stycke, h1-h6, kod
@@ -108,6 +108,9 @@ RTF-redigeraren i Universal Editor gör att författaren kan använda standardte
 * **Kursiv**
 * **Understruken**
 * **Genomstruken**
+* **Textfärg**
+   * Öppnar en färgpalett där du kan välja en färg eller ange ett hexadecimalt värde
+   * Endast tillgängligt i den modala redigeraren, inte i kontext
 * **Upphöjd**
 * **Nedsänkt**
 * **Punktlista**
@@ -122,12 +125,21 @@ RTF-redigeraren i Universal Editor gör att författaren kan använda standardte
    * Ange en URL eller använd [resursväljaren](/help/assets/overview-asset-selector.md#using-asset-selector) för att välja en resurs från AEM.
 * **Tabell**
    * Använd listrutan för att infoga en ny tabell med det markerade antalet kolumner och rader eller infoga och ta bort nya kolumner/rader.
+* **Justering**
+   * **Vänsterjustera**
+   * **Centrera**
+   * **Högerjustera**
+   * **Justera**
+* **Höger till vänster**
+* **Vänster till höger**
+* **Indrag**
+* **Minska indrag**
 * **Klistra in som text**
    * Ta bort formatering från text i Urklipp innan du klistrar in den i Universell redigerare.
 * **Ta bort all formatering**
    * Ta bort alla formateringsalternativ från den markerade texten.
 
-RTE kan konfigureras för att dölja alternativ eller visa ytterligare alternativ beroende på författarens behov. Mer information finns i dokumentet [Configuring the RTE for the Universal Editor](/help/implementing/universal-editor/configure-rte.md).
+Vilka alternativ som är tillgängliga som standard varierar beroende på bakänden. RTE kan konfigureras för att dölja alternativ eller visa ytterligare alternativ beroende på författarens behov. Mer information finns i dokumentet [Configuring the RTE for the Universal Editor](/help/implementing/universal-editor/configure-rte.md).
 
 ### Redigera media {#edit-media}
 
@@ -154,7 +166,7 @@ Om du markerar ett fält som är relaterat till ett innehållsfragment läses in
 
 Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet på egenskapspanelen.
 
-Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** &#x200B;](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
+Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** ](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
 
 >[!TIP]
 >
@@ -178,7 +190,13 @@ Beroende på arbetsflödets behov kan du behöva redigera innehållsfragmentet i
 
    ![Välj ikonen Lägg till](assets/add-icon.png)
 
-1. Om mer än en komponent tillåts för behållaren väljer du vilken du vill infoga i listrutan. Om bara en komponent tillåts infogas den automatiskt.
+1. Dialogrutan för komponentväljaren öppnas.
+   * Använd den vänstra kolumnen för att filtrera komponenter efter kategori eller använd sökningen för att filtrera efter namn.
+   * Klicka på komponentnamnet i den högra kolumnen för att infoga det i behållaren.
+   * Om bara en komponent tillåts i behållaren infogas den automatiskt.
+   * Klicka utanför väljaren om du vill avbryta infogningen av komponenten.
+
+   ![Komponentväljaren](assets/component-picker.png)
 
 Komponenten infogas i behållaren och kan redigeras i redigeraren.
 
@@ -258,7 +276,7 @@ Komponenterna ordnas om både i innehållsträdet och i redigeraren.
 Välj Ångra eller Gör om för att ångra eller göra om den senaste redigeringen i redigeraren.
 
 ![Ångra-ikon](assets/undo.png)
-![Ikonen Gör om &#x200B;](assets/redo.png)
+![Ikonen Gör om ](assets/redo.png)
 
 * Ångra och göra om kan göras för redigeringar som görs i sitt sammanhang, redigeringar som görs via panelen Egenskaper samt för att lägga till, duplicera, flytta och ta bort block.
 * Ångra och gör om är begränsat till den aktuella webbläsarsessionen.
@@ -274,7 +292,7 @@ Du kan kopiera och klistra in komponenter som finns i [behållare.](/help/implem
 Kopiera och klistra in kan finnas på samma webbläsarflik eller mellan webbläsarflikar, förutsatt att flikarna redan är öppna. Du kan inte kopiera ett objekt och sedan öppna en ny webbläsarflik för att klistra in det.
 
 ![Kopiera ikon](assets/copy.png)
-![Ikonen Klistra in &#x200B;](assets/paste.png)
+![Ikonen Klistra in ](assets/paste.png)
 
 1. Markera en komponent i redigeraren eller i innehållsträdet.
 1. Ikonen **Kopiera** visas på egenskapspanelen i [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-panel) Tryck eller klicka på den.

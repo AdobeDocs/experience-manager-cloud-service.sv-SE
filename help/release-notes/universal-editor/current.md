@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2026.02.26
-description: Detta är versionsinformationen för version 2026.02.26 av Universal Editor.
+title: Versionsinformation om Universal Editor 2026.03.05
+description: Det här är versionsinformationen för version 2026.03.05 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 53f77d76fc43932e16cd36e47435499f33513b18
+source-git-commit: 2148c2399c1d5121de155d512dba7eeed3315a31
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 0%
+source-wordcount: '178'
+ht-degree: 1%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2026.02.26 {#release-notes}
+# Versionsinformation om Universal Editor 2026.03.05 {#release-notes}
 
-Det här är versionsinformationen för den 26 februari 2026-versionen av Universal Editor.
+Detta är versionsinformationen för den 5 mars 2026-utgåvan av Universal Editor.
 
 >[!TIP]
 >
@@ -26,9 +26,8 @@ Det här är versionsinformationen för den 26 februari 2026-versionen av Univer
 
 ## Nyheter {#what-is-new}
 
-* Beskrivningar har lagts till i alla schemafält för att hjälpa utvecklare att generera modell-/filter-/komponentdefinitionsfiler.
-* Flerfältsuppdateringar av innehållsfragment stöds nu för kontextredigeringar.
-
+* [Komponentväljaren](/help/sites-cloud/authoring/universal-editor/authoring.md#adding-components) har en ny design.
+* [En färgväljare](/help/sites-cloud/authoring/universal-editor/authoring.md#formatting-options) för textredigeraren är nu tillgänglig.
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -38,7 +37,5 @@ Om du är intresserad av att testa de kommande funktionerna som listas nedan och
 
 ## Andra förbättringar {#other-improvements}
 
-* Redigeraren använder inte längre `{}` som standardvärde innan innehållet kommer fram, vilket förhindrar dataförlust i vissa situationer.
-* Datakvaliteten när fältet är i fokus blev mer robust.
-* Ändringar går inte längre förlorade i vissa situationer när du redigerar i den vänstra panelen och sedan markerar ett annat objekt i redigeringsfönstret.
-* Ett beständigt problem med RTE-fält för innehållsfragment när OpenAPI-slutpunkter användes har åtgärdats.
+* Justering, textriktning och indragsalternativ är nu [aktiverade som standard i RTE](/help/implementing/universal-editor/configure-rte.md), förutsatt att backend-funktionen har stöd för dem.
+* Flikar återges nu när du använder ett innehållsfragment med Open API- och UI-schema.

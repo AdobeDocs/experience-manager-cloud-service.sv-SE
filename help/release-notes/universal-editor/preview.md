@@ -4,9 +4,9 @@ description: Det här är versionsinformationen för förhandsversionen av Unive
 feature: Release Information
 role: Admin
 exl-id: e8d031aa-4676-4e45-977b-e5dffcc404c4
-source-git-commit: 6b4c4b92bb726da2f7222dfa0e223aa3d0309c8f
+source-git-commit: fc73e3dd01d22ece3c2e2c55a5f62d04ee8564a9
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Versionsinformation om förhandsvisning i Universal Editor {#preview}
 
-Det här är versionsinformationen för **förhandsvisningsversionen** av den universella redigeraren. De här funktionerna är för närvarande tillgängliga i den universella redigerarens **förhandsvisningsmiljö**. Dessa funktioner kommer att lanseras den 26 februari 2026.
+Det här är versionsinformationen för **förhandsvisningsversionen** av den universella redigeraren. De här funktionerna är för närvarande tillgängliga i den universella redigerarens **förhandsvisningsmiljö**. Dessa funktioner är planerade att lanseras den 12 mars 2026.
 
 Versionsinformationen **preview** är praktisk så att du vet vilka ändringar som kommer att göras i den universella redigeraren och kan testa dem genom att [växla till förhandsvisningsversionen.](/help/sites-cloud/authoring/universal-editor/navigation.md#user-properties)
 
@@ -28,9 +28,4 @@ Versionsinformationen **preview** är praktisk så att du vet vilka ändringar s
 
 ## Kommande funktioner {#upcoming-features}
 
-* Komponentväljaren har en ny design.
-* Nu finns det en färgväljare för textredigeraren.
-
-## Kommande förbättringar {#upcoming-improvements}
-
-* Justering, textriktning och indragsalternativ är nu [aktiverade som standard i RTE](/help/implementing/universal-editor/configure-rte.md), förutsatt att backend-funktionen har stöd för dem.
+* Ett alternativ för att lägga till komponenter har lagts till på snabbmenyn.
