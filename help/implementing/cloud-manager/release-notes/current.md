@@ -35,7 +35,7 @@ Nästa planerade version är torsdagen den 2 april 2026.
   Se även [Kopiera innehåll](/help/implementing/developing/tools/content-copy.md#copy-content).
 
 * **Stöd för UI-utbyggbarhet i AEM Experience Hub**
-Stöd för gränssnittstillägg i [ AEM Experience Hub ](https://experience.adobe.com/experiencemanager) är nu aktiverat, vilket gör att utvecklare kan utöka gränssnittet med anpassade funktioner och widgetar som skapats med Adobe App Builder.
+Stöd för gränssnittstillägg i [&#x200B; AEM Experience Hub &#x200B;](https://experience.adobe.com/experiencemanager) är nu aktiverat, vilket gör att utvecklare kan utöka gränssnittet med anpassade funktioner och widgetar som skapats med Adobe App Builder.
 
   Mer information finns i [AEM Experience Hub](https://developer.adobe.com/uix/docs/services/aem-experience-hub/).
 
