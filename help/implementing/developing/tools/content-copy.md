@@ -1,12 +1,12 @@
 ---
 title: Verktyget Innehållskopia
-description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on-demand från produktionsmiljöer i AEM as a Cloud Service till lägre miljöer för teständamål.
+description: Med innehållskopieringsverktyget kan användare kopiera muterbart innehåll on-demand från sin produktionsmiljö i AEM as a Cloud Service till lägre miljöer för teständamål.
 exl-id: 5883e4bc-9861-498e-bd35-32ff03d901cc
 feature: Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 86205946b7c4b7173448eca728f4495ab7e35064
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1502'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on-demand 
 
 Aktuella, riktiga data är värdefulla för testning, validering och för att ge användaren erkännande. Med innehållskopieringsverktyget kan du kopiera innehåll från en AEM as a Cloud Service-produktionsmiljö till en staging-, development- eller [Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md) -miljö för sådan testning.
 
-Innehållet som ska kopieras definieras av en innehållsuppsättning. En innehållsuppsättning består av en lista med JCR-sökvägar som innehåller det muterbara innehåll som ska kopieras från en källredigeringstjänstmiljö till en målredigeringstjänstmiljö i samma Cloud Manager-program. Följande sökvägar tillåts i en innehållsuppsättning.
+En innehållsuppsättning definierar innehållet som ska kopieras. En innehållsuppsättning består av en lista med JCR-sökvägar. Dessa sökvägar innehåller det muterbara innehåll som ska kopieras från en källredigeringstjänstmiljö till en målredigeringstjänstmiljö, allt inom samma Cloud Manager-program. Följande sökvägar tillåts i en innehållsuppsättning:
 
 ```text
 /content
@@ -34,7 +34,7 @@ Innehållet som ska kopieras definieras av en innehållsuppsättning. En innehå
 
 När du kopierar innehåll är källmiljön en källa till sanning.
 
-* Om innehållet har ändrats i målmiljön skrivs det över av innehållet i källan, om sökvägarna är desamma.
+* Om käll- och målsökvägarna matchar skriver innehåll från källan över ändrat innehåll i målmiljön.
 * Om banorna inte är likadana sammanfogas innehåll från källan med innehållet i målplatsen.
 
 ## Behörigheter {#permissions}
@@ -75,8 +75,8 @@ Innan något innehåll kan kopieras måste en innehållsuppsättning definieras.
 
 1. Om du måste förfina eller begränsa din innehållsuppsättning kan delbanor uteslutas.
 
-   1. Klicka på **Lägg till exkludera delsökvägar** bredvid den sökväg du vill begränsa i listan över inkluderade sökvägar.
-   1. Ange den delbana som ska uteslutas under den valda banan.
+   1. I listan med inkluderade sökvägar klickar du på alternativet **Lägg till exkludera delsökvägar** intill den sökväg som du vill begränsa.
+   1. Ange den delbana som ska uteslutas från den markerade banan.
    1. Välj **Uteslut sökväg**.
    1. Välj **Lägg till exkludera delsökvägar** igen om du vill lägga till ytterligare sökvägar som ska exkluderas efter behov.
       * Undantagna sökvägar måste vara relativa till den inkluderade sökvägen.
@@ -97,32 +97,34 @@ Innehållsuppsättningen kan nu användas för att kopiera innehåll mellan milj
 
 ## Redigera en innehållsuppsättning {#edit-content-set}
 
-Följ liknande steg som när du skapar ett innehållssteg. I stället för att klicka på **Lägg till innehållsuppsättning** markerar du en befintlig uppsättning i konsolen och väljer **Redigera** på ellipsmenyn.
+1. Följ liknande steg som när du skapar ett innehållssteg. I stället för att klicka på **Lägg till innehållsuppsättning** markerar du en befintlig uppsättning i konsolen och väljer **Redigera** på ellipsmenyn.
 
 ![Redigera innehållsuppsättning](assets/edit-content-set.png)
 
-När du redigerar din innehållsuppsättning kan du expandera de konfigurerade sökvägarna så att de uteslutna delsökvägarna visas.
+1. När du redigerar din innehållsuppsättning kan du expandera de konfigurerade sökvägarna så att de uteslutna delsökvägarna visas.
 
-## Kopierar innehåll {#copy-content}
+## Kopiera innehåll {#copy-content}
 
-När en innehållsuppsättning har skapats kan du använda den för att kopiera innehåll. Följ de här stegen för att kopiera innehåll.
+När en innehållsuppsättning har skapats kan du använda den för att kopiera innehåll.
 
 >[!NOTE]
-> Använd inte innehållskopiering i en miljö medan en [innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md) körs i den miljön.
+> Använd inte innehållskopiering i en miljö när en [innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md)-åtgärd körs i den miljön.
+
+**Så här kopierar du innehåll:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. Gå till skärmen **Miljö** från sidan **Översikt**.
+1. Gå till **Miljö** > **Innehållsuppsättningar** på sidan **Översikt**.
 
-1. Navigera till sidan **Innehållsuppsättningar** från skärmen **Miljö**.
+1. Välj en innehållsuppsättning på konsolen.
 
-1. Välj en innehållsuppsättning från konsolen och välj **Kopiera innehåll** på ellipsmenyn.
+1. Klicka på **Kopiera innehåll** på ellipsmenyn.
 
    ![Innehållskopia](assets/copy-content.png)
 
    >[!NOTE]
    >
-   >En miljö kan inte markeras om:
+   >En miljö kan inte markeras om något av följande stämmer:
    >
    >* Användaren har inte rätt behörighet.
    >* Miljön har en pågående pipeline eller en åtgärd för att kopiera innehåll.
@@ -138,13 +140,16 @@ När en innehållsuppsättning har skapats kan du använda den för att kopiera 
       * Utveckling/RDE
    * Som standard är&quot;Cross-Program&quot;-innehållskopiering inaktiverat. På kundens begäran kan den dock aktiveras, vilket gör ytterligare ett **målprogram** -indatafält tillgängligt.
 
-1. Om det behövs kan du även välja att **Inkludera åtkomstkontrollistor** i kopieringsprocessen.
+1. (Valfritt) Om du vill kan du ange följande:
 
-1. Välj **Kopiera**.
+   * **Inkludera åtkomstkontrollistor** - Välj om du vill kopiera innehållets åtkomstkontrollbehörighet tillsammans med innehållet.
+   * **Rensa** - Välj det här alternativet om du vill ta bort det befintliga innehållet på målet innan du startar importen, så att du kan börja från en ren skiffer och undvika konflikter med befintligt innehåll. Om du låter **Rensa** vara avmarkerat importerar Cloud Manager det nya innehållet ovanpå det befintliga målinnehållet. Ett bekräftelsemeddelande visas innan rensningen börjar och Cloud Manager loggar rensningsåtgärden och importinformationen för spårbarhet.
+
+1. Klicka på **Kopiera**.
 
 Kopieringsprocessen startar. Kopieringsprocessens status visas i konsolen för den valda innehållsuppsättningen.
 
-## Innehållskopia aktivitet {#copy-activity}
+## Kopiera innehåll {#copy-activity}
 
 Du kan övervaka statusen för dina kopieringsprocesser på sidan **Kopiera innehållsaktivitet**.
 
@@ -161,11 +166,11 @@ Du kan övervaka statusen för dina kopieringsprocesser på sidan **Kopiera inne
 När du börjar kopiera innehåll kan processen ha någon av följande statusar.
 
 | Status | Beskrivning |
-|---|---|
-| Pågår | Innehållskopieringen pågår |
-| Misslyckades | Åtgärden Kopiera innehåll misslyckades |
-| Slutförd | Innehållskopieringen har slutförts |
-| Avbruten | Användaren avbryter en innehållskopia när den har startats |
+| --- | --- |
+| Pågår | Kopiering av innehåll pågår. |
+| Misslyckades | Åtgärden Kopiera innehåll misslyckades. |
+| Slutförd | Åtgärden Kopiera innehåll slutfördes. |
+| Avbruten | En användare avbryter en innehållskopia när den har startats. |
 
 ### Avbryta en kopieringsprocess {#canceling}
 
@@ -181,15 +186,19 @@ På sidan **Kopiera innehållsaktivitet** väljer du åtgärden **Avbryt** på e
 >
 >Om din miljö är i ett sådant läge på grund av att du har avbrutit kontaktar du Adobe kundtjänst för hjälp.
 
-### Åtkomst till loggar {#accessing-logs}
+### Åtkomstloggar {#accessing-logs}
 
 Du kan kontrollera loggarna för både käll- och målmiljöer för att se om det finns några slutförda innehållskopieringsprocesser.
 
-På sidan **Kopiera innehållsaktivitet** väljer du åtgärden **Loggar** på ellipsmenyn för kopieringsprocessen som du vill granska loggarna för och väljer sedan för vilken miljö.
+**Så här kommer du åt loggar:**
+
+1. På sidan **Kopiera innehållsaktivitet** klickar du på **Loggar** på ellipsmenyn för kopieringsprocessen som du vill granska. Välj sedan miljö.
 
 ![Åtkomst till loggar för kopieringsinnehållsprocess](assets/copy-content-logs.png)
 
-Loggarna hämtas till din lokala dator. Om hämtningen inte startar kontrollerar du inställningarna för popup-blockering.
+Loggarna hämtas till din lokala dator.
+
+1. Om hämtningen inte startar kontrollerar du inställningarna för popup-blockering.
 
 ## Begränsningar {#limitations}
 
