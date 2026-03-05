@@ -1,11 +1,11 @@
 ---
 title: Egenskaper för väljaren för innehållsfragment i mikrofon för Adobe Experience Manager as a Cloud Service
 description: Egenskaper för att konfigurera Micro-Frontend Content Fragment Selector för att söka, hitta och hämta innehållsfragment från programmet.
-role: Admin, User
+role: Admin, User, Developer
 exl-id: c81b5256-09fb-41ce-9581-f6d1ad316ca4
-source-git-commit: 74b9493fc3cdba4a1fc64d1137f5c50c6bebca0a
+source-git-commit: 86be8e53b77e8c7771f5a60b711a045128899acd
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
@@ -20,18 +20,19 @@ Du kan använda följande egenskaper för att anpassa hur väljaren för innehå
 
 | Egenskap | Typ | Obligatoriskt | Standard | Beskrivning |
 |--- |--- |--- |--- |--- |
-| `ref` | FragmentSelectorRef | | | Referens till instansen `ContentFragmentSelector` som tillåter åtkomst till tillhandahållna funktioner som `reload`. |
+| `ref` | FragmentSelectorRef | Nej | | Referens till instansen `ContentFragmentSelector` som tillåter åtkomst till tillhandahållna funktioner som `reload`. |
 | `imsToken` | string | Nej | | IMS-token används för autentisering. Om inget anges initieras IMS-inloggningsflödet. |
 | `repoId` | string | Nej | | Databas-ID som används för fragmentväljaren. När det finns en sådan anslutning ansluter väljaren automatiskt till den angivna databasen och listrutan för databasen döljs. Om det inte anges kan användaren välja en databas i listan över tillgängliga databaser som de har åtkomst till. |
+| `allowedRepositoryIds` | sträng[] | Nej | | Lista med databas-ID:n för att filtrera databaser och innehållsfragment i väljaren för innehållsfragment. När det anges med databas-ID:n visas endast dessa databaser i databasväljaren. Om ingen angiven eller tom array anges är alla databaser som användaren har åtkomst till tillgängliga. |
 | `defaultRepoId` | string | Nej | | Databas-ID som väljs som standard när databasväljaren visas. Används endast när `repoId` inte har angetts. Om `repoId` anges döljs databasväljaren och det här värdet ignoreras. |
 | `orgId` | string | Nej | | Organisations-ID som används för autentisering. Om det inte anges kan användaren välja en databas från olika organisationer som de har åtkomst till. Om användaren inte har åtkomst till någon databas eller organisation läses innehållet inte in. |
-| `locale` | string | Nej | `en-US` | Språk. |
+| `locale` | string | Nej | &quot;en-US&quot; | Språk. |
 | `env` | string | Nej | | Distributionsmiljö. Se typen `Env` för tillåtna miljönamn. |
 | `filters` | FragmentFilter | Nej | `{ folder: "/content/dam" }` | Filter som ska tillämpas på listan med innehållsfragment. Som standard visas fragment under `/content/dam`. |
 | `isOpen` | boolesk | Nej | `false` | Flagga för att styra om väljaren är öppen eller stängd. |
 | `noWrap` | boolesk | Nej | `false` | Avgör om fragmentväljaren återges utan någon omslutningsdialogruta. När värdet är `true` bäddas fragmentväljaren in direkt i den överordnade behållaren. Användbar för att integrera väljaren i anpassade layouter eller arbetsflöden. |
 | `onSelectionChange` | ({ contentFragments: `ContentFragmentSelection`, domainName?: `string`, tenantInfo?: `string`, repoId?: `string`, deliveryRepos?: `DeliveryRepository[]` }) => void | Nej | | Återanropsfunktionen aktiveras när valet av innehållsfragment ändras. Tillhandahåller de markerade fragmenten, domännamnet, innehavarinformationen, databas-ID och leveransdatabaserna. |
-| `onDismiss` | () => void | Nej | | Callback-funktionen aktiveras när dismiss-åtgärden utförs, till exempel när väljaren stängs. |
+| `onDismiss` | () => void | Nej | | Återanropsfunktionen aktiveras när åtgärden för att stänga av utförs (t.ex. när väljaren stängs). |
 | `onSubmit` | ({ contentFragments: `ContentFragmentSelection`, domainName?: `string`, tenantInfo?: `string`, repoId?: `string`, deliveryRepos?: `DeliveryRepository[]` }) => void | Nej | | Återanropsfunktionen aktiveras när användaren bekräftar sitt val. Tar emot valda innehållsfragment, domännamn, innehavarinformation, databas-ID och leveransdatabaser. |
 | `theme` | &quot;light&quot; eller &quot;dark&quot; | Nej | | Tema för fragmentväljaren. Som standard är den inställd på unifiedShell-miljötemat. |
 | `selectionType` | &quot;single&quot; eller &quot;multiple&quot; | Nej | `single` | Markeringstypen kan användas för att begränsa markeringen för fragmentväljaren. |
@@ -52,7 +53,7 @@ Egenskaperna `ImsAuthProps` definierar autentiseringsinformationen och det flöd
 | `imsClientId` | Ett strängvärde som representerar det IMS-klient-ID som används för autentisering. Detta värde tillhandahålls av Adobe och är specifikt för din Adobe AEM CS-organisation. |
 | `imsScope` | Beskriver de scope som används vid autentisering. Omfattningarna avgör vilken åtkomstnivå programmet har till organisationens resurser. Flera omfång kan avgränsas med kommatecken. |
 | `redirectUrl` | Representerar den URL där användaren omdirigeras efter autentiseringen. Det här värdet ställs vanligtvis in på programmets aktuella URL. Om `redirectUrl` inte anges kommer `ImsAuthService` att använda den redirectUrl som används för att registrera `imsClientId` |
-| `modalMode` | Ett booleskt värde som anger om autentiseringsflödet ska visas i ett modalt (popup) eller inte. Om värdet är `true` visas autentiseringsflödet i ett popup-fönster. Om värdet är `false` visas autentiseringsflödet i en helsidesinläsning.<br>**Obs!** För bättre användargränssnitt kan du dynamiskt styra det här värdet om användaren har inaktiverat popup-fönster för webbläsare. |
+| `modalMode` | Ett booleskt värde som anger om autentiseringsflödet ska visas i ett modalt (popup) eller inte. Om värdet är `true` visas autentiseringsflödet i ett popup-fönster. Om värdet är `false` visas autentiseringsflödet i en helsidesinläsning. _Note :_för bättre användargränssnitt, du kan dynamiskt styra det här värdet om användaren har webbläsarpopup-fönster inaktiverat. |
 | `onImsServiceInitialized` | En callback-funktion som anropas när Adobe IMS-autentiseringstjänsten initieras. Den här funktionen har en parameter, `service`, som är ett objekt som representerar Adobe IMS-tjänsten. Mer information finns i [`ImsAuthService`](#imsauthservice-ims-auth-service). |
 | `onAccessTokenReceived` | En återanropsfunktion som anropas när en `imsToken` tas emot från Adobe IMS-autentiseringstjänsten. Den här funktionen tar en parameter, `imsToken`, som är en sträng som representerar åtkomsttoken. |
 | `onAccessTokenExpired` | En återanropsfunktion som anropas när en åtkomsttoken har upphört att gälla. Den här funktionen används vanligtvis för att utlösa ett nytt autentiseringsflöde för att erhålla en ny åtkomsttoken. |
@@ -65,7 +66,7 @@ Klassen `ImsAuthService` hanterar autentiseringsflödet för väljaren för inne
 | Funktionsnamn | Beskrivning |
 |--- |--- |
 | `isSignedInUser` | Avgör om användaren är inloggad på tjänsten och returnerar ett booleskt värde i enlighet med detta. |
-| `getImsToken` | Hämtar autentiseringen `imsToken` för den inloggade användaren, som kan användas för att autentisera begäranden till andra tjänster, som att generera resursen _rendering._ |
+| `getImsToken` | Hämtar autentiseringen `imsToken` för den inloggade användaren, som kan användas för att autentisera begäranden till andra tjänster, som att generera en återgivning av resurser. |
 | `signIn` | Initierar inloggningsprocessen för användaren. Den här funktionen använder `ImsAuthProps` för att visa autentisering i antingen ett popup-fönster eller en fullständig sidinläsning. |
 | `signOut` | Signerar användaren från tjänsten, gör sin autentiseringstoken ogiltig och kräver att han/hon loggar in igen för att få åtkomst till skyddade resurser. Om du anropar den här funktionen läses den aktuella sidan in igen. |
 | `refreshToken` | Uppdaterar autentiseringstoken för den inloggade användaren, vilket förhindrar att den upphör att gälla och säkerställer oavbruten åtkomst till skyddade resurser. Returnerar en ny autentiseringstoken som kan användas för efterföljande begäranden. |
