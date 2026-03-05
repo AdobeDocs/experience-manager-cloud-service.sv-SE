@@ -5,9 +5,9 @@ keywords: Skicka ett e-postmeddelande för ett tilläggsformulär, Skicka med e-
 feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
 exl-id: 70386e57-345b-4edb-97f1-3fd52ea9ff4f
 role: User, Developer
-source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
+source-git-commit: 79046330f5c3fe3b19ac35200ef0750f28ba31c4
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '892'
 ht-degree: 1%
 
 ---
@@ -56,6 +56,11 @@ Så här konfigurerar du en Skicka e-post-åtgärd för Foundation-komponent:
 1. Lägg till en e-postmall för att konfigurera åtgärden skicka e-post.
    * Du kan ange sökvägen till den externa e-postmallen som sparats i dina AEM-resurser med alternativet **[!UICONTROL External Template Path]**.
    * Du kan också lägga till en anpassad e-postmall för formuläröverföringen i textrutan **[!UICONTROL Email Template]**.
+
+   >[!NOTE]
+   >
+   > Du kan också aktivera att **[!UICONTROL Use HTML Template]** skickar e-post med en anpassad HTML-layout i stället för standardmallen. När det här alternativet är aktiverat anger du HTML-filen i fältet **Extern mallsökväg**. Den här funktionen är tillgänglig via programmet Tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com).
+
 1. [Valfritt] Med åtgärden **[!UICONTROL Send Email]** Skicka kan du inkludera bilagor och ett [dokument med post (DoR)](generate-document-of-record-core-components.md) med e-postmeddelandet.
 1. Klicka på **[!UICONTROL Done]**.
 
@@ -76,6 +81,11 @@ Så här konfigurerar du åtgärden Skicka e-post för kärnkomponenten:
 1. Lägg till en e-postmall för att konfigurera åtgärden skicka e-post.
    * Du kan ange sökvägen till den externa e-postmallen som sparats i dina AEM-resurser med alternativet **[!UICONTROL External Template Path]**.
    * Du kan också lägga till en anpassad e-postmall för formuläröverföringen i textrutan **[!UICONTROL Email Template]**.
+
+   >[!NOTE]
+   >
+   > Du kan också aktivera att **[!UICONTROL Use HTML Template]** skickar e-post med en anpassad HTML-layout i stället för standardmallen. När det här alternativet är aktiverat anger du HTML-filen i fältet **Extern mallsökväg**. Den här funktionen är tillgänglig via programmet Tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com).
+
 1. [Valfritt] Med åtgärden **[!UICONTROL Send Email]** Skicka kan du inkludera bilagor och ett [dokument med post (DoR)](generate-document-of-record-core-components.md) med e-postmeddelandet.
 1. Klicka på **[!UICONTROL Done]**.
 
@@ -104,6 +114,7 @@ Dialogrutan **Formuläregenskaper** visas.
 1. Lägg till en e-postmall för att konfigurera åtgärden skicka e-post.
    * Du kan ange sökvägen till den externa e-postmallen som sparats i dina AEM-resurser med alternativet **[!UICONTROL External Template Path]**.
    * Du kan också lägga till en anpassad e-postmall för formuläröverföringen i textrutan **[!UICONTROL Email Template]**.
+
 1. [Valfritt] Med åtgärden **[!UICONTROL Send Email]** Skicka kan du inkludera bilagor och ett [dokument med post (DoR)](generate-document-of-record-core-components.md) med e-postmeddelandet.
 1. Klicka på **[!UICONTROL Save&Close]**.
 
@@ -113,7 +124,7 @@ Dialogrutan **Formuläregenskaper** visas.
 
 * Vi rekommenderar att du håller e-postinnehållet klart och koncist. Användarna bör förstå syftet med e-postmeddelandet och de åtgärder de behöver vidta.
 * Det rekommenderas att alla formulärfält har unika elementnamn, även om de finns på olika paneler i ett adaptivt formulär.
-* När du använder AEM as a Cloud Service kräver utgående e-post kryptering. Som standard är funktionen för utgående e-post inaktiverad. Om du vill aktivera det skickar du en supportanmälan till [begär åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=sv-SE#sending-email).
+* När du använder AEM as a Cloud Service kräver utgående e-post kryptering. Som standard är funktionen för utgående e-post inaktiverad. Om du vill aktivera det skickar du en supportanmälan till [begär åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
 
 ## Relaterade artiklar
 
