@@ -5,16 +5,16 @@ keywords: adaptivt formulärtema, webbplatstema, AEM Sites-tema, integration av 
 feature: Adaptive Forms, Core Components
 role: Developer
 exl-id: 0607e11c-84d2-42cb-be9f-acd7c328a342
-source-git-commit: 343fc4fdc9b2947ff7771e3b74e77c679cf5c204
+source-git-commit: e1593d26beea79ffd7d8c5075b99d84c6a98c3b0
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
 
 # Bädda in ett adaptivt Forms-tema i ett AEM Sites-tema
 
-Du kan bädda in ett adaptivt Forms-tema (till exempel [AEM Forms Canvas-temat](https://github.com/adobe/aem-forms-theme-canvas)) i ditt AEM Sites-tema. På så sätt kör ett enda tema både dina webbplatssidor och alla adaptiva Forms-filer som är inbäddade på dessa sidor, med ett bygge och en distribution via [AEM Front-End Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines.html?lang=sv-SE).
+Du kan bädda in ett adaptivt Forms-tema (till exempel [AEM Forms Canvas-temat](https://github.com/adobe/aem-forms-theme-canvas)) i ditt AEM Sites-tema. På så sätt kör ett enda tema både dina webbplatssidor och alla adaptiva Forms-filer som är inbäddade på dessa sidor, med ett bygge och en distribution via [AEM Front-End Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines.html).
 
 Den här artikeln är avsedd för utvecklare som vill ha anpassade AEM Sites-standardteman (eller anpassade) utan att behöva hantera en separat Forms-temadistribution.
 
@@ -22,15 +22,11 @@ Den här artikeln är avsedd för utvecklare som vill ha anpassade AEM Sites-sta
 
 Kontrollera att du har:
 
-* **AEM as a Cloud Service** med [Front-End Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines.html?lang=sv-SE) konfigurerad för ditt webbplatstema.
+* **AEM as a Cloud Service** med [Front-End Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines.html) konfigurerad för ditt webbplatstema.
 * **Källor för webbplatsteman** - till exempel [standardtemat för webbplatsmallen](https://github.com/adobe/aem-site-template-standard) (den repo som innehåller `theme/` med `src/theme.scss`, `src/components/` och så vidare).
 * **Forms-temakällor** - [AEM Forms Canvas-temat](https://github.com/adobe/aem-forms-theme-canvas) (eller något annat kompatibelt Adaptivt Forms-tema) klonas eller laddas ned lokalt.
 * **Node.js och npm** - för att skapa webbplatstemat (se temat README för de versioner som stöds).
 * **Maven** - om du skapar hela webbplatsmallpaketet (valfritt för arbete med endast teman).
-
->[!NOTE]
->
->**Temanamn:** När du bäddar in ett Forms-tema i ditt webbplatstema och distribuerar via frontendpipelinen behöver du **inte ändra något temanamn**. Formulärformaten blir en del av ditt befintliga webbplatstema, som byggs och distribueras med det aktuella namnet. Du behöver bara ändra temanamnet (till exempel i `package.json`) när du distribuerar ett **fristående** Forms-tema från en dedikerad temadegidentitet. Detta scenario beskrivs i [Använd teman för att formatera Core Components-baserad Adaptive Forms](/help/forms/using-themes-in-core-components.md).
 
 ## Steg 1: Skapa mappen med adaptiva formulärkomponenter {#step-1-create-folder}
 
@@ -213,7 +209,7 @@ Det här är den enda ändringen som krävs i den befintliga temastrukturen för
 
    ![kör bygge](/help/forms/assets/theme-mpm-run-build.png)
 
-2. Distribuera via din befintliga [frontpipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines.html?lang=sv-SE). Efter distributionen gäller samma tema för CSS för både webbplatssidor och inbäddade adaptiva Forms.
+2. Distribuera via din befintliga [frontpipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines.html). Efter distributionen gäller samma tema för CSS för både webbplatssidor och inbäddade adaptiva Forms.
 
 ## Felsökning {#troubleshooting}
 
@@ -228,4 +224,4 @@ Det här är den enda ändringen som krävs i den befintliga temastrukturen för
 ## Se även {#see-also}
 
 * [Använd teman för att utforma Core Components-baserade Adaptive Forms](/help/forms/using-themes-in-core-components.md)
-* [Utveckla med frontmatade rörledningar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines.html?lang=sv-SE)
+* [Utveckla med frontmatade rörledningar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines.html)
