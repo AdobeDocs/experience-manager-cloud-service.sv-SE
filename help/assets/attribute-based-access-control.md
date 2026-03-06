@@ -28,7 +28,7 @@ Några av fördelarna med attributbaserad åtkomstkontroll är:
 
 * Minskar antalet dubbletter - förbättrar materialets integritet. Dubbletter behövs i mappbaserade behörigheter när samma resurser delas med olika grupper.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475413/?learn=on&enablevpops){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3475418/?captions=swe&learn=on&enablevpops){transcript=true}
 
 ## Hur aktiverar jag attributbaserad åtkomstkontroll? {#enable-attribute-based-access-control}
 
