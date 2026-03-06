@@ -3,9 +3,9 @@ title: Överför varumärkesgodkända resurser till  [!DNL Content Hub]
 description: Lär dig hur du överför varumärkesgodkända mediefiler till Content Hub
 role: User
 exl-id: f1be7cfc-1803-4c17-bb58-947104aa883c
-source-git-commit: 655f84593adb1199bcfc21cb54071feb3c8523c5
+source-git-commit: 282ab15d8c498b3c0ddba8165b1262bc20729b75
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 [Content Hub-användare med behörighet att lägga till resurser](/help/assets/deploy-content-hub.md#onboard-content-hub-users-add-assets) kan lägga till resurser i Content Hub antingen från det lokala filsystemet eller importera resurser från OneDrive eller Dropbox-datakällor. Alla resurser visas på den översta nivån i Content Hub, oavsett vilken mappstruktur som finns i det lokala filsystemet eller datakällorna i OneDrive och Dropbox, vilket förbättrar sökfunktionerna.
 
->[!VIDEO](https://video.tv.adobe.com/v/3445379/?captions=swe&learn=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3432980/?learn=on){transcript=true}
 
 Resurserna som markerats som `Approved` i Assets as a Cloud Service är automatiskt tillgängliga i Content Hub. Mer information finns i [Godkänn resurser för Content Hub](/help/assets/approve-assets-content-hub.md).
 
@@ -77,3 +77,30 @@ Visningen av resurser som överförts med Content Hub beror på om du har [aktiv
 * Om **[!UICONTROL Auto-approval]**-växeln är inaktiverad visas inte de resurser som du överför med Content Hub automatiskt. Resurserna är tillgängliga i mappen `hydrated-assets` i din Assets as a Cloud Service-miljö. Navigera till mappen och [massredigera](#bulk-approve-assets-content-hub) statusen för dessa resurser till `Approved` för de resurser som ska visas i Content Hub.
 
 ![Content Hub godkännandeprocess](/help/assets/assets/content-hub-approval.png)
+
+## Frågor och svar {#faqs-content-hub-upload-assets}
+
+### Vilka typer av mediefiler kan jag överföra till Content Hub och varifrån kommer? {#asset-types-upload-to-content-hub}
+
+Content Hub-användare med rättigheter att lägga till resurser kan överföra varumärkesgodkända resurser från det lokala filsystemet. Alla överförda resurser, oavsett deras ursprungliga mappstruktur, visas på den översta nivån i Content Hub för att förbättra sökfunktionerna.
+
+### Hur förbättrar Content Hub sökningen och organisationen av resurser? {#search-content-hub}
+
+Content Hub förbättrar sökning och organisation av resurser genom att låta användarna definiera nyckeldetaljer för varje överföring, som kampanjnamn, nyckelord, kanaler, tidsram och region. Dessutom genereras automatiskt ytterligare egenskaper för varje resurs (till exempel filstorlek, format och upplösning) och Adobe AI används för att lägga till smarta taggar, vilket gör det enklare och snabbare att hitta relevanta resurser.
+
+### Hur överför jag resurser från mitt lokala filsystem till Content Hub? {#upload-assets-content-hub}
+
+Om du vill överföra resurser från det lokala filsystemet klickar du på **Lägg till Assets** för att öppna dialogrutan för överföring. Du kan dra och släppa filer eller mappar, eller bläddra manuellt för att markera dem. Du måste gruppera dina resurser under ett kampanjnamn, och vi rekommenderar att du fyller i andra fält som nyckelord, kanaler, tidsram och region för att få bättre ordning. När du är klar klickar du på **Överför**, granskar informationen och bekräftar att du vill börja överföra.
+
+### Hur fungerar godkännandeprocessen i Content Hub? {#asset-approval-content-hub}
+
+Om du aktiverar alternativet för automatiskt godkännande blir resurser som överförts med Content Hub automatiskt tillgängliga. Om det är inaktiverat placeras överförda resurser i mappen **hydrated-assets** i Assets as a Cloud Service, och du måste redigera deras status manuellt till **Godkänd** för att kunna visa dem i Content Hub.
+
+### Kan jag konfigurera de fält som är obligatoriska eller valfria när jag överför resurser till Content Hub? {#available-fields-while-uploading-assets-to-content-hub}
+
+Administratörer kan använda användargränssnittet för konfiguration för att definiera fält som är obligatoriska eller valfria när resurser överförs till Content Hub.
+
+### Vad ska jag göra om mina överförda resurser inte visas automatiskt i Content Hub? {#assets-do-not-display-in-content-hub}
+
+Om resurserna inte visas automatiskt betyder det att växlingen för automatiskt godkännande är inaktiverad. Resurserna finns i mappen **hydrated-assets** i din Assets as a Cloud Service-miljö. Du måste redigera deras status gruppvis till **Godkänd** för att de ska visas i Content Hub.
+

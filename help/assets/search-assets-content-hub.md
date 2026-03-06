@@ -3,9 +3,9 @@ title: Söka efter resurser i Content Hub
 description: Lär dig söka efter resurser i  [!DNL Content Hub]
 role: User
 exl-id: 8578d7d0-32b9-4e5c-80ef-3827e358ac6c
-source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
+source-git-commit: 95d7935142e26b717e2c33a2bd0e8e2c2f52a623
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -167,5 +167,20 @@ Utför följande steg om du vill utföra en gruppsökning i [!DNL Content Hub]:
 [!DNL The Content Hub] är inte begränsat till sökning, utan låter dig utföra ytterligare åtgärder, som [download](download-assets-content-hub.md), [share](share-assets-content-hub.md) och [lägga till resurser i samlingen](collections-content-hub.md), direkt från sök- eller förhandsgranskningsgränssnittet. Markera resurserna på sökresultatsidan för att visa dessa alternativ.
 
 Läs mer om hur [konfigurerar resurser i  [!DNL Content Hub]](configure-content-hub-ui-options.md).
+
+## Frågor och svar {#faqs-deploy-content-hub}
+
+### Hur kan jag begränsa sökresultaten i AEM Assets Content Hub?
+
+Du kan begränsa sökresultaten i Content Hub genom att använda textbaserad sökning, använda olika filter (som filformat, godkännandestatus, ändringsdatum osv.), söka efter taggar eller smarta taggar och använda filterpanelen. Genom att kombinera flera predikat eller filteralternativ kan du rikta in dig exakt på de resurser du behöver.
+
+### Kan jag göra en gruppsökning i AEM Assets Content Hub för flera resurser samtidigt?
+
+Ja, du kan utföra en gruppsökning i Content Hub genom att ange flera värden (till exempel namn, filformat, taggar) avgränsade med angivna avgränsare. Med funktionen för masssökning kan du snabbt hitta flera resurser i en enda fråga, vilket gör det mer effektivt än att söka efter resurser en i taget.
+
+
+### Kan administratörer anpassa de filter som finns i AEM Assets Content Hub Search?
+
+Ja, administratörer kan använda AEM Assets Content Hub Configuration User Interface för att konfigurera vilka filter som är tillgängliga i sökgränssnittet. Standardfiltren inkluderar filformat, godkännandestatus, utgångsdatum med mera, men administratörer kan anpassa dessa alternativ efter organisationens behov.
 
 

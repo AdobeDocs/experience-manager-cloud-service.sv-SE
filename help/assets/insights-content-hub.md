@@ -3,9 +3,9 @@ title: Visa resursinsikter i Content Hub
 description: Lär dig hur du visar resursinsikter i  [!DNL Content Hub]
 role: User
 exl-id: 29cbe017-856d-486b-acf3-aa47dbd90f3f
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 12bb550ff275c84bc60869e91e953993aab57aa5
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -50,3 +50,25 @@ Du kan även visa:
 * **[!UICONTROL Assets by Campaigns]**: Antal tillgångar och respektive procentandel baserat på kampanjer.
 * **[!UICONTROL Assets by Channels]**: Tillgångsantal och respektive procentandel baserat på vilka kanaler som används.
 * **[!UICONTROL Assets by Regions]**: Antal tillgångar och respektive procentandel baserat på områden där resursen används.
+
+## Frågor och svar {#faqs-assets-insights-content-hub}
+
+### Vad behöver vi Assets Insights i AEM Assets Content Hub?
+
+Assets Insights i AEM Assets Content Hub ger värdefull information om resursanvändningsstatistik över kampanjer, kanaler och regioner, vilket hjälper marknadsföringsintressenter att förstå hur materialet fungerar och hur populärt det är för att få en bättre användarupplevelse.
+
+### Vem har tillgång till de funktioner som beskrivs i Assets Insights?
+
+Content Hub-användare kan utföra de åtgärder och komma åt de funktioner som nämns i avsnittet Assets Insights.
+
+### Vilka resursinsikter finns på fliken Insights?
+
+Du kan visa antalet resurser i databasen, antalet samlingar, Assets-överföringar per år, månad eller dag, aktiva användare per dag eller månad samt resursklassificering baserad på filformat.
+
+### Hur visar jag statistik för överförda mediefiler i AEM Assets Content Hub?
+
+Du kan visa statistik för överförda resurser och samlingar genom att gå till fliken Insights, där du kan spåra överföringshistoriken efter år, månad eller dag.
+
+### Vilka mätvärden kan jag analysera angående användaraktivitet i Content Hub?
+
+Du kan analysera antalet aktiva användare per dag eller månad, vilket visas visuellt med ett linjediagram.

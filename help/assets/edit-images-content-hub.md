@@ -2,9 +2,9 @@
 title: Redigera bilder i Content Hub med Adobe Express
 description: Redigera bilder i Content Hub med Adobe Express
 exl-id: c9777862-226c-4d39-87da-9c4a30437dc5
-source-git-commit: 655f84593adb1199bcfc21cb54071feb3c8523c5
+source-git-commit: 12bb550ff275c84bc60869e91e953993aab57aa5
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Så här redigerar du bilder med Content Hub:
 
 1. Klicka på **[!DNL Open in Adobe Express]** på resurskortet för bilden som du vill redigera. Du kan också klicka på bilden för att öppna informationen och sedan klicka på logotypen [!DNL Adobe Express]. Den inbäddade redigeraren för Adobe Express läses sedan in utan att någonsin behöva lämna Content Hub.
 
-   Du kan använda funktionen [!DNL Adobe Express] för att utföra alla bildredigeringsrelaterade åtgärder, till exempel [ändra storlek på bild](https://helpx.adobe.com/se/express/using/resize-image.html), [ta bort eller ändra bakgrundsfärg](https://helpx.adobe.com/se/express/using/remove-background.html), [beskära bild](https://helpx.adobe.com/se/express/using/crop-image.html), kombinera bilden med AI-genererad bild eller text och mycket annat.
+   Du kan använda funktionen [!DNL Adobe Express] för att utföra alla bildredigeringsrelaterade åtgärder, till exempel [ändra storlek på bild](https://helpx.adobe.com/express/using/resize-image.html), [ta bort eller ändra bakgrundsfärg](https://helpx.adobe.com/express/using/remove-background.html), [beskära bild](https://helpx.adobe.com/express/using/crop-image.html), kombinera bilden med AI-genererad bild eller text och mycket annat.
 
 1. Utför ändringarna och klicka på **[!UICONTROL Save]** för att spara den redigerade resursen i någon av formattyperna:
 
@@ -50,3 +50,37 @@ Så här redigerar du bilder med Content Hub:
 1. Klicka på **[!UICONTROL Save as new asset]** för att spara resursen.
 
 Administratörer kan också konfigurera obligatoriska och valfria fält som visas när resurser läggs till i Content Hub, till exempel kampanjnamn, nyckelord, kanaler osv. Mer information finns i [Konfigurera Content Hub användargränssnitt](configure-content-hub-ui-options.md#configure-upload-options-content-hub).
+
+## Frågor och svar {#faqs-edit-images-content-hub}
+
+### Vem kan redigera bilder i AEM Assets Content Hub?
+
+Användare som har behörighet att använda Adobe Express och AEM Assets Content Hub och som har rätt att mixa om resurser till nya varianter kan redigera bilder med Content Hub.
+
+### Hur redigerar jag en bild med Adobe Express i AEM Assets Content Hub?
+
+Om du vill redigera en bild klickar du på **Öppna i Adobe Express** på bildens resurskort eller öppnar bildens detaljer och klickar på Adobe Express logotyp. Då läses den inbäddade Adobe Express-redigeraren in i AEM Assets Content Hub så att du kan redigera utan att behöva lämna plattformen.
+
+### Vilka redigeringsfunktioner har Adobe Express i AEM Assets Content Hub?
+
+Adobe Express har en mängd bildredigeringsfunktioner, bland annat för att ändra storlek på bilder, ta bort eller ändra bakgrundsfärg, beskära bilder och kombinera dem med AI-genererade bilder eller text.
+
+### Vilka filformat kan jag spara mina redigerade bilder som i AEM Assets Content Hub?
+
+Du kan spara redigerade bilder i PNG- (bra kvalitet), JPG- (lämplig för små filer) eller PDF-format (lämplig för dokument).
+
+### Vilka fält ska jag fylla i när jag sparar en redigerad bild i Content Hub?
+
+När du sparar en redigerad bild bör du ange ett namn för resursen i fältet **Spara som** och ett kampanjnamn i fältet **Kampanjnamn**. Adobe rekommenderar även att du anger värden i ytterligare fält som Nyckelord, Kanaler, Tidsram och Region för att förbättra sökbarheten och organisera.
+
+### Kan jag spara mina redigeringar som en ny resurs i Content Hub?
+
+Ja, efter redigeringen kan du klicka på **Spara som ny resurs** för att spara ändringarna som en ny resurs i Content Hub.
+
+### Kan administratörer anpassa fälten när de överför resurser till AEM Assets Content Hub?
+
+Ja, administratörer kan konfigurera vilka fält som är obligatoriska eller valfria när de lägger till resurser i AEM Assets Content Hub, till exempel kampanjnamn, nyckelord och kanaler, för att passa organisationens behov. Använd fliken **Importera** i konfigurationsgränssnittet för att konfigurera fälten.
+
+
+
+

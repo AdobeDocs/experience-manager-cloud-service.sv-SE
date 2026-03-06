@@ -3,9 +3,9 @@ title: Attributbaserad åtkomstkontroll
 description: Lär dig hur du aktiverar attributbaserad åtkomstkontroll för att definiera metadatabaserade regler för att definiera åtkomstnivån för resurser som är tillgängliga i Content Hub
 role: Admin
 exl-id: 05f54b05-40b8-4a6c-af8f-5c3f7a2089d4
-source-git-commit: 655f84593adb1199bcfc21cb54071feb3c8523c5
+source-git-commit: 44e9c1f016bfdad909d9e2aa1c9a301dcecd763b
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '1391'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Några av fördelarna med attributbaserad åtkomstkontroll är:
 
 * Minskar antalet dubbletter - förbättrar materialets integritet. Dubbletter behövs i mappbaserade behörigheter när samma resurser delas med olika grupper.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475418/?captions=swe&learn=on&enablevpops){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3475413/?learn=on&enablevpops){transcript=true}
 
 ## Hur aktiverar jag attributbaserad åtkomstkontroll? {#enable-attribute-based-access-control}
 
@@ -102,3 +102,34 @@ Detta gör att du kan skriva enkla och uttrycksfulla regler, som: ALLOW if regio
 * Fånga regelns affärsmetod i kommentarer, oavsett om villkoret är korrekt skrivet, eftersom metoden hjälper oss att validera och korrigera logiken, om det behövs.
 
 * Licensen för PDF-filer som är inställda för DRM måste vara synliga för alla, så att användarna kan se dem när de hämtar resursen med licens.
+
+## Frågor och svar {#faqs-attribute-based-access-control-content-hub}
+
+### Vad är attributbaserad åtkomstkontroll (ABAC) i AEM Assets Content Hub?
+
+Med den attributbaserade åtkomstkontrollen (ABAC) i AEM Assets Content Hub kan administratörer definiera metadatabaserade regler som styr vilken åtkomstnivå olika användargrupper har till digitala resurser. Åtkomsten avgörs av om resursens metadata matchar villkoren som anges i reglerna, vilket möjliggör en detaljerad och dynamisk hantering av synlighet för resurser.
+
+### Hur definierar administratörer åtkomstregler med ABAC i AEM Assets Content Hub?
+
+Administratörer definierar åtkomstregler genom att skapa villkor som baseras på metadata för resurser, till exempel varumärke eller region, och länka dessa till specifika ID för användargrupper. Dessa regler använder logiska operatorer (AND, OR) och jämförelseoperatorer (är lika med, inte lika med) för att ange exakt vilka resurser som är synliga för vilka användargrupper.
+
+### Vilka är de största fördelarna med att använda ABAC jämfört med traditionella mappbaserade behörigheter?
+
+ABAC eliminerar beroendet av mappstrukturer för behörigheter, tillåter administratörer att överföra resurser och tilldela behörigheter retroaktivt samt minskar antalet duplicerade resurser som behövs. Detta förbättrar materialets integritet och förenklar behörighetshanteringen, särskilt när resurser måste delas med flera grupper.
+
+### Kan administratörer konfigurera ABAC-regler direkt i AEM Assets Content Hub-gränssnittet?
+
+Nej, för närvarande kan inte administratörer skapa ABAC-regler direkt i Content Hub. Istället måste de ladda ned ett mallkalkylblad (nedladdningslänk i den här artikeln), definiera sina regler där och skicka dem till Adobe Support via en supportanmälan för implementering.
+
+### Vilka typer av metadatavillkor kan användas när ABAC-regler konfigureras i AEM Assets Content Hub?
+
+ABAC-regler i AEM Assets Content Hub kan använda logiska operatorer som AND och OR samt jämförelseoperatorer som equals och not equals. Metadataegenskaperna som används i reglerna måste vara korrekt definierade och tillgängliga i AEM metadatamatchningar, och kan innehålla fält som region, varumärke eller publiceringsstatus.
+
+### Varför är AEM Assets Content Hub ABAC särskilt användbart för organisationer med stora team och olika resursbehov?
+
+ABAC är användbart för organisationer med stora team eftersom det möjliggör detaljerad regelbaserad åtkomst till resurser baserat på användarroller, regioner eller varumärken. Det ser till att användarna bara ser resurser som är relevanta för deras ansvarsområden, utan manuella behörighetstilldelningar eller överdrivet dubbelarbete.
+
+### Hur ska administratörer förbereda ABAC-kalkylbladet innan det skickas till Adobe Support?
+
+Administratörer bör skapa användargrupper i Adobe Admin Console, notera sina grupp-ID:n och tydligt definiera behörigheter och villkor för varje grupp i kalkylbladet. De ska se till att alla metadataegenskaper mappas korrekt till rätt scheman och använda kommentarskolumnen för att förtydliga affärsmetoden för varje regel, vilket gör det enklare för Adobe att validera och implementera reglerna.
+

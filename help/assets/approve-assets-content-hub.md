@@ -2,9 +2,9 @@
 title: Godkänn resurser för Content Hub
 description: Lär dig hur du godkänner mediefiler i Assets as a Cloud Service och gör dem tillgängliga i Content Hub.
 exl-id: fc849028-ab56-4388-b8d6-e36cac8f868f
-source-git-commit: aec2bd06ad498e92ce1e69ac587ee7fcd5106268
+source-git-commit: 282ab15d8c498b3c0ddba8165b1262bc20729b75
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1630'
 ht-degree: 0%
 
 ---
@@ -153,3 +153,42 @@ Visningen av resurser som överförts med Content Hub beror på om du har [aktiv
 * Om **[!UICONTROL Auto-approval]**-växeln är inaktiverad visas inte de resurser som du överför med Content Hub automatiskt. Resurserna är tillgängliga i mappen `hydrated-assets` i din Assets as a Cloud Service-miljö. Navigera till mappen och [massredigera](#bulk-approve-assets-content-hub) statusen för dessa resurser till `Approved` för de resurser som ska visas i Content Hub.
 
 ![Content Hub godkännandeprocess](/help/assets/assets/content-hub-approval.png)
+
+## Frågor och svar {#faqs-content-hub-approved-assets}
+
+### Vad är syftet med att godkänna material för Content Hub i Experience Manager as a Cloud Service? {#approving-assets-content-hub}
+
+Genom att godkänna mediefiler kan du säkerställa att endast de senaste och godkända versionerna är tillgängliga för användning inom Content Hub, vilket ger en enhetlig varumärkesprofil i alla kanaler och i alla tillämpningar. Denna kontrollerade process effektiviserar resurshanteringen för varumärkesansvariga och marknadsförare.
+
+### Vilka är förutsättningarna för att godkänna mediefiler för Content Hub?
+
+Du måste ha tillgång till AEM Assets as a Cloud Service och skrivbehörighet för att redigera metadata för resurser, särskilt fältet **Status** i resursegenskaperna.
+
+### Hur godkänner du en enskild resurs med hjälp av Assets-vyn i AEM as a Cloud Service?
+
+Markera resursen, klicka på **Detaljer** i verktygsfältet, gå till fliken **Grundläggande**, välj **Godkänd** i listrutan **Status** och klicka på **Spara**. Resursen är tillgänglig i Content Hub.
+
+### Kan mediefiler godkännas i bulk för Content Hub, och i så fall, hur?
+
+Ja, resurser kan godkännas gruppvis. Markera flera resurser i Assets-vyn, klicka på **Redigera flera metadata**, välj **Godkänd** i fältet **Status** under Egenskaper och klicka på **Spara**. Alla markerade resurser är tillgängliga i Content Hub.
+
+### Hur fungerar godkännandeprocessen i Content Hub? {#asset-approval-content-hub}
+
+Om du aktiverar alternativet för automatiskt godkännande blir resurser som överförts med Content Hub automatiskt tillgängliga. Om det är inaktiverat placeras överförda resurser i mappen **hydrated-assets** i Assets as a Cloud Service, och du måste redigera deras status manuellt till **Godkänd** för att kunna visa dem i Content Hub.
+
+### Vad är fältet Godkännandemål och hur påverkar det publiceringen av resurser?
+
+I fältet **Godkännandemål** på sidan Resursinformation kan du välja var godkända resurser ska publiceras. Alternativen är endast **Delivery** (publicerar till både Dynamic Media med OpenAPI och Content Hub) eller **Content Hub**. Om du inte väljer något alternativ används standardinställningen för Assets as a Cloud Service-miljön. Mer information finns i [Standardgodkännandemål och publiceringsmål för godkända resurser](#default-approval-target-options-publish-destinations).
+
+
+### Vad händer om du inte ser fältet Godkännandemål på sidan med information om Assets View-resurser?
+
+Om fältet **Godkännandemål** saknas på sidan med resursinformation för Assets View bör du redigera metadataformuläret, dra fältet **Godkännande för** från tillgängliga komponenter till formuläret och klicka på **Spara**. På så sätt kan du ange godkännandemål för resurser.
+
+### Hur kan ni automatisera godkännandet av nyligen inkapslade resurser i administratörsvyn?
+
+Skapa en mapp i författarmiljön, navigera till **Verktyg** > **Assets** > **Metadataprofiler**, skapa och redigera en metadataprofil. Lägg till ett textfält med en rad, etikettera det **Godkänd Assets** och mappa det till &#39;./jcr:content/metadata/dam:status och ange standardvärdet till `approved`. Använd metadataprofilen på mappen. Nya resurser som läggs till i mappen godkänns automatiskt.
+
+### Vilka har åtkomst till godkända mediefiler i Content Hub och vilka kontroller finns det?
+
+Godkända resurser är tillgängliga för användare som ingår i samma organisation inom Content Hub. Strikta kontroller säkerställer att endast de senaste godkända versionerna är tillgängliga, vilket bidrar till att upprätthålla varumärkets enhetlighet och säkerhet.

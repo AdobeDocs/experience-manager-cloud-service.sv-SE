@@ -3,9 +3,9 @@ title: Hantera samlingar i Content Hub
 description: Lär dig hantera samlingar i Content Hub
 role: User
 exl-id: ea74456c-f980-4a02-b26b-d7c46dac6aee
-source-git-commit: 655f84593adb1199bcfc21cb54071feb3c8523c5
+source-git-commit: 12bb550ff275c84bc60869e91e953993aab57aa5
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1840'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Med [!DNL Content Hub] kan du skapa offentliga samlingar. Dessa samlingar är ti
 
 Det hjälper användarna att enkelt komma åt och hantera de olika resurserna som är tillgängliga i [!DNL Content Hub].
 
->[!VIDEO](https://video.tv.adobe.com/v/3445304/?captions=swe&learn=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3435687/?learn=on){transcript=true}
 
 ## Förutsättningar {#prerequisites}
 
@@ -126,7 +126,7 @@ Om du dessutom vill filtrera samlingsvyn baserat på åtkomstbehörigheter går 
 ## Hämta resurser som är tillgängliga i en samling{#download-assets-within-collection}
 
 Om du vill hämta resurser som är tillgängliga i en samling går du till fliken **[!UICONTROL Collections]**.\
-Klicka på ikonen ![Hämta &#x200B;](assets/download-icon.svg) på samlingskortet.
+Klicka på ikonen ![Hämta ](assets/download-icon.svg) på samlingskortet.
 
 ![Fliken Samling](assets/download-collection.png)
 
@@ -138,7 +138,7 @@ Lär dig hur du [hämtar en resurs från  [!DNL Content Hub]](download-assets-co
 
 ## Dela resurser som är tillgängliga i en samling {#share-assets-available-within-collection}
 
-Du kan också dela de tillgängliga resurserna i en samling. Se till att [aktivera delning av offentlig länk i Content Hub](configure-content-hub-ui-options.md#configure-collections-content-hub). Gå till fliken **[!UICONTROL Collections]**. Välj ikonen ![Dela &#x200B;](assets/share.svg) på resurskortet. Delningslänken kopieras. Du kan dela den kopierade länken med mottagaren. Läs mer om att [dela resurser i  [!DNL Content Hub]](share-assets-content-hub.md).
+Du kan också dela de tillgängliga resurserna i en samling. Se till att [aktivera delning av offentlig länk i Content Hub](configure-content-hub-ui-options.md#configure-collections-content-hub). Gå till fliken **[!UICONTROL Collections]**. Välj ikonen ![Dela ](assets/share.svg) på resurskortet. Delningslänken kopieras. Du kan dela den kopierade länken med mottagaren. Läs mer om att [dela resurser i  [!DNL Content Hub]](share-assets-content-hub.md).
 
 Content Hub Collections innehåller omfattande styrningsverktyg för effektiv filhantering, inklusive anpassningsbara delningsbehörigheter och samarbetsfunktioner. De här inställningarna ger allt från skrivskyddad åtkomst till fullständig administrativ kontroll och har stöd för finstyrning framför resursdistribution. När du delar en resurs antingen individuellt eller som en del av en samling bestäms omfattningen av åtkomsten av samlingens aktuella åtkomstnivå som tilldelats användaren. Du kan också inte dela en privat samling.
 
@@ -198,3 +198,54 @@ Du kan markera samlingar som favoriter i Content Hub, vilket gör det enklare at
    Samlingar som är markerade som favoriter visas nu på fliken **[!UICONTROL My Favorites]**. Du kan också ta bort samlingar från **[!UICONTROL My Favorites]**. Om du vill göra det klickar du på ikonen **[!UICONTROL More actions]** ![Fler åtgärder](assets/do-not-localize/more-actions.png) och väljer **[!UICONTROL Remove from Favorites]**.
 
    ![Ta bort samling som favorit](assets/remove-favorite-collection.png)
+
+## Frågor och svar {#faqs-manage-collections-content-hub}
+
+### Vad kallas samlingar i AEM Assets Content Hub?
+
+En samling i AEM Assets Content Hub är en uppsättning resurser som kan delas av användare. Samlingar kan innehålla resurser från olika platser, samtidigt som deras referensintegritet bevaras. De skapar ett delat utrymme där användarna effektivt kan komma åt och använda innehållet.
+
+### Hur skapar jag en ny samling i AEM Assets Content Hub?
+
+Om du vill skapa en ny samling i AEM Assets Content Hub går du till fliken Samlingar och klickar på **Skapa samling**. Lägg till en titel och beskrivning i det nya samlingsfönstret, välj åtkomstkontrolltypen i listrutan **Vem har åtkomst** och klicka på **Skapa**. Du kan sedan lägga till resurser i samlingen.
+
+### Vilka typer av åtkomstkontroll är tillgängliga när du skapar en samling?
+
+Det finns tre åtkomstkontrolltyper: **Privat** - Endast författare och administratörer kan redigera och komma åt, **Offentlig** - Visa endast - Alla kan visa, men bara skapare och administratörer kan redigera, och **Offentlig** - Visa och redigera - alla kan komma åt och redigera samlingen utan begränsningar.
+
+### Vem kan utföra åtgärder på samlingar i Content Hub?
+
+Content Hub-användare kan utföra åtgärder som att skapa, visa, dela, hämta, ta bort, ta bort, fästa samlingar och markera dem som favoriter. Administratörer har ytterligare behörigheter, som att visa alla åtkomstalternativ och ta bort samlingar.
+
+### Hur lägger jag till resurser i en befintlig samling i AEM Assets Content Hub?
+
+Markera de resurser som du vill lägga till, klicka på **Lägg till i samlingen** och välj samlingen i listan. Du kan också söka efter samlingar med hjälp av sökfältet. Klicka på **Lägg till i samlingen** för att bekräfta åtgärden.
+
+### Kan samlingar filtreras och sökas igenom i AEM Assets Content Hub?
+
+Ja, samlingar kan filtreras och sökas igenom i AEM Assets Content Hub efter namn, åtkomstbehörighet eller skapare. Filter innehåller alternativ som **Alla samlingar**, **Endast jag**, **Alla kan visa**, **Alla kan redigera**, **Skapade av alla** och **Skapade av mig**.
+
+### Hur hämtar jag resurser från en samling i AEM Assets Content Hub?
+
+Om du vill hämta resurser från en samling i AEM Assets Content Hub går du till fliken **Samlingar** och klickar på hämtningsikonen på samlingskortet för att hämta alla resurser. Du kan också öppna samlingen, välja enskilda resurser och klicka på **Hämta** för att hämta dem separat.
+
+### Hur kan resurser delas från en samling i AEM Assets Content Hub?
+
+Assets kan delas genom att aktivera delning av offentlig länk i Content Hub. Välj delningsikonen på resurskortet för att kopiera delningslänken, som sedan kan skickas till mottagarna. Observera att privata samlingar inte kan delas.
+
+### Vem kan ta bort resurser från en samling i AEM Assets Content Hub?
+
+En ägare till samlingen, en administratör eller en icke-adminanvändare med redigeringsbehörighet kan ta bort en eller flera resurser från en samling. Markera resurserna och klicka på **Ta bort från samlingen** och bekräfta sedan borttagningen.
+
+### Vem får ta bort en samling från AEM Assets Content Hub och hur fungerar den?
+
+Det är bara administratörer och skaparen av en samling som kan ta bort den. Om du vill ta bort går du till fliken Samlingar, markerar samlingen och klickar på ikonen Ta bort. Samlingen tas bort från AEM Assets Content Hub.
+
+### Vilka alternativ kan en administratör konfigurera för samlingar i AEM Assets Content Hub?
+
+Administratören kan aktivera eller inaktivera följande alternativ för samlingar i AEM Assets Content Hub:
+
+* Aktivera alternativet **Visa endast samlingar** om du vill tillåta samlingar som är tillgängliga för alla men bara kan redigeras av skaparen och administratören.
+
+* Aktivera alternativet **Offentliga samlingar** för att tillåta samlingar som är tillgängliga och redigerbara av alla. Om **Visa endast samlingar** och **publika samlingar** är inaktiverade kan icke-adminanvändare som standard bara skapa privata samlingar.
+
