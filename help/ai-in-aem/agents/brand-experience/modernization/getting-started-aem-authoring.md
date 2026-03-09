@@ -36,7 +36,7 @@ För AEM-projekt som använder Universal Editor skiljer sig beredningen av Exper
 1. Klicka på **Skapa**.
    * Du omdirigeras till sidan Platser.
    * Uppdatera sidan om den nya platsen inte visas omedelbart.
-1. Om du inte redan har gjort det när du [konfigurerar ditt svar ](#create-repo) uppdaterar `fstab.yaml` så att det pekar på din AEM-värd, Git-ägare och Git-repo och verkställer ändringarna i `main`.
+1. Om du inte redan har gjort det när du [konfigurerar ditt svar &#x200B;](#create-repo) uppdaterar `fstab.yaml` så att det pekar på din AEM-värd, Git-ägare och Git-repo och verkställer ändringarna i `main`.
    * Mer information finns i [Konfigurera innehållskällan](/help/implementing/cloud-manager/edge-delivery/configure-content-source.md).
 
 ## Fortsätt med standardstegen Komma igång {#continue}
