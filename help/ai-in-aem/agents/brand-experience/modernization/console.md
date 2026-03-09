@@ -43,7 +43,7 @@ Utvecklarna har full kontroll över vilka fartyg som levereras. Alla ändringar 
 
 ## Navigering {#navigation}
 
-När du har loggat in på konsolen på [`aemcoder.adobe.io` ](https://aemcoder.adobe.io) kommer du till hemskärmen på konsolen.
+När du har loggat in på konsolen på [`aemcoder.adobe.io` &#x200B;](https://aemcoder.adobe.io) kommer du till hemskärmen på konsolen.
 
 ![Startskärmen för konsolen](assets/console-home.png)
 
@@ -154,5 +154,5 @@ I inställningsvyn kan du hantera konsolens grundläggande inställningar.
       * `team_library_content:read`
       * `file_dev_resources:read`
       * `projects:read`
-   * [Mer information om hur du konfigurerar personliga åtkomsttoken finns i Figma-dokumentationen ](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens).
+   * [Mer information om hur du konfigurerar personliga åtkomsttoken finns i Figma-dokumentationen &#x200B;](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens).
 * **Återställ arbetsyta** återställer konsolen till startläget och alla ändringar som inte har skickats eller inte har överförts går förlorade.
