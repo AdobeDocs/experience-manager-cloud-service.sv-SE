@@ -4,9 +4,9 @@ description: Läs om hur Experience Modernization Agent tar in nya webbplatser i
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: c23a6f55-2ba8-4290-b7e8-06cad5de0fc8
-source-git-commit: baf12e49dadc7b25f5169279a52d5712380445de
+source-git-commit: 7e5450f853e04f12e3a25e4a996aa8c3afe383ca
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '851'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Läs om hur Experience Modernization Agent tar in webbplatser i Edge Delivery Se
 
 Det kombinerar [kunskaper om webbplatsskapande och migrering](#creation-migration) för inledande webbplatsintroduktion och [funktioner för blockutveckling](#block-development) för kontinuerlig upplevelseutveckling (formatuppdateringar, mallförbättringar, skapande av landningssidor). Dessutom erbjuder den [Experience Modernization Console](#console) som en AI-stödd utvecklingsmiljö som du kan använda direkt. Även om användare kan hantera agenten direkt via konsolen behåller utvecklarna full kontroll över vad som skickas.
 
-För att komplex migrering ska lyckas erbjuder Adobe dessutom [AOE-leveransmodellen &#x200B;](#delivery-model). Det här alternativet kan användas som en accelerator eller som en taktisk tjänst för att hjälpa till att frigöra specifika projektutmaningar.
+För att komplex migrering ska lyckas erbjuder Adobe dessutom [AOE-leveransmodellen ](#delivery-model). Det här alternativet kan användas som en accelerator eller som en taktisk tjänst för att hjälpa till att frigöra specifika projektutmaningar.
 
 ## Fördelar {#benefits}
 
@@ -66,13 +66,9 @@ Självbetjäningskonsolen för Experience Modernization är vanligtvis tillgäng
 
 ## Leveransmodell {#delivery-model}
 
-För komplexa migreringar eller accelererade resultat erbjuder Adobe leveransmodellen&quot;Agentic Outcome Engineer&quot; (AOE). Detta är en valfri tjänst där Adobe tekniker utför AI-verktygen åt dig.
+För komplexa migreringar eller accelererade resultat erbjuder Adobe leveransmodellen&quot;Agentic Outcome Engineer&quot; (AOE). Detta är en valfri tjänst där Adobe tekniker utför AI-verktygen åt dig. Mer information om leveransmodellen finns i dokumentet [Leveransmodell för Experience Modernization Agent.](/help/ai-in-aem/agents/brand-experience/modernization/delivery-model.md)
 
-* Adobe AOE har agenten i samverkan med er och kombinerar AI-automatisering med expertvägledning för att leverera produktionsklara resultat i stor skala.
-* Detta är ett strategiskt återställningsalternativ för företag som står inför stelbenta implementeringar eller äldre moderniseringsutmaningar.
-* AOE-modellen erbjuder en snabbare, lägre risk-väg framåt som utnyttjar AI-automatisering samtidigt som man säkerställer styrning, kvalitet och framgångsrika resultat.
-
-Om du vill utforska AOE Delivery Model:
+Om du är intresserad av AOE-modellen för nästa migrering:
 
 * Kontakta din Adobe-representant eller kontogrupp för att initiera omfattningen och planeringen.
 * Adobe kommer att bekräfta sin behörighet, uppskatta engagemanget och föreslå en engagemangsplan.
@@ -94,7 +90,7 @@ Agenten stöder inte följande mål.
    * Kunskaperna gäller endast Edge Delivery Services.
 * Headless delivery patterns such as API-only or SPA-based delivery (t.ex. Next.js)
 
-Följande krav täcks ännu inte av dedikerade automatiseringskunskaper och kräver manuell insats.
+Följande krav täcks inte av dedikerade automatiseringskunskaper och kräver manuell insats.
 
 * Strikta pixelperfektion
    * Endast den praktiska designtroheten automatiseras
