@@ -4,7 +4,7 @@ description: Lär dig hur du använder Model Context Protocol med AEM as a Cloud
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: ddb7fc8c-affc-4374-8e08-d45d96017109
-source-git-commit: 8b77b992171623dcf7b065079d72992a5da3a01d
+source-git-commit: 2cbbb53c1bf5277ab54e6731152c0400b4e67aba
 workflow-type: tm+mt
 source-wordcount: '1757'
 ht-degree: 0%
@@ -146,8 +146,8 @@ Nedan finns stegvisa guider för varje program som stöds:
 
 #### Chattprogram (webb och dator) {#setup-chat-applications}
 
-* [Anthropic Claude](setup-claude.md)
-* [OpenAI ChatGPT](setup-chatgpt.md)
+* [Anthropic Claude](/help/ai-in-aem/mcp-support/setup-claude.md)
+* [OpenAI ChatGPT](/help/ai-in-aem/mcp-support/setup-chatgpt.md)
 
 #### Utvecklingsverktyg (IDE-tillägg, datorprogram, CLI) {#setup-developer-tools}
 
@@ -155,7 +155,7 @@ Nedan finns stegvisa guider för varje program som stöds:
 * Förenklingskod (CLI, JetBrains, VS-kod, markör)
 * Öka indrag för skrivbordsapp
 * Cline (JetBrains, VS Code, Cursor)
-* [Markör](setup-cursor.md)
+* [Markör](/help/ai-in-aem/mcp-support/setup-cursor.md)
 * GitHub Copilot (VS-kod)
 * Kiro (datorprogram, CLI)
 * OpenAI Codex (datorprogram)
@@ -164,7 +164,7 @@ Nedan finns stegvisa guider för varje program som stöds:
 
 #### Enterprise Platforms {#setup-enterprise-platforms}
 
-* [Microsoft Copilot Studio](setup-microsoft-copilot-studio.md)
+* [Microsoft Copilot Studio](/help/ai-in-aem/mcp-support/setup-microsoft-copilot-studio.md)
 
 ## Autentisering {#authentication}
 
