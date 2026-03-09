@@ -1,12 +1,13 @@
 ---
 title: Importera resurser gruppvis i Assets-vyn
 description: Lär dig hur du importerar resurser satsvis med det nya användargränssnittet i Assets (Assets-vyn). Det ger administratörer möjlighet att importera ett stort antal resurser från en datakälla till AEM Assets.
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 10f9d679-7579-4650-9379-bc8287cb2ff1
 feature: Asset Management, Publishing, Collaboration, Asset Processing
 role: User
-source-git-commit: 655f84593adb1199bcfc21cb54071feb3c8523c5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1700'
 ht-degree: 0%
 
 ---
@@ -27,13 +28,13 @@ Du kan importera resurser från följande datakällor:
 * Dropbox
 * OneDrive
 
->[!VIDEO](https://video.tv.adobe.com/v/3451963/?captions=swe&learn=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on){transcript=true}
 
 ## Förutsättningar {#prerequisites}
 
 | Data Source | Förutsättningar |
 |-----|------|
-| Azure | <ul> <li>Azure Storage-konto </li> <li> Azure Blob Container <li> Azure Access Key eller SAS-token baserat på autentiseringsläge </li></ul> |
+| Azure | <ul> <li>Azure lagringskonto </li> <li> Azure Blob Container <li> Azure Access Key eller SAS Token baserat på autentiseringsläge </li></ul> |
 | AWS | <ul> <li>AWS </li> <li> AWS Bucket <li> AWS Access Key </li><li> AWS Access Secret </li></ul> |
 | Google Cloud | <ul> <li>GCP Bucket </li> <li> E-postadress för GCP-tjänstkonto <li> Privat nyckel för GCP-tjänstkonto</li></ul> |
 | Dropbox | <ul> <li>Dropbox klient-ID (programnyckel) </li> <li> Dropbox Client Secret (apphemlighet)</li></ul> |

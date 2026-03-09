@@ -5,10 +5,11 @@ mini-toc-levels: 3
 contentOwner: Rick Brough
 feature: Configuration,Viewer Presets,Image Presets,Dynamic Media
 role: Admin,User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 83b70b17-7ee3-41cb-be90-c92ca161660e
-source-git-commit: bd43f86c9d3ad017a5e963800938e3ead98b7441
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 {{work-with-dynamic-media}}
 
-[Dynamic Media](https://business.adobe.com/se/products/experience-manager/assets/dynamic-media.html) hjälper dig att hantera resurser genom att leverera visuella marknadsförings- och marknadsföringsresurser på begäran, automatiskt skalade för konsumtion på webben, mobiler och sociala webbplatser. Med hjälp av en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimediematerial i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
+[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) hjälper dig att hantera resurser genom att leverera visuella marknadsförings- och marknadsföringsresurser på begäran, automatiskt skalade för konsumtion på webben, mobiler och sociala webbplatser. Med hjälp av en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimediematerial i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
 <!-- OBSOLETE UNTIL THE INTEGRATING SCENE7 TOPIC GETS A MAJOR UPDATE
 

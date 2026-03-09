@@ -8,10 +8,11 @@ contentOwner: Vishabh Gupta
 topic-tags: Configuration
 feature: Asset Management, Configuration
 role: Admin
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: e96c8d68-74a6-4d61-82dc-20e619338d4b
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1612'
 ht-degree: 0%
 
 ---
@@ -21,9 +22,9 @@ ht-degree: 0%
 Transkription är processen att översätta ljudet från en ljud- eller videofil till text (tal till text) med hjälp av taligenkänningstekniken.
 [!DNL Adobe Experience Manager Assets] har konfigurerats med [!DNL Azure Media Services] som automatiskt genererar textutskrift av det talade språket i en ljud- eller videofil som stöds i WebVTT-format (.vtt). När en ljud- eller videoresurs bearbetas i [!DNL Experience Manager Assets] genererar transkriberingstjänsten automatiskt texttranskriberingen av ljud- eller videoresursen och lagrar den på samma plats i Assets-databasen där den ursprungliga resursen finns. Med transkriberingstjänsten [!DNL Experience Manager Assets] kan marknadsförarna effektivt hantera sitt ljud- och videoinnehåll med ökad identifiering av textinnehållet och öka avkastningen på dessa resurser genom stöd för hjälpmedel och lokalisering.
 
-Transskript är textversioner av talat innehåll. Ett exempel är en film som du ser på alla OTT-plattformar, som ofta innehåller bildtexter som hjälper till med tillgänglighet eller som konsumerar innehållet på andra språk. Eller alla ljud- och videofiler som används i marknadsförings-, utbildnings- eller underhållningssyfte. De här upplevelserna börjar med en transkription som sedan formateras eller översätts på lämpligt sätt. Att transkribera ljud eller video är en tidskrävande och felbenägen process när den utförs manuellt. Det är också en utmaning att skala den manuella processen, med tanke på det ständigt ökande behovet av ljud- och videoinnehåll. [!DNL Experience Manager Assets] använder Azure:s AI-baserade transkription som tillåter storskalig bearbetning av ljud- och videoresurserna och genererar texttranskriberingarna (.vtt-filer) tillsammans med tidsstämpelsinformationen. I kombination med Assets stöds även transkriberingsfunktionen med Dynamic Media.
+Transskript är textversioner av talat innehåll. Ett exempel är en film som du ser på alla OTT-plattformar, som ofta innehåller bildtexter som hjälper till med tillgänglighet eller som konsumerar innehållet på andra språk. Eller alla ljud- och videofiler som används i marknadsförings-, utbildnings- eller underhållningssyfte. De här upplevelserna börjar med en transkription som sedan formateras eller översätts på lämpligt sätt. Att transkribera ljud eller video är en tidskrävande och felbenägen process när den utförs manuellt. Det är också en utmaning att skala den manuella processen, med tanke på det ständigt ökande behovet av ljud- och videoinnehåll. [!DNL Experience Manager Assets] använder den Azure AI-baserade transkription som tillåter storskalig bearbetning av ljud- och videoresurserna och genererar texttranskriberingarna (.vtt-filer) tillsammans med tidsstämpelsinformationen. I kombination med Assets stöds även transkriberingsfunktionen med Dynamic Media.
 
-transkriberingsfunktionen är tillgänglig utan kostnad i [!DNL Experience Manager Assets]. Administratörerna kräver dock användarens Azure-autentiseringsuppgifter för att konfigurera transkriberingstjänsten i [!DNL Experience Manager Assets]. Du kan också [hämta autentiseringsuppgifterna för utvärderingsversionen](https://azure.microsoft.com/en-us/pricing/details/media-services/) direkt från Microsoft® för att få en upplevelse av ljud- eller videotranskriberingsfunktionen i Assets.
+transkriberingsfunktionen är tillgänglig utan kostnad i [!DNL Experience Manager Assets]. Administratörerna kräver dock att användarens Azure-autentiseringsuppgifter konfigurerar transkriberingstjänsten i [!DNL Experience Manager Assets]. Du kan också [hämta autentiseringsuppgifterna för utvärderingsversionen](https://azure.microsoft.com/en-us/pricing/details/media-services/) direkt från Microsoft® för att få en upplevelse av ljud- eller videotranskriberingsfunktionen i Assets.
 
 ## Krav för transkribering {#prerequisites}
 
@@ -37,9 +38,9 @@ transkriberingsfunktionen är tillgänglig utan kostnad i [!DNL Experience Manag
    * Resursgrupp
    * Prenumerations-ID
 
-   Se [Azure-dokumentation](https://docs.microsoft.com/en-us/azure/media-services/latest/access-api-howto?tabs=portal) för att få autentiseringsuppgifter för åtkomst till Azure Media Services API.
+   Se [Azure-dokumentation](https://docs.microsoft.com/en-us/azure/media-services/latest/access-api-howto?tabs=portal) för att få inloggningsuppgifter för åtkomst till Azure Media Services API.
 
-1. Kontrollera att Azure-kontot har tillräcklig kredit för att behandla nya begäranden.
+1. Se till att Azure-kontot har tillräckligt med kredit för att behandla nya begäranden.
 
 ## Konfigurera transkription i [!DNL Experience Manager Assets] {#configure-transcription}
 
@@ -51,7 +52,7 @@ Följande konfigurationer krävs för att aktivera transkriberingsfunktionen i [
 
 ### Konfigurera Azure Media Services {#configure-azure-media-services}
 
-[!DNL Experience Manager Assets] använder [!DNL Azure Media Services] som automatiskt genererar textutskrifter av det talade språket i en [ljud- eller videofil som stöds](#supported-file-formats-for-transcription) i WebVTT-formatet (.vtt). Administratörerna kan konfigurera [!DNL Azure Media Services] i [!DNL Experience Manager Assets] med hjälp av Azure-autentiseringsuppgifterna. [transkriberingskraven](#transcription-prerequisites) listar de [!DNL Azure]-autentiseringsuppgifter som krävs för konfigurationen. Om du inte har [!DNL Azure]-konto och autentiseringsuppgifter kan du läsa [dokumentationen för Azure Media Services](https://azure.microsoft.com/en-us/pricing/details/media-services/) för att hämta autentiseringsuppgifter för utvärderingsversionen.
+[!DNL Experience Manager Assets] använder [!DNL Azure Media Services] som automatiskt genererar textutskrifter av det talade språket i en [ljud- eller videofil som stöds](#supported-file-formats-for-transcription) i WebVTT-formatet (.vtt). Administratörerna kan konfigurera [!DNL Azure Media Services] i [!DNL Experience Manager Assets] med Azure-autentiseringsuppgifterna. [transkriberingskraven](#transcription-prerequisites) listar de [!DNL Azure]-autentiseringsuppgifter som krävs för konfigurationen. Om du inte har [!DNL Azure]-konto och autentiseringsuppgifter läser du [Azure Media Services-dokumentation](https://azure.microsoft.com/en-us/pricing/details/media-services/) för att få autentiseringsuppgifter för testversionen.
 
 ![configure-transcription-service](assets/configure-transcription-service.png)
 
@@ -59,11 +60,11 @@ Gå till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTRO
 
 ### Konfigurera bearbetningsprofil för transkription {#configure-processing-profile}
 
-När [!DNL Azure Media Services] har konfigurerats i Experience Manager Assets är nästa steg att skapa en resursbearbetningsprofil för att generera en AI-baserad transkription av ljud- och videoresurserna. Den AI-baserade bearbetningsprofilen genererar transkriberingar av det [ljud- eller videomaterial &#x200B;](#supported-file-formats-for-transcription) som stöds som en rendering i Experience Manager Assets och lagrar transkriberingen (.vtt-filen) i samma mapp som den ursprungliga resursen finns i. Det är därför enklare för användarna att söka efter och hitta resursen och dess utskrivna återgivning.
+När [!DNL Azure Media Services] har konfigurerats i Experience Manager Assets är nästa steg att skapa en resursbearbetningsprofil för att generera en AI-baserad transkription av ljud- och videoresurserna. Den AI-baserade bearbetningsprofilen genererar transkriberingar av det [ljud- eller videomaterial ](#supported-file-formats-for-transcription) som stöds som en rendering i Experience Manager Assets och lagrar transkriberingen (.vtt-filen) i samma mapp som den ursprungliga resursen finns i. Det är därför enklare för användarna att söka efter och hitta resursen och dess utskrivna återgivning.
 
 Gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** och klicka på knappen **[!UICONTROL Create]** för att skapa en AI-baserad bearbetningsprofil för generering av transkription av dina ljud- och videofiler. Som standard visas bara tre flikar på sidan Bearbetningsprofil (Bild, Video och Anpassad). En **[!UICONTROL Content AI]**-flik visas emellertid om du har konfigurerat [!DNL Azure Media Services] i [!DNL Experience Manager Assets]-instansen. Verifiera dina [!DNL Azure]-inloggningsuppgifter om du inte ser fliken **[!UICONTROL Content AI]** när du skapar en bearbetningsprofil.
 
-Klicka på knappen **[!UICONTROL Add New]** på fliken **[!UICONTROL Content AI]** för att konfigurera transkriberingen. Här kan du inkludera och exkludera filformat (MIME-typer) för att generera transkript genom att välja filtyper i listrutan. I följande bild inkluderas alla ljud- och videofiler som stöds och textfilerna exkluderas.
+Klicka på knappen **[!UICONTROL Content AI]** på fliken **[!UICONTROL Add New]** för att konfigurera transkriberingen. Här kan du inkludera och exkludera filformat (MIME-typer) för att generera transkript genom att välja filtyper i listrutan. I följande bild inkluderas alla ljud- och videofiler som stöds och textfilerna exkluderas.
 
 Aktivera växlingsknappen **[!UICONTROL Create VTT transcript in same directory]** för att skapa och lagra den krypterade återgivningen (.vtt-fil) i samma mapp som den ursprungliga resursen finns i. De andra återgivningarna genereras också av standardarbetsflödet för DAM-resurshantering oavsett den här inställningen.
 
@@ -124,7 +125,7 @@ Om du har [konfigurerat Dynamic Media](/help/assets/dynamic-media/config-dm.md) 
 
 Se även:
 
-* [Videosjälvstudiekurs om hur du lägger till CC Closed Caption i videon Dynamic Media &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html?lang=sv-SE#add-cc-closed-captioning-to-dynamic-media-video)
+* [Videosjälvstudiekurs om hur du lägger till CC Closed Caption i videon Dynamic Media ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html#add-cc-closed-captioning-to-dynamic-media-video)
 * [Publicera Dynamic Media-videor till YouTube](/help/assets/dynamic-media/video.md#publishing-videos-to-youtube)
 
 I följande bild återspeglar webbadressen bildtextdelen som refererar till utskriften (.vtt-filen). Videon visar det talade språket (transkriberad text) som **[!UICONTROL Closed Caption]** vid den angivna tidsstämpeln i videon. Användaren kan aktivera eller inaktivera bildtexten med knappen **[!UICONTROL CC]**.

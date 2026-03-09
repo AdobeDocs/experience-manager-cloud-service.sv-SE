@@ -7,10 +7,11 @@ topic-tags: introduction
 content-type: reference
 feature: 3D Assets
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 82084ba7-1302-4cbd-8626-d77b3aaa4ed1
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2187'
 ht-degree: 2%
 
 ---
@@ -109,7 +110,7 @@ Se även [Förhandsgranska resurser med programgränssnittet](/help/assets/dynam
 
    Se [Överför dina 3D-resurser för användning i dynamiska media](/help/assets/add-assets.md#upload-assets).
 
-1. Välj **[!UICONTROL Assets > Files]** på sidan [!DNL Experience Manager].**[!UICONTROL Navigation]**
+1. Välj [!DNL Experience Manager] på sidan **[!UICONTROL Navigation]**.**[!UICONTROL Assets > Files]**
 1. I den nedrullningsbara listan **[!UICONTROL View]** i det övre högra hörnet på sidan väljer du **[!UICONTROL Card View]**.
 1. Navigera till en 3D-resurs som du vill visa.
 1. Om du vill öppna resursen på detaljsidan väljer du kortet för 3D-resursen.
@@ -224,7 +225,7 @@ När du har lagt till en 3D-mediekomponent på en webbsida kan du tilldela den e
 
 Se [Lägga till komponenten 3D Media på en webbsida](#adding-the-three-d-media-component-to-a-web-page).
 
-1. Klicka på ikonen **[!UICONTROL Assets]** i sidredigeraren [!DNL Experience Manager Sites] för att öppna **[!UICONTROL Assets]** på sidpanelen.
+1. Klicka på ikonen [!DNL Experience Manager Sites] i sidredigeraren **[!UICONTROL Assets]** för att öppna **[!UICONTROL Assets]** på sidpanelen.
 1. I listrutan väljer du **[!UICONTROL 3D]** om du bara vill visa filtyper för 3D-resurser.
 1. På sidopanelen söker du efter eller bläddrar till den 3D-resurs som du vill visa på sidan som redigeras.
 1. Dra 3D-resursen från sidopanelen i Assets och släpp den på komponenten **[!UICONTROL 3D Media]** som du tidigare lade till på sidan.

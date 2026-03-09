@@ -2,12 +2,13 @@
 title: Sök efter bästa praxis för  [!DNL Adobe Experience Manager] som en [!DNL Cloud Service]
 description: Metodtips om hur du söker efter, hittar och hämtar metadata för resurser i programmet.
 contentOwner: KK
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 446692de-5cea-4dbd-a98e-ec5177c7017e
 feature: Best Practices
 role: User
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '2437'
+source-wordcount: '2443'
 ht-degree: 0%
 
 ---
@@ -54,7 +55,7 @@ Sökningen visar liknande resultat om du även arbetar i **[!UICONTROL Assets vi
 
 **Scenario 2: Sök efter alla filer med nyckelordet `classic car` i mappen `automobile` .**
 
-Filtret Filer och mappar hjälper dig att begränsa sökningen. Använd alternativen Filer, Mappar eller Filer och Mappar i listrutan beroende på dina behov. Alternativet att välja mellan Filer, Mappar eller Filer och mappar är endast tillgängligt i **[!UICONTROL Admin view]**. Gå till [!UICONTROL Path] i **[!UICONTROL Assets view]** och bläddra i mappen där du vill göra en sökning.
+Filtret Filer och mappar hjälper dig att begränsa sökningen. Använd alternativen Filer, Mappar eller Filer och Mappar i listrutan beroende på dina behov. Alternativet att välja mellan Filer, Mappar eller Filer och mappar är endast tillgängligt i **[!UICONTROL Admin view]**. Gå till **[!UICONTROL Assets view]** i [!UICONTROL Path] och bläddra i mappen där du vill göra en sökning.
 
 * Använd alternativet **[!UICONTROL Files]** när du behöver söka efter filer med en specifik sökväg i databasen. Du behöver inte söka efter mappar i den definierade sökvägen.
 * Använd alternativet **[!UICONTROL Folders]** när du behöver begränsa sökningen till mappar med en viss sökväg.
@@ -171,7 +172,7 @@ Utför följande steg i **[!UICONTROL Admin view]**:
 Utför följande steg i **[!UICONTROL Assets view]**:
 
 1. Skriv `classic car` i sökfältet.
-1. Gå till Filter. Välj [!UICONTROL PDF] under [!UICONTROL MIME Type].
+1. Gå till Filter. Välj [!UICONTROL MIME Type] under [!UICONTROL PDF].
 1. Gå till [!UICONTROL Asset Status], välj [!UICONTROL All] om du vill inkludera alla publicerade och opublicerade resurser.
 
 **Scenario 5: Sök efter alla bilder utom PNG**
@@ -268,7 +269,7 @@ Det tar dig till samlingen med resurser med liknande färg och metadata.
 
 ## Anpassade sökfaktorer {#custom-search-facets}
 
-Med sökfaktorer i Adobe Experience Manager kan du söka efter resurser på flera olika sätt i stället för i en enda, förbestämd eller taxonisk ordning. Du kan anpassa sökfaktorer och lägga till predikat utifrån dina behov. Läs [Sök efter ansikten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=sv-SE#) om du vill ha stegvisa anvisningar om hur du lägger till ett anpassat predikat.
+Med sökfaktorer i Adobe Experience Manager kan du söka efter resurser på flera olika sätt i stället för i en enda, förbestämd eller taxonisk ordning. Du kan anpassa sökfaktorer och lägga till predikat utifrån dina behov. Läs [Sök efter ansikten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=en#) om du vill ha stegvisa anvisningar om hur du lägger till ett anpassat predikat.
 
 <!--**Scenario 10: Search assets based on Sku ID**
 to be added later
@@ -316,7 +317,7 @@ The newly added assets are not indexed.
     </tr>
     <tr>
         <td> Anpassade aspekter </td>
-        <td> Du kan lägga till <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=sv-SE">anpassade sökfaktorer efter behov.</td>
+        <td> Du kan lägga till <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=en">anpassade sökfaktorer efter behov.</td>
         <td> De anpassade funktionerna stöds delvis i Assets-vyn. De aspekter som stöds är:
             <ul>
             <li> Förutsedda taggar
@@ -430,5 +431,5 @@ The newly added assets are not indexed.
 
 >[!MORELIKETHIS]
 >
->* [Söka efter resurser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/search-assets.html?lang=sv-SE)
->* [Söka efter fasetter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=sv-SE)
+>* [Söka efter resurser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/search-assets.html?lang=en)
+>* [Söka efter fasetter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=en)

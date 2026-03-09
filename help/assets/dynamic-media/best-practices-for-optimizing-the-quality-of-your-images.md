@@ -4,10 +4,11 @@ description: Lär dig de bästa sätten som hjälper dig att optimera kvaliteten
 contentOwner: Rick Brough
 feature: Asset Management, Best Practices
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 2efc4a27-01d7-427f-9701-393497314402
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1629'
+source-wordcount: '1635'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,7 @@ Adobe Experience Manager innehåller över 100 kommandon för leverans av dynami
 **Smart bildåtergivning:**
 
 * Om du aktiverar Smart Imaging i Dynamic Media kan du automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens funktioner.
-Vill du veta mer? Gå till [Smart bildbehandling](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/dynamicmedia/imaging-faq).
+Vill du veta mer? Gå till [Smart bildbehandling](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/imaging-faq).
 * Den förbättrar bildens prestanda genom att dynamiskt justera dessa parametrar.
 * Du kan utvärdera Smart Imaging med självutvärderingsverktyget [Snapshot](https://snapshot.scene7.com/).
 
@@ -87,7 +88,7 @@ Bildskärpa är den mest komplicerade aspekten när det gäller att styra bilder
 
 * Best practices white paper [Adobe Dynamic Media Classic Image Quality and Sharpening Best Practices](/help/assets/dynamic-media/assets/sharpening_images.pdf) gäller även Experience Manager.
 
-* Titta på [Använd bildskärpa med Experience Manager - dynamiska media](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use#dynamic-media).
+* Titta på [Använd bildskärpa med Experience Manager - dynamiska media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use#dynamic-media).
 
 Med Experience Manager kan du öka skärpan i bilder vid intag, vid leverans eller både och. Normalt är det dock bäst att öka skärpan i bilder med bara en metod eller en annan, men inte med båda. Att skärpa bilderna vid leverans, på en URL-adress, ger oftast bäst resultat.
 
@@ -111,7 +112,7 @@ Det finns två metoder för bildskärpa:
 
       * Best practices white paper [Adobe Dynamic Media Classic Image Quality and Sharpening Best Practices](/help/assets/dynamic-media/assets/sharpening_images.pdf) gäller även Experience Manager.
 
-      * Titta på [Använd bildskärpa med Experience Manager - dynamiska media](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use#dynamic-media).
+      * Titta på [Använd bildskärpa med Experience Manager - dynamiska media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use#dynamic-media).
 
       * I Experience Manager kan du även styra en fjärde parameter: monokrom (0,1). Den här parametern avgör om oskarp maskning används separat på varje färgkomponent med värdet 0 eller på bildens intensitet/intensitet med värdet 1.
 
@@ -164,4 +165,4 @@ Följande allmänna förslag är användbara när du experimenterar för att opt
 
 * Testa olika parametrar i realtid direkt på en URL.
 * Det är en god vana att gruppera kommandona Dynamic Media Image Serving i en bildförinställning. En bildförinställning är i princip URL-kommandomakron med anpassade förinställningsnamn som `$thumb_low$` och `&product_high$`. Det anpassade förinställningsnamnet i en URL-sökväg anropar de här förinställningarna. Den här funktionen hjälper dig att hantera kommandon och kvalitetsinställningar för olika användningsmönster för bilder på webbplatsen och förkortar den totala längden på URL-adresser.
-* Experience Manager har också mer avancerade sätt att finjustera bildkvaliteten, t.ex. genom att lägga på skärpa vid inhämtning. [Adobe konsulttjänster](https://business.adobe.com/se/customers/consulting-services/main.html) kan hjälpa dig med anpassade insikter och metodtips för att optimera återgivningsresultaten.
+* Experience Manager har också mer avancerade sätt att finjustera bildkvaliteten, t.ex. genom att lägga på skärpa vid inhämtning. [Adobe konsulttjänster](https://business.adobe.com/customers/consulting-services/main.html) kan hjälpa dig med anpassade insikter och metodtips för att optimera återgivningsresultaten.

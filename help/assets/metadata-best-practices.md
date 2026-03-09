@@ -2,11 +2,12 @@
 title: Metadatahantering och bästa praxis
 description: Lär dig mer om metadata och de effektivaste strategierna för att hantera digitala resurser.
 role: User, Admin
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: d90519df-55a6-4e23-81ad-ff2365d71c0d
 feature: Metadata, Best Practices
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1374'
 ht-degree: 0%
 
 ---
@@ -97,7 +98,7 @@ Bestäm var informationen kommer från och granska detaljerna i metadatastrategi
 
 >[!NOTE]
 >
->Lär dig hur du [hanterar metadata för dina digitala resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/metadata.html?lang=sv-SE).
+>Lär dig hur du [hanterar metadata för dina digitala resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/metadata.html).
 
 ### Var konsekvent med metadatastrategin
 
@@ -138,7 +139,7 @@ Du kan lägga till flera nyckelord och ordna dem efter din prioritet.
    1. Klicka på **[!UICONTROL Save & Close]**.
 Sök efter resursen med de nyckelord du har lagt till. Resursen visas bland de översta sökresultaten.
 
-  Lär dig hur du [förbättrar sökningen i Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html?lang=sv-SE).
+  Lär dig hur du [förbättrar sökningen i Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html).
 
 * **Anpassade metadatafält:** Anpassa metadatafälten för att hämta ytterligare information om resurser. Du kan till exempel lägga till specifika fält för projektinformation, copyrightinformation eller andra relevanta data som förbättrar sökfunktionerna. Lär dig [att redigera eller lägga till anpassade metadata](meta-edit.md) i Experience Manager Assets.
 
@@ -164,8 +165,8 @@ Prova följande metodtips för att förenkla metadata:
 
 ### Analysera innehållsresan
 
-Undersök innehållsförsörjningskedjan för att hitta metadatakällor och engagera alla intressenter, från början till slut, för att få en grundlig strategi för bästa praxis. Involvera olika medarbetare för att säkerställa fullständigt stöd i hela organisationen. <br>Inkludera metadata i olika faser för att dela ansvaret för att tillhandahålla tillgångsinformation vid överföring. Att integrera [!DNL Experience Manager Assets] och [!DNL Workfront] ger till exempel avsevärda fördelar när det gäller metadatahantering, vilket förbättrar effektiviteten och samarbetet när det gäller att skapa och hantera innehåll. Den här integreringen säkerställer effektiv synkronisering av metadata för länkade resurser, och uppdaterar automatiskt projektinformationen när ändringar görs i [!DNL Workfront].
+Undersök innehållet i supply chain för att hitta metadatakällor och engagera alla intressenter, från början till slut, för att få en grundlig strategi för bästa praxis. Involvera olika medarbetare för att säkerställa fullständigt stöd i hela organisationen. <br>Inkludera metadata i olika faser för att dela ansvaret för att tillhandahålla tillgångsinformation vid överföring. Att integrera [!DNL Experience Manager Assets] och [!DNL Workfront] ger till exempel avsevärda fördelar när det gäller metadatahantering, vilket förbättrar effektiviteten och samarbetet när det gäller att skapa och hantera innehåll. Den här integreringen säkerställer effektiv synkronisering av metadata för länkade resurser, och uppdaterar automatiskt projektinformationen när ändringar görs i [!DNL Workfront].
 
 informera om mål, framsteg, milstolpar och utmaningar tidigt för att få synpunkter och samarbete från alla intressenter. Uppmuntra samarbete i hela organisationen för att skapa effektiva processer och värdefulla metadata.
 
-Läs mer om [metadata och relaterade koncept](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/metadata-concepts.html?lang=sv-SE) för att effektivt hantera dina Experience Manager-metadata.
+Läs mer om [metadata och relaterade koncept](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/metadata-concepts.html) för att effektivt hantera dina Experience Manager-metadata.

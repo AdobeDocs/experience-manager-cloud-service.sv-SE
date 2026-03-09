@@ -4,9 +4,11 @@ description: Lär dig hur du relaterar digitala resurser som delar vissa gemensa
 role: User
 feature: Collaboration,Asset Management
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 77dab2731f8d442bf999bf1614ef060944794574
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
+exl-id: 89149283-bbf2-40d3-9a4c-5b27ff5f944e
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
@@ -23,7 +25,7 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
 
 ## Steg för att relatera tillgångar {#steps-to-relate-assets}
 
-1. Öppna sidan **[!UICONTROL Properties]** i gränssnittet [!DNL Experience Manager] för en resurs som du vill relatera.
+1. Öppna sidan [!DNL Experience Manager] i gränssnittet **[!UICONTROL Properties]** för en resurs som du vill relatera.
 
    ![öppnar sidan Egenskaper för en resurs för att relatera resursen](assets/asset-properties-relate-assets.png)
 
@@ -56,7 +58,7 @@ Se [Översätta resurser i AEM](/help/assets/translate-assets.md).
 
 * Ge feedback om dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
 
 >[!MORELIKETHIS]
 >

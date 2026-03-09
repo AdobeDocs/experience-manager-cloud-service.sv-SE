@@ -2,10 +2,11 @@
 title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud Service]
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 role: Admin, User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 62b0b857-068f-45b7-9018-9c59fde01dc3
-source-git-commit: a57bcc24798dbb3acd3d19526848c4dd9adf3d1f
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
@@ -202,7 +203,7 @@ Additionally, see [Asset Selector user interface for Dynamic Media with OpenAPI 
 
 ##### Add modifiers {#modifiers-dm-media-renditions}
 
-Beyond the common image settings available in the UI, Dynamic Media supports numerous advanced image modifications that you can specify in the Image Modifiers field. See [Defining image preset options with Image Modifiers](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/assets/dynamic/managing-image-presets#defining-image-preset-options-with-image-modifiers).
+Beyond the common image settings available in the UI, Dynamic Media supports numerous advanced image modifications that you can specify in the Image Modifiers field. See [Defining image preset options with Image Modifiers](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/dynamic/managing-image-presets#defining-image-preset-options-with-image-modifiers).
 
 -->
 
@@ -286,4 +287,4 @@ Beyond the common image settings available in the UI, Dynamic Media supports num
 >* [Integrera resursväljare med olika program](/help/assets/integrate-asset-selector.md)
 >* [Egenskaper för resursväljare](/help/assets/asset-selector-properties.md)
 >* [Integrera resursväljare med dynamiska media med OpenAPI-funktioner](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
->* [Produktvisuella effekter som drivs av AEM Assets Integration för Commerce](https://experienceleague.adobe.com/sv/docs/commerce/product-visuals/overview)
+>* [Produktvisuella effekter som drivs av AEM Assets Integration för Commerce](https://experienceleague.adobe.com/en/docs/commerce/product-visuals/overview)

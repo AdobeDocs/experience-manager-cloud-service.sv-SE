@@ -2,11 +2,12 @@
 title: Kom igång med  [!DNL Assets View]
 description: Så här kommer du åt, inloggningsupplevelsen av, användningsfall som stöds och kända problem i  [!DNL Assets View].
 role: User, Leader
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 51ae6657-f6b5-44b0-a47f-451735ab0d01
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: fb7ce7dbb58be9fef5ab087441457770828d73c8
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,7 @@ Om du vill ändra [!UICONTROL Experience Cloud preferences] klickar du på [!UIC
 
 >[!NOTE]
 >
->Om du navigerar till Assets-vyn och ser ett `Network Error`-meddelande kontrollerar du att du har utfört instruktionerna som nämns i artikeln [Cross-Origin Resource Sharing (CORS) &#x200B;](/help/headless/deployment/cross-origin-resource-sharing.md) .
+>Om du navigerar till Assets-vyn och ser ett `Network Error`-meddelande kontrollerar du att du har utfört instruktionerna som nämns i artikeln [Cross-Origin Resource Sharing (CORS) ](/help/headless/deployment/cross-origin-resource-sharing.md) .
 
 ## [!DNL Assets View] användningsfall {#use-cases}
 
@@ -60,13 +61,13 @@ De olika DAM-aktiviteterna (Digital Asset Management) som du kan utföra med [!D
 
 ## Nästa steg {#next-steps}
 
-* [Titta på en video för att komma igång med Assets View](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/getting-started.html?lang=sv-SE)
+* [Titta på en video för att komma igång med Assets View](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/getting-started.html)
 
 * Ge produktfeedback med alternativet [!UICONTROL Feedback] som finns i användargränssnittet i Assets View
 
 * Ge feedback om dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
 
 
 <!--TBD: Merge the below rows in the table when the use cases are documented/available.

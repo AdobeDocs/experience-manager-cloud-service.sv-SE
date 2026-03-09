@@ -1,12 +1,13 @@
 ---
 title: Uppdatering  [!DNL Workfront for Experience Manager enhanced connector]
 description: Uppdatering  [!DNL Workfront for Experience Manager enhanced connector]
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 09276b4d-a7c8-4927-8c0a-40eda48e55a7
 feature: Workfront Integrations and Apps
 role: Admin
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -17,14 +18,14 @@ Med [!UICONTROL Experience Manager Assets as a Cloud Service] kan du uppdatera [
 
 >[!TIP]
 >
->Söker du efter [!DNL Workfront for Experience Manager enhanced connector] uppdateringsdokumentation för AEM 6.5? Klicka [här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-connector-install.html?lang=sv-SE##update-enhanced-connector-for-workfront).
+>Söker du efter [!DNL Workfront for Experience Manager enhanced connector] uppdateringsdokumentation för AEM 6.5? Klicka [här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-connector-install.html?lang=en##update-enhanced-connector-for-workfront).
 
 
 Uppdatera [!DNL Workfront for Experience Manager enhanced connector] till den senaste versionen:
 
 1. Hämta den senaste versionen av den utökade anslutningen från [Adobe Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/workfront-tools.ui.apps.zip).
 
-1. [Åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/accessing-repos.html?lang=sv-SE) och klona din AEM as a Cloud Service-databas från Cloud Manager.
+1. [Åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/accessing-repos.html?lang=en) och klona din AEM as a Cloud Service-databas från Cloud Manager.
 
 1. Öppna den klonade Experience Manager as a Cloud Service-databasen med valfri integrerad utvecklingsmiljö.
 
@@ -85,4 +86,4 @@ Uppdatera [!DNL Workfront for Experience Manager enhanced connector] till den se
 
 1. Överför ändringarna till databasen.
 
-1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE).
+1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).

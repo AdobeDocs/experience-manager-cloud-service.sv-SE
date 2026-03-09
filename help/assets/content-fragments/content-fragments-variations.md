@@ -1,13 +1,14 @@
 ---
 title: Variationer - innehåll i redigeringsfragment (Assets - innehållsfragment)
 description: Förstå hur varianter av innehållsfragment gör att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte, vilket ökar flexibiliteten.
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: af05aae6-d535-4007-ba81-7f41213ff152
 feature: Content Fragments
 role: User
 solution: Experience Manager Sites
-source-git-commit: 8dc6874f3f8833ef67a4fa93d2a830fa8485b593
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '2530'
+source-wordcount: '2536'
 ht-degree: 4%
 
 ---
@@ -105,7 +106,7 @@ Textredigeraren i helskärmsläge innehåller följande:
 * Åtkomst till olika [åtgärder](#actions)
 * Beroende på [format](#formats) kan ytterligare formateringsalternativ användas ([RTF](#rich-text))
 
-### Åtgärder {#actions}
+### Instruktioner {#actions}
 
 Följande åtgärder är också tillgängliga (för alla [format](#formats)) när helskärmsredigeraren (d.v.s. flerradig text) är öppen:
 
@@ -502,7 +503,7 @@ När du redigerar en variant har du tillgång till åtgärden för att synkronis
 
 >[!CAUTION]
 >
->Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**&#x200B;till varianten*.
+>Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**till varianten*.
 >
 >Endast varianternas aktuella element synkroniseras.
 >

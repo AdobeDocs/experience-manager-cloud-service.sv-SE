@@ -5,10 +5,11 @@ contentOwner: AG
 mini-toc-levels: 1
 feature: Collections, Asset Management
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: b0798adc-56a4-4577-b4ee-8d1fca3bff09
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '2245'
+source-wordcount: '2251'
 ht-degree: 13%
 
 ---
@@ -17,7 +18,7 @@ ht-degree: 13%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-collections.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-collections.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 En samling är en uppsättning resurser i Adobe Experience Manager Assets. Använd samlingar för att dela resurser mellan användare. Uppsättningen kan vara en statisk samling eller en dynamisk samling som baseras på sökresultat.
@@ -80,7 +81,7 @@ En smart samling använder ett sökvillkor för att dynamiskt fylla i resurser. 
 
 1. Navigera till användargränssnittet för Assets och välj ikonen **[!UICONTROL Search]**.
 1. Ange söknyckelordet i rutan Omni Search och välj `Enter`. Välj ikonen GlobalNav om du vill visa panelen Filter och använda ett sökfilter från sökpanelen.
-1. Välj **[!UICONTROL Files]** i listan **[!UICONTROL Files & Folders]**.
+1. Välj **[!UICONTROL Files & Folders]** i listan **[!UICONTROL Files]**.
 1. Välj **[!UICONTROL Save Smart Collection]**.
 1. Ange ett namn för samlingen. Välj **[!UICONTROL Public]** om du vill lägga till DAM-användargruppen med visningsrollen i den smarta samlingen.
 
@@ -112,7 +113,7 @@ Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras
 1. Markera `Enter` med markören i sökrutan.
 1. Välj ikonen GlobalNav för att visa panelen Filter.
 1. Välj den smarta samling du vill ändra i listan **[!UICONTROL Saved Searches]**. På sökpanelen visas de filter som har konfigurerats för den sparade sökningen.
-1. Välj **[!UICONTROL Files]** i listan **[!UICONTROL Files & Folders]**.
+1. Välj **[!UICONTROL Files & Folders]** i listan **[!UICONTROL Files]**.
 1. Ändra ett eller flera filter efter behov. Välj **[!UICONTROL Edit Smart Collection]**. Du kan också redigera namnet på den smarta samlingen.
 1. Välj **[!UICONTROL Save]**. Dialogrutan **[!UICONTROL Edit Smart Collection]** visas.
 1. Välj **[!UICONTROL Overwrite]** om du vill ersätta den ursprungliga smarta samlingen med den redigerade samlingen. Du kan också välja **[!UICONTROL Save As]** om du vill spara den redigerade samlingen separat.

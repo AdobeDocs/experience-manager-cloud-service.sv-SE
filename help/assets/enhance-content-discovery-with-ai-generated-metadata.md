@@ -3,13 +3,14 @@ title: Förbättra innehållsidentifiering med AI-genererade metadata i administ
 description: Lär dig förbättra innehållsidentifiering med AI-genererade metadata i administratörsvyn
 feature: Smart Tags,Tagging
 role: Admin,User
-source-git-commit: 3f44e74488fc73c406fefb6decc41782859d029b
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
+exl-id: c76379e3-6bdf-4dba-9d2b-f2120f85052f
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
-
 
 # Förbättra innehållsidentifiering med AI-genererade metadata {#ai-smart-tags}
 

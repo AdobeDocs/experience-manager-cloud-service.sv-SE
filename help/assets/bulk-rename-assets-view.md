@@ -2,10 +2,11 @@
 title: Byt namn på och gruppera resurser om namn i  [!DNL Assets view]
 description: Lär dig hur du byter namn på resurser gruppvis med det nya användargränssnittet i Assets (Assets-vyn). Det gör det möjligt att byta namn på flera resurser samtidigt.
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: e041811b-0246-408f-9246-248da55f66a1
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
@@ -36,7 +37,7 @@ Följ stegen nedan om du vill byta namn på huvuddelen av resurserna samtidigt m
 
 1. Klicka på **[!UICONTROL Execute]** om du vill tillåta att AI byter namn på resurser så som anges i uppmaningen.
 
-1. [Valfritt] Klicka på ikonen ![Ångra &#x200B;](assets/do-not-localize/undo.svg) om du vill ångra eller avbryta den senaste åtgärden du utförde.
+1. [Valfritt] Klicka på ikonen ![Ångra ](assets/do-not-localize/undo.svg) om du vill ångra eller avbryta den senaste åtgärden du utförde.
 
 1. Kontrollera ändringarna i kolumnen [!UICONTROL New name preview] och klicka på **[!UICONTROL Save]**.
 
@@ -61,10 +62,10 @@ Nedan följer några exempel på hur du kan använda AI för att byta namn på r
 
 ## Nästa steg {#next-steps}
 
-* [Titta på en video om hur du hanterar metadataformulär i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/configuring/metadata-forms.html?lang=sv-SE)
+* [Titta på en video om hur du hanterar metadataformulär i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/configuring/metadata-forms.html)
 
 * Ge produktfeedback med alternativet [!UICONTROL Feedback] som finns i användargränssnittet i Assets-vyn
 
 * Ge feedback om dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)

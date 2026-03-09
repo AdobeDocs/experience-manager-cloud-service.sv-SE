@@ -4,10 +4,11 @@ description: Spåra användarbetyg och användningsstatistik för bilder som anv
 contentOwner: AG
 feature: Asset Insights, Asset Reports
 role: User, Leader
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: e268453b-e7c0-4aa4-bd29-2686edb5f99a
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '852'
 ht-degree: 3%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 3%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/asset-insights.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/asset-insights.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Med Assets Insights-funktionen kan ni spåra användarbetyg och användningsstatistik för bilder som används på tredjepartswebbplatser, marknadsföringskampanjer och Adobe kreativa lösningar. Det ger insikter om bildens prestanda och popularitet.
@@ -116,9 +117,9 @@ Assets Insights fetches usage data for assets from Adobe Analytics report suites
 
 1. När autentiseringen är klar visas rapportsviterna i listrutan. Välj den Adobe Analytics **[!UICONTROL Report Suite]** från vilken du vill att Assets Insights ska hämta data. Klicka på **[!UICONTROL Add]**.
 
-1. Klicka på **[!UICONTROL Done]** när [!DNL Experience Manager] har konfigurerat rapportsviten.
+1. Klicka på [!DNL Experience Manager] när **[!UICONTROL Done]** har konfigurerat rapportsviten.
 
-Mer information finns i [Adobe Analytics webbtjänster](https://experienceleague.adobe.com/docs/analytics/admin/company-settings/web-services-admin.html?lang=sv-SE#api-access-information).
+Mer information finns i [Adobe Analytics webbtjänster](https://experienceleague.adobe.com/docs/analytics/admin/company-settings/web-services-admin.html#api-access-information).
 
 ### Sidspårare {#page-tracker}
 
@@ -128,7 +129,7 @@ När du har konfigurerat ditt Adobe Analytics-konto genereras sidspårningskoden
 
    ![chlimage_1-73](assets/chlimage_1-73.png)
 
-1. Klicka på **[!UICONTROL Insights Page Tracker]**-kortet på sidan **[!UICONTROL Navigation]**.
+1. Klicka på **[!UICONTROL Navigation]**-kortet på sidan **[!UICONTROL Insights Page Tracker]**.
 1. Klicka på **[!UICONTROL Download]** för att hämta sidspårningskod.
 
 <!--

@@ -4,10 +4,11 @@ description: Dynamic Media har redan en fördefinierad adaptiv videokodningsprof
 contentOwner: Rick Brough
 feature: Asset Management,Video Profiles,Renditions,Best Practices
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 07bfd353-c105-4677-a094-b70c1098fb7f
-source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '3517'
+source-wordcount: '3523'
 ht-degree: 4%
 
 ---
@@ -94,7 +95,7 @@ I följande tabell visas de effektivaste strategierna för kodning av profiler f
 
 ## Använda smart beskärning i videoprofiler {#about-smart-crop-video}
 
-Smart beskärning för video är en valfri funktion i videoprofiler. Det är ett verktyg som använder Adobe AI för att automatiskt identifiera och beskära fokuspunkten i adaptiv video eller progressiv video som du har överfört, oavsett storlek.
+Smart beskärning för video är en valfri funktion i videoprofiler. Det är ett verktyg som använder Adobe AI för att automatiskt identifiera och beskära fokalpunkten i adaptiv video eller progressiv video som du har överfört, oavsett storlek.
 
 De videoformat som stöds för smart beskärning är MP4, MKV, MOV, AVI, FLV och WMV.
 

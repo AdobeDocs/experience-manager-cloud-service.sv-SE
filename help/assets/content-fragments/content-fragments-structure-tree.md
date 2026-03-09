@@ -1,20 +1,21 @@
 ---
 title: Strukturträd för innehållsfragment (Assets - innehållsfragment)
-description: Använd funktionen Strukturträd i Content Fragment Editor i AEM för att bättre förstå rubriklöst innehåll.
+description: Använd strukturträdsfunktionen i Content Fragment Editor i AEM för att få en bättre förståelse för rubriklöst innehåll.
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 4a134f04-e580-4f69-9d11-0a2fc83a4b3a
 feature: Content Fragments
 role: User
 solution: Experience Manager Sites
-source-git-commit: 86a2c5f35d82010c84b74b6b5f0da09fd87c2b7a
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
 
 # Strukturträd för innehållsfragment {#content-fragment-structure-tree}
 
-Använd funktionen Strukturträd i Content Fragment Editor i AEM för att bättre förstå ditt innehåll, särskilt för rubrikfri leverans.
+Använd strukturträdsfunktionen i Content Fragment Editor i AEM för att få en bättre förståelse för ditt innehåll, särskilt för rubrikfri leverans.
 
 >[!NOTE]
 >

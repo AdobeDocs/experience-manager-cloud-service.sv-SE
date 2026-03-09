@@ -4,10 +4,11 @@ description: Lär dig hur du hanterar förfallotillstånd för mediefiler och in
 contentOwner: AG
 feature: Asset Management,DRM
 role: User, Admin
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: fa5f94df-1c15-4593-afcb-1d24508da2bf
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1319'
 ht-degree: 2%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 2%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/drm.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/drm.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Digitala resurser är ofta kopplade till en licens som anger användningsvillkoren och hur länge de ska användas. Med hjälp av plattformen [!DNL Experience Manager] kan du effektivt hantera förfalloinformation för mediefiler och licensieringsinformation.
@@ -36,13 +37,13 @@ Så här visar du referenser till webbsidor och sammansatta resurser för en res
 
 1. Navigera till resursen, markera resursen och klicka på ikonen ![för referens till vänster spår](assets/do-not-localize/content-rail-icon.png). Den vänstra listen öppnas.
 1. Välj **[!UICONTROL References]** i den vänstra listen.
-1. För förfallna resurser visar [!UICONTROL References] förfallostatusen som **[!UICONTROL Asset is Expired]**. Om resursen har upphört att gälla för delresurser visas statusen **[!UICONTROL Asset has Expired Sub-Assets]** på [!UICONTROL References]-listen.
+1. För förfallna resurser visar [!UICONTROL References] förfallostatusen som **[!UICONTROL Asset is Expired]**. Om resursen har upphört att gälla för delresurser visas statusen [!UICONTROL References] på **[!UICONTROL Asset has Expired Sub-Assets]**-listen.
 
 ### Sök efter utgångna resurser {#search-expired-assets}
 
 Så här söker du efter en utgången resurs, inklusive underresurser som har gått ut:
 
-1. Klicka på **[!UICONTROL Search]** i verktygsfältet i [!DNL Assets]-konsolen och tryck på `Enter`.
+1. Klicka på [!DNL Assets] i verktygsfältet i **[!UICONTROL Search]**-konsolen och tryck på `Enter`.
 
 1. Klicka på ikonen GlobalNav och välj alternativet **[!UICONTROL Expiry Status]**.
 
@@ -102,7 +103,7 @@ Konsolen [!DNL Assets] kan visa olika lägen för resurser. Beroende på det akt
 
 1. Om du vill visa sidan med resursinformation väljer du en resurs i [!DNL Assets]-gränssnittet och klickar på **[!UICONTROL Properties]**.
 
-1. Ange ett förfallodatum för resursen från fältet **[!UICONTROL Expires]** på fliken [!UICONTROL Advanced].
+1. Ange ett förfallodatum för resursen från fältet [!UICONTROL Advanced] på fliken **[!UICONTROL Expires]**.
 
 1. Klicka på **[!UICONTROL Save]** och sedan på **[!UICONTROL Close]** för att visa resurskonsolen.
 
@@ -147,7 +148,7 @@ En tillgång anses vara skyddad om något av dessa villkor är uppfyllt:
 
 1. Markera de resurser som du vill hämta i kortvyn och välj **[!UICONTROL Download]**.
 1. På sidan **[!UICONTROL Copyright Management]** väljer du den resurs du vill hämta i listan.
-1. Välj **[!UICONTROL Agree]** i rutan [!UICONTROL License]. En bock visas bredvid resursen. Välj alternativet **[!UICONTROL Download]**.
+1. Välj [!UICONTROL License] i rutan **[!UICONTROL Agree]**. En bock visas bredvid resursen. Välj alternativet **[!UICONTROL Download]**.
 
    >[!NOTE]
    >

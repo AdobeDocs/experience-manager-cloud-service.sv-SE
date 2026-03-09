@@ -1,12 +1,13 @@
 ---
 title: Hantera meddelanden
 description: Övervaka åtgärderna som utförs på de resurser eller mappar som är tillgängliga i databasen med hjälp av vymeddelanden i Assets.
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 1fe6a845-37d5-43c2-bb96-c5b149c238ab
 feature: Assets Essentials
 role: User, Leader
-source-git-commit: 4d31745d4ada9e68ffefbba3dc91995037f205b9
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---

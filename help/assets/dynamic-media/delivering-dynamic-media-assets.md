@@ -4,10 +4,11 @@ description: Lär dig hur du levererar Dynamic Media-resurser till dina webbsido
 contentOwner: Rick Brough
 feature: Asset Management
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 4557b561-b3c4-4d6f-8044-2069bda41613
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---

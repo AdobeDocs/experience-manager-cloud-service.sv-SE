@@ -4,10 +4,11 @@ description: Lär dig hur du förhandsgranskar 3D-resurser i Experience Manager.
 contentOwner: Rick Brough
 feature: 3D Assets
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: e873bd25-f841-4063-824f-7e48f40bb678
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '621'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/previewing-3d-assets.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/previewing-3d-assets.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Experience Manager Assets hanterar, förhandsvisar och levererar 3D-resurser.
@@ -70,7 +71,7 @@ Dessutom är funktioner i klientdatorn - som en arbetsstation, bärbar dator ell
 
 1. Se till att du har överfört 3D-resurser till Experience Manager.
 Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-assets) och [Överför resurser](/help/assets/manage-digital-assets.md#uploading-assets).
-1. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** från Experience Manager på sidan **[!UICONTROL Navigation]**.
+1. Gå till **[!UICONTROL Navigation]** > **[!UICONTROL Assets]** från Experience Manager på sidan **[!UICONTROL Files]**.
 
    ![Navigeringssida](/help/assets/dynamic-media/assets/navigation-assets.png)
 

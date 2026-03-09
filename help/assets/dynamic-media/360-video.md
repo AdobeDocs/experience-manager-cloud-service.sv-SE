@@ -4,10 +4,11 @@ description: Lär dig hur du arbetar med 360- och VR-video (Virtual Reality) i D
 contentOwner: Rick Brough
 feature: 360 VR Video
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: ffd092d3-2188-47b0-a475-8bfa660c03c1
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ Du kan använda 360/VR-visningsprogrammet för att återge ekvirektangulär vide
 
 Spatial audio stöds inte för närvarande. Om ljudet blandas i stereo ändras inte balansen (L/R) när kunden ändrar kamerans visningsvinkel.
 
-Se [Använda dynamiska media 360-videor och anpassade videominiatyrer med AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.html?lang=sv-SE#dynamic-media).
+Se [Använda dynamiska media 360-videor och anpassade videominiatyrer med AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.html#dynamic-media).
 
 Se även [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
@@ -37,7 +38,7 @@ Välj [Space Station 360](https://s7d1.scene7.com/s7viewers/html5/Video360Viewer
 
 Du kan använda Adobe Premier Pro för att visa och redigera 360/VR-film. Du kan till exempel placera logotyper och text på rätt sätt i en scen och använda effekter och övergångar som är särskilt utformade för ekvirektangulära medier.
 
-Se [Redigera 360/VR-video](https://helpx.adobe.com/se/premiere-pro/how-to/edit-360-vr-video.html).
+Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-vr-video.html).
 
 ## Ladda upp material som ska användas med 360-videovisningsprogrammet {#uploading-assets-for-use-with-the-video-viewer}
 

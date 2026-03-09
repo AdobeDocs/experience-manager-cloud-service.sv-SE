@@ -4,10 +4,11 @@ description: Lär dig hur du automatiserar skapande av bilduppsättningar och sn
 contentOwner: Rick Brough
 feature: Image Presets,Viewer Presets
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 022ee347-54ec-4cec-b808-9eb3a9e51424
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '3192'
+source-wordcount: '3198'
 ht-degree: 0%
 
 ---
@@ -71,9 +72,9 @@ När du är klar med att skapa en gruppuppsättningsförinställning använder d
    ![bsp-create1.png](/help/assets/assets-dm/bsp-create1.png)
 
 1. På sidan **[!UICONTROL Batch Set Presets]**, nära det övre högra hörnet, väljer du **[!UICONTROL Create]**.
-1. Ange ett beskrivande namn i textfältet **[!UICONTROL Preset Name]** i dialogrutan **[!UICONTROL Create Batch Set Preset]**. Förinställningsnamnet kan inte redigeras om du senare bestämmer dig för att ändra det.
+1. Ange ett beskrivande namn i textfältet **[!UICONTROL Create Batch Set Preset]** i dialogrutan **[!UICONTROL Preset Name]**. Förinställningsnamnet kan inte redigeras om du senare bestämmer dig för att ändra det.
 
-1. Välj **[!UICONTROL ImageSet]** eller **[!UICONTROL SpinSet]** i listrutan **[!UICONTROL Preset Type]**. Se till att du väljer rätt förinställningstyp. Den går inte att redigera senare.
+1. Välj **[!UICONTROL Preset Type]** eller **[!UICONTROL ImageSet]** i listrutan **[!UICONTROL SpinSet]**. Se till att du väljer rätt förinställningstyp. Den går inte att redigera senare.
 1. Välj **[!UICONTROL Create]**.
 1. Till höger om sidan **[!UICONTROL Edit Batch Set Preset]** anger du de redigeringsbara alternativ som du vill ha under rubrikerna **[!UICONTROL Preset Details]** och **[!UICONTROL Set Naming Convention]**.
 Mer information om de redigeringsbara alternativ som är tillgängliga finns i [Förinställningsdetaljer, Ange namngivningskonvention och Regelresultat - RegX-alternativ](#features-options-bsp).
@@ -146,7 +147,7 @@ Bearbeta resurser i en mapp på nytt om du upplever något av följande två sce
 1. På sidan **[!UICONTROL Batch Set Presets]**, till vänster om kolumnen **[!UICONTROL Preset Name]**, markerar du kryssrutan för varje gruppuppsättningsförinställning som du vill tillämpa på mappar.
 1. Välj **[!UICONTROL Apply Batch Preset to Folders]** i verktygsfältet.
 1. På sidan **[!UICONTROL Select Folders]** markerar du kryssrutan för varje mapp som du vill använda gruppuppsättningsförinställningarna på.
-1. Välj **[!UICONTROL Apply]** i det övre högra hörnet på sidan **[!UICONTROL Select Folders]**.
+1. Välj **[!UICONTROL Select Folders]** i det övre högra hörnet på sidan **[!UICONTROL Apply]**.
 
 ### Använda gruppuppsättningsförinställningar från egenskapssidan för en resursmapp {#apply-bsp-to-folders-via-properties}
 
@@ -182,7 +183,7 @@ Om du vill att den nyligen redigerade förinställningen ska tillämpas på de b
 1. På sidan **[!UICONTROL Batch Set Presets]**, till vänster om kolumnen **[!UICONTROL Preset Name]**, kontrollerar du den förinställning för gruppuppsättning som du vill ändra.
 1. Välj **[!UICONTROL Edit Batch Set Preset]** i verktygsfältet.
 1. Redigera förinställningen efter behov.
-1. Välj **[!UICONTROL Save]** i det övre högra hörnet på sidan **[!UICONTROL Batch Set Preset]**.
+1. Välj **[!UICONTROL Batch Set Preset]** i det övre högra hörnet på sidan **[!UICONTROL Save]**.
 
 ## Kopiera en befintlig gruppuppsättningsförinställning {#copy-bsp}
 
@@ -195,7 +196,7 @@ Om du kopierar en befintlig förinställning som är en referens från resursmap
 1. Välj Experience Manager logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
 1. På sidan **[!UICONTROL Batch Set Presets]**, till vänster om kolumnen **[!UICONTROL Preset Name]**, markerar du kryssrutan för den gruppuppsättningsförinställning som du vill kopiera.
 1. Välj **[!UICONTROL Copy]** i verktygsfältet.
-1. Skriv ett nytt namn på förinställningen i textrutan **[!UICONTROL Title]** i dialogrutan **[!UICONTROL Copy Batch Set Preset]**.
+1. Skriv ett nytt namn på förinställningen i textrutan **[!UICONTROL Copy Batch Set Preset]** i dialogrutan **[!UICONTROL Title]**.
 
    ![bsp-copy2.png](/help/assets/assets-dm/bsp-copy2.png)
 
@@ -219,11 +220,11 @@ Det finns två metoder som du kan använda för att ta bort gruppuppsättningsf�
 1. Välj **[!UICONTROL Remove Batch Preset from Folders]** i verktygsfältet.
 
 1. På sidan **[!UICONTROL Select Folders]** markerar du en eller flera mappar där du vill ta bort förinställningarna för gruppuppsättningar.
-1. Välj **[!UICONTROL Remove]** i det övre högra hörnet på sidan **[!UICONTROL Select Folders]**.
+1. Välj **[!UICONTROL Select Folders]** i det övre högra hörnet på sidan **[!UICONTROL Remove]**.
 
    ![bsp-remove-from-folders3.png](/help/assets/assets-dm/bsp-remove-from-folders3.png)
 
-1. Välj **[!UICONTROL Remove]** i dialogrutan **[!UICONTROL Remove profile]**.
+1. Välj **[!UICONTROL Remove profile]** i dialogrutan **[!UICONTROL Remove]**.
 
 ### Ta bort gruppuppsättningsförinställningar från en mapps egenskapssida {#remove-bsp-from-folders-via-properties}
 
@@ -255,7 +256,7 @@ Om du vill *ta bort* förinställningar från mappar i stället läser du [Ta bo
 
    ![bsp-delete2.png](/help/assets/assets-dm/bsp-delete2.png)
 
-1. Välj **[!UICONTROL Delete]** i dialogrutan **[!UICONTROL Delete Batch Set Presets]**.
+1. Välj **[!UICONTROL Delete Batch Set Presets]** i dialogrutan **[!UICONTROL Delete]**.
 
    Om en resursmapp refererar till den förinställning du vill ta bort väljer du **[!UICONTROL Force Delete]** i stället.
 

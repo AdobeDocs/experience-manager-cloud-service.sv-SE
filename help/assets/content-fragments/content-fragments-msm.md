@@ -1,13 +1,14 @@
 ---
 title: Återanvänd innehållsfragment med MSM och Live-kopior
 description: Lär dig hur du använder funktionen Live Copy i MSM för att använda samma, eller liknande, innehåll i innehållsfragment på flera platser, samtidigt som du synkroniserar med källinnehållet.
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: f050b2d1-856c-4cdb-ac74-bc78016f144a
 feature: Content Fragments
 role: User
 solution: Experience Manager Sites
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---

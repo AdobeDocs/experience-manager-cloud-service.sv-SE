@@ -1,13 +1,14 @@
 ---
 title: Hantera innehållsfragment (Assets - innehållsfragment)
 description: Lär dig hur du använder Assets-konsolen för att hantera dina AEM Content Fragments, antingen som grund för ditt headless-innehåll eller för att skapa sidor.
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 333ad877-db2f-454a-a3e5-59a936455932
 feature: Content Fragments
 role: User, Admin
 solution: Experience Manager Sites
-source-git-commit: ce807274d6138473ff9661897a0816e0feb99f15
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1947'
 ht-degree: 4%
 
 ---
@@ -139,7 +140,7 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 
 >[!NOTE]
 >
->Många av dessa är [standardåtgärder för Assets](/help/assets/manage-digital-assets.md) och/eller [AEM-datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/get-started.html?lang=sv-SE).
+>Många av dessa är [standardåtgärder för Assets](/help/assets/manage-digital-assets.md) och/eller [AEM-datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/get-started.html).
 
 ## Öppna fragmentredigeraren {#opening-the-fragment-editor}
 
@@ -183,7 +184,7 @@ Navigera genom de olika lägena med hjälp av ikonerna på sidopanelen:
 * [Associerat innehåll](#associating-content-with-your-fragment)
 * [Metadata](#viewing-and-editing-the-metadata-properties-of-your-fragment)
 * [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
-* [Förhandsgranska](/help/assets/content-fragments/content-fragments-json-preview.md)
+* [Förhandsgranskning](/help/assets/content-fragments/content-fragments-json-preview.md)
 
 ![Lägen i redigeraren för innehållsfragment](assets/cfm-managing-04.png)
 
@@ -386,7 +387,7 @@ Du kan få åtkomst till detta:
 * Efter skapande; använder [åtgärder som är tillgängliga i Assets-konsolen](#actions-for-a-content-fragment-assets-console).
 * Från [redigeraren för innehållsfragment](#toolbar-actions-in-the-content-fragment-editor).
 
-När du [publicerar en sida som använder fragmentet &#x200B;](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
+När du [publicerar en sida som använder fragmentet ](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
 
 >[!CAUTION]
 >

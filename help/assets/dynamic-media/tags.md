@@ -4,10 +4,11 @@ description: Läs om tillägget Dynamic Media Viewer för Experience Platform Ta
 contentOwner: Rick Brough
 feature: Asset Reports
 role: Admin,User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: a71fef45-c9a4-4091-8af1-c3c173324b7a
-source-git-commit: 05c6c8bcd8140bed9a30179c5a12d3a3fa8cb37d
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '6272'
+source-wordcount: '6278'
 ht-degree: 6%
 
 ---
@@ -24,7 +25,7 @@ Tillägget *Dynamiska medievyer* för Experience Platform-taggar fungerar med Dy
 
 Integrationen innebär att du kan spåra användningen av dynamiska medievyer på din webbplats med Adobe Analytics. Samtidigt kan du använda händelser och data som visas av visningsprogrammen med andra Experience Platform Tags-tillägg som kommer från Adobe eller en tredje part.
 
-Mer information om Adobe-tillägg och tredjepartstillägg finns i [Adobe-tillägg](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/extensions/overview) i användarhandboken för Experience Platform-taggar.
+Mer information om Adobe-tillägg och tredjepartstillägg finns i [Adobe-tillägg](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/overview) i användarhandboken för Experience Platform-taggar.
 
 **Det här avsnittet är avsett för följande:** Webbplatsadministratörer, utvecklare av Adobe Experience Manager-programmet och personer i Operations.
 
@@ -33,7 +34,7 @@ Mer information om Adobe-tillägg och tredjepartstillägg finns i [Adobe-tilläg
 * Integrering med Experience Platform Tags för dynamiska medievyer fungerar inte i Experience Manager författarnod. Du kan inte se någon spårning från en WCM-sida förrän den har publicerats.
 * Integrering med Experience Platform Tags för Dynamic Media-visningsprogram stöds inte för&quot;popup&quot;-åtgärdsläge, där visningsprogrammets URL hämtas med knappen &quot;URL&quot; på sidan Resursinformation.
 * Integrering med Experience Platform Tags kan inte användas samtidigt med integrering med äldre visningsprogram med Analytics (med parametern `config2=`).
-* Stödet för videospårning är begränsat till enbart huvuduppspelningsspårning, vilket beskrivs i [Spårningsöversikt](https://experienceleague.adobe.com/sv/docs/media-analytics/using/tracking/track-core-overview#player-events). I synnerhet stöds inte QoS, Ads, Chapter/Segments eller Errors tracking.
+* Stödet för videospårning är begränsat till enbart huvuduppspelningsspårning, vilket beskrivs i [Spårningsöversikt](https://experienceleague.adobe.com/en/docs/media-analytics/using/tracking/track-core-overview#player-events). I synnerhet stöds inte QoS, Ads, Chapter/Segments eller Errors tracking.
 * Lagringsvaraktighetskonfigurationen för dataelement stöds inte för dataelement med tillägget *Dynamiska medievyer*. Lagringstid måste anges till **[!UICONTROL None]**.
 
 ### Användningsexempel för integreringen {#use-cases-for-the-integration}
@@ -68,7 +69,7 @@ Tillägget Dynamic Media Viewer håller automatiskt värdena för dataelementen 
 
 När du har definierat det kan ett dataelement användas på andra platser i användargränssnittet för Experience Platform-taggar med hjälp av widgeten för dataelementväljaren. **Ange variabelåtgärd** för Adobe Analytics-tillägget i en regel refererar till dataelement som definierats för spårning av dynamiska medievyer (se nedan).
 
-Se [Dataelement](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/ui/data-elements) i användarhandboken för Experience Platform-taggar.
+Se [Dataelement](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/data-elements) i användarhandboken för Experience Platform-taggar.
 
 #### Om regler i Experience Platform-taggar {#about-rules-in-adobe-launch}
 
@@ -94,7 +95,7 @@ I avsnittet Åtgärder måste du ha en *Ange variabler*-åtgärd. Den här åtg�
 
 Åtgärden **Skicka Beacon** måste följa åtgärden **Ange variabler**. Åtgärden *Skicka Beacon* skickar data till analysspårningsservern. Båda åtgärderna, *Ange variabler* och *Skicka fyr*, kommer från Adobe Analytics-tillägget.
 
-Se [Regler](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/ui/rules) i användarhandboken för Experience Platform-taggar.
+Se [Regler](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) i användarhandboken för Experience Platform-taggar.
 
 #### Exempelkonfiguration {#sample-configuration}
 
@@ -104,7 +105,7 @@ I följande exempelkonfiguration i Experience Platform Tags visas hur du spårar
 
    ![image2019-11](assets/image2019-11.png)
 
-1. Definiera en regel *TrackAssetOnLoad* från fliken **[!UICONTROL Rules]**.
+1. Definiera en regel **[!UICONTROL Rules]** TrackAssetOnLoad *från fliken*.
 
    I den här regeln använder fältet **[!UICONTROL Event]** händelsen **[!UICONTROL LOAD]** från tillägget för dynamiska medievyer.
 
@@ -128,7 +129,7 @@ När ett Experience Cloud-konto prenumererar på Adobe Analytics för ljud och v
 
 Se [Installation och konfiguration av tillägg](#installing-and-setup-of-extensions).
 
-Stödet för videospårning är för närvarande begränsat till enbart huvuduppspelningsspårning, vilket beskrivs i [Spårningsöversikt](https://experienceleague.adobe.com/sv/docs/media-analytics/using/tracking/track-core-overview#player-events). I synnerhet stöds inte QoS, Ads, Chapter/Segments eller Errors tracking.
+Stödet för videospårning är för närvarande begränsat till enbart huvuduppspelningsspårning, vilket beskrivs i [Spårningsöversikt](https://experienceleague.adobe.com/en/docs/media-analytics/using/tracking/track-core-overview#player-events). I synnerhet stöds inte QoS, Ads, Chapter/Segments eller Errors tracking.
 
 ## Använda tillägget Dynamic Media Viewer {#using-the-dynamic-media-viewers-extension}
 
@@ -150,7 +151,7 @@ Slutför konfigurationsstegen i avsnitten [Konfigurera Adobe Analytics](#configu
 
 Om konfigurationen är korrekt kan du lägga till stöd för Experience Platform-taggar på en webbsida med ett dynamiskt medievisningsprogram.
 
-Mer information om hur du använder inbäddningskoden för Experience Platform-taggbiblioteket finns i [Lägga till Experience Platform-taggar &#x200B;](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-in-websites/configure-tags/add-embed-code) .
+Mer information om hur du använder inbäddningskoden för Experience Platform-taggbiblioteket finns i [Lägga till Experience Platform-taggar ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/configure-tags/add-embed-code) .
 
 Mer information om hur du använder den inbäddade kodfunktionen i Experience Manager Dynamic Media finns i [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
 
@@ -196,7 +197,7 @@ När du väljer det här alternativet återges ett formulär med två fält i da
 
 ![image2019-7-22_12-5-46](assets/image2019-7-22_12-5-46.png)
 
-I referenshandboken för [Dynamiska medievisningsprogram](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers) finns en lista över händelser som stöds av varje visningsprogramtyp. Gå till den specifika visningsprogramsektionen och välj sedan underavsnittet Stöd för Adobe Analytics-spårning. För närvarande dokumenterar inte referenshandboken för Dynamic Media Viewer händelseargument.
+I referenshandboken för [Dynamiska medievisningsprogram](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers) finns en lista över händelser som stöds av varje visningsprogramtyp. Gå till den specifika visningsprogramsektionen och välj sedan underavsnittet Stöd för Adobe Analytics-spårning. För närvarande dokumenterar inte referenshandboken för Dynamic Media Viewer händelseargument.
 
 Nu ska vi titta på livscykeln för de dynamiska medievyerna *Dataelement*. Värdet för ett sådant dataelement fylls i efter att motsvarande Dynamic Media Viewer-händelse inträffar på sidan. Anta till exempel att dataelementet pekar på händelsen **[!UICONTROL LOAD]** och dess &quot;asset&quot;-argument. Värdet för ett sådant dataelement tar emot giltiga data när visningsprogrammet kör LOAD-händelsen för första gången. Om dataelementet pekar på händelsen **[!UICONTROL ZOOM]** och dess &quot;scale&quot;-argument, förblir värdet för dataelementet tomt tills användaren skickar en **[!UICONTROL ZOOM]** -händelse för första gången.
 
@@ -232,7 +233,7 @@ Samplingsuppsättningen ovan påverkar också dataelementvärdets livslängd. V�
 
 Värden för dataelement som hanteras av dynamiska medievisningsprogram lagras inte i den lokala lagringen eller på servern. De lagras bara i klientsidans Experience Platform-taggbibliotek. Värdena för sådana dataelement försvinner när webbsidan läses in igen.
 
-I allmänhet har dataelementsredigeraren stöd för [val av lagringstid](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/ui/data-elements#create-a-data-element). Dataelement som använder tillägget för dynamiska medievyer stöder dock bara alternativet för lagringstid på **[!UICONTROL None]**. Det går att ange andra värden i användargränssnittet, men i det här fallet är dataelementets beteende inte definierat. Tillägget hanterar värdet på dataelementet separat: det dataelement som behåller värdet på visningsprogrammets händelseargument under hela visningsprogrammets livscykel.
+I allmänhet har dataelementsredigeraren stöd för [val av lagringstid](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/data-elements#create-a-data-element). Dataelement som använder tillägget för dynamiska medievyer stöder dock bara alternativet för lagringstid på **[!UICONTROL None]**. Det går att ange andra värden i användargränssnittet, men i det här fallet är dataelementets beteende inte definierat. Tillägget hanterar värdet på dataelementet separat: det dataelement som behåller värdet på visningsprogrammets händelseargument under hela visningsprogrammets livscykel.
 
 ### Regler i tillägget Dynamiska medievyer {#about-rules-in-the-dynamic-media-viewers-extension}
 
@@ -428,7 +429,7 @@ När du har konfigurerat Adobe Analytics konfigureras integreringen för följan
 * Analysvariabler är tillgängliga för att ta emot spårningsdata.
 * Det finns rapporter för att visa data som samlats in inifrån Adobe Analytics.
 
-Se även [Implementeringshandbok för analyser](https://experienceleague.adobe.com/sv/docs/analytics/implementation/home).
+Se även [Implementeringshandbok för analyser](https://experienceleague.adobe.com/en/docs/analytics/implementation/home).
 
 **Så här konfigurerar du Adobe Analytics för integreringen:**
 
@@ -446,7 +447,7 @@ Se även [Implementeringshandbok för analyser](https://experienceleague.adobe.c
 
    Om ingen rapportsvit är tillgänglig måste du eller Adobe Analytics-administratören skapa en innan du kan fortsätta med konfigurationen.
 
-   Se [Rapporter och rapportsviter](https://experienceleague.adobe.com/sv/docs/analytics/admin/admin-tools/manage-report-suites/report-suites-admin) och [Skapa en rapportsvit](https://experienceleague.adobe.com/sv/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
+   Se [Rapporter och rapportsviter](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/report-suites-admin) och [Skapa en rapportsvit](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
 
    I Adobe Analytics hanteras rapportsviter under **[!UICONTROL Admin]** > **[!UICONTROL Report Suites]**.
 
@@ -460,7 +461,7 @@ Se även [Implementeringshandbok för analyser](https://experienceleague.adobe.c
 
    Du kan använda alla variabeltyper som stöds av Adobe Analytics. Din Analytics-implementering måste avgöra lämplig variabeltyp, till exempel Anpassad trafik (`props`) eller Konvertering (`eVar`).
 
-   Se [Översikt över utkast och eVars](https://experienceleague.adobe.com/sv/docs/analytics/implementation/vars/page-vars/evar#vars).
+   Se [Översikt över utkast och eVars](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/evar#vars).
 
    I den här dokumentationen används endast en anpassad trafikvariabel (props) eftersom de blir tillgängliga i en analysrapport inom några minuter efter att en åtgärd har utförts på en webbsida.
 
@@ -507,14 +508,14 @@ När du har konfigurerat Experience Platform Tags ställs följande objekt in f�
 
 En egenskap i Experience Platform Tags är en namngiven konfiguration som håller ihop alla inställningar. Ett bibliotek med konfigurationsinställningarna genereras och publiceras på olika miljönivåer (utveckling, mellanlagring och produktion).
 
-Se även [Konfigurera en markeringsegenskap](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/initial-configuration/configure-tags).
+Se även [Konfigurera en markeringsegenskap](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/initial-configuration/configure-tags).
 
 **Så här skapar du en egenskap i Experience Platform-taggar:**
 
 1. Klicka på **[!UICONTROL New Property]** i Experience Platform Tags.
 1. I dialogrutan **[!UICONTROL Create Property]** anger du ett beskrivande namn, till exempel webbplatsens titel, i fältet **[!UICONTROL Name]**. Exempel: `DynamicMediaViewersProp.`
 1. Ange webbplatsens domän i fältet **[!UICONTROL Domains]**.
-1. Aktivera **[!UICONTROL Configure for extension development (cannot be modified later)]** i listrutan **[!UICONTROL Advanced Options]** om det tillägg som du vill använda - i det här fallet *Dynamiska mediavisare* - inte har släppts än.
+1. Aktivera **[!UICONTROL Advanced Options]** i listrutan **[!UICONTROL Configure for extension development (cannot be modified later)]** om det tillägg som du vill använda - i det här fallet *Dynamiska mediavisare* - inte har släppts än.
 
    ![image2019-7-8_16-3-47](assets/image2019-7-8_16-3-47.png)
 
@@ -534,7 +535,7 @@ Om det behövs måste följande tillägg installeras och konfigureras:
 
 Ingen ytterligare konfiguration behövs, förutom föreslagna värden. Klicka på **[!UICONTROL Save]** när du är klar.
 
-Se [Experience Cloud Identity Service-tillägg](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/extensions/client/id-service/overview).
+Se [Experience Cloud Identity Service-tillägg](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/id-service/overview).
 
 * (Obligatoriskt) *Adobe Analytics*-tillägg
 
@@ -550,11 +551,11 @@ På sidan Installera tillägg anger du rapportsvits-ID:t i fälten **[!UICONTROL
 
 *Konfigurera endast följande objekt om du tänker använda videospårning:*
 
-Expandera **[!UICONTROL General]** på sidan **[!UICONTROL Install Extension]** och ange sedan spårningsservern. Spårningsservern följer mallen `<trackingNamespace>.sc.omtrdc.net`, där `<trackingNamespace>` är den information som hämtas i e-postmeddelandet om etablering.
+Expandera **[!UICONTROL Install Extension]** på sidan **[!UICONTROL General]** och ange sedan spårningsservern. Spårningsservern följer mallen `<trackingNamespace>.sc.omtrdc.net`, där `<trackingNamespace>` är den information som hämtas i e-postmeddelandet om etablering.
 
 Välj **[!UICONTROL Save]**.
 
-Se [Adobe Analytics-tillägg](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/extensions/client/analytics/overview).
+Se [Adobe Analytics-tillägg](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview).
 
 * (Valfritt. Krävs endast om videospårning behövs) *Adobe Media Analytics för ljud och video*-tillägg
 
@@ -562,7 +563,7 @@ Fyll i spårningsserverfältet. Spårningsservern för tillägget *Adobe Media A
 
 Alla andra fält är valfria.
 
-Se [Adobe Media Analytics för ljud- och videotillägg](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/extensions/client/media-analytics/overview).
+Se [Adobe Media Analytics för ljud- och videotillägg](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/media-analytics/overview).
 
 * (Obligatoriskt) Tillägget *Dynamiska medievisningsprogram*
 
@@ -592,7 +593,7 @@ Om du vill ändra konfigurationen för Experience Platform-taggar (inklusive ins
 
 Experience Platform Tags kan ha flera utvecklingsmiljöer, en mellanlagringsmiljö och en produktionsmiljö. Som standard pekar Experience Platform Tags Cloud Configuration i Experience Manager på Experience Manager författarnoden mot Stage-miljön för plattformstaggar. Experience Manager publiceringsnod pekar på produktionsmiljön i Experience Platform Tags. Detta innebär att med standardinställningarna för Experience Manager måste du publicera Experience Platform Tags-biblioteket till mellanlagringsmiljön. Om du gör det kan du använda det i redigeringsläge i Experience Manager. Du kan sedan publicera den i produktionsmiljön så att den kan användas i Experience Manager-publicering.
 
-Mer information om Experience Platform Tags-miljöer finns i [Miljö](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/publish/environments/environments).
+Mer information om Experience Platform Tags-miljöer finns i [Miljö](https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/environments/environments).
 
 Publicering av ett bibliotek omfattar följande två steg:
 
@@ -650,7 +651,7 @@ Publicering av ett bibliotek omfattar följande två steg:
 
    ![image2019-7-15_16-8-9](assets/image2019-7-15_16-8-9.png)
 
-   Mer information om publiceringsprocessen i Experience Platform Tags finns i [Publicera](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/publish/overview).
+   Mer information om publiceringsprocessen i Experience Platform Tags finns i [Publicera](https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview).
 
 ## Konfigurera Adobe Experience Manager för integreringen {#configuring-adobe-experience-manager-for-the-integration}
 
@@ -695,7 +696,7 @@ Experience Manager-konfigurationen består av följande två huvudsteg:
 
 1. Gå till [Adobe Developer Console](https://developer.adobe.com/console/integrations) på en ny flik i webbläsaren.
 
-1. Klicka på **[!UICONTROL New integration]** på sidan **[!UICONTROL Adobe Developer Console Integrations]** i det övre högra hörnet.
+1. Klicka på **[!UICONTROL Adobe Developer Console Integrations]** på sidan **[!UICONTROL New integration]** i det övre högra hörnet.
 1. I dialogrutan **[!UICONTROL Create a new integration]** kontrollerar du att alternativknappen **[!UICONTROL Access an API]** är markerad och sedan klickar du på **[!UICONTROL Continue]**.
 
    ![2019-07-25_13-04-20](assets/2019-07-25_13-04-20.png)
@@ -712,14 +713,14 @@ Experience Manager-konfigurationen består av följande två huvudsteg:
 
    * I området **[!UICONTROL Public key certificates]** överför du filen med den offentliga nyckeln (`*.crt`) som du laddade ned tidigare i dessa steg.
 
-   * Klicka på **[!UICONTROL Admin]** under rubriken **[!UICONTROL Select a role for Experience Platform Tags API]**.
+   * Klicka på **[!UICONTROL Select a role for Experience Platform Tags API]** under rubriken **[!UICONTROL Admin]**.
 
-   * Välj produktprofilen **[!UICONTROL Tags - <your_company_name>]** under rubriken **[!UICONTROL Select one or more product profiles for Experience Platform Tags API]**.
+   * Välj produktprofilen **[!UICONTROL Select one or more product profiles for Experience Platform Tags API]** under rubriken **[!UICONTROL Tags - <your_company_name>]**.
 
    ![2019-07-25_13-49-18](assets/2019-07-25_13-49-18.png)
 
 1. Välj **[!UICONTROL Create integration]**.
-1. Klicka på **[!UICONTROL Continue to integration details]** på sidan **[!UICONTROL Integration created]**.
+1. Klicka på **[!UICONTROL Integration created]** på sidan **[!UICONTROL Continue to integration details]**.
 
    ![2019-07-25_14-16-33](assets/2019-07-25_14-16-33.png)
 
@@ -734,7 +735,7 @@ Experience Manager-konfigurationen består av följande två huvudsteg:
 
 1. Gå tillbaka till sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** som du öppnade tidigare. Klicka på **[!UICONTROL Next]** i det övre högra hörnet av sidan för att öppna sidan **[!UICONTROL Account]** i fönstret **[!UICONTROL Adobe IMS Technical Account Configuration]**.
 
-   (Om du stängde sidan tidigare går du tillbaka till Experience Manager-författaren och går till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. Välj **[!UICONTROL Create]**. Klicka på **[!UICONTROL Experience Platform Tags]** i listrutan **[!UICONTROL Cloud Solution]**. Klicka på namnet på det certifikat som skapades tidigare i listrutan **[!UICONTROL Certificate]**.
+   (Om du stängde sidan tidigare går du tillbaka till Experience Manager-författaren och går till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. Välj **[!UICONTROL Create]**. Klicka på **[!UICONTROL Cloud Solution]** i listrutan **[!UICONTROL Experience Platform Tags]**. Klicka på namnet på det certifikat som skapades tidigare i listrutan **[!UICONTROL Certificate]**.
 
    ![2019-07-25_20-57-50](assets/2019-07-25_20-57-50.png)
    *Adobe IMS Technical Account Configuration - certifikatsida*
@@ -756,7 +757,7 @@ Exempel: `https://ims-na1.adobelogin.com/`
    ![2019-07-25_15-01-53](assets/2019-07-25_15-01-53.png)
    *Detaljsida för integrering - JWT-flik*
 
-1. **[!UICONTROL API Key]** – Gå tillbaka till sidan med integreringsinformation. Välj fliken **[!UICONTROL Overview]** och klicka sedan på **[!UICONTROL Copy]** till höger om fältet **[!UICONTROL API Key (Client ID)]**.
+1. **[!UICONTROL API Key]** – Gå tillbaka till sidan med integreringsinformation. Välj fliken **[!UICONTROL Overview]** och klicka sedan på **[!UICONTROL API Key (Client ID)]** till höger om fältet **[!UICONTROL Copy]**.
 
    Gå tillbaka till sidan **[!UICONTROL Account]** och klistra sedan in nyckeln i respektive fält.
 
@@ -778,7 +779,7 @@ Exempel: `https://ims-na1.adobelogin.com/`
 
    ![2019-07-25_22-08-30](assets/2019-07-25_22-08-30.png)
 
-1. Klicka på **[!UICONTROL Create]** i det övre högra hörnet på sidan **[!UICONTROL Account]**.
+1. Klicka på **[!UICONTROL Account]** i det övre högra hörnet på sidan **[!UICONTROL Create]**.
 
    När Experience Manager IMS är konfigurerat har du nu ett nytt IMSAccount som visas under **[!UICONTROL Adobe IMS Configurations]**.
 
@@ -845,4 +846,4 @@ Det stöds dock i Experience Manager publiceringsnod. Med standardinställningar
 
 Det är möjligt att kringgå denna begränsning. Ange utvecklings- eller mellanlagrings-URL:en för Experience Platform Tags-biblioteket i Experience Platform Tags Cloud Configuration för Experience Manager ovan. När du gör det använder Experience Manager publiceringsnod utvecklings- eller mellanlagringsversionen av Experience Platform Tags-biblioteket.
 
-Mer information om hur du konfigurerar Experience Platform Tags Cloud finns i [Integrera Experience Platform-taggar och Experience Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview#integrations) .
+Mer information om hur du konfigurerar Experience Platform Tags Cloud finns i [Integrera Experience Platform-taggar och Experience Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview#integrations) .

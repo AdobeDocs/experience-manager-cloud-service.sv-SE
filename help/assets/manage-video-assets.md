@@ -4,10 +4,11 @@ description: Överför, förhandsgranska, kommentera och publicera videomaterial
 contentOwner: AG
 feature: Asset Management, Publishing, Collaboration, Video
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 91edce4a-dfa0-4eca-aba7-d41ac907b81e
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '4643'
+source-wordcount: '4655'
 ht-degree: 5%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 5%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/managing-video-assets.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/managing-video-assets.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Videoformatet är en viktig del av ett företags digitala resurser. [!DNL Adobe Experience Manager] erbjuder mogna erbjudanden och funktioner för att hantera hela livscykeln för dina videoresurser efter att de har skapats.
@@ -105,8 +106,8 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
    Om det behövs använder **[!UICONTROL Sign in]** dina Google-kontouppgifter för att se alternativet **[!UICONTROL Console]**.
 
 1. På sidan **[!UICONTROL Dashboard]**, till höger om **[!UICONTROL Google Cloud Platform]**, väljer du listrutan **[!UICONTROL Project]** för att öppna dialogrutan **[!UICONTROL Select a project]**.
-1. Välj **[!UICONTROL New Project]** i dialogrutan **[!UICONTROL Select a project]**.
-1. Skriv namnet på det nya projektet i fältet **[!UICONTROL Project name]** i dialogrutan **[!UICONTROL New Project]**.
+1. Välj **[!UICONTROL Select a project]** i dialogrutan **[!UICONTROL New Project]**.
+1. Skriv namnet på det nya projektet i fältet **[!UICONTROL New Project]** i dialogrutan **[!UICONTROL Project name]**.
 
    Ditt projekt-ID baseras på ditt projektnamn. Välj därför projektnamnet noggrant. Det går inte att ändra det efter att det har skapats. Du måste även ange samma projekt-ID igen när du konfigurerar YouTube i Experience Manager senare. Skriv därför ned den.
 
@@ -114,19 +115,19 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
 1. Gör något av följande:
 
-   * Välj **[!UICONTROL Explore and enable APIs]** på ditt projekts Dashboard på **[!UICONTROL Getting Started]**-kortet.
-   * Välj **[!UICONTROL Go to APIs overview]** på ditt projekts Dashboard på **[!UICONTROL APIs]**-kortet.
+   * Välj **[!UICONTROL Getting Started]** på ditt projekts Dashboard på **[!UICONTROL Explore and enable APIs]**-kortet.
+   * Välj **[!UICONTROL APIs]** på ditt projekts Dashboard på **[!UICONTROL Go to APIs overview]**-kortet.
 
-1. Välj **[!UICONTROL ENABLE APIS AND SERVICES]** i mitten av sidan **[!UICONTROL APIs & Services]**.<!-- NEXT STEP BELOW IS STEP 10 -->
+1. Välj **[!UICONTROL APIs & Services]** i mitten av sidan **[!UICONTROL ENABLE APIS AND SERVICES]**.<!-- NEXT STEP BELOW IS STEP 10 -->
 1. På sidan **[!UICONTROL API Library]**, till vänster, under **[!UICONTROL Category]**, väljer du **[!UICONTROL YouTube]**. Välj **[!UICONTROL YouTube]** till höger på sidan.
-1. Välj **[!UICONTROL YouTube Data API v3]** på sidan **[!UICONTROL YouTube]**.
-1. Välj **[!UICONTROL MANAGE]** på sidan **[!UICONTROL YouTube Data API v3]**.
+1. Välj **[!UICONTROL YouTube]** på sidan **[!UICONTROL YouTube Data API v3]**.
+1. Välj **[!UICONTROL YouTube Data API v3]** på sidan **[!UICONTROL MANAGE]**.
 
    ![6_5_googleaccount-apis-manage](/help/assets/dynamic-media/assets/6_5_googleaccount-apis-manage.png)
 
-1. Om du vill använda API:t måste du ha autentiseringsuppgifter. Om det behövs väljer du **[!UICONTROL Credentials]** till vänster på sidan **[!UICONTROL APIs & Services]**.
+1. Om du vill använda API:t måste du ha autentiseringsuppgifter. Om det behövs väljer du **[!UICONTROL APIs & Services]** till vänster på sidan **[!UICONTROL Credentials]**.
 1. På sidan **[!UICONTROL Credentials]**, nära överkanten, väljer du **[!UICONTROL CREATE CREDENTIALS]** och sedan **[!UICONTROL OAuth client ID]**.
-1. På sidan **[!UICONTROL Create OAuth client ID]** väljer du **[!UICONTROL Web application]** i listrutan **[!UICONTROL Application type]**.
+1. På sidan **[!UICONTROL Create OAuth client ID]** väljer du **[!UICONTROL Application type]** i listrutan **[!UICONTROL Web application]**.
 
    ![6_5_googleaccount-apis-applicationtype](/help/assets/dynamic-media/assets/6_5_googleaccount-apis-applicationtype.png)
 
@@ -135,7 +136,7 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
    * I fältet **[!UICONTROL Name]** anger du ett unikt namn för din OAuth 2.0-klient.
    * Använd det standardnamn som Google redan har angett i fältet **[!UICONTROL Name]**.
 
-1. Välj **[!UICONTROL ADD URI]** under rubriken **[!UICONTROL Authorized JavaScript origins]**.
+1. Välj **[!UICONTROL Authorized JavaScript origins]** under rubriken **[!UICONTROL ADD URI]**.
 
    ![6_5_googleaccount-apis-namepermissions](/help/assets/dynamic-media/assets/6_5_googleaccount-apis-nameauthorizations.png)
 
@@ -160,7 +161,7 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
    >
    >URI-sökvägsexemplet ovan är hypotetiskt och endast i förklaringssyfte.
 
-1. Välj **[!UICONTROL Create]** längst ned på sidan **[!UICONTROL Create OAuth client ID]**.
+1. Välj **[!UICONTROL Create OAuth client ID]** längst ned på sidan **[!UICONTROL Create]**.
 1. Gör följande i dialogrutan **[!UICONTROL OAuth client created]**:
 
    * (Valfritt) Kopiera värdena i fälten **[!UICONTROL Your Client ID]** och **[!UICONTROL Your Client Secret]** och spara.
@@ -170,7 +171,7 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
    ![6_5_googleaccount-apis-authclientcreated](/help/assets/dynamic-media/assets/6_5_googleaccount-apis-oauthclientcreated.png)
 
-1. Välj **[!UICONTROL OK]** i dialogrutan **[!UICONTROL OAuth client created]**.
+1. Välj **[!UICONTROL OAuth client created]** i dialogrutan **[!UICONTROL OK]**.
 1. Logga ut från ditt Google-konto. Skapa nu en YouTube-kanal.
 
 ### Create a YouTube channel {#creating-a-youtube-channel}
@@ -325,7 +326,7 @@ Om du vill skapa en profil för metadatabearbetning kopierar du först värden f
 
 1. I det övre vänstra hörnet av Experience Manager väljer du Experience Manager logotyp och navigerar sedan till **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]** i den vänstra listen.
 1. Välj **[!UICONTROL default]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
-1. Markera rutan till vänster om **[!UICONTROL video]** på sidan **[!UICONTROL default]** och välj sedan **[!UICONTROL Edit]**.
+1. Markera rutan till vänster om **[!UICONTROL default]** på sidan **[!UICONTROL video]** och välj sedan **[!UICONTROL Edit]**.
 1. Välj fliken **[!UICONTROL Advanced]** på sidan Redigerare för metadatamodeller.
 1. Välj **[!UICONTROL YouTube Category]** under rubriken YouTube Publishing.
 1. Till höger på sidan, under fliken **[!UICONTROL Settings]**, gör du följande:
@@ -349,7 +350,7 @@ Klistra in det kopierade värdet i textredigeraren. Du kommer att behöva det h�
 1. I det övre vänstra hörnet av Experience Manager väljer du Experience Manager logotyp och sedan väljer du **[!UICONTROL Tools]** (hammikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]** i den vänstra listen.
 
 1. Välj **[!UICONTROL Create]** på sidan Metadataprofiler, i det övre högra hörnet på sidan.
-1. I dialogrutan Lägg till metadataprofil anger du namnet `YouTube Video` i textfältet **[!UICONTROL Profile title]** och väljer sedan **[!UICONTROL Create]**.
+1. I dialogrutan Lägg till metadataprofil anger du namnet **[!UICONTROL Profile title]** i textfältet `YouTube Video` och väljer sedan **[!UICONTROL Create]**.
 1. Välj fliken **[!UICONTROL Advance]** på sidan för metadataprofilredigeraren.
 1. Lägg till de kopierade YouTube Publishing-värdena i profilen genom att göra följande:
 
@@ -410,7 +411,7 @@ Nu kopplar du taggarna som du lade till tidigare till videoresurser. På så sä
 1. Välj **[!UICONTROL Save and Close]** i det övre högra hörnet på videons egenskapssida.
 1. Välj **[!UICONTROL Quick Publish]** i verktygsfältet.
 
-   Se även [Använd publikationshantering med Experience Manager Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html?lang=sv-SE#page-authoring).
+   Se även [Använd publikationshantering med Experience Manager Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html#page-authoring).
 
    Du kan även verifiera den publicerade videon på din YouTube-kanal.
 
@@ -495,7 +496,7 @@ Du kan övervaka förloppet, inklusive misslyckad kodning/YouTube-publicering.
 
    >[!NOTE]
    >
-   >Det kan ta lång tid innan fel-/felmeddelanden slutligen spelas in på grund av flera arbetsflödeskonfigurationer på **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** från [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr), till exempel:
+   >Det kan ta lång tid innan fel-/felmeddelanden slutligen registreras på grund av flera arbetsflödeskonfigurationer på **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** från [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr), till exempel:
    >
    >* Konfiguration av Apache Sling-jobbkö
    >* Extern processhanterare för Adobe Granite-arbetsflöde

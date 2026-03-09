@@ -2,10 +2,11 @@
 title: Integrering med Content Credentials
 description: Content Credentials, som är integrerat i AEM Assets och finns i Assets View, kan erbjuda kontext i en tillgångs historia, inklusive hur den har skapats och vem som har deltagit i skapandet av den. Som en näringsetikett för digitalt innehåll kan Content Credentials bidra till att öka transparensen och bygga förtroende hos målgrupperna.
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 27c25ae0-4477-40c3-85c8-3e0aa725aba7
-source-git-commit: fb7ce7dbb58be9fef5ab087441457770828d73c8
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -37,11 +38,8 @@ Adobe Experience Manager Assets har nu stöd för Content Credentials så att an
 1. Klicka på **Detaljer** och välj `Cr pin` i rutan längst till höger. På fliken Content Credentials visas följande information om resursen.
    1. **Genererad bild:** Datum och tid då Content Credentials tillämpades.
    1. **Innehållssammanfattning:** Anger om resursen har genererats delvis eller helt av AI, eller hur den har redigerats.
-
       ![innehållsautentiseringsuppgifter](/help/assets/assets/content-credentials1.png)
    1. **Process:** Anger vilket program, vilken enhet och vilket AI-verktyg (till exempel Adobe Firefly) som används för att generera resursen samt vilka ändringar som görs senare.
-
       ![process](/help/assets/assets/CR-Process.png)
    1. **Om denna Content Credentials:** Utfärdarens namn tillsammans med datum och tid för utfärdande.
-
       ![utfärdare](/help/assets/assets/CR-issuer.png)

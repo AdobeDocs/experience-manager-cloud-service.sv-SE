@@ -4,10 +4,11 @@ description: Generera varianter av mediefiler med hjälp av Creative Cloud-integ
 contentOwner: AG
 feature: Upload, Asset Processing, Publishing, Asset Compute Microservices
 role: User, Admin
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 4cff355e-d12c-44c7-b519-4cc37f49e396
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
@@ -60,7 +61,7 @@ Så här aktiverar du tillägget för innehållsautomatisering för AEM as a Clo
 1. Klicka på **[!UICONTROL Continue]**.
 1. Expandera **[!UICONTROL Assets]** och välj **[!UICONTROL Content Automation]**.
 1. Klicka på **[!UICONTROL Create]**.
-1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE).
+1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).
 
 Om du behöver lägga till tillägget för innehållsautomatisering i ett befintligt AEM as a Cloud Service-program i Cloud Manager:
 
@@ -70,7 +71,7 @@ Om du behöver lägga till tillägget för innehållsautomatisering i ett befint
 
 1. Expandera **[!UICONTROL Assets]** och välj **[!UICONTROL Content Automation]**.
 1. Klicka på **[!UICONTROL Update]**.
-1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE).
+1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).
 
 ## Använd en bearbetningsprofil för att redigera flera kreativa resurser samtidigt {#process-assets}
 

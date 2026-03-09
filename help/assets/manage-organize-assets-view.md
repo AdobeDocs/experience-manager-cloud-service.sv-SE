@@ -3,11 +3,12 @@ title: Hantera era digitala resurser
 description: Flytta, ta bort, kopiera, byta namn på, uppdatera och version av dina resurser i  [!DNL Assets view].
 role: User, Leader
 contentOwner: AG
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 2459d482-828b-4410-810c-ac55ef0a2119
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: fb7ce7dbb58be9fef5ab087441457770828d73c8
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1621'
 ht-degree: 0%
 
 ---
@@ -150,7 +151,7 @@ Så här anger du resursstatus:
 
 1. Markera resursen och klicka på **[!UICONTROL Details]** i verktygsfältet.
 
-1. Välj resursstatus i listrutan **[!UICONTROL Status]** på fliken **[!UICONTROL Basic]**. Möjliga värden är Godkänd, Avvisat och Ingen status (standard).
+1. Välj resursstatus i listrutan **[!UICONTROL Basic]** på fliken **[!UICONTROL Status]**. Möjliga värden är Godkänd, Avvisat och Ingen status (standard).
 Om du har aktiverat Dynamic Media med OpenAPI-funktioner för din miljö, genererar Experience Manager Assets en offentlig URL så fort du markerar resursen som `Approved`.
 
    >[!VIDEO](https://video.tv.adobe.com/v/342495)
@@ -165,7 +166,7 @@ Så här anger du godkännandemål:
 
 1. Markera resursen och klicka på **[!UICONTROL Details]** i verktygsfältet.
 
-1. Välj resursstatus i listrutan **[!UICONTROL Status]** på fliken **[!UICONTROL Basic]**. Möjliga värden är Godkänd, Avvisat och Ingen status (standard).
+1. Välj resursstatus i listrutan **[!UICONTROL Basic]** på fliken **[!UICONTROL Status]**. Möjliga värden är Godkänd, Avvisat och Ingen status (standard).
 
 1. Om du väljer **Godkänd** i steg 2 väljer du ett godkännandemål. Exempel på möjliga värden är Delivery och Content Hub.
 
@@ -207,7 +208,7 @@ Så här anger du förfallodatum för tillgång:
 
 1. Markera resursen och klicka på **[!UICONTROL Details]** i verktygsfältet.
 
-1. Ange förfallodatumet för resursen med fältet **[!UICONTROL Expiration date]** på fliken **[!UICONTROL Basic]**.
+1. Ange förfallodatumet för resursen med fältet **[!UICONTROL Basic]** på fliken **[!UICONTROL Expiration date]**.
 
 Indikatorn för `Expired`-resurskortet åsidosätter indikatorn `Approved` eller `Rejected` som angetts för en resurs.
 
@@ -231,11 +232,11 @@ Om du vill lägga till metadatafältet Förfallodatum i formuläret drar du **[!
 
 ## Nästa steg {#next-steps}
 
-* [Titta på en video för att hantera resurser i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/basics/managing.html?lang=sv-SE)
+* [Titta på en video för att hantera resurser i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/basics/managing.html)
 
 * Ge produktfeedback med alternativet [!UICONTROL Feedback] som finns i användargränssnittet i Assets-vyn
 
 * Ge feedback om dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
 

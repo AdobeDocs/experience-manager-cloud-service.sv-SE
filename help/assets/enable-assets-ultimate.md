@@ -3,10 +3,11 @@ title: Aktivera Assets Ultimate
 description: Lär dig hur du aktiverar Assets Ultimate för nya och befintliga kunder.
 feature: Asset Management
 role: User, Admin
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 45cd8ccd-e5cf-42cd-aa7f-4ae59d0587f7
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1368'
 ht-degree: 0%
 
 ---
@@ -31,7 +32,7 @@ Utför följande steg:
 
 1. [Skapa ett nytt program](/help/journey-onboarding/create-program.md) och [lägg till miljöer](/help/journey-onboarding//create-environments.md) i det.
 
-   Välj **[!UICONTROL Assets Ultimate]** på fliken **[!UICONTROL Solutions & Add-ons]** när du skapar det nya programmet. Du kan också expandera **[!UICONTROL Assets Ultimate]** och välja **[!UICONTROL Content Hub]** för att aktivera [Content Hub](/help/assets/product-overview.md) för resursdistribution.
+   Välj **[!UICONTROL Solutions & Add-ons]** på fliken **[!UICONTROL Assets Ultimate]** när du skapar det nya programmet. Du kan också expandera **[!UICONTROL Assets Ultimate]** och välja **[!UICONTROL Content Hub]** för att aktivera [Content Hub](/help/assets/product-overview.md) för resursdistribution.
 
    ![AEM Assets Ultimate](assets/aem-assets-ultimate-solutions.png)
 

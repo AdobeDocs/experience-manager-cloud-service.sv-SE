@@ -4,10 +4,11 @@ description: Filformat och MIME-typer som stöds av  [!DNL Experience Manager As
 contentOwner: AG
 feature: Asset Management, Renditions
 role: User, Admin
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---
@@ -153,7 +154,7 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 ## Videoformat {#video-formats}
 
-| Filformat | Skapa miniatyrbilder | Extrahering av metadata | Bredd/höjd | Förhandsgranska | Utdata |
+| Filformat | Skapa miniatyrbilder | Extrahering av metadata | Bredd/höjd | Förhandsgranskning | Utdata |
 | ----------- | -------------------- | ------------------- | ------------ | ------- | ------- |
 | 3G2 | - | ✓ | - | - | - |
 | 3GP | - | ✓ | - | - | - |

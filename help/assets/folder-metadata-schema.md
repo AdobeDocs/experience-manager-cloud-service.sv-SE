@@ -4,10 +4,11 @@ description: Lär dig hur du skapar metadatamappar för resursmappar i  [!DNL Ex
 contentOwner: AG
 feature: Metadata
 role: User, Admin
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: c86760ed-169d-40f7-91a4-8aee449b286c
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1014'
 ht-degree: 3%
 
 ---
@@ -156,7 +157,7 @@ Om du konfigurerar ett metadataram för en mapp lagras sökvägen till schemafor
 
 Du kan tilldela ett mappmetadatchema när du skapar en mapp. Om det finns minst ett mappmetadatchema i systemet visas en extra lista i dialogrutan **[!UICONTROL Create Folder]**. Du kan välja önskat schema. Som standard är inget schema valt.
 
-1. Välj **[!UICONTROL Create]** i verktygsfältet i användargränssnittet för [!DNL Experience Manager Assets].
+1. Välj [!DNL Experience Manager Assets] i verktygsfältet i användargränssnittet för **[!UICONTROL Create]**.
 1. Ange en rubrik och ett namn för mappen.
 1. Välj önskat schema i listan Mappmetadatamatchema. Välj sedan **[!UICONTROL Create]**.
 

@@ -1,20 +1,21 @@
 ---
 title: Content Fragments - Configuration Browser (Assets - Content Fragments)
 description: Lär dig hur du aktiverar funktionen för innehållsfragment i konfigurationsläsaren.
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 9fc911de-1d33-4811-8f58-ea21ce94bedb
 feature: Content Fragments
 role: User, Admin, Developer
 solution: Experience Manager Sites
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '361'
 ht-degree: 3%
 
 ---
 
 # Content Fragments - Configuration Browser{#content-fragments-configuration-browser}
 
-Lär dig hur du aktiverar vissa Content Fragment-funktioner i Configuration Browser för att använda AEM kraftfulla headless-leveransfunktioner.
+Lär dig hur du aktiverar vissa Content Fragment-funktioner i Configuration Browser så att du kan använda AEM kraftfulla headless-leveransfunktioner.
 
 ## Aktivera funktionen för innehållsfragment för instansen {#enable-content-fragment-functionality-instance}
 
@@ -79,6 +80,6 @@ Om du vill använda vissa [funktioner för innehållsfragment](#creating-a-conte
 
 När konfigurationen **global** är aktiverad för innehållsfragmentfunktioner gäller detta alla Assets-mappar.
 
-Om du vill använda andra konfigurationer (d.v.s. inte globala) med en jämförbar Assets-mapp måste du definiera anslutningen. Den här anslutningen görs genom att du väljer lämplig **konfiguration** på fliken **Cloud Service** i **Mappegenskaper** för rätt mapp.
+Om du vill använda andra konfigurationer (d.v.s. inte globala) med en jämförbar Assets-mapp måste du definiera anslutningen. Den här anslutningen görs genom att du väljer lämplig **konfiguration** på fliken **Cloud-tjänster** i **Mappegenskaper** för rätt mapp.
 
 ![Använd konfiguration](assets/cfm-conf-02.png)

@@ -4,10 +4,11 @@ description: Lär dig mer om metoder du kan använda för att välja resurser f�
 contentOwner: Rick Brough
 feature: Selectors,Interactive Images,Interactive Videos,Carousel Banners
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: a6f366ab-41b8-4909-b815-e6c4b938bf77
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '712'
 ht-degree: 5%
 
 ---

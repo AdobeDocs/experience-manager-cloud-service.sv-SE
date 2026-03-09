@@ -1,12 +1,13 @@
 ---
 title: Färgtaggar för bilder
 description: Med Adobe Experience Manager Assets kan du skilja mellan färger i en bild och använda dem som taggar automatiskt. Du kan sedan använda dessa taggar för att söka efter och filtrera bilder.
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 3afa949b-ea1b-4b8e-ac94-06566e2c7147
 feature: Smart Imaging, Interactive Images, Asset Management
 role: User, Admin
-source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1148'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 ![Banderoll för färgtaggning](assets/banner-image.png)
 
-Adobe Experience Manager (AEM) Assets använder Adobe AI-funktioner för att skilja mellan färgerna i en bild och använda dem som taggar automatiskt vid intag. Dessa taggar möjliggör en förbättrad sökfunktion baserat på bildens färgkomposition.
+Adobe Experience Manager (AEM) Assets använder Adobe AI-funktioner för att skilja mellan färger i en bild och använda dem som taggar automatiskt vid intag. Dessa taggar möjliggör en förbättrad sökfunktion baserat på bildens färgkomposition.
 
 Du kan konfigurera antalet färger, inom intervallet 1 till 40, som taggas i en bild så att du kan söka efter bilder baserade på dessa färger senare. Experience Manager Assets använder märkorden baserat på färgmängden i en bild. Du kan också konfigurera visningsformatet för en färgtagg.
 

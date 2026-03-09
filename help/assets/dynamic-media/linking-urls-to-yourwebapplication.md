@@ -4,10 +4,11 @@ description: Lär dig hur du länkar URL:er till ditt webbprogram i Dynamic Medi
 contentOwner: Rick Brough
 feature: Publishing,Upload,Viewer Presets,Image Presets,Video
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 3cd3f4d5-ebf0-4318-9a0d-1ea69453d57b
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1223'
 ht-degree: 3%
 
 ---
@@ -119,7 +120,7 @@ Dynamic Media har stöd för leverans av statiska resurser, vilket är andra res
 ## Hämta en video-URL för en publicerad videoåtergivning {#obtaining-a-video-url-for-a-published-video-rendition}
 
 1. I Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**.
-1. Bläddra nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** på sidan **[!UICONTROL Cloud Services]** och välj sedan **[!UICONTROL Show Configurations]**.
+1. Bläddra nedåt till rubriken **[!UICONTROL Cloud Services]** på sidan **[!UICONTROL Dynamic Media Cloud Services]** och välj sedan **[!UICONTROL Show Configurations]**.
 1. Under **[!UICONTROL Available Configurations]** markerar du namnet på konfigurationen som du vill använda.
 
 1. På sidan **[!UICONTROL Dynamic Media Cloud Settings]**, under **[!UICONTROL Video Service URL]**, kopierar du ned hela URL-sökvägen. Du behöver den kopierade URL-sökvägen senare i stegen.
@@ -156,7 +157,7 @@ Dynamic Media har stöd för leverans av statiska resurser, vilket är andra res
 ## Hämta en video-URL för strömning med adaptiv bithastighet (HLS) {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. I Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**.
-1. Bläddra nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** på sidan **[!UICONTROL Cloud Services]** och välj sedan **[!UICONTROL Show Configurations]**.
+1. Bläddra nedåt till rubriken **[!UICONTROL Cloud Services]** på sidan **[!UICONTROL Dynamic Media Cloud Services]** och välj sedan **[!UICONTROL Show Configurations]**.
 1. Under **[!UICONTROL Available Configurations]** markerar du namnet på konfigurationen som du vill använda.
 1. Gör följande på sidan **[!UICONTROL Dynamic Media Cloud Services Settings]**:
 

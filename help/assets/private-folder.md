@@ -4,10 +4,11 @@ description: Lär dig hur du skapar en privat mapp i  [!DNL Adobe Experience Man
 contentOwner: Vishabh Gupta
 role: User
 feature: Collaboration
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: d48f6daf-af81-4024-bff2-e8bf6d683b0c
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '604'
+source-wordcount: '610'
 ht-degree: 1%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 1%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/private-folder.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/private-folder.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Du kan skapa en privat mapp i användargränssnittet [!DNL Adobe Experience Manager Assets] som är exklusivt tillgänglig för dig. Du kan dela den här privata mappen med andra användare och tilldela andra användare olika behörigheter. Beroende på vilken behörighetsnivå du tilldelar kan användare utföra olika åtgärder i mappen, till exempel visa resurser i mappen eller redigera resurserna.
@@ -31,11 +32,11 @@ Du kan skapa en privat mapp i användargränssnittet [!DNL Adobe Experience Mana
 
 Så här skapar och delar du en privat mapp:
 
-1. Klicka på knappen **[!UICONTROL Create]** i verktygsfältet i [!DNL Assets]-konsolen och välj sedan **[!UICONTROL Folder]** på menyn.
+1. Klicka på knappen [!DNL Assets] i verktygsfältet i **[!UICONTROL Create]**-konsolen och välj sedan **[!UICONTROL Folder]** på menyn.
 
    ![Skapa resursmapp](assets/create-folder.png)
 
-1. Ange en `Title` och `Name` (valfritt) för mappen i dialogrutan **[!UICONTROL Create Folder]**.
+1. Ange en **[!UICONTROL Create Folder]** och `Title` (valfritt) för mappen i dialogrutan `Name`.
 
    Markera kryssrutan **[!UICONTROL Private]** och klicka på **[!UICONTROL Create]**.
 

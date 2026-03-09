@@ -4,10 +4,11 @@ description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Asset
 contentOwner: AG
 feature: Asset Reports, Asset Management
 role: Admin, User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: ef617b01-0019-4379-8d58-c03215d7e28f
-source-git-commit: 9c1104f449dc2ec625926925ef8c95976f1faf3d
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '929'
 ht-degree: 3%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 3%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Med resursrapportering kan du utvärdera verktyget för din [!DNL Adobe Experience Manager Assets]-distribution. Med [!DNL Assets] kan du generera olika rapporter för dina digitala resurser. Rapporterna innehåller användbar information om hur ditt system används, hur användare interagerar med resurser och vilka resurser som delas av <!-- downloaded and -->.
@@ -61,12 +62,12 @@ När en rapport genereras meddelas du via <!-- through an email (optional) and -
 
    ![Verktygssida för att navigera bland resurser - rapport](assets/navigation.png)
 
-1. Klicka på **[!UICONTROL Create]** i verktygsfältet på sidan [!UICONTROL Asset Reports].
+1. Klicka på [!UICONTROL Asset Reports] i verktygsfältet på sidan **[!UICONTROL Create]**.
 1. Välj den rapport du vill skapa på sidan **[!UICONTROL Create Report]** och klicka på **[!UICONTROL Next]**.
 
    >[!NOTE]
    >
-   >Ange dig själv till en **AEM Administrator-produktprofil** för att skapa en **Download**-rapport. Se [Tilldela AEM produktprofiler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem) för att ge dig rätt till en AEM Administrator-produktprofil.
+   >Ange dig själv till en **AEM Administrator-produktprofil** för att skapa en **Download**-rapport. Se [Tilldela AEM produktprofiler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem) för att ge dig rätt till en AEM Administrator-produktprofil.
 
    ![Välj rapporttyp](assets/choose_report.png)
 
@@ -144,7 +145,7 @@ Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer 
 Följ de här stegen för att lägga till anpassade kolumner i de här rapporterna:
 
 1. I [!DNL Manager interface] klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
-1. Klicka på **[!UICONTROL Create]** i verktygsfältet på sidan [!UICONTROL Asset Reports].
+1. Klicka på [!UICONTROL Asset Reports] i verktygsfältet på sidan **[!UICONTROL Create]**.
 
 1. Välj en rapport som du vill skapa på sidan **[!UICONTROL Create Report]**. Klicka på **[!UICONTROL Next]**.
 

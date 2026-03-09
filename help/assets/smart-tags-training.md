@@ -3,17 +3,18 @@ title: Tagga resurser automatiskt med  [!DNL Adobe AI] smart tjänst
 description: Tagga tillgångar med en artificiellt intelligent tjänst som tillämpar kontextuella och beskrivande affärstaggar.
 feature: Smart Tags,Tagging
 role: Admin,User
-source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
+exl-id: 05304c5e-f620-4cca-8cfe-76a6fa2e3f4a
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1471'
 ht-degree: 5%
 
 ---
 
-
 # Utbildning om smarta taggar
 
-Med hjälp av utbildningsmaterialet för smarta taggar kan du träna dina taggar så att du kan ange information om de relevanta taggarna inte finns där. Den använder ett artificiellt intelligent ramverk av [Adobe AI](https://business.adobe.com/ai/adobe-genai.html) för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. [!DNL Experience Manager Assets] använder automatiskt smarta taggar på överförda resurser som standard.
+Med hjälp av utbildningsmaterialet för smarta taggar kan du träna dina taggar så att du kan ange information om de relevanta taggarna inte finns där. Den använder ett artificiellt intelligent ramverk av [Adobe AI](https://business.adobe.com/ai/adobe-genai.html) för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och i din affärsmiljö. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. [!DNL Experience Manager Assets] använder automatiskt smarta taggar på överförda resurser som standard.
 
 ## Fastställa kraven på smarta taggar-utbildning {#smart-tag-training-requirement}
 

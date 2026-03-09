@@ -4,10 +4,11 @@ description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media.
 contentOwner: Rick Brough
 feature: Spin Sets
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: ed470472-62d9-4684-971b-30df3919c180
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1892'
+source-wordcount: '1898'
 ht-degree: 7%
 
 ---
@@ -58,7 +59,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Se [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
-1. Ställ in [förinställningar för Vyhanteraren &#x200B;](/help/assets/dynamic-media/managing-viewer-presets.md) efter behov.
+1. Ställ in [förinställningar för Vyhanteraren ](/help/assets/dynamic-media/managing-viewer-presets.md) efter behov.
 
    Administratörer kan skapa eller ändra visningsförinställningar för rotationsuppsättningar. Om du vill visa rotationsuppsättningen med en visningsförinställning markerar du rotationsuppsättningen och väljer **Visningsprogram** i listrutan till vänster.
 

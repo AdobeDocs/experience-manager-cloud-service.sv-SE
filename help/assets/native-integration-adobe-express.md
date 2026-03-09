@@ -1,12 +1,13 @@
 ---
 title: Använd Content Advisor för att få åtkomst till AEM Assets i Adobe Express
 description: Använd Content Advisor för att upptäcka och få tillgång till AEM Assets direkt inifrån den inbyggda Adobe Express-integreringen.
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: d43e4451-da2a-444d-9aa4-4282130ee44f
 feature: Collaboration
 role: User
-source-git-commit: 6d80567106fe7c32d8073ca093f895ff28500413
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '2558'
+source-wordcount: '2564'
 ht-degree: 0%
 
 ---
@@ -154,7 +155,7 @@ Klicka på ikonen ![förhandsgranska](assets/do-not-localize/preview-icon.svg) o
 
 ![Förhandsgranska dynamiska medierenderingar](assets/native-express-dynamic-media-preview.png)
 
-Klicka på **[!UICONTROL Add Modifiers]**, ange en modifierare i textrutan och tryck på Retur för att använda omvandlingen på återgivningarna i realtid. På samma sätt kan du lägga till flera modifierare i en återgivning och förhandsgranska dessa omvandlingar. Dra och släpp resursen från förhandsgranskningen på arbetsytan. Återgivningen efter att dessa modifierare har använts sparas inte. Se listan över modifierare som stöds för [Dynamic Media Scene7](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference) och [Dynamic Media med OpenAPI](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/#operation/getAssetSeoFormat).
+Klicka på **[!UICONTROL Add Modifiers]**, ange en modifierare i textrutan och tryck på Retur för att använda omvandlingen på återgivningarna i realtid. På samma sätt kan du lägga till flera modifierare i en återgivning och förhandsgranska dessa omvandlingar. Dra och släpp resursen från förhandsgranskningen på arbetsytan. Återgivningen efter att dessa modifierare har använts sparas inte. Se listan över modifierare som stöds för [Dynamic Media Scene7](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference) och [Dynamic Media med OpenAPI](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/#operation/getAssetSeoFormat).
 
 >[!IMPORTANT]
 > 
@@ -250,7 +251,7 @@ Adobe rekommenderar att du anger värden i resten av fälten och skapar en förb
 
 ## Filformat som stöds {#supported-file-formats-import-assets}
 
-Adobe Express har inbyggt stöd för de format som finns på [Granska minimikraven för bilder](https://helpx.adobe.com/se/express/web/image-creation-and-editing/change-file-formats/image-requirements.html). AEM Assets har dock stöd för följande formattyper:
+Adobe Express har inbyggt stöd för de format som finns på [Granska minimikraven för bilder](https://helpx.adobe.com/express/web/image-creation-and-editing/change-file-formats/image-requirements.html). AEM Assets har dock stöd för följande formattyper:
 
 | Format som stöds | Maximala dimensioner/upplösning | Maximal filstorlek |
 |------------------|---------------------------------------------|---------------|

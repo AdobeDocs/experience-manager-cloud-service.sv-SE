@@ -3,11 +3,12 @@ title: Sök ansikten.
 description: I den här artikeln beskrivs hur du skapar, ändrar och använder sökfaktorer i Experience Manager.
 feature: Metadata
 role: Admin, User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: f994c1bf-3f9d-4cb2-88f4-72a9ad6fa999
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '2388'
-ht-degree: 13%
+source-wordcount: '2392'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +16,7 @@ ht-degree: 13%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/search-facets.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/search-facets.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 En företagsövergripande driftsättning av Adobe Experience Manager Assets har kapacitet att lagra många resurser. Ibland kan det vara besvärligt och tidskrävande att hitta rätt resurs om du bara använder de allmänna sökfunktionerna i Experience Manager.
@@ -35,7 +36,7 @@ Lägg till predikatet `Fulltext` i formuläret för fulltextsökningar. Använd 
 1. Klicka på Experience Manager logotyp och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och sedan **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 
-   ![Leta reda på och markera sökfältet för Assets Admin Search &#x200B;](assets/assets_admin_searchrail.png)
+   ![Leta reda på och markera sökfältet för Assets Admin Search ](assets/assets_admin_searchrail.png)
 
 1. På sidan Redigera sökning i Forms drar du ett predikat från fliken **[!UICONTROL Select Predicate]** till huvudrutan. Dra till exempel **[!UICONTROL Property Predicate]**.
 
@@ -108,7 +109,7 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 1. Gör något av följande:
 
    * I fältet **[!UICONTROL Property Name]** anger du sökvägen till JSON-filen där du definierar noderna för alternativen och anger motsvarande nyckelvärdepar.
-   * Välj ![Assets-ikonen Lägg till](assets/do-not-localize/aem_assets_add_icon.png) bredvid fältet Alternativ för att ange visningstext och värde för de alternativ som du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ väljer du ![Assets-ikonen för att lägga till &#x200B;](assets/do-not-localize/aem_assets_add_icon.png) och upprepar steget.
+   * Välj ![Assets-ikonen Lägg till](assets/do-not-localize/aem_assets_add_icon.png) bredvid fältet Alternativ för att ange visningstext och värde för de alternativ som du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ väljer du ![Assets-ikonen för att lägga till ](assets/do-not-localize/aem_assets_add_icon.png) och upprepar steget.
 
 1. Kontrollera att **[!UICONTROL Single Select]** är avmarkerat så att användaren kan välja flera alternativ för filtyper samtidigt (till exempel bilder, dokument, multimedia och arkiv). Om du väljer **[!UICONTROL Single Select]** kan användaren bara välja ett alternativ åt gången för olika filtyper.
 
@@ -338,7 +339,7 @@ Om du inte har tilldelats en administratörsroll finns det en lista med behörig
 |---|---|
 | Redigera | Läs- och skrivbehörigheter på noden `/apps` i CRX. |
 | Ta bort | Läsa, skriva och ta bort behörigheter på noden `/apps` i CRX. |
-| Förhandsgranska | Läsa, skriva och ta bort behörigheter på noden `/var/dam/content` i CRX. Läs- och skrivbehörigheter på noden `/apps`. |
+| Förhandsgranskning | Läsa, skriva och ta bort behörigheter på noden `/var/dam/content` i CRX. Läs- och skrivbehörigheter på noden `/apps`. |
 
 **Se även**
 

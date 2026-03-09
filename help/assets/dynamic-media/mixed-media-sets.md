@@ -4,10 +4,11 @@ description: Lär dig hur du arbetar med blandade medieuppsättningar i Dynamic 
 contentOwner: Rick Brough
 feature: Mixed Media Sets
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 7ccde741-38d2-44c9-9378-f2721384aab7
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1438'
 ht-degree: 11%
 
 ---

@@ -1,20 +1,21 @@
 ---
 title: Förhandsgranska - JSON-representation (Assets - innehållsfragment)
-description: Lär dig hur du enkelt förhandsgranskar en JSON-representation av dina innehållsfragment när du implementerar AEM headless-lösning.
+description: Lär dig hur du enkelt förhandsgranskar en JSON-representation av dina innehållsfragment när du implementerar en headless-lösning för AEM.
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: e5f3f3ee-c191-4b7b-8a29-67524bb68a8e
 feature: Content Fragments
 role: User
 solution: Experience Manager Sites
-source-git-commit: 86a2c5f35d82010c84b74b6b5f0da09fd87c2b7a
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '185'
 ht-degree: 1%
 
 ---
 
 # Förhandsgranska - JSON-representation {#preview-json-representation}
 
-När du utvecklar modeller för innehållsfragment som en del av den AEM headless-implementeringen kanske du vill visa JSON-exempelutdata för ett innehållsfragment, baserat på en modell. Om du till exempel vill få en uppfattning om hur det slutliga resultatet kommer att se ut. Detta kan vara praktiskt vid validering av modell-JSON-strukturen, kanske med standardexempelinnehåll per datatyp.
+När du utvecklar modeller för innehållsfragment som en del av AEM headless-implementering kanske du vill visa exempel-JSON-utdata för ett innehållsfragment, baserat på en modell. Om du till exempel vill få en uppfattning om hur det slutliga resultatet kommer att se ut. Detta kan vara praktiskt vid validering av modell-JSON-strukturen, kanske med standardexempelinnehåll per datatyp.
 
 >[!NOTE]
 >

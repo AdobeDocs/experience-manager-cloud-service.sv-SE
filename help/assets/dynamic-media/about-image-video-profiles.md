@@ -4,10 +4,11 @@ description: En bildprofil eller en videoprofil är ett recept på vilka alterna
 contentOwner: Rick Brough
 feature: Asset Management,Image Profiles,Video Profiles
 role: Admin,User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 8c8f0a57-13f5-4903-8d76-bfb6ee83323c
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1345'
 ht-degree: 0%
 
 ---
@@ -78,14 +79,14 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
    ![Skärmbild av Assets i Experience Manager med en vald mapp med resurser, listrutan Tidslinje markerad, knappen Starta arbetsflöde markerad och karikonen till höger om fältet Kommentar markerad](/help/assets/dynamic-media/assets/reprocess-assets1.png).
 
 1. Välj **[!UICONTROL Start Workflow]**.
-1. Välj **[!UICONTROL Dynamic Media Reprocess]** i listrutan **[!UICONTROL Start Workflow]**.
+1. Välj **[!UICONTROL Start Workflow]** i listrutan **[!UICONTROL Dynamic Media Reprocess]**.
 1. (Valfritt) Ange ett namn för arbetsflödet i textfältet **Ange arbetsflödets namn**. Du kan använda namnet för att referera till arbetsflödesinstansen, om det behövs.
 
    ![Skärmbild av tidslinjens användargränssnitt med &quot;Dynamisk medieombearbetning&quot; markerat i listrutan Starta arbetsflöde och knappen Start markerad](/help/assets/dynamic-media/assets/reprocess-assets2.png).
 
 1. Välj **[!UICONTROL Start]** och sedan **[!UICONTROL Confirm]**.
 
-   Om du vill övervaka arbetsflödet eller kontrollera förloppet väljer du **[!UICONTROL Tools > Workflow]** på huvudkonsolsidan för [!DNL Experience Manager]. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Välj **[!UICONTROL Open History]** på menyraden. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
+   Om du vill övervaka arbetsflödet eller kontrollera förloppet väljer du [!DNL Experience Manager] på huvudkonsolsidan för **[!UICONTROL Tools > Workflow]**. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Välj **[!UICONTROL Open History]** på menyraden. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
 
 ### Justera batchstorleken för arbetsflödet för ombearbetning (valfritt) {#adjusting-load}
 
@@ -102,7 +103,7 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 1. På sidan Dynamic Media Reprocess workflow, i det övre högra hörnet, väljer du **[!UICONTROL Edit]** för att låsa upp arbetsflödet.
 1. I arbetsflödet väljer du komponenten Scene7 Batch Upload för att öppna verktygsfältet och väljer sedan **[!UICONTROL Configure]** i verktygsfältet.
 
-   ![Skärmbild av komponenten &quot;Scene7 Batch Upload&quot; på sidan &quot;Dynamic Media Reprocess&quot; med muspekaren över ikonen &quot;Configure&quot; &#x200B;](/help/assets/dynamic-media/assets/reprocess-assets8.png).
+   ![Skärmbild av komponenten &quot;Scene7 Batch Upload&quot; på sidan &quot;Dynamic Media Reprocess&quot; med muspekaren över ikonen &quot;Configure&quot; ](/help/assets/dynamic-media/assets/reprocess-assets8.png).
 
 1. Ange följande i dialogrutan **[!UICONTROL Batch Upload to Scene7—Step Properties]**:
    * I textfälten **[!UICONTROL Title]** och **[!UICONTROL Description]** anger du en ny titel och beskrivning för jobbet, om så önskas.
@@ -112,9 +113,9 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
    * I **[!UICONTROL Batch field]** anger du det maximala antalet resurser (50-1000) som ska bearbetas i ett batchbearbetningsjobb för en Dynamic Media-server.
    * Välj **[!UICONTROL Advance on timeout]** om du vill fortsätta när tidsgränsen nås. Avmarkera alternativet om du vill fortsätta till inkorgen när tidsgränsen nås.
 
-   ![Skärmbild av sidan &quot;Gruppöverföring till scen7 - Stegegenskaper&quot; &#x200B;](/help/assets/dynamic-media/assets/reprocess-assets3.png).
+   ![Skärmbild av sidan &quot;Gruppöverföring till scen7 - Stegegenskaper&quot; ](/help/assets/dynamic-media/assets/reprocess-assets3.png).
 
-1. Välj **[!UICONTROL Done]** i det övre högra hörnet i dialogrutan **[!UICONTROL Batch Upload to Scene7 – Step Properties]**.
+1. Välj **[!UICONTROL Batch Upload to Scene7 – Step Properties]** i det övre högra hörnet i dialogrutan **[!UICONTROL Done]**.
 
 1. Välj **[!UICONTROL Sync]** i det övre högra hörnet på sidan för arbetsflödesmodellen för ombearbetning av dynamiska media. När du ser **[!UICONTROL Synced]** synkroniseras arbetsflödets körningsmodell och kan bearbeta resurser i en mapp igen.
 

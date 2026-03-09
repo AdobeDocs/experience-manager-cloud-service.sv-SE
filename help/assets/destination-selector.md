@@ -3,11 +3,12 @@ title: Målväljare för AEM as a Cloud Service
 description: Använd AEM målväljare för att visa och välja resurser som du kan använda som en kopia av den ursprungliga resursen.
 contentOwner: Adobe
 role: Admin, User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 7e7bc1ee-d580-4c88-b550-273e8b0620ba
 feature: Selectors
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1887'
+source-wordcount: '1880'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ Integreringen görs genom att du importerar målväljarpaketet och ansluter till
 
 Du kan utföra autentisering utan att definiera några IMS-egenskaper om:
 
-* Du integrerar ett [!DNL Adobe]-program i [Enhetligt gränssnitt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=sv-SE).
+* Du integrerar ett [!DNL Adobe]-program i [Enhetligt gränssnitt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=en).
 * Du har redan en IMS-token genererad för autentisering.
 
 ## Förutsättningar {#prerequisites}
@@ -128,13 +129,13 @@ I följande tabell beskrivs några av de viktiga egenskaperna för det valda må
 
 | Egenskap | Typ | Förklaring |
 |---|---|---|
-| *repo:databaseId* | string | Unik identifierare för databasen där resursen lagras. |
+| *repo:repositoryId* | string | Unik identifierare för databasen där resursen lagras. |
 | *repo:id* | string | Unik identifierare för tillgången. |
 | *repo:assetClass* | string | Klassificeringen av resursen (till exempel bild eller video, dokument). |
 | *repo:name* | string | Namnet på resursen, inklusive filtillägget. |
 | *repo:size* | tal | Resursens storlek i byte. |
 | *repo:path* | string | Platsen för resursen i databasen. |
-| *repo:överordnade* | `Array<string>` | En array med överordnade objekt för resursen i databasen. |
+| *repo:ancestors* | `Array<string>` | En array med överordnade objekt för resursen i databasen. |
 | *repo:state* | string | Aktuellt läge för resursen i databasen (t.ex. aktiv, borttagen och så vidare). |
 | *repo:createdBy* | string | Användaren eller systemet som skapade resursen. |
 | *repo:createDate* | string | Datum och tid då tillgången skapades. |
@@ -205,7 +206,7 @@ Du kan använda egenskaperna för målväljaren för att anpassa hur målväljar
 | *itemNameFormatter* | string | Nej | | Med den här egenskapen kan du formatera objektnamnet |
 | *i18nSymboler* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |  | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade lokaliserade värden via `i18nSymbols`-proppen. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna.  Om du vill utföra åsidosättningen måste du skicka ett giltigt [Message Descriptor](https://formatjs.io/docs/react-intl/api/#message-descriptor)-objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
 | *inlineAlertSetup* | string | Nej | | Det lägger till ett varningsmeddelande som du vill skicka i programmet. Du kan till exempel lägga till ett varningsmeddelande om att du inte har behörighet att komma åt den här mappen. |
-| *intl* | Objekt | Nej | | Målväljaren innehåller standardöversättningar, OOTB. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale`-utkastet. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [&#x200B; ISO 639 - Koder &#x200B;](https://www.iso.org/iso-639-language-codes.html) för att representera namn på språkstandarder. </br></br> Lista över språk som stöds: engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
+| *intl* | Objekt | Nej | | Målväljaren innehåller standardöversättningar, OOTB. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale`-utkastet. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ ISO 639 - Koder ](https://www.iso.org/iso-639-language-codes.html) för att representera namn på språkstandarder. </br></br> Lista över språk som stöds: engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
 
 ## Exempel på hur du använder egenskaper för målväljare {#usage-examples}
 

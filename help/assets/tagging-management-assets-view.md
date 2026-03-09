@@ -1,12 +1,13 @@
 ---
 title: Hur hanterar jag taggar i Assets-vyn?
 description: Lär dig hur du hanterar taggar i Assets-vyn. Taggar hjälper dig att kategorisera resurser som kan bläddras och sökas effektivare.
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 7c5e1212-054f-46ca-9982-30e40b0482e1
 feature: Smart Tags
 role: User, Admin, Developer
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1712'
+source-wordcount: '1718'
 ht-degree: 0%
 
 ---
@@ -130,7 +131,7 @@ Så här tar du bort taggar:
 
 ## Lägg till taggar i metadataformuläret {#add-tags-to-metadata-form}
 
-Taggkomponenten läggs automatiskt till i metadataformuläret `default`. Du kan utforma ett [metadataformulär](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/metadata.html?lang=sv-SE#metadata-forms) antingen med en mall eller från början. Om du inte använder någon befintlig metadatamall kan du ändra metadataformuläret och lägga till taggkomponenten. Mappningen av metadataegenskaper fylls i automatiskt och kan inte ändras just nu. [!DNL Assets as a Cloud Service]-användare kan uppdatera mappningen för att lagra taggvärden med anpassade namnutrymmen och endast visa deluppsättningar av hierarkier med hjälp av rotsökvägar.
+Taggkomponenten läggs automatiskt till i metadataformuläret `default`. Du kan utforma ett [metadataformulär](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/metadata.html?lang=en#metadata-forms) antingen med en mall eller från början. Om du inte använder någon befintlig metadatamall kan du ändra metadataformuläret och lägga till taggkomponenten. Mappningen av metadataegenskaper fylls i automatiskt och kan inte ändras just nu. [!DNL Assets as a Cloud Service]-användare kan uppdatera mappningen för att lagra taggvärden med anpassade namnutrymmen och endast visa deluppsättningar av hierarkier med hjälp av rotsökvägar.
 
 I den här snabbvideon ser du hur du lägger till taggkomponenten i metadataformuläret:
 

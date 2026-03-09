@@ -1,10 +1,11 @@
 ---
 title: Hantera licensierade Assets på Content Hub
 description: Lär dig hur du lägger till ett licensfält i metadataformuläret för mediefiler, använder metadataegenskapen Licens på objektmappar och godkänner mediefiler med licenser för användning.
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: ac3aad9f-c7b3-47a7-9314-a2f8277f0d3e
-source-git-commit: bfa7ceeb839574ff1b80ffc25b6519a629247385
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---

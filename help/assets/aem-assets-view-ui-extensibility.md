@@ -3,10 +3,11 @@ title: Aktivera UI-utökningsbarhet i  [!DNL AEM Assets View]
 description: Lär dig mer om UI-utökningsfunktionen i  [!DNL AEM Assets View]. [!DNL AEM Assets View] gränssnittet gör att du kan lägga till anpassade gränssnittskomponenter som uppfyller specifika affärsbehov.
 feature: App Builder
 role: User, Developer
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: a11f7043-17cf-4331-b76c-d3db099c2411
-source-git-commit: f83324be68bdab65e5c76ef336eb7e4a2e318dd1
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '602'
 ht-degree: 0%
 
 ---
@@ -19,13 +20,13 @@ Du kan lägga till dina tillägg på nivån **Resurs**, **Mapp** och **Samling**
 >[!IMPORTANT]
 >
 > * [!DNL AEM Assets View] UI-utbyggbarhet är tillgänglig med [[!DNL Assets Ultimate]](/help/assets/assets-ultimate-overview.md).
-> * [!DNL Assets view]Skapa och skicka ett [kundsupportärende [!DNL Adobe]  om du vill få åtkomst till &#x200B;](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) UI-utökningsbarhet.
+> * [!DNL Assets view]Skapa och skicka ett [kundsupportärende [!DNL Adobe]  om du vill få åtkomst till ](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) UI-utökningsbarhet.
 > * Du kan ge feedback genom att expandera **[!UICONTROL Detailed Feedback options]** och klicka på **[!UICONTROL Report an issue]**.
 
 ## <a id="1"></a> Öppna Assets-vyn{#add-UI-Extensibility-in-AEM-Assets-View}
 
 Följ stegen som anges i bilden nedan för att komma åt [!DNL Assets View]:
-![&#x200B; access-assets-view-ui &#x200B;](/help/assets/assets/access-assets-view.jpg)
+![ access-assets-view-ui ](/help/assets/assets/access-assets-view.jpg)
 
 ## Visa gränssnittstillägg i [!DNL Assets View] {#ui-extensibility-panel-assets-view}
 

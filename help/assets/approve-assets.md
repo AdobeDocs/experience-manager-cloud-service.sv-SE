@@ -2,10 +2,11 @@
 title: Godkänn resurser i Experience Manager
 description: Lär dig godkänna resurser i  [!DNL Experience Manager].
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: fe61a0f1-94d3-409a-acb9-195979668c25
-source-git-commit: 9c1104f449dc2ec625926925ef8c95976f1faf3d
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '952'
 ht-degree: 0%
 
 ---
@@ -33,7 +34,7 @@ Om du behöver visa egenskapen som fältet **[!UICONTROL Review Status]** är ma
 1. Dra och släpp ett **[!UICONTROL Dropdown]**-fält från avsnittet **[!UICONTROL Build Form]** på höger sida till avsnittet Metadata i formuläret.
 1. Klicka på det nya fältet och gör sedan följande uppdateringar på panelen **[!UICONTROL Settings]**:
    1. Ändra **[!UICONTROL Field Label]** till _Godkännandemål_.
-   1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam:activationTarget_.
+   1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam :activationTarget_.
    1. Lägg till alternativen med `contenthub` och `delivery` som alternativvärden.
 
    >[!NOTE]
@@ -51,7 +52,7 @@ Om du behöver visa egenskapen som fältet **[!UICONTROL Review Status]** är ma
 Så här godkänner du resurser i [!DNL Experience Manager Admin view]:
 
 1. Markera resursen/resurserna och klicka på **[!UICONTROL Properties]** i den övre rutan.
-1. Bläddra nedåt till **[!UICONTROL Review Status]** på fliken **[!UICONTROL Basic]**.
+1. Bläddra nedåt till **[!UICONTROL Basic]** på fliken **[!UICONTROL Review Status]**.
 1. Ändra granskningsstatusen till **[!UICONTROL Approved]**.
    ![bild](/help/assets/assets/approve-old-ui.png)
 1. Klicka på **[!UICONTROL Save & Close]**.
@@ -73,13 +74,13 @@ Effektivisera arbetsflödet genom att snabbt godkänna flera resurser samtidigt.
 1. Dra och släpp **[!UICONTROL Single Line Text Field]** från avsnittet **[!UICONTROL Build Form]** på höger sida till avsnittet Metadata i formuläret.
 1. Klicka på det nya fältet och gör sedan följande uppdateringar på panelen **[!UICONTROL Settings]**:
    1. Ändra **[!UICONTROL Field Label]** till _Godkänd Assets_.
-   1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam:status_.
+   1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam :status_.
    1. Ändra standardvärdet till _godkänt_.
 
 1. Dra och släpp ett **[!UICONTROL Dropdown]**-fält från avsnittet **[!UICONTROL Build Form]** på höger sida till avsnittet Metadata i formuläret.
 1. Klicka på det nya fältet och gör sedan följande uppdateringar på panelen **[!UICONTROL Settings]**:
    1. Ändra **[!UICONTROL Field Label]** till _Godkännandemål_.
-   1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam:activationTarget_.
+   1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam :activationTarget_.
    1. Lägg till alternativen med `contenthub` och `delivery` som alternativvärden.
 
    >[!NOTE]

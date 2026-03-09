@@ -2,10 +2,11 @@
 title: Dynamic Media med OpenAPI-funktioner - frågor och svar
 description: Dynamic Media med OpenAPI-funktioner - frågor och svar
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 3450e050-4b0b-4184-8e71-5e667d9ca721
-source-git-commit: c3bac140c2e0b33cfc206cda7c0591fc75a47a1f
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1599'
 ht-degree: 0%
 
 ---
@@ -51,7 +52,7 @@ På samma sätt anger Experience Manager Assets statusen Avvisat i Assets-vyn me
 
 ## Hur kan du få användar- eller grupp-ID:n för Adobe IMS (Adobe Identity Management Services) att användas för att ange rollerna för resurser i Experience Manager Admin-vyn, för att säkra leverans- och sökupplevelsen? {#set-roles-secure-delivery-search}
 
-Användare som behöver åtkomst till Experience Manager Author-miljön hanteras som Adobe IMS-användare i Adobe Admin Console. Mer information om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console finns i [Adobe IMS-användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/adobe-ims-users.html?lang=sv-SE).
+Användare som behöver åtkomst till Experience Manager Author-miljön hanteras som Adobe IMS-användare i Adobe Admin Console. Mer information om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console finns i [Adobe IMS-användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/adobe-ims-users.html?lang=en).
 
 
 ## Kan du godkänna flera resurser samtidigt i en mapp? {#approve-multiple-assets-in-folder}
@@ -135,7 +136,7 @@ Tabellen nedan visar de viktigaste skillnaderna mellan de två lösningarna:
 
 Så här aktiverar du produktionen av [modifierare i begränsad tillgänglighet](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/) för ditt konto:
 
-1. [Skapa ett Adobe-supportärende med Admin Console](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+1. [Skapa ett Adobe-supportärende med Admin Console](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 1. Ange följande i Adobe Support-ärendet:
 

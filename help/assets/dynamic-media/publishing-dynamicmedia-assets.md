@@ -4,10 +4,11 @@ description: Lär dig hur du publicerar Dynamic Media-video och bildresurser så
 contentOwner: Rick Brough
 feature: Asset Management
 role: User
+badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 8ee759dc-cb8f-4e80-8175-2c3ba06da862
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '486'
 ht-degree: 2%
 
 ---
@@ -42,6 +43,6 @@ Mer information om hur du publicerar en uppsättning eller resurs finns i [Publi
 
 Experience Manager stöder nu leverans av allt dynamiskt medieinnehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar sättet som webbläsare och servrar kommunicerar på, vilket ger bättre respons och laddningstider för alla dynamiska medieresurser.
 
-Se [HTTP/2-leverans av innehåll, vanliga frågor &#x200B;](/help/assets/dynamic-media/http2faq.md).
+Se [HTTP/2-leverans av innehåll, vanliga frågor ](/help/assets/dynamic-media/http2faq.md).
 
 <!--this md file used to reside under sites-administering-->
