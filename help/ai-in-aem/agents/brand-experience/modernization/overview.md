@@ -4,9 +4,9 @@ description: Läs om hur Experience Modernization Agent tar in nya webbplatser i
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: c23a6f55-2ba8-4290-b7e8-06cad5de0fc8
-source-git-commit: 0bef673daf2030ce2418d0d3a0560a8476868657
+source-git-commit: 0aaa9904b3011adc3f3e3b01bfee8ee3e96f12e2
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Läs om hur Experience Modernization Agent tar in webbplatser i Edge Delivery Se
 
 Det kombinerar [kunskaper om webbplatsskapande och migrering](#creation-migration) för inledande webbplatsintroduktion och [funktioner för blockutveckling](#block-development) för kontinuerlig upplevelseutveckling (formatuppdateringar, mallförbättringar, skapande av landningssidor). Dessutom erbjuder den [Experience Modernization Console](#console) som en AI-stödd utvecklingsmiljö som du kan använda direkt. Även om användare kan hantera agenten direkt via konsolen behåller utvecklarna full kontroll över vad som skickas.
 
-För att komplex migrering ska lyckas erbjuder Adobe dessutom [AOE-leveransmodellen &#x200B;](#delivery-model). Det här alternativet kan användas som en accelerator eller som en taktisk tjänst för att hjälpa till att frigöra specifika projektutmaningar.
+För att komplex migrering ska lyckas erbjuder Adobe dessutom [AOE-leveransmodellen ](#delivery-model). Det här alternativet kan användas som en accelerator eller som en taktisk tjänst för att hjälpa till att frigöra specifika projektutmaningar.
 
 ## Fördelar {#benefits}
 
@@ -63,6 +63,11 @@ Agenten för Experience Modernization tillhandahåller en AI-assisterad utveckli
 * Företagsstyrning används eftersom utvecklarna behåller full kontroll över vad som levereras via vanliga GitHub-gransknings- och godkännandeprocesser.
 
 Självbetjäningskonsolen för Experience Modernization är vanligtvis tillgänglig. Intresserade användare kan begära åtkomst för att få en smidig introduktionsupplevelse.
+
+Kom igång med Experience Modernization Console!
+
+* Om du moderniserar webbplatsen genom att ange dokumentredigering som mål [kommer du igång här.](/help/ai-in-aem/agents/brand-experience/modernization/getting-started.md)
+* Om du moderniserar webbplatsen genom att skapa för AEM [kommer du igång här.](/help/ai-in-aem/agents/brand-experience/modernization/getting-started-aem-authoring.md)
 
 ## Leveransmodell {#delivery-model}
 

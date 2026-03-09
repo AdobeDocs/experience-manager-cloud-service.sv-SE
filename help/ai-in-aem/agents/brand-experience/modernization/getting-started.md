@@ -4,9 +4,9 @@ description: Lär dig de första stegen för att snabbt bli produktiv med Experi
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: 612c211e-43bf-47dc-89a8-9995a960e4d7
-source-git-commit: 0bef673daf2030ce2418d0d3a0560a8476868657
+source-git-commit: 0aaa9904b3011adc3f3e3b01bfee8ee3e96f12e2
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ Lär dig de första stegen för att snabbt bli produktiv med Experience Moderniz
 >Om du är intresserad av att använda Experience Modernization Console kan du begära åtkomst för att få en smidig introduktionsupplevelse.
 
 ## Förbered en Edge Delivery GitHub-databas {#prepare-repo}
+
+>[!NOTE]
+>
+>Använda ett AEM Sites- och Universal Editor-projekt? Följ installationsstegen för [Komma igång för AEM Sites/Universal Editor](/help/ai-in-aem/agents/brand-experience/modernization/getting-started-aem-authoring.md).
 
 1. Välj en [Edge Delivery Services](/help/edge/overview.md)-databas som ska användas med Experience Modernization Console.
    * Detta kan vara ett befintligt Edge Delivery Services-projekt eller så kan du skapa ett nytt efter [utvecklarsjälvstudiekursen](https://www.aem.live/developer/tutorial) med hjälp av [standarddatabasen.](https://github.com/adobe/aem-boilerplate)
@@ -77,6 +81,10 @@ Nu har du importerat både innehåll och format till konsolen.
 >[Se frågeguiden](/help/ai-in-aem/agents/brand-experience/modernization/prompting-guide.md) för mer information om hur du kan fråga agenten och vad dess kunskaper kan göra.
 
 ## Överför innehåll {#upload-content}
+
+>[!TIP]
+>
+>Om du arbetar med ett AEM Sites- och Universal Editor-projekt fungerar överföringen av innehåll till AEM något annorlunda. Se [Komma igång med Experience Modernization Agent for AEM Sites/Universal Editor Projects](/help/ai-in-aem/agents/brand-experience/modernization/getting-started-aem-authoring.md#upload-content) för specifika överföringsanvisningar.
 
 Så här överför du ditt innehåll till [Dokumentredigering](https://da.live):
 

@@ -4,9 +4,9 @@ description: Referenshandbok för gränssnittet och funktionerna i Experience Mo
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: 43d8c124-fc87-4cec-a91d-ab12255ae321
-source-git-commit: e2a9c55644c0d9542f6a299f0df30a3dfd4a55de
+source-git-commit: 0aaa9904b3011adc3f3e3b01bfee8ee3e96f12e2
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Utvecklarna har full kontroll över vilka fartyg som levereras. Alla ändringar 
 
 ## Navigering {#navigation}
 
-När du har loggat in på konsolen på [`aemcoder.adobe.io` &#x200B;](https://aemcoder.adobe.io) kommer du till hemskärmen på konsolen.
+När du har loggat in på konsolen på [`aemcoder.adobe.io` ](https://aemcoder.adobe.io) kommer du till hemskärmen på konsolen.
 
 ![Startskärmen för konsolen](assets/console-home.png)
 
@@ -67,19 +67,17 @@ Den vänstra sidofältet ger snabb åtkomst till viktiga vyer av konsolen.
 
 Vyn **Hem** är startpunkten för konsolen.
 
-* Överst finns en [promptpanel](#prompt-panel) som gör begäranden från konsolen.
-* Här nedan visas uppmaningar om att starta projektet.
+* Överst finns en [promptinmatning](#prompt-input) för att göra begäranden från konsolen.
+* Här nedan visas uppmaningar om att komma igång med projektet.
 
-### Frågepanelen {#prompt-panel}
+### Fråga indata {#prompt-input}
 
-Frågepanelen innehåller kontroller för interaktion med AI.
+Frågeindata innehåller kontroller för interaktion med AI.
 
 * **Planerings-/körningslägen** (glödlampor och trollstavsikoner): Växla mellan planerings- och körningslägen
    * **Planeringsläge**: AI analyserar begäranden och sammanställer en strategi utan att göra ändringar, vilket är användbart för att förstå strategi innan implementering.
    * **Körningsläge**: AI utför planen och utför faktiska filändringar.
 * **Bifoga filer** (pappersklippsikon): Överför och bifoga filer till uppmaningen om ytterligare kontext (t.ex. referensdesign, skärmbilder, specifikationer)
-* **Inställningar** (kugghjulsikon): Välj att hoppa över bekräftelsefrågor från AI
-* **Rensa chatt**: Detta återställer konversationen och rensar kontextfönstret i AI. Använd det här alternativet när du startar en ny uppgift som inte hör till den tidigare konversationen.
 
 ## Innehållsvy {#content-view}
 
@@ -91,15 +89,32 @@ I **innehållsvyn** finns verktyg för att bläddra bland och förhandsgranska i
 
 ![Innehållsvy](assets/content-imported.png)
 
-Det finns tre lägen i förhandsvisningspanelen:
+### Panelen Chatt {#chat-panel}
+
+På chattpanelen kan du visa och fortsätta ditt samtal med agenten för upplevelsemodernisering. Chattpanelen innehåller historiken för chattmeddelanden och [uppmaningsindata](#prompt-input) för att göra ytterligare förfrågningar från konsolen.
+
+* **Chattåtgärder**
+   * **Rensa chatt**: Detta återställer konversationen och rensar kontextfönstret i AI. Använd det här alternativet när du startar en ny uppgift som inte hör till den tidigare konversationen.
+   * **Hämta chatt**: Detta hämtar konversationshistoriken som en markeringsfil.
+
+### Panelen Förhandsgranska {#preview-panel}
+
+Det finns upp till fyra lägen på förhandsvisningspanelen:
 
 * **Förhandsgranska** (dokument med förstoringsglaset) om du vill visa det återgivna HTML-innehållet
-* **HTML-vy** (dokumentikon) om du vill visa den underliggande innehållsstrukturen för dokumentredigering
-* **Designläge** (penselikon) om du vill välja element på sidan för kontext för prompten
+   * **Responsiv vy** om du vill visa det återgivna HTML-innehållet på en dator, surfplatta eller mobilvy
+   * **Designläge** (penselikon) om du vill lägga till element på sidan i uppmaningen om ytterligare kontext
+* **Dokumentvy** (dokumentikon) om du vill visa den underliggande innehållsstrukturen för dokumentredigering
+* **Markeringsvy (AEM-redigering)** (kodikon) för att visa den underliggande strukturen för markeringsinnehåll
+* **JCR XML-vy (AEM-redigering)** (dataikon) för att visa den resulterande strukturen för JCR XML-innehåll
 
 Du kan alltid klicka på ikonen **Uppdatera förhandsvisning** för att uppdatera förhandsvisningspanelen.
 
-Knappen **Överför innehåll** öppnar ett modalt fönster där du kan överföra filer till AEM Document Authoring.
+Knappen **Ta bort** tar bort den markerade sidan från arbetsytan. Förhandsvisat eller publicerat innehåll tas inte bort.
+
+Knappen **Fel** (AEM-redigering) öppnar ett modalt fönster där felen på den valda sidan visas.
+
+Knappen **Överför innehåll** öppnar ett modalt fönster där du kan överföra filer till AEM.
 
 * Fälten **Organisation** och **Databas** är förifyllda om projektet har en `fstab.yaml`-fil
 * Filmarkering ger redigerbara målsökvägar
@@ -111,15 +126,16 @@ Knappen **Överför innehåll** öppnar ett modalt fönster där du kan överfö
 
 I **kodvyn** finns verktyg för att bläddra i kod och hantera kodändringar. Vyn är uppdelad i tre paneler, från vänster till höger:
 
-* Fråga panelen för interaktion med konsolen och projektet
+* Panelen Chatt för interaktion med konsolen och projektet
 * I filläsaren finns en översikt över dina kodfiler eller ändringar som skillnader
-* Panelen Förhandsgranska för att visa en kodfil eller diff-markering i filläsaren
+* Panelen Förhandsgranska för att visa en kodfil eller ändringar som har markerats i filläsaren
 
 ![Kodvyn](assets/code-view.png)
 
 Det finns två olika lägen i förhandsvisningspanelen:
 
 * **Workspace-filer** om du vill bläddra bland kodfilerna på den aktuella arbetsytan
+   * Använd knappen **Lägg till i chatt** för att lägga till filen i chattpanelen för kontext.
 * **Git-ändringar** för att visa skillnaderna mellan filändringar som har skapats i ditt arbete i projektet
    * Klicka på ikonen `+` för att mellanlagra den ändrade filen
    * Klicka på pilikonen för att ta bort den ändrade filen
@@ -145,6 +161,8 @@ I inställningsvyn kan du hantera konsolens grundläggande inställningar.
 
 ![Inställningsvyn](assets/settings-view.png)
 
+* Med **Project** kan du visa och redigera projektinställningar som att anpassa biblioteks-URL:en.
+* Med **support** kan du begära hjälp från AEM supportteam.
 * Med **Autentiseringsuppgifter** kan du ange en personlig åtkomsttoken för Figma så att [konsolen kan komma åt designblock för ditt projekt.](/help/ai-in-aem/agents/brand-experience/modernization/prompting-guide.md#figma-block-migration)
    * Token kräver följande skrivskyddade omfång:
       * `file_content:read`
@@ -154,5 +172,5 @@ I inställningsvyn kan du hantera konsolens grundläggande inställningar.
       * `team_library_content:read`
       * `file_dev_resources:read`
       * `projects:read`
-   * [Mer information om hur du konfigurerar personliga åtkomsttoken finns i Figma-dokumentationen &#x200B;](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens).
+   * [Mer information om hur du konfigurerar personliga åtkomsttoken finns i Figma-dokumentationen ](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens).
 * **Återställ arbetsyta** återställer konsolen till startläget och alla ändringar som inte har skickats eller inte har överförts går förlorade.
