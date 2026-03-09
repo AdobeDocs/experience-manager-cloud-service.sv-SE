@@ -1,14 +1,14 @@
 ---
 title: Micro-Frontend Content Fragment Selector for Adobe Experience Manager as a Cloud Service
 description: Använd Micro-Frontend Content Fragment Selector för att söka, hitta och hämta innehållsfragment från programmet.
-role: Admin, User
-source-git-commit: 32e1b3cef768b420f32b70202ddadc80db2b74e8
+role: Admin, User, Developer
+exl-id: 5b18fb2c-26c8-4d9d-ba2e-9e53c09f5022
+source-git-commit: 006bfe9067267da1524ab456605a956162c889e3
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
-
 
 # Micro-Frontend Content Fragment Selector {#micro-frontend-content-fragment-selector}
 
@@ -69,9 +69,11 @@ Använd komponenten `ContentFragmentSelector`. Det finns flera installationsalte
 
 När väljaren för innehållsfragment har konfigurerats och autentiserats för att använda väljaren för innehållsfragment med ditt AEM as a Cloud Service-program kan du välja Innehållsfragment eller utföra olika andra åtgärder för att söka efter dina fragment i databasen:
 
-![Innehållsfragmentväljaren](/help/headless/assets/content-fragment-selector-using.png)
+![Innehållsfragmentväljaren](/help/headless/assets/content-fragment-selector-unwrapped.png)
 
-* Med väljaren **Databas** överst till höger kan du välja den databas som du vill använda
+* I det övre verktygsfältet kan du:
+   * Använd **databasväljaren** längst upp till höger för att välja den databas som du vill använda
+   * Välj format, lista eller stödraster
 * I panelen längst till vänster kan du:
    * Dölja eller visa mappar från den valda databasen
    * Välj en specifik mapp för att visa innehållsfragment i den mappen
@@ -81,6 +83,9 @@ När väljaren för innehållsfragment har konfigurerats och autentiserats för 
    * Sortera den aktuella listan efter olika kolumner, både stigande och fallande
    * Se indikatorn för visningsformat
    * Visa, dölja och ange filter
+* I den högra panelen kan du:
+   * Visa egenskaper
+   * Visa referenser
 
 ### Visa/dölj panelen {#hide-show-panel}
 
@@ -130,3 +135,16 @@ Du kan sortera fragment i väljaren för innehållsfragment efter olika egenskap
 Med väljaren för innehållsfragment kan du visa fragmentet i:
 
 * **Tabellvy**
+* **Stödrastervisning**
+
+Du kan välja önskad vy bland ikonerna i det övre verktygsfältet:
+
+![Innehållsfragmentväljaren - vytyp](/help/headless/assets/content-fragment-selector-view-type.png)
+
+## Integrera väljaren för innehållsfragment med program {#integrate-the-content-fragment-selector-with-applications}
+
+Du kan integrera väljaren för innehållsfragment med olika program som:
+
+* [Integrera väljaren för innehållsfragment med ett Adobe-program](/help/headless/content-fragment-selector/integrate-adobe-application.md)
+* [Integrera väljaren för innehållsfragment med andra program än Adobe eller tredjepartsprogram](/help/headless/content-fragment-selector/integrate-non-adobe-application.md)
+* [Integrera väljaren för innehållsfragment med Vanilla JS](/help/headless/content-fragment-selector/integrate-using-vanilla-js.md)
