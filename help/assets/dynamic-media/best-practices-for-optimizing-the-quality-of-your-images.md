@@ -28,7 +28,7 @@ Adobe Experience Manager innehåller över 100 kommandon för leverans av dynami
 **Smart bildåtergivning:**
 
 * Om du aktiverar Smart Imaging i Dynamic Media kan du automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens funktioner.
-Vill du veta mer? Gå till [Smart bildbehandling](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/imaging-faq).
+Vill du veta mer? Gå till [Smart bildbehandling](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/dynamicmedia/imaging-faq).
 * Den förbättrar bildens prestanda genom att dynamiskt justera dessa parametrar.
 * Du kan utvärdera Smart Imaging med självutvärderingsverktyget [Snapshot](https://snapshot.scene7.com/).
 
@@ -165,4 +165,4 @@ Följande allmänna förslag är användbara när du experimenterar för att opt
 
 * Testa olika parametrar i realtid direkt på en URL.
 * Det är en god vana att gruppera kommandona Dynamic Media Image Serving i en bildförinställning. En bildförinställning är i princip URL-kommandomakron med anpassade förinställningsnamn som `$thumb_low$` och `&product_high$`. Det anpassade förinställningsnamnet i en URL-sökväg anropar de här förinställningarna. Den här funktionen hjälper dig att hantera kommandon och kvalitetsinställningar för olika användningsmönster för bilder på webbplatsen och förkortar den totala längden på URL-adresser.
-* Experience Manager har också mer avancerade sätt att finjustera bildkvaliteten, t.ex. genom att lägga på skärpa vid inhämtning. [Adobe konsulttjänster](https://business.adobe.com/customers/consulting-services/main.html) kan hjälpa dig med anpassade insikter och metodtips för att optimera återgivningsresultaten.
+* Experience Manager har också mer avancerade sätt att finjustera bildkvaliteten, t.ex. genom att lägga på skärpa vid inhämtning. [Adobe konsulttjänster](https://business.adobe.com/se/customers/consulting-services/main.html) kan hjälpa dig med anpassade insikter och metodtips för att optimera återgivningsresultaten.

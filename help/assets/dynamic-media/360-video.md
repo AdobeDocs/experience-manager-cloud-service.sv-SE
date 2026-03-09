@@ -23,7 +23,7 @@ Du kan använda 360/VR-visningsprogrammet för att återge ekvirektangulär vide
 
 Spatial audio stöds inte för närvarande. Om ljudet blandas i stereo ändras inte balansen (L/R) när kunden ändrar kamerans visningsvinkel.
 
-Se [Använda dynamiska media 360-videor och anpassade videominiatyrer med AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.html#dynamic-media).
+Se [Använda dynamiska media 360-videor och anpassade videominiatyrer med AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.html?lang=sv-SE#dynamic-media).
 
 Se även [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 

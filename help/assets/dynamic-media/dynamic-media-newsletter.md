@@ -46,7 +46,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
     * Connect with the Adobe Experience Manager Community.
     * Fast-track your Adobe expertise with Adobe Experience League. -->
 
-* **[April 2020, utgåva 3](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_04_2020_April.html)**
+* **[April 2020, utgåva 3](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_04_2020_April.html?lang=sv-SE)**
 
   I detta nummer:
 

@@ -104,7 +104,7 @@ Anta att du använde följande exempelkod för inbäddning på webbsidan för en
    Mer information om metoden `setHandlers()` finns här:
 
    * Interaktiv bildläsare - [inställningsverktyg](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
-   * Interaktiv videoredigerare - [snygga hanterare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
+   * Interaktiv videoredigerare - [snygga hanterare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html?lang=sv-SE)
 
 1. Konfigurera hanteraren `quickViewActivate`.
 
@@ -135,8 +135,8 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
 
    Mer information om metoden `quickViewActivate` finns här:
 
-   * Interaktiv bildläsare - [Händelseåteranrop](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html)
-   * Interaktiv videovisningsprogram - [Händelseåteranrop](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html)
+   * Interaktiv bildläsare - [Händelseåteranrop](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html?lang=sv-SE)
+   * Interaktiv videovisningsprogram - [Händelseåteranrop](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html?lang=sv-SE)
    * Stöd för interaktiva data i Interactive Video Viewer - [Stöd för interaktiva data](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html)
 
 1. Gör följande:

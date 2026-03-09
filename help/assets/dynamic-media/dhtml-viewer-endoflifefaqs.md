@@ -17,4 +17,4 @@ ht-degree: 0%
 
 Från och med den 31 januari 2014 är DHTML-visningsprogramplattformen officiellt utgånget.
 
-Se [Referenshandboken för dynamiska medievisningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html) för de senaste visningsprogrammen som stöds.
+Se [Referenshandboken för dynamiska medievisningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html?lang=sv-SE) för de senaste visningsprogrammen som stöds.

@@ -61,11 +61,11 @@ The [Use Interactive Video, Link Sharing, and YouTube sharing in Experience Mana
 
 Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med interaktiva videor i Dynamic Media.
 
-Leta efter rubriken **Exempel** i några av snabbstartsaktiviteterna. Den innehåller en kort självstudiekurs som baseras på denna [startsida för demo som *inte* har lagt till interaktivitet i den än](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html).
+Leta efter rubriken **Exempel** i några av snabbstartsaktiviteterna. Den innehåller en kort självstudiekurs som baseras på denna [startsida för demo som *inte* har lagt till interaktivitet i den än](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=sv-SE).
 
 **Exemplen** visar hur du integrerar interaktiva videofilmer på en webbplats.
 
-När du är klar med självstudiekursen i det sista exempelavsnittet [visas din sista demowebbsida med den helintegrerade interaktiva videon på det här sättet](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html).
+När du är klar med självstudiekursen i det sista exempelavsnittet [visas din sista demowebbsida med den helintegrerade interaktiva videon på det här sättet](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html?lang=sv-SE).
 
 Interaktiva videosteg:
 
@@ -185,7 +185,7 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande miniatyr
 
 När ovanstående metod används på exempelwebbplatsen har du en webbsida med flera produktminiatyrbilder där var och en har knappen &quot;SE MER&quot;:
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=sv-SE](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=sv-SE)
 
 När du har aktiverat alla snabbvyer för produkter som är tillgängliga på sidan visas följande lista över snabbvybegäranden som gjorts i serverdelen:
 
@@ -539,7 +539,7 @@ Den kopierade inbäddningskoden ställs in för en responsiv miljö så att den 
 
 Använda demowebbplatsen som exempel:
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=sv-SE](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=sv-SE)
 
 Observera att koden för videoinbäddning är standard:
 
@@ -570,7 +570,7 @@ Observera att koden för videoinbäddning är standard:
 
 Integrationen är lika enkel som att ta bort inbäddningskoden för video och ersätta den med den interaktiva inbäddningskoden för video från Experience Manager. Resultatet visas på följande URL. Även om det visar en interaktiv video på sidan är den ännu inte integrerad med de befintliga snabbvyerna:
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html?lang=sv-SE](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html?lang=sv-SE)
 
 ## Integrera en interaktiv video med en befintlig QuickView {#integrating-an-interactive-video-with-an-existing-quickview}
 
@@ -770,7 +770,7 @@ Den fullständiga källkoden är följande:
 
 Den färdiga demowebbplatsen med den helt integrerade interaktiva videon ser ut så här:
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html?lang=sv-SE](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html?lang=sv-SE)
 
 ## Skapa anpassade popup-fönster® med QuickView {#using-quickviews-to-create-custom-pop-ups}
 

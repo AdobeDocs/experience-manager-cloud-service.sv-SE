@@ -133,7 +133,7 @@ Vill du veta mer? Gå till [Bästa tillvägagångssätt för att optimera kvalit
 
 Eftersom uppfattningen av bildkvaliteten varierar från människa till människa, kan ibland en systematisk undersökningsmetod vara nödvändig för att uppnå önskvärda resultat. Adobe Experience Manager hjälper till med den här processen med över 100 dynamiska mediakommandon för bildförbättring.
 
-Vill du veta mer? Titta på [ögonblicksbilden av dynamiska media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot) (3 minuter, 17 sekunder).
+Vill du veta mer? Titta på [ögonblicksbilden av dynamiska media](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot) (3 minuter, 17 sekunder).
 
 Om du vill utvärdera hur de olika kommandona påverkar bildkvaliteten kan du överföra en bild till Dynamic Media, använda verktygets gränssnitt på den angivna URL:en och använda de kommandon som du vill testa.
 
