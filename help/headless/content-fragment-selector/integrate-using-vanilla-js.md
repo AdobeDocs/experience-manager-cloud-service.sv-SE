@@ -21,5 +21,5 @@ Integreringen görs genom att du importerar Content Fragment Selector-paketet oc
 
 Du kan utföra autentisering utan att definiera några IMS-egenskaper om du:
 
-* integrerar ett Adobe-program på [Unified Shell](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell)
+* integrerar ett Adobe-program på [Unified Shell](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell)
 * har redan en IMS-token genererad för autentisering
