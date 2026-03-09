@@ -20,14 +20,14 @@ De största skillnaderna jämfört med [!DNL Experience Manager] 6.5 är inom f�
 
 * [Tillgångsinmatning, överföring och bearbetning](#asset-ingestion).
 * [Resursmikrotjänster för molnbaserad bearbetning](#asset-microservices).
-* [Det klassiska användargränssnittet ](#classic-ui) tas bort.
+* [Det klassiska användargränssnittet &#x200B;](#classic-ui) tas bort.
 
 ## Intag, bearbetning och distribution av material {#asset-ingestion-distribution}
 
 Tillgångsuppladdningen är optimerad för ökad effektivitet genom bättre skalning av intag, snabbare uppladdning, snabbare bearbetning med hjälp av mikrotjänster och bulkinhämtning. Produktfunktionerna (webbanvändargränssnitt, skrivbordsklienter) uppdateras. Dessutom kan detta påverka vissa befintliga anpassningar.
 
 * [!DNL Experience Manager] använder principen för direkt binär åtkomst för att överföra och hämta resurser och använder resursmikrotjänster för att bearbeta resurser. Se en [översikt över mikrotjänster](/help/assets/asset-microservices-overview.md).
-   * Resursöverföring [ med direkt binär åtkomst](/help/assets/asset-microservices-overview.md#asset-upload-with-direct-binary-access).
+   * Resursöverföring [&#x200B; med direkt binär åtkomst](/help/assets/asset-microservices-overview.md#asset-upload-with-direct-binary-access).
    * Mer teknisk information finns i [protokoll för direkt binär överföring och API:er](/help/assets/developer-reference-material-apis.md#upload-binary).
    * En jämförelse av tillgängliga API-metoder för grundläggande CRUD-åtgärder finns i [API:er och tillgångsåtgärder](/help/assets/developer-reference-material-apis.md#use-cases-and-apis).
 * Standardarbetsflödet **[!UICONTROL DAM Asset Update]** i tidigare versioner av [!DNL Experience Manager] är inte längre tillgängligt. I stället erbjuder mikrotjänsterna en skalbar, lättillgänglig tjänst som täcker det mesta av standardbearbetningen av resurser (återgivningar, metadataextrahering och textextrahering för indexering).

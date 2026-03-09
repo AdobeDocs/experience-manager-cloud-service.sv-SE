@@ -41,7 +41,7 @@ Innan du installerar anslutningsprogrammet följer du de här förinstallationss
 
    * [IP-adresser för Workfront-kluster](https://experienceleague.adobe.com/docs/workfront/using/administration-and-setup/get-started-administration/configure-your-firewall.html?lang=en#ip-addresses-to-allow-for-clusters-1-2-3-5-7-8-and-9). Om du vill känna till IP-klustret i [!DNL Workfront] går du till **[!UICONTROL Setup]** > **[!UICONTROL System]** > **[!UICONTROL Customer Info]**.
 
-   * [API:er för Workfront Event Subscription ](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-api/event-subscriptions/event-subs-api.html)
+   * [API:er för Workfront Event Subscription &#x200B;](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-api/event-subscriptions/event-subs-api.html)
 
    >[!IMPORTANT]
    >
@@ -53,7 +53,7 @@ Innan du installerar anslutningsprogrammet följer du de här förinstallationss
    >
    >    ```
    >    dscacheutil -q host -a name p{PROGRAM_ID}.external.adobeaemcloud.com
-   >
+   >    
    >    ```
 
 1. Kontrollera att följande övertäckningar inte finns i databasen [!DNL Experience Manager]. Om du har befintliga övertäckningar på de här banorna måste du antingen ta bort övertäckningarna eller sammanfoga ändringarna mellan dem:

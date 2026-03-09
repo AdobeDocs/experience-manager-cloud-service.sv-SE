@@ -62,7 +62,7 @@ Lägg nu till en bildbehandlingsparameter i slutet av URL:en. I URL-fältet skri
 
 Observera att en ny återgivning av bevakningen genereras. En viktig fördel med detta enkla arbete med att ändra bildens bredd är att bilden som visas genereras 100 % dynamiskt.
 
-Ändra nu breddvärdet för `500` pixlar till `1000` pixlar och tryck sedan på **[!UICONTROL Enter]**. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock%5F28563982?wid=1000){target=&quot;_blank}.
+Ändra nu breddvärdet för `500` pixlar till `1000` pixlar och tryck sedan på **[!UICONTROL Enter]**. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock%5F28563982?wid=1000){target=_blank}.
 När du trycker på **[!UICONTROL Enter]** återgår webbläsaren till Dynamic Media Image Server. Den genererar en helt ny återgivning av klockan, baserat på det nya breddvärdet du just angav, skickar sedan tillbaka den nya bilden till webbläsaren och cachelagrar den.
 
 Dynamic Media har många bildbehandlingsparametrar som du kan använda för att finjustera bildresurser på webbsidor. Du kan [se en lista över dem här](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=en).
@@ -155,7 +155,7 @@ När du har ändrat bildförinställningen och tömt cacheminnet uppdateras alla
 
 En del av de vanligaste användningsområdena för Dynamic Media är möjligheten att skapa bilduppsättningar, snurra och blandade medieuppsättningar.
 
-Bilduppsättningar består vanligtvis av en serie bildresurser som presenteras som en enda enhet. Den här typen av uppsättningar ger användarna en integrerad visningsupplevelse, där användarna kan se olika vyer av ett objekt genom att klicka på en miniatyrbild. Med bilduppsättningar kan du presentera alternativa vyer av något och visningsprogrammet har zoomverktyg som gör att du kan granska bilder noggrant. [Visa en bilduppsättning med namnet&quot;Körs&quot; som använder visningsprogrammet ](https://s7d1.scene7.com/s7viewers/html5/FlyoutViewer.html?asset=jpearldemo/Running).
+Bilduppsättningar består vanligtvis av en serie bildresurser som presenteras som en enda enhet. Den här typen av uppsättningar ger användarna en integrerad visningsupplevelse, där användarna kan se olika vyer av ett objekt genom att klicka på en miniatyrbild. Med bilduppsättningar kan du presentera alternativa vyer av något och visningsprogrammet har zoomverktyg som gör att du kan granska bilder noggrant. [Visa en bilduppsättning med namnet&quot;Körs&quot; som använder visningsprogrammet &#x200B;](https://s7d1.scene7.com/s7viewers/html5/FlyoutViewer.html?asset=jpearldemo/Running).
 
 Här i Dynamic Media ser du flera bilder av skor. Det är en produktserie som försäljning och marknadsföring vill att kunderna ska se som en enda presentation, en Image-uppsättning.
 

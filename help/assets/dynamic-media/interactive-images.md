@@ -43,7 +43,7 @@ Interactive Images:
 Om du använder Experience Manager Sites, Experience Manager e-handel eller båda är det här steget inte nödvändigt.
 
 1. **(Valfritt) Skapa en förinställning för Interactive Image Viewer**. Anpassa den grafiska bild som används för att representera aktiveringspunkter. Det är inte nödvändigt att skapa en egen förinställning för Interactive Image Viewer om du tänker använda den färdiga Interactive Image Viewer-förinställningen `Shoppable_Banner` i stället.
-Se [ (Valfritt) Skapa en förinställning för Interactive Image Viewer ](/help/assets/dynamic-media/managing-viewer-presets.md#creating-a-new-viewer-preset).
+Se [&#x200B; (Valfritt) Skapa en förinställning för Interactive Image Viewer &#x200B;](/help/assets/dynamic-media/managing-viewer-presets.md#creating-a-new-viewer-preset).
 
 1. **Överför en bildbanderoll**. Överför bildbanderoller som du vill göra interaktiva.
 Se [Överföra en bildbanderoll](#uploading-an-image-banner).
@@ -113,10 +113,10 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande hotspot-
     <td><p>En SKU, hittades i frågesträngen.</p> </td>
     <td><p>De inspelade URL:erna för snabbvyn är bland annat följande:</p>
     <ul>
-      <li><p><code>https://server/json?productId=866558&amp;source=100</code></p> </li>
-      <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
-      <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
-      <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
+      <li><p><code>https://server/json?productId=866558&source=100</code></p> </li>
+      <li><p><code>https://server/json?productId=1196184&source=100</code></p> </li>
+      <li><p><code>https://server/json?productId=1081492&source=100</code></p> </li>
+      <li><p><code>https://server/json?productId=1898294&source=100</code></p> </li>
     </ul> <p>Den enda variabeldelen i URL:en är värdet på strängparametern productId= och det är tydligt ett SKU-värde. Därför behöver aktiveringspunkter bara SKU-fält med värden som <strong><code>866558</code></strong>, <strong><code>1196184</code></strong>, <strong><code>1081492</code></strong>, <strong><code>1898294</code></strong>.</p> </td>
   </tr>
   <tr>
@@ -132,9 +132,9 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande hotspot-
     <td><p>SKU och kategori-ID i frågesträngen.</p> </td>
     <td><p>De inspelade URL:erna för snabbvyn är bland annat följande:</p>
     <ul>
-      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
-      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
-      <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
+      <li><p><code>https://server/quickView/product/?category=1100004&prodId=305466</code></p> </li>
+      <li><p><code>https://server/quickView/product/?category=1100004&prodId=310181</code></p> </li>
+      <li><p><code>https://server/quickView/product/?category=1740148&prodId=308706</code></p> </li>
     </ul> <p>I det här fallet finns det två olika delar i URL:en. SKU:n lagras i parametern <code>prodId</code> och kategori-ID:t <code></code> lagras i parametern <code>category=</code>.</p> <p>Därför är hotspot-definitionerna par. Det vill säga ett SKU-värde och en extra variabel som kallas <code>categoryId</code>. De resulterande paren är följande:</p>
     <ul>
       <li><p>SKU är <strong><code>305466</code></strong> och <code>categoryId</code> är <code>1100004</code>.</p> </li>
@@ -229,7 +229,7 @@ Alternativen Ångra och Gör om, nära det övre högra hörnet på sidan, stöd
 
 När du är klar med att skapa en interaktiv bild kan du använda Förhandsgranska för att se hur den interaktiva bilden ser ut för kunderna.
 
-Se [ (Valfritt) Förhandsvisa interaktiva bilder ](#optional-previewing-interactive-images).
+Se [&#x200B; (Valfritt) Förhandsvisa interaktiva bilder &#x200B;](#optional-previewing-interactive-images).
 
 >[!NOTE]
 >
@@ -343,7 +343,7 @@ Den kopierade inbäddningskoden ställs in för en responsiv miljö så att den 
 
 **Exempel**
 
-Lägg märke till att bilden på de tre personerna är en statisk [-tagg med ](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)demowebbplatsen som exempel`IMG`:
+Lägg märke till att bilden på de tre personerna är en statisk [-tagg med &#x200B;](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)demowebbplatsen som exempel`IMG`:
 
 ```xml {.line-numbers}
 <img class="img-responsive" width="100%" title="Hero Image 2" alt="Hero Image 2" src="images/shoppable-banner.jpg">
@@ -427,27 +427,27 @@ Med hjälp av de tidigare exemplen på snabbvyns URL kan du i följande exempel 
  <tbody>
   <tr>
    <td><p>En SKU, som finns i frågesträngen</p> </td>
-   <td><code class="code">s7interactiveimageviewer.setHandlers({
-      "quickViewActivate": function(inData) {
-      var quickViewUrl = "https://server/json?productId=" + inData.sku + "&amp;amp;source=100";
-      },
-      });</code></td>
+   <td><code class="code">s7interactiveimageviewer.setHandlers(&lbrace;
+      "quickViewActivate": function(inData) &lbrace;
+      var quickViewUrl = "https://server/json?productId=" + inData.sku + "&amp;source=100";
+      &rbrace;,
+      &rbrace;);</code></td>
   </tr>
   <tr>
    <td><p>En SKU, finns i URL-sökvägen</p> </td>
-   <td><code class="code">s7interactiveimageviewer.setHandlers({
-      "quickViewActivate": function(inData) {
+   <td><code class="code">s7interactiveimageviewer.setHandlers(&lbrace;
+      "quickViewActivate": function(inData) &lbrace;
       var quickViewUrl = "https://server/product/" + inData.sku;
-      },
-      });</code></td>
+      &rbrace;,
+      &rbrace;);</code></td>
   </tr>
   <tr>
    <td><p>SKU och kategori-ID i frågesträngen</p> </td>
-   <td><code class="code">s7interactiveimageviewer.setHandlers({
-      "quickViewActivate": function(inData) {
-      var quickViewUrl = "https://server/quickView/product/?category=" + inData.categoryId + "&amp;amp;prodId=" + inData.sku;
-      },
-      });</code></td>
+   <td><code class="code">s7interactiveimageviewer.setHandlers(&lbrace;
+      "quickViewActivate": function(inData) &lbrace;
+      var quickViewUrl = "https://server/quickView/product/?category=" + inData.categoryId + "&amp;prodId=" + inData.sku;
+      &rbrace;,
+      &rbrace;);</code></td>
   </tr>
  </tbody>
 </table>

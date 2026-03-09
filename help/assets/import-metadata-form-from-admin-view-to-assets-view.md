@@ -25,7 +25,7 @@ Kontrollera att du har administratörsbehörighet för att importera metadatafor
 
 Som administratör ska du utföra följande steg för att importera metadataformulär som är tillgängliga i [!DNL Admin View] till [!DNL Assets View]:
 
-1. Navigera till startsidan för [!DNL Assets View] och klicka på **[!UICONTROL  Metadata Forms]** under **[!UICONTROL Settings]** för att öppna sidan **[!UICONTROL Metadata Forms]** med en lista över metadataformulär som är tillgängliga i [!DNL Assets View].
+1. Navigera till startsidan för [!DNL Assets View] och klicka på **[!UICONTROL &#x200B; Metadata Forms]** under **[!UICONTROL Settings]** för att öppna sidan **[!UICONTROL Metadata Forms]** med en lista över metadataformulär som är tillgängliga i [!DNL Assets View].
 
    ![sida med metadataformulär](/help/assets/assets/metadata-forms-page.png)
 
@@ -61,4 +61,4 @@ När du har importerat metadataformulär från [!DNL Admin View] till [!DNL Asse
 
    >[!NOTE]
    >
-   > I [[!DNL Assets View] informationssidan](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/metadata-assets-view#metadata-forms) eller egenskapssidan [[!DNL Admin View] ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/administer/metadata-schemas) synkroniseras ändringar av egenskapsvärden för metadata automatiskt mellan de två gränssnitten. Strukturella ändringar i formuläret, som att lägga till eller ta bort fält eller andra ändringar, synkroniseras inte.
+   > I [[!DNL Assets View] informationssidan](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/metadata-assets-view#metadata-forms) eller egenskapssidan [[!DNL Admin View] &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/administer/metadata-schemas) synkroniseras ändringar av egenskapsvärden för metadata automatiskt mellan de två gränssnitten. Strukturella ändringar i formuläret, som att lägga till eller ta bort fält eller andra ändringar, synkroniseras inte.

@@ -1,6 +1,6 @@
 ---
 title: Redigera flera metadata i  [!DNL Assets View]
-description: Lär dig hur du kan uppdatera en fördefinierad uppsättning standardmetadatafält för flera resurser som finns på [DNL! Assets View] samtidigt.
+description: Lär dig hur du kan uppdatera en fördefinierad uppsättning standardmetadatafält för flera resurser som finns på [!DNL ! Assets View] samtidigt.
 badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: f5fee1b3-2855-4010-ae4a-216beb20920d
 source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
