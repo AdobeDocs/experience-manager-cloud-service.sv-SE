@@ -4,9 +4,9 @@ description: Läs om hur Experience Modernization Agent tar in nya webbplatser i
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: c23a6f55-2ba8-4290-b7e8-06cad5de0fc8
-source-git-commit: 7e5450f853e04f12e3a25e4a996aa8c3afe383ca
+source-git-commit: 0bef673daf2030ce2418d0d3a0560a8476868657
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Läs om hur Experience Modernization Agent tar in webbplatser i Edge Delivery Se
 
 Det kombinerar [kunskaper om webbplatsskapande och migrering](#creation-migration) för inledande webbplatsintroduktion och [funktioner för blockutveckling](#block-development) för kontinuerlig upplevelseutveckling (formatuppdateringar, mallförbättringar, skapande av landningssidor). Dessutom erbjuder den [Experience Modernization Console](#console) som en AI-stödd utvecklingsmiljö som du kan använda direkt. Även om användare kan hantera agenten direkt via konsolen behåller utvecklarna full kontroll över vad som skickas.
 
-För att komplex migrering ska lyckas erbjuder Adobe dessutom [AOE-leveransmodellen &#x200B;](#delivery-model). Det här alternativet kan användas som en accelerator eller som en taktisk tjänst för att hjälpa till att frigöra specifika projektutmaningar.
+För att komplex migrering ska lyckas erbjuder Adobe dessutom [AOE-leveransmodellen ](#delivery-model). Det här alternativet kan användas som en accelerator eller som en taktisk tjänst för att hjälpa till att frigöra specifika projektutmaningar.
 
 ## Fördelar {#benefits}
 
@@ -101,3 +101,7 @@ Följande krav täcks inte av dedikerade automatiseringskunskaper och kräver ma
 * Arv av flera webbplatser (MSM)
 * Anpassade funktioner (t.ex. räknare, konfiguratorer)
 * Anpassad affärslogik
+
+## Nästa steg {#next-steps}
+
+Kom igång genom att migrera en webbplats med dokumentet [Komma igång med Experience Modernization Agent.](/help/ai-in-aem/agents/brand-experience/modernization/getting-started.md)

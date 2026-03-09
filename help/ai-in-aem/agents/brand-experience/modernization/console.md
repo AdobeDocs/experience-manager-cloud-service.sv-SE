@@ -4,9 +4,9 @@ description: Referenshandbok för gränssnittet och funktionerna i Experience Mo
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: 43d8c124-fc87-4cec-a91d-ab12255ae321
-source-git-commit: 51127359588edce96b87fc13447370063e9ca93b
+source-git-commit: e2a9c55644c0d9542f6a299f0df30a3dfd4a55de
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Utvecklarna har full kontroll över vilka fartyg som levereras. Alla ändringar 
 
 ## Navigering {#navigation}
 
-När du har loggat in på konsolen på [`aemcoder.adobe.io` &#x200B;](https://aemcoder.adobe.io) kommer du till hemskärmen på konsolen.
+När du har loggat in på konsolen på [`aemcoder.adobe.io` ](https://aemcoder.adobe.io) kommer du till hemskärmen på konsolen.
 
 ![Startskärmen för konsolen](assets/console-home.png)
 
@@ -145,5 +145,14 @@ I inställningsvyn kan du hantera konsolens grundläggande inställningar.
 
 ![Inställningsvyn](assets/settings-view.png)
 
-* Med **Autentiseringsuppgifter** kan du ange en personlig åtkomsttoken för Figma så att konsolen kan komma åt designblock för ditt projekt.
+* Med **Autentiseringsuppgifter** kan du ange en personlig åtkomsttoken för Figma så att [konsolen kan komma åt designblock för ditt projekt.](/help/ai-in-aem/agents/brand-experience/modernization/prompting-guide.md#figma-block-migration)
+   * Token kräver följande skrivskyddade omfång:
+      * `file_content:read`
+      * `file_metadata:read`
+      * `library_assets:read`
+      * `library_content:read`
+      * `team_library_content:read`
+      * `file_dev_resources:read`
+      * `projects:read`
+   * [Mer information om hur du konfigurerar personliga åtkomsttoken finns i Figma-dokumentationen ](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens).
 * **Återställ arbetsyta** återställer konsolen till startläget och alla ändringar som inte har skickats eller inte har överförts går förlorade.

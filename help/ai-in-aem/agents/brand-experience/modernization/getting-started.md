@@ -4,9 +4,9 @@ description: Lär dig de första stegen för att snabbt bli produktiv med Experi
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: 612c211e-43bf-47dc-89a8-9995a960e4d7
-source-git-commit: 51127359588edce96b87fc13447370063e9ca93b
+source-git-commit: 0bef673daf2030ce2418d0d3a0560a8476868657
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,10 @@ Nu när konsolen har åtkomst till koden kan du börja fråga.
 
 Nu har du importerat både innehåll och format till konsolen.
 
+>[!TIP]
+>
+>[Se frågeguiden](/help/ai-in-aem/agents/brand-experience/modernization/prompting-guide.md) för mer information om hur du kan fråga agenten och vad dess kunskaper kan göra.
+
 ## Överför innehåll {#upload-content}
 
 Så här överför du ditt innehåll till [Dokumentredigering](https://da.live):
@@ -136,5 +140,6 @@ Om du har överfört koden till en annan gren än `main` visas inte formaten i d
 Följande dokument kan vara användbara när du fortsätter att utforska Experience Modernization Agent och dess konsol.
 
 * [Experience Modernization Console](/help/ai-in-aem/agents/brand-experience/modernization/console.md) - information om konsolen, dess vyer, alternativ och funktioner
+* [Frågeguiden för Experience Modernization Agent](/help/ai-in-aem/agents/brand-experience/modernization/prompting-guide.md) - Ideas om hur du kan fråga agenten och vilka kunskaper den kan göra
 * [Edge Delivery Services utvecklarsjälvstudiekurs](https://www.aem.live/developer/tutorial) - Praktiskt om du inte har använt AEM- eller Edge Delivery Services-projekt tidigare
 * [Dokumentredigering](https://da.live) - Praktiskt om du inte har använt dokumentredigering tidigare för innehållshantering
