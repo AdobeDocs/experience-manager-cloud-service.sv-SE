@@ -4,9 +4,9 @@ description: Lär dig hur du kan använda konfigurationspipelines för att distr
 feature: Operations
 role: Admin
 exl-id: bd121d31-811f-400b-b3b8-04cdee5fe8fa
-source-git-commit: ac04829b63ca5e2fee71f6c71d0730f21c576382
+source-git-commit: 66ea803dbf8e8b12fecf6256a88c94c2ca6fa112
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1445'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Lär dig hur du kan använda konfigurationspipelines för att distribuera olika 
 
 En Cloud Manager-konfigurationspipeline distribuerar konfigurationsfiler (skapade i YAML-format) till en målmiljö. Ett antal funktioner i AEM as a Cloud Service kan konfigureras på det här sättet, inklusive loggvidarebefordran, rensningsrelaterade underhållsåtgärder och flera CDN-funktioner.
 
-För **Publicera leveransprojekt** -projekt kan konfigurationspipelines distribueras via Cloud Manager till olika typer av dev-, stage- och produktionsmiljöer. Konfigurationsfilerna kan distribueras till Rapid Development Environment (RDE) med [kommandoradsverktyg](/help/implementing/developing/introduction/rapid-development-environments.md#deploy-config-pipeline).
+För **Publicera leveransprojekt** -projekt kan konfigurationspipelines distribueras via Cloud Manager till olika typer av dev-, stage- och produktionsmiljöer. Konfigurationsfilerna kan distribueras till Rapid Development Environment (RDE) med [kommandoradsverktyg](/help/implementing/developing/introduction/rapid-development-environments.md#deploy-config-pipeline). Använd en riktad distribution av typen [**Publish Delivery Pipeline**](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#targeted-deployment) ([Production](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#targeted-deployment) eller [Non-Production](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#targeted-deployment)) när du behöver konfigurera trafik för en domän som är kopplad till en Publish Delivery-miljö.
 
-Konfigurationspipelines kan också distribueras via Cloud Manager för **Edge Delivery** -projekt.
+Konfigurationspipelines kan också distribueras via Cloud Manager för **Edge Delivery** -projekt. Använd en [**Edge Delivery-pipeline**](/help/implementing/cloud-manager/configuring-pipelines/configuring-edge-delivery-pipeline.md) när domänen är kopplad till en **Edge Delivery-webbplats**.
 
 I följande avsnitt i det här dokumentet ges en översikt över viktig information om hur du kan använda konfigureringspipelines och hur konfigurationer för dem ska struktureras. Här beskrivs allmänna koncept som delas av alla eller en delmängd av de funktioner som stöds av konfigurationspipelines.
 
@@ -50,7 +50,7 @@ I följande tabell finns en omfattande lista över sådana konfigurationer med l
 | [Underhållsaktivitet för versionsrensning](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM-databasen genom att deklarera regler för när innehållsversioner ska rensas | X |  |
 | [Granskningslogg Rensa underhållsaktivitet](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM granskningslogg för bättre prestanda genom att ange regler för när loggarna ska rensas | X |  |
 | [Underhållsaktivitet för tömning av arbetsflöde](/help/operations/maintenance.md) | `MaintenanceTasks` | Minimera antalet arbetsflödesinstanser för att öka arbetsflödesmotorns prestanda.<br><br>Se även [Regelbunden rensning av arbetsflödesinstanser](/help/sites-cloud/administering/workflows-administering.md#regular-purging-of-workflow-instances) | X |  |
-| [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md) | `LogForwarding` | Konfigurera slutpunkterna och autentiseringsuppgifterna för vidarebefordran av loggar till olika mål, inklusive Azure Blob Storage, Datadog, HTTPS, Elasticsearch, Splunk | X | X |
+| [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md) | `LogForwarding` | Konfigurera slutpunkterna och autentiseringsuppgifterna för vidarebefordran av loggar till olika mål, inklusive Azure Blob Storage, DataDig, HTTPS, Elasticsearch, Splunk | X | X |
 | [Registrerar ett klient-ID](/help/implementing/developing/open-api-based-apis.md) | `API` | Omvandla Adobe Developer Console API-projekt till en viss AEM-miljö genom att registrera klient-ID:t. Krävs för användning av OpenAPI-baserade API:er som kräver autentisering | X |  |
 
 ## Skapa och hantera konfigureringspipelines {#creating-and-managing}
@@ -108,7 +108,7 @@ eller
     cdn.yaml
 ```
 
-Mappnamnen och filnamnen under `/config` är godtyckliga. YAML-filen måste dock innehålla ett giltigt [`kind`-egenskapsvärde &#x200B;](#configurations).
+Mappnamnen och filnamnen under `/config` är godtyckliga. YAML-filen måste dock innehålla ett giltigt [`kind`-egenskapsvärde ](#configurations).
 
 Konfigurationer distribueras vanligtvis till alla miljöer. Om alla egenskapsvärden är identiska för varje miljö räcker det med en YAML-fil. Det är dock vanligt att egenskapsvärden skiljer sig åt mellan olika miljöer, till exempel när en lägre miljö testas.
 
