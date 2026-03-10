@@ -3,9 +3,9 @@ title: Hantera licensierade Assets på Content Hub
 description: Lär dig hur du lägger till ett licensfält i metadataformuläret för mediefiler, använder metadataegenskapen Licens på objektmappar och godkänner mediefiler med licenser för användning.
 badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: ac3aad9f-c7b3-47a7-9314-a2f8277f0d3e
-source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
+source-git-commit: 59f97fc6ded4274c27400f56b50b4a3329cc471a
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -28,21 +28,21 @@ Utför följande steg:
 
 ### Vad är syftet med att hantera licensierade mediefiler på AEM Assets Content Hub?
 
-Genom att hantera licensierat material på Content Hub kan administratörer se till att endast godkänt material med giltiga licenser är tillgängligt för användning, vilket säkerställer regelefterlevnad och korrekt metadataspårning i AEM redigeringsmiljö.
+Genom att hantera licensierat material på AEM Assets Content Hub kan administratörer se till att endast godkänt material med giltiga licenser är tillgängligt för användning, vilket säkerställer regelefterlevnad och korrekt metadataspårning i AEM redigeringsmiljö.
 
 ### Hur lägger jag till ett licensfält i resursegenskaperna i Experience Manager as a Cloud Service?
 
-Du kan lägga till ett licensfält i resursegenskaper genom att redigera metadataformuläret så att det innehåller ett nytt textfält som är mappat till egenskapen `dc:license`. Det här fältet visas sedan i resursegenskaperna i AEM Assets redigeringsmiljö.
+I AEM Assets-vyn kan du lägga till ett licensfält i resursegenskaper genom att redigera metadataformuläret så att det innehåller ett nytt textfält som är mappat till egenskapen `dc:license`. Det här fältet visas sedan i resursegenskaperna i AEM Assets redigeringsmiljö.
 
-### Hur använder man ett metadataformulär i en resursmapp för att inkludera licensfältet i resursegenskaperna?
+### Hur använder man ett metadataformulär i en resursmapp för att inkludera licensfältet i resursegenskaperna i AEM Assets?
 
-Redigera metadataformuläret så att det innehåller licensfältet. Använd det här metadataformuläret på den önskade resursmappen för att se till att de nya inställningarna införlivas för alla resurser i den mappen.
+I AEM Assets-vyn redigerar du metadataformuläret så att det innehåller licensfältet. Använd det här metadataformuläret på den önskade resursmappen för att se till att de nya inställningarna införlivas för alla resurser i den mappen.
 
-### Hur anger jag licensinformation för en mediefil?
+### Hur anger jag licensinformation för en mediefil i AEM Assets-vyn?
 
 Om du vill ange licensinformation markerar du resursen, klickar på **Detaljer** för att visa dess egenskaper och anger den absoluta sökvägen för den godkända resurslicensen i licensfältet som lagts till i metadataformuläret.
 
-### Vilket format krävs för Content Hub absoluta sökväg för en medielicens?
+### Vilket format krävs för AEM Assets Content Hub absolut sökväg för en medielicens?
 
 Content Hub absoluta sökväg ska följa mönstret: /content/dam/(Resursens mapphierarki i DAM-databasen)/(asset_name).(file_extension). Exempel: `/content/dam/teamA/projects/documents/file1.pdf`.
 
@@ -54,6 +54,6 @@ Genom att godkänna både mediefilen och licensen säkerställs att endast korre
 
 När du har definierat licenssökvägen i resursens egenskaper godkänner du resursen och klickar på Spara. Den här åtgärden gör den licensierade mediefilen tillgänglig i AEM Assets Content Hub.
 
-### Vem ansvarar för att hantera licensierade mediefiler i Content Hub?
+### Vem ansvarar för att hantera licensierade mediefiler i AEM Assets Content Hub?
 
-Administratörer ansvarar för att redigera metadataformulär, tilldela dem till resursmappar och godkänna både resurser och deras licenser i Content Hub.
+Administratörer ansvarar för att redigera metadataformulär, tilldela dem till resursmappar och godkänna både mediefiler och deras licenser i AEM Assets Content Hub.

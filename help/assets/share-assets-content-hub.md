@@ -4,9 +4,9 @@ description: Dela Assets i [!DNL the Content Hub]
 role: User
 badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 5284d229-1596-40bf-aa5f-af4b6500ebdf
-source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
+source-git-commit: 59f97fc6ded4274c27400f56b50b4a3329cc471a
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '907'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Skapa en länk till valda resurser för att enkelt dela dem med andra. Som auktoriserad [!DNL Content Hub]-användare väljer du en eller flera resurser som är tillgängliga i din [!DNL Content Hub]-miljö, skapar en länk och skickar den till andra privata eller offentliga användare.
 
->[!VIDEO](https://video.tv.adobe.com/v/3474923/?captions=swe&learn=on&enablevpops=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3474890/?learn=on&enablevpops=on){transcript=true}
 
 ## Förutsättningar {#prerequisites}
 
@@ -25,7 +25,7 @@ Skapa en länk till valda resurser för att enkelt dela dem med andra. Som aukto
 
 Så här delar du en eller flera resurser med privata eller offentliga användare:
 
-1. Navigera till din [!DNL Content Hub]-hemsida, markera en eller flera resurser och klicka på ![&#x200B; dela &#x200B;](/help/assets/assets/share.svg) **[!UICONTROL Share]** för att visa en enskild markerad resurs eller en lista med flera markerade resurser i dialogrutan **[!UICONTROL Share assets]** .
+1. Navigera till din [!DNL Content Hub]-hemsida, markera en eller flera resurser och klicka på ![ dela ](/help/assets/assets/share.svg) **[!UICONTROL Share]** för att visa en enskild markerad resurs eller en lista med flera markerade resurser i dialogrutan **[!UICONTROL Share assets]** .
 
    Du kan också markera och dela resurser som är tillgängliga i ![samlingar](/help/assets/assets/Smock_Collection_18_N.svg) **[!UICONTROL Collections]**.
 
@@ -74,7 +74,7 @@ Genom att dela resurser i AEM Assets Content Hub kan behöriga användare enkelt
 
 ### Hur delar jag resurser och samlingar med andra via AEM Assets Content Hub?
 
-Om du vill dela resurser eller samlingar i Content Hub går du till Content Hub hemsida, markerar en eller flera resurser (eller går till fliken Samlingar för samlingar) och klickar på ikonen Dela. I dialogrutan Dela kan du förhandsgranska resurserna, ta bort eventuella resurser, lägga till en titel och en beskrivning, välja vem som kan komma åt länken (privat eller offentlig), ange en förfalloperiod och sedan klicka på Hämta länk för att generera och kopiera den delningsbara URL:en. Länken kan sedan skickas till teammedlemmar eller intressenter.
+Om du vill dela resurser eller samlingar i AEM Assets Content Hub går du till Content Hub hemsida, markerar en eller flera resurser (eller går till fliken Samlingar för samlingar) och klickar på ikonen Dela. I dialogrutan Dela kan du förhandsgranska resurserna, ta bort eventuella resurser, lägga till en titel och en beskrivning, välja vem som kan komma åt länken (privat eller offentlig), ange en förfalloperiod och sedan klicka på Hämta länk för att generera och kopiera den delningsbara URL:en. Länken kan sedan skickas till teammedlemmar eller intressenter.
 
 ### Vilka åtkomstalternativ är tillgängliga när du delar resurser i AEM Assets Content Hub och hur skiljer de sig åt?
 
@@ -86,11 +86,11 @@ Ja, administratörer kan aktivera eller inaktivera alternativet **Aktivera offen
 
 ### Kan jag ange förfallodatum för delade resurslänkar i AEM Assets Content Hub och varför är detta viktigt?
 
-Ja, du kan ange förfallodatum för både privata och offentliga delade länkar i Content Hub. För offentliga länkar kan du välja bland förinställningar som 24 timmar upp till en vecka, medan du med hjälp av privata länkar kan välja bland förinställningar eller ange ett anpassat förfallodatum. Förfallodatum är viktiga eftersom länken inte längre kan användas för att komma åt eller hämta resurserna när den upphör att gälla, vilket bidrar till att upprätthålla säkerheten och kontrollen för ditt innehåll.
+Ja, du kan ange förfallodatum för både privata och offentliga delade länkar i AEM Assets Content Hub. För offentliga länkar kan du välja bland förinställningar som 24 timmar upp till en vecka, medan du med hjälp av privata länkar kan välja bland förinställningar eller ange ett anpassat förfallodatum. Förfallodatum är viktiga eftersom länken inte längre kan användas för att komma åt eller hämta resurserna när den upphör att gälla, vilket bidrar till att upprätthålla säkerheten och kontrollen för ditt innehåll.
 
 ### Vad kan mottagarna göra med den delade resurslänken som skapats med AEM Assets Content Hub, och finns det alternativ för att hämta olika återgivningar?
 
-Mottagare som tar emot en delad resurslänk kan öppna den i sin webbläsare och förhandsgranska, välja och hämta de resurser som finns. Om resursåtergivningar är aktiverade i Content Hub kan mottagarna välja vilka återgivningar (till exempel Original eller Static) de vill hämta. Resurserna och återgivningarna hämtas som en zip-fil och metadata kan visas genom att du klickar på miniatyrbilden för resursen. Länken fungerar tills det angivna förfallodatumet.
+Mottagare som tar emot en delad resurslänk kan öppna den i sin webbläsare och förhandsgranska, välja och hämta de resurser som finns. Om resursåtergivningar är aktiverade i AEM Assets Content Hub kan mottagarna välja vilka återgivningar (till exempel Original eller Static) de vill hämta. Resurserna och återgivningarna hämtas som en zip-fil och metadata kan visas genom att du klickar på miniatyrbilden för resursen. Länken fungerar tills det angivna förfallodatumet.
 
 
 

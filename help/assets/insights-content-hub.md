@@ -4,9 +4,9 @@ description: Lär dig hur du visar resursinsikter i  [!DNL Content Hub]
 role: User
 badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 29cbe017-856d-486b-acf3-aa47dbd90f3f
-source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
+source-git-commit: 59f97fc6ded4274c27400f56b50b4a3329cc471a
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -58,18 +58,18 @@ Du kan även visa:
 
 Assets Insights i AEM Assets Content Hub ger värdefull information om resursanvändningsstatistik över kampanjer, kanaler och regioner, vilket hjälper marknadsföringsintressenter att förstå hur materialet fungerar och hur populärt det är för att få en bättre användarupplevelse.
 
-### Vem har tillgång till de funktioner som beskrivs i Assets Insights?
+### Vem har tillgång till de funktioner som beskrivs i Assets Insights i AEM Assets Content Hub?
 
-Content Hub-användare kan utföra de åtgärder och komma åt de funktioner som nämns i avsnittet Assets Insights.
+AEM Assets Content Hub-användare kan utföra de åtgärder och få tillgång till de funktioner som nämns i Assets Insights-avsnittet.
 
-### Vilka resursinsikter finns på fliken Insights?
+### Vilka resursinsikter finns på fliken Insights i AEM Assets Content Hub?
 
-Du kan visa antalet resurser i databasen, antalet samlingar, Assets-överföringar per år, månad eller dag, aktiva användare per dag eller månad samt resursklassificering baserad på filformat.
+Du kan visa antalet resurser i databasen, antal samlingar, Assets-överföringar per år, månad eller dag, aktiva användare per dag eller månad samt resursklassificering baserad på filformat i AEM Assets Content Hub.
 
 ### Hur visar jag statistik för överförda mediefiler i AEM Assets Content Hub?
 
-Du kan visa statistik för överförda resurser och samlingar genom att gå till fliken Insights, där du kan spåra överföringshistoriken efter år, månad eller dag.
+Du kan visa statistik för överförda resurser och samlingar i AEM Assets Content Hub genom att gå till fliken Insights, där du kan spåra överföringshistoriken efter år, månad eller dag.
 
-### Vilka mätvärden kan jag analysera angående användaraktivitet i Content Hub?
+### Vilka mätvärden kan jag analysera angående användaraktivitet i AEM Assets Content Hub?
 
-Du kan analysera antalet aktiva användare per dag eller månad, vilket visas visuellt med ett linjediagram.
+Du kan analysera antalet aktiva användare per dag eller månad, som visas med ett linjediagram i AEM Assets Content Hub.

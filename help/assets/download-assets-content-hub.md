@@ -4,9 +4,9 @@ description: Lär dig hur du hämtar en eller flera resurser och deras återgivn
 role: User
 badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 96d4ffba-4e3e-4496-9da2-6eb36be8331f
-source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
+source-git-commit: 59f97fc6ded4274c27400f56b50b4a3329cc471a
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1342'
 ht-degree: 0%
 
 ---
@@ -148,7 +148,7 @@ Läs mer om att [visa och hantera återgivningar i [!DNL Experience Manager Asse
 
 * [Dynamiska återgivningar](/help/assets/renditions.md#dynamic-renditions): Dynamiska återgivningar är anpassade versioner av resurser i realtid som utför olika åtgärder, till exempel att ändra storlek på bilder för olika enhetsupplösningar eller beskära för att passa olika proportioner. Med dessa renderingar kan ni erbjuda personaliserade och optimerade upplevelser för större behov. Dynamiska återgivningar av resurser skapas i [!DNL Adobe Experience Manager Assets]-redigeringsmiljön. Mer information om steg som krävs för att aktivera dynamiska renderingar finns i [Aktivera dynamiska renderingar](#enable-dynamic-media-renditions).
 
-* [Smart beskärning](/help/assets/dynamic-media/image-profiles.md#creating-image-profiles): Den smarta beskärningen fokuserar enbart på den viktigaste delen av en resurs under beskärningsprocessen. Dynamic Media Smart-beskärning utnyttjar artificiell intelligens från Adobe AI för att spåra intressepunkten och säkerställa att våra resurser ser så bra ut som möjligt på alla skärmstorlekar. [!DNL Adobe Experience Manager] smart beskärning visar bredden och höjden på en resursåtergivning tillsammans med titeln. Mer information finns på [med SmartCrop med AEM Assets Dynamic Media](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use).
+* [Smart beskärning](/help/assets/dynamic-media/image-profiles.md#creating-image-profiles): Den smarta beskärningen fokuserar enbart på den viktigaste delen av en resurs under beskärningsprocessen. Dynamic Media Smart-beskärning utnyttjar artificiell intelligens från Adobe AI för att spåra intressepunkten och säkerställa att våra resurser ser så bra ut som möjligt på alla skärmstorlekar. [!DNL Adobe Experience Manager] smart beskärning visar bredden och höjden på en resursåtergivning tillsammans med titeln. Mer information finns på [med SmartCrop med AEM Assets Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use).
 
   Smart Crop-renderingar visas och är bara tillgängliga för hämtning om du har tillgång till [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md). Återgivningar för smart beskärning är bara tillgängliga för bildresurser.
 
@@ -184,7 +184,7 @@ Så här aktiverar du dynamiska återgivningar:
 
 ### Hur hämtar jag en eller flera mediefiler från AEM Assets Content Hub?
 
-Om du vill hämta en enskild resurs klickar du på hämtningsikonen på resurskortet. Om du har flera resurser markerar du dem och klickar på Hämta i åtgärdsfältet. Content Hub börjar hämta resurserna i sin ursprungliga återgivning om hämtningarna är aktiverade av administratören. Om det finns resursrenderingar kan du välja specifika renderingar innan du hämtar dem.
+Om du vill hämta en enskild resurs i AEM Assets Content Hub klickar du på hämtningsikonen på resurskortet. Om du har flera resurser markerar du dem och klickar på Hämta i åtgärdsfältet. Content Hub börjar hämta resurserna i sin ursprungliga återgivning om hämtningarna är aktiverade av administratören. Om det finns resursrenderingar kan du välja specifika renderingar innan du hämtar dem.
 
 ### Finns det någon konfiguration som hanteras av administratören i AEM Assets Content Hub som tillåter användare att hämta ursprungliga resurser eller aktivera tillgänglighet för återgivningar?
 
@@ -192,15 +192,15 @@ Ja, administratörer kan aktivera eller inaktivera **Aktivera tillgänglighet f�
 
 ### Vad är resursrenderingar och vilka typer finns det i AEM Assets Content Hub?
 
-Resursåtergivningar är olika representationer av den ursprungliga resursfilen som är skräddarsydd för olika användningsområden. Typerna är statiska återgivningar (till exempel miniatyrer, webboptimerade eller mobiloptimerade versioner eller högupplösta filer för utskrift), anpassade statiska återgivningar och dynamiska återgivningar (inklusive Smart Crop-versioner). Statiska återgivningar genereras i förväg, medan dynamiska återgivningar skapas i realtid baserat på begäran.
+Resursåtergivningar i AEM Assets Content Hub är olika representationer av den ursprungliga resursfilen som är skräddarsydd för olika användningsområden. Typerna är statiska återgivningar (till exempel miniatyrer, webboptimerade eller mobiloptimerade versioner eller högupplösta filer för utskrift), anpassade statiska återgivningar och dynamiska återgivningar (inklusive Smart Crop-versioner). Statiska återgivningar genereras i förväg, medan dynamiska återgivningar skapas i realtid baserat på begäran.
 
 ### Hur fungerar Smart Crop med resurser i AEM Assets Content Hub?
 
-Smart Crop är en AI-baserad funktion som identifierar den viktigaste delen av en bild och på ett intelligent sätt beskär runt den. Detta garanterar att bilderna ser bra ut på olika skärmar och i olika format. Återgivningar av Smart Crop är tillgängliga för bildresurser om din organisation stöder dynamiska mediefunktioner.
+Smart Crop i AEM Assets Content Hub är en AI-baserad funktion som identifierar den viktigaste delen av en bild och på ett intelligent sätt beskär runt den. Detta garanterar att bilderna ser bra ut på olika skärmar och i olika format. Återgivningar av Smart Crop är tillgängliga för bildresurser om din organisation stöder dynamiska mediefunktioner.
 
 ### Hur aktiverar jag dynamiska renderingar i AEM Assets Content Hub?
 
-Så här aktiverar du dynamiska återgivningar:
+Så här aktiverar du dynamiska renderingar i AEM Assets Content Hub:
 
 * Kontrollera att Dynamic Media med OpenAPI-funktioner är aktiverade. Godkända resurser är sedan tillgängliga för offentlig leverans.
 
@@ -212,9 +212,9 @@ Så här aktiverar du dynamiska återgivningar:
 
 Dynamiska återgivningar stöds bara för bildresurser.
 
-### Hur hämtar jag resursrenderingar i Content Hub?
+### Hur hämtar jag resursrenderingar i AEM Assets Content Hub?
 
-Om du vill hämta återgivningar markerar du resursen och klickar på hämtningsåtgärden. Om återgivningar är aktiverade av administratören visas en dialogruta där du kan välja vilka återgivningar som ska hämtas. Godkänn licensierade mediefiler innan du hämtar dem. För flera resurser väljer du resurserna, väljer renderingar och hämtar dem som en ZIP-fil. Du kan välja alla tillgängliga återgivningar eller specifika, som statiska eller dynamiska återgivningar.
+Om du vill hämta renderingar i AEM Assets Content Hub markerar du resursen och klickar på nedladdningsåtgärden. Om återgivningar är aktiverade av administratören visas en dialogruta där du kan välja vilka återgivningar som ska hämtas. Godkänn licensierade mediefiler innan du hämtar dem. För flera resurser väljer du resurserna, väljer renderingar och hämtar dem som en ZIP-fil. Du kan välja alla tillgängliga återgivningar eller specifika, som statiska eller dynamiska återgivningar.
 
 
 

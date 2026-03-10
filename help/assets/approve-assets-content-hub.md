@@ -3,9 +3,9 @@ title: Godkänn resurser för Content Hub
 description: Lär dig hur du godkänner mediefiler i Assets as a Cloud Service och gör dem tillgängliga i Content Hub.
 badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: fc849028-ab56-4388-b8d6-e36cac8f868f
-source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
+source-git-commit: 59f97fc6ded4274c27400f56b50b4a3329cc471a
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1673'
 ht-degree: 0%
 
 ---
@@ -157,39 +157,39 @@ Visningen av resurser som överförts med Content Hub beror på om du har [aktiv
 
 ## Frågor och svar {#faqs-content-hub-approved-assets}
 
-### Vad är syftet med att godkänna material för Content Hub i Experience Manager as a Cloud Service? {#approving-assets-content-hub}
+### Vad är syftet med att godkänna material för AEM Assets Content Hub i Experience Manager as a Cloud Service? {#approving-assets-content-hub}
 
-Genom att godkänna mediefiler kan du säkerställa att endast de senaste och godkända versionerna är tillgängliga för användning inom Content Hub, vilket ger en enhetlig varumärkesprofil i alla kanaler och i alla tillämpningar. Denna kontrollerade process effektiviserar resurshanteringen för varumärkesansvariga och marknadsförare.
+Genom att godkänna mediefiler kan du säkerställa att endast de senaste och godkända versionerna är tillgängliga för användning inom AEM Assets Content Hub, vilket ger en enhetlig varumärkesprofil i alla kanaler och i alla tillämpningar. Denna kontrollerade process effektiviserar resurshanteringen för varumärkesansvariga och marknadsförare.
 
-### Vilka är förutsättningarna för att godkänna mediefiler för Content Hub?
+### Vilka är förutsättningarna för att godkänna mediefiler för AEM Assets Content Hub?
 
 Du måste ha tillgång till AEM Assets as a Cloud Service och skrivbehörighet för att redigera metadata för resurser, särskilt fältet **Status** i resursegenskaperna.
 
-### Hur godkänner du en enskild resurs med hjälp av Assets-vyn i AEM as a Cloud Service?
+### Hur godkänner du en enskild resurs med hjälp av Assets-vyn i AEM as a Cloud Service så att den blir tillgänglig i AEM Assets Content Hub?
 
-Markera resursen, klicka på **Detaljer** i verktygsfältet, gå till fliken **Grundläggande**, välj **Godkänd** i listrutan **Status** och klicka på **Spara**. Resursen är tillgänglig i Content Hub.
+Markera resursen, klicka på **Detaljer** i verktygsfältet, gå till fliken **Grundläggande**, välj **Godkänd** i listrutan **Status** och klicka på **Spara**. Resursen är tillgänglig i AEM Assets Content Hub.
 
-### Kan mediefiler godkännas i bulk för Content Hub, och i så fall, hur?
+### Kan mediefiler godkännas i bulk för AEM Assets Content Hub, och i så fall, hur?
 
-Ja, resurser kan godkännas gruppvis. Markera flera resurser i Assets-vyn, klicka på **Redigera flera metadata**, välj **Godkänd** i fältet **Status** under Egenskaper och klicka på **Spara**. Alla markerade resurser är tillgängliga i Content Hub.
+Ja, resurser kan godkännas gruppvis. Markera flera resurser i Assets-vyn, klicka på **Redigera flera metadata**, välj **Godkänd** i fältet **Status** under Egenskaper och klicka på **Spara**. Alla markerade resurser är tillgängliga i AEM Assets Content Hub.
 
-### Hur fungerar godkännandeprocessen i Content Hub? {#asset-approval-content-hub}
+### Hur fungerar godkännandeprocessen i AEM Assets Content Hub? {#asset-approval-content-hub}
 
-Om du aktiverar alternativet för automatiskt godkännande blir resurser som överförts med Content Hub automatiskt tillgängliga. Om det är inaktiverat placeras överförda resurser i mappen **hydrated-assets** i Assets as a Cloud Service, och du måste redigera deras status manuellt till **Godkänd** för att kunna visa dem i Content Hub.
+Om du aktiverar alternativet för automatiskt godkännande blir resurser som överförts med AEM Assets Content Hub automatiskt tillgängliga. Om det är inaktiverat placeras överförda resurser i mappen **hydrated-assets** i Assets as a Cloud Service, och du måste redigera deras status manuellt till **Godkänd** för att kunna visa dem i Content Hub.
 
-### Vad är fältet Godkännandemål och hur påverkar det publiceringen av resurser?
+### Vad är fältet Godkännandemål i AEM Assets-vyn och hur påverkar det tillgångspubliceringen?
 
 I fältet **Godkännandemål** på sidan Resursinformation kan du välja var godkända resurser ska publiceras. Alternativen är endast **Delivery** (publicerar till både Dynamic Media med OpenAPI och Content Hub) eller **Content Hub**. Om du inte väljer något alternativ används standardinställningen för Assets as a Cloud Service-miljön. Mer information finns i [Standardgodkännandemål och publiceringsmål för godkända resurser](#default-approval-target-options-publish-destinations).
 
 
-### Vad händer om du inte ser fältet Godkännandemål på sidan med information om Assets View-resurser?
+### Vad händer om du inte ser fältet Godkännandemål på sidan med information om AEM Assets View-resurser?
 
 Om fältet **Godkännandemål** saknas på sidan med resursinformation för Assets View bör du redigera metadataformuläret, dra fältet **Godkännande för** från tillgängliga komponenter till formuläret och klicka på **Spara**. På så sätt kan du ange godkännandemål för resurser.
 
-### Hur kan ni automatisera godkännandet av nyligen inkapslade resurser i administratörsvyn?
+### Hur kan ni automatisera godkännandet av nyligen inkapslade resurser i AEM Assets Admin-vyn?
 
 Skapa en mapp i författarmiljön, navigera till **Verktyg** > **Assets** > **Metadataprofiler**, skapa och redigera en metadataprofil. Lägg till ett textfält med en rad, etikettera det **Godkänd Assets** och mappa det till &#39;./jcr:content/metadata/dam:status och ange standardvärdet till `approved`. Använd metadataprofilen på mappen. Nya resurser som läggs till i mappen godkänns automatiskt.
 
-### Vilka har åtkomst till godkända mediefiler i Content Hub och vilka kontroller finns det?
+### Vem har åtkomst till godkända mediefiler i AEM Assets Content Hub och vilka kontroller finns på plats?
 
-Godkända resurser är tillgängliga för användare som ingår i samma organisation inom Content Hub. Strikta kontroller säkerställer att endast de senaste godkända versionerna är tillgängliga, vilket bidrar till att upprätthålla varumärkets enhetlighet och säkerhet.
+Godkända resurser är tillgängliga för användare som ingår i samma organisation inom AEM Assets Content Hub. Strikta kontroller säkerställer att endast de senaste godkända versionerna är tillgängliga, vilket bidrar till att upprätthålla varumärkets enhetlighet och säkerhet.

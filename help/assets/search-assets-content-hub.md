@@ -4,9 +4,9 @@ description: Lär dig söka efter resurser i  [!DNL Content Hub]
 role: User
 badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 8578d7d0-32b9-4e5c-80ef-3827e358ac6c
-source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
+source-git-commit: 59f97fc6ded4274c27400f56b50b4a3329cc471a
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -173,11 +173,11 @@ Läs mer om hur [konfigurerar resurser i  [!DNL Content Hub]](configure-content-
 
 ### Hur kan jag begränsa sökresultaten i AEM Assets Content Hub?
 
-Du kan begränsa sökresultaten i Content Hub genom att använda textbaserad sökning, använda olika filter (som filformat, godkännandestatus, ändringsdatum osv.), söka efter taggar eller smarta taggar och använda filterpanelen. Genom att kombinera flera predikat eller filteralternativ kan du rikta in dig exakt på de resurser du behöver.
+Du kan begränsa sökresultaten i AEM Assets Content Hub genom att använda textbaserad sökning, använda olika filter (som filformat, godkännandestatus, ändringsdatum osv.), söka efter taggar eller smarta taggar och använda filterpanelen. Genom att kombinera flera predikat eller filteralternativ kan du rikta in dig exakt på de resurser du behöver.
 
 ### Kan jag göra en gruppsökning i AEM Assets Content Hub för flera resurser samtidigt?
 
-Ja, du kan utföra en gruppsökning i Content Hub genom att ange flera värden (till exempel namn, filformat, taggar) avgränsade med angivna avgränsare. Med funktionen för masssökning kan du snabbt hitta flera resurser i en enda fråga, vilket gör det mer effektivt än att söka efter resurser en i taget.
+Ja, du kan utföra en gruppsökning i AEM Assets Content Hub genom att ange flera värden (till exempel namn, filformat, taggar) avgränsade med angivna avgränsare. Med funktionen för masssökning kan du snabbt hitta flera resurser i en enda fråga, vilket gör det mer effektivt än att söka efter resurser en i taget.
 
 
 ### Kan administratörer anpassa de filter som finns i AEM Assets Content Hub Search?

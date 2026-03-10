@@ -4,9 +4,9 @@ description: Lär dig hur du distribuerar och aktiverar Content Hub och ger åtk
 role: Admin
 badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 58194858-6e1c-460b-bab3-3496176b2851
-source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
+source-git-commit: 59f97fc6ded4274c27400f56b50b4a3329cc471a
 workflow-type: tm+mt
-source-wordcount: '2505'
+source-wordcount: '2544'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Den här artikeln innehåller ett komplett arbetsflöde för att ge Content Hub 
 
 I den här videon får du lära dig hur du aktiverar Content Hub för Experience Manager Assets:
 
->[!VIDEO](https://video.tv.adobe.com/v/3472939/?captions=swe&learn=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3472918/?learn=on){transcript=true}
 
 De olika behörigheterna för Content Hub omfattar:
 
@@ -274,9 +274,9 @@ Om användarna inte får de behörigheter de behöver även efter att ha lagt ti
 
 ## Frågor och svar {#faqs-deploy-content-hub}
 
-### Hur får användare tillgång till Content Hub och vilka behörigheter kan tilldelas?
+### Hur får användare tillgång till AEM Assets Content Hub och vilka behörigheter kan tilldelas?
 
-Användare kan läggas till i Content Hub via Adobe Admin Console genom att tilldela dem till relevant produktprofil för Content Hub.
+Användare kan läggas till i AEM Assets Content Hub via Adobe Admin Console genom att tilldela dem till relevant produktprofil för Content Hub.
 
 Följande behörigheter är tillgängliga för användarna:
 
@@ -288,9 +288,9 @@ Följande behörigheter är tillgängliga för användarna:
 
 * Content Hub-användare som har rätt att mixa om resurser har tillgång till Adobe Express (om du har Adobe Express-rättigheter) förutom att få tillgång till varumärkesgodkända resurser på Content Hub-portalen.
 
-### Vilka produktprofiler finns för olika typer av användare i Content Hub?
+### Vilka produktprofiler finns för olika typer av användare i AEM Assets Content Hub?
 
-Produktprofilerna är tillgängliga för olika typer av användare i Content Hub:
+Produktprofilerna är tillgängliga för olika typer av användare i AEM Assets Content Hub:
 
 * Content Hub-användare: AEM Assets Limited Users
 
@@ -300,9 +300,9 @@ Produktprofilerna är tillgängliga för olika typer av användare i Content Hub
 
 * Content Hub-användare med rättigheter att mixa om resurser: AEM Assets Limited Users + AEM Users
 
-### Hur kan administratörer aktivera Content Hub för sin organisation?
+### Hur kan administratörer aktivera AEM Assets Content Hub för sin organisation?
 
-Administratören måste logga in på Cloud Manager, välja (eller skapa) sitt program, aktivera Assets och Content Hub på fliken Lösningar och tillägg samt uppdatera programmet. Detta skapar en Content Hub-instans i Adobe Admin Console där användaråtkomst kan hanteras.
+För att aktivera AEM Assets Content Hub för sin organisation måste administratörer logga in på Cloud Manager, välja (eller skapa) sitt program, aktivera Assets och Content Hub på fliken Lösningar och tillägg och uppdatera programmet. Detta skapar en Content Hub-instans i Adobe Admin Console där användaråtkomst kan hanteras.
 
 ### Hur många Content Hub Limited-användare ingår i AEM Assets? {#content-hub-limited-users-with-aem-assets}
 
@@ -318,29 +318,29 @@ Antalet tillgängliga Content Hub-krediter beror på din AEM Assets-licens:
 
 * Befintliga Assets as a Cloud Service-kunder får en Content Hub-kredit.
 
-### Hur används Content Hub-krediter?
+### Hur används AEM Assets Content Hub-krediter?
 
 En Content Hub-kredit förbrukas för varje miljö där Content Hub är aktiverat. För att aktivera Content Hub i produktions-, utvecklings- och scenmiljöer krävs till exempel tre krediter.
 
 ### Kan jag aktivera Content Hub i lägre miljöer?
 
-Ja. Du kan aktivera Content Hub i miljöer med lägre krav, som Development eller Stage, förutsatt att du har tillgång till Content Hub-krediter. Varje lägre miljö kräver en kredit.
+Ja. Du kan aktivera AEM Assets Content Hub i miljöer med lägre krav, som Development eller Stage, förutsatt att du har tillgång till Content Hub-krediter. Varje lägre miljö kräver en kredit.
 
-### Hur har jag behörighet att komma åt godkända mediefiler på Content Hub?
+### Hur har jag behörighet att komma åt godkända mediefiler på AEM Assets Content Hub?
 
-Content Hub-användare har tillgång till varumärkesgodkända mediefiler på Content Hub-portalen. Du måste läggas till i produktprofilen för AEM Limited Users om du vill vara Content Hub-användare.
+Användare av AEM Assets Content Hub har tillgång till varumärkesgodkänt material på Content Hub-portalen. Du måste läggas till i produktprofilen för AEM Limited Users om du vill vara Content Hub-användare.
 
-### Hur har jag behörighet att överföra mediefiler till Content Hub?
+### Hur har jag behörighet att överföra mediefiler till AEM Assets Content Hub?
 
-Content Hub-användare som har rätt att lägga till resurser har möjlighet att överföra resurser till Content Hub utöver att få tillgång till varumärkesgodkända resurser på Content Hub-portalen. Du måste läggas till i produktprofilerna AEM Limited Users och AEM Users för att kunna vara Content Hub-användare med behörighet att lägga till resurser.
+AEM Assets Content Hub-användare som har behörighet att lägga till resurser kan överföra resurser till Content Hub utöver att få tillgång till varumärkesgodkända resurser på Content Hub-portalen. Du måste läggas till i produktprofilerna AEM Limited Users och AEM Users för att kunna vara Content Hub-användare med behörighet att lägga till resurser.
 
-### Hur har jag behörighet att komma åt användargränssnittet för konfigurationen i Content Hub?
+### Hur har jag behörighet att komma åt användargränssnittet i AEM Assets Content Hub?
 
-Content Hub-administratörer har tillgång till användargränssnittet för konfiguration på Content Hub, förutom tillgång till varumärkesgodkända mediefiler, överföring av mediefiler till Content Hub och Adobe Express-integrering för redigering av bilder (om du har Adobe Express-behörighet). Du måste läggas till i produktprofilerna AEM Limited Users och AEM Administrators för att bli Content Hub-administratör.
+Administratörer för AEM Assets Content Hub har tillgång till användargränssnittet för konfiguration på Content Hub, förutom tillgång till varumärkesgodkända mediefiler, överföring av mediefiler till Content Hub och Adobe Express-integrering för redigering av bilder (om du har Adobe Express-behörighet). Du måste läggas till i produktprofilerna AEM Limited Users och AEM Administrators för att bli Content Hub-administratör.
 
-### Hur har jag behörighet att redigera bilder med Adobe Express i Content Hub?
+### Hur har jag behörighet att redigera bilder med Adobe Express i AEM Assets Content Hub?
 
-Content Hub-användare som har rätt att mixa om resurser har tillgång till Adobe Express (om du har Adobe Express-rättigheter) förutom att få tillgång till varumärkesgodkända resurser på Content Hub-portalen. Du måste läggas till i produktprofilerna AEM Limited Users och AEM Users för att kunna vara Content Hub-användare med rätt att mixa om resurser.
+AEM Assets Content Hub-användare som har rätt att mixa om resurser har tillgång till Adobe Express (om du har Adobe Express-rättigheter) förutom att få tillgång till varumärkesgodkända resurser på Content Hub-portalen. Du måste läggas till i produktprofilerna AEM Limited Users och AEM Users för att kunna vara Content Hub-användare med rätt att mixa om resurser.
 
 
 

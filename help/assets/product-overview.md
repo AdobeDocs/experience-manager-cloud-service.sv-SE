@@ -3,9 +3,9 @@ title: Content Hub - översikt
 description: Läs mer om Content Hub, dess viktigaste fördelar, hur du får tillgång till det och hur du kan ge feedback kring de alternativ som finns i Content Hub.
 badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: c5908058-f1ad-4aaa-9e8e-c0157e107ed1
-source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
+source-git-commit: 59f97fc6ded4274c27400f56b50b4a3329cc471a
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '948'
 ht-degree: 2%
 
 ---
@@ -22,9 +22,9 @@ Content Hub ingår i Experience Manager Assets as a Cloud Service för att demok
 
 >[!VIDEO](https://video.tv.adobe.com/v/3463712)
 
-## Varför Content Hub?
+## Varför AEM Assets Content Hub?
 
-Content Hub har följande fördelar:
+AEM Assets Content Hub har följande fördelar:
 
 **Hitta och dela alla varumärkesgodkända resurser som finns i en intuitiv portal**
 
@@ -42,7 +42,7 @@ Med Content Hub kan du skapa nytt innehåll med Adobe Express (om du har Adobe E
 
 Content Hub kräver en produktionsredigeringsmiljö för Experience Manager as a Cloud Service, version 2024.6 eller senare (lägsta version är 2024.6.16799).
 
-## Hur kommer jag åt Content Hub? {#access-content-hub}
+## Hur får jag tillgång till AEM Assets Content Hub? {#access-content-hub}
 
 [När du har konfigurerat Content Hub](/help/assets/deploy-content-hub.md) och lagt till en användare i [Content Hub produktprofil](/help/assets/deploy-content-hub.md#content-hub-instance-product-profile) kan du få åtkomst till Content Hub på följande sätt:
 
@@ -86,29 +86,29 @@ Så här konfigurerar du Content Hub för ditt team:
 
 ## Frågor och svar {#faqs-content-hub-overview}
 
-### Vad är Content Hub? {#what-is-content-hub}
+### Vad är AEM Assets Content Hub? {#what-is-content-hub}
 
-Content Hub är en Adobe Experience Manager as a Cloud Service-funktion som gör att större team enkelt kan hitta relevanta, godkända resurser via en intuitiv portal och snabbt anpassa dem efter sina behov. Det gör det möjligt att distribuera resurser i stor skala och gör det lättare att skapa varianter av varumärkesinnehåll för att förbättra marknadsföringsflexibiliteten.
+AEM Assets Content Hub är en Adobe Experience Manager as a Cloud Service-funktion som gör att större team enkelt kan hitta relevanta, godkända resurser via en intuitiv portal och snabbt anpassa dem efter sina behov. Det gör det möjligt att distribuera resurser i stor skala och gör det lättare att skapa varianter av varumärkesinnehåll för att förbättra marknadsföringsflexibiliteten.
 
-### Vilka är förutsättningarna för att få tillgång till Content Hub? {#prerequisites-for-content-hub}
+### Vilka är förutsättningarna för att få tillgång till AEM Assets Content Hub? {#prerequisites-for-content-hub}
 
 Content Hub kräver en produktionsdesignmiljö för Experience Manager as a Cloud Service, särskilt version 2024.6 eller senare (minimiversion 2024.6.16799).
 
-### Hur förbättrar Content Hub sökningen efter varumärkesgodkända mediefiler? {#content-hub-improves-search-experience}
+### Hur förbättrar AEM Assets Content Hub sökningen efter varumärkesgodkända mediefiler? {#content-hub-improves-search-experience}
 
-Content Hub presenterar alla godkända mediefiler i en enda hierarki, vilket gör det enklare att hitta och dela varumärkesgodkända mediefiler via en intuitiv portal. Med den här installationen effektiviseras sökprocessen så att användarna effektivt kan hitta de resurser de behöver.
+AEM Assets Content Hub presenterar alla godkända mediefiler i en enda hierarki, vilket gör det enklare att hitta och dela varumärkesgodkända mediefiler via en intuitiv portal. Med den här installationen effektiviseras sökprocessen så att användarna effektivt kan hitta de resurser de behöver.
 
-### Vem kan konfigurera Content Hub användargränssnitt och vilka aspekter kan konfigureras? {#content-hub-configuration}
+### Vem kan konfigurera användargränssnittet i AEM Assets Content Hub och vilka aspekter kan konfigureras? {#content-hub-configuration}
 
-En administratör kan konfigurera Content Hub användargränssnitt, inklusive sökfilter, fält för att lägga till eller importera resurser, resursegenskaper och banderollinnehåll för varumärkning. På så sätt kan anpassningar göras utifrån organisationens krav.
+En administratör kan konfigurera användargränssnittet i AEM Assets Content Hub, inklusive sökfilter, fält för att lägga till eller importera resurser, resursegenskaper och banderollinnehåll för varumärkning. På så sätt kan anpassningar göras utifrån organisationens krav.
 
-### Hur ger Content Hub icke-kreatörer möjlighet att redigera och mixa om innehåll? {#content-hub-edit-remix-content}
+### På vilket sätt ger AEM Assets Content Hub icke-kreatörer möjlighet att redigera och mixa om material? {#content-hub-edit-remix-content}
 
 Med Content Hub kan icke-kreatörer redigera befintligt innehåll och skapa nya varumärkesanpassade varianter med lättanvända verktyg, mallar och varumärkeselement. Om man har Adobe Express-rättigheter kan man också utnyttja Adobe Firefly GenAI för att skapa avancerat material.
 
-### Hur får användare tillgång till Content Hub? {#content-hub-access}
+### Hur kan användare få tillgång till AEM Assets Content Hub? {#content-hub-access}
 
-Användare kan komma åt Content Hub via direktlänkar (https://experience.adobe.com/#/assets/contenthub) eller genom att logga in på experience.adobe.com och välja Experience Manager Assets Content Hub i snabbåtkomstavsnittet.
+Användare kan komma åt AEM Assets Content Hub via direktlänkar (https://experience.adobe.com/#/assets/contenthub) eller genom att logga in på experience.adobe.com och välja Experience Manager Assets Content Hub i snabbåtkomstavsnittet.
 
 ### Hur många Content Hub Limited-användare ingår i AEM Assets? {#content-hub-limited-users-with-aem-assets}
 

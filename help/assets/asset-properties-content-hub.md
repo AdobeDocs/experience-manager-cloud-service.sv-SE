@@ -4,9 +4,9 @@ description: Lär dig hur du förhandsgranskar resurser och egenskaper i  [!DNL 
 role: User
 badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: a85af980-4c51-4d30-9fad-afd16370e9db
-source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
+source-git-commit: 59f97fc6ded4274c27400f56b50b4a3329cc471a
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '978'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ Vissa egenskaper för resurser som visas i [!DNL Content Hub] härleds, eller ge
 
 * **Smarta taggar:** [!DNL The Content Hub] använder Adobe AI smarta innehållstjänster för att utbilda resurser med hjälp av igenkänningsalgoritmen i den taggbaserade strukturen. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Smarta taggar ökar innehållets hastighet genom att hjälpa dig att snabbt hitta relevanta resurser. De smarta taggarna är ett exempel på resursinformation som inte finns i bilden. [!DNL Experience Manager Assets] använder smarta taggar automatiskt på resurser som standard.
 
-* **Färgtaggar:** [Med färgtaggar](#https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/color-tag-images.html?lang=sv-SE) kan du identifiera en resurs med hjälp av färger som identifieras automatiskt i en resurs med hjälp av Adobe AI-funktioner.
+* **Färgtaggar:** [Med färgtaggar](#https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/color-tag-images.html?lang=en) kan du identifiera en resurs med hjälp av färger som identifieras automatiskt i en resurs med hjälp av Adobe AI-funktioner.
 
 * Överföringsdatum
 
@@ -141,22 +141,22 @@ The date range allows you to select dates you want to see the assets. You can cu
 
 ### Varför förhandsgranskar du resurser och deras egenskaper i AEM Assets Content Hub?
 
-Genom att förhandsgranska mediefiler och deras egenskaper i Content Hub kan användarna noga se filinformation, vilket är nödvändigt för effektiv distribution och hantering av mediefiler. När den digitala informationen växer blir det inte längre möjligt att bygga på filnamn och miniatyrbilder. Genom att visa detaljerade egenskaper kan du kategorisera resurser, göra dem mer tillgängliga, lättare att arbeta med och se till att informationen är fullständig för alla användare.
+Om du förhandsgranskar mediefiler och deras egenskaper i AEM Assets Content Hub kan användarna noga se filinformation, vilket är nödvändigt för effektiv distribution och hantering av mediefiler. När den digitala informationen växer blir det inte längre möjligt att bygga på filnamn och miniatyrbilder. Genom att visa detaljerade egenskaper kan du kategorisera resurser, göra dem mer tillgängliga, lättare att arbeta med och se till att informationen är fullständig för alla användare.
 
 ### Hur kan jag visa och interagera med en mediefil i AEM Assets Content Hub?
 
-Om du vill visa egenskaperna för en resurs i Content Hub går du till eller söker efter resursen och klickar sedan på den för att öppna egenskapssidan. Här kan du zooma in eller ut i förhandsvisningen, ångra zoomning, flytta till föregående eller nästa resurs, hämta resursen, redigera den med Adobe Express, lägga till den i en samling eller stänga förhandsvisningen. På egenskapssidan visas detaljerad information som titel, format, storlek, upplösning, taggar, färgtaggar och smarta taggar.
+Om du vill visa egenskaperna för en resurs i AEM Assets Content Hub navigerar du till eller söker efter resursen och klickar sedan på den för att öppna egenskapssidan. Här kan du zooma in eller ut i förhandsvisningen, ångra zoomning, flytta till föregående eller nästa resurs, hämta resursen, redigera den med Adobe Express, lägga till den i en samling eller stänga förhandsvisningen. På egenskapssidan visas detaljerad information som titel, format, storlek, upplösning, taggar, färgtaggar och smarta taggar.
 
 ### Vad är härledda egenskaper i AEM Assets Content Hub och hur genereras de?
 
-Härledda egenskaper i Content Hub genereras automatiskt när resurser överförs och godkänns. Exempel är resursens storlek, smarta taggar och färgtaggar. Smarta taggar använder Adobe AI smarta innehållstjänster för att automatiskt identifiera och använda relevanta taggar, vilket förbättrar möjligheten att upptäcka resurser. Färgtaggar identifieras också automatiskt med hjälp av AI, vilket gör det lättare för användare att identifiera resurser utifrån deras framträdande färger.
+Härledda egenskaper i AEM Assets Content Hub genereras automatiskt när resurser överförs och godkänns. Exempel är resursens storlek, smarta taggar och färgtaggar. Smarta taggar använder Adobe AI smarta innehållstjänster för att automatiskt identifiera och använda relevanta taggar, vilket förbättrar möjligheten att upptäcka resurser. Färgtaggar identifieras också automatiskt med hjälp av AI, vilket gör det lättare för användare att identifiera resurser utifrån deras framträdande färger.
 
-### Kan administratörer anpassa vilka resursegenskaper som visas i Content Hub?
+### Kan administratörer anpassa vilka resursegenskaper som visas i AEM Assets Content Hub?
 
-Ja, administratörer kan konfigurera vilka egenskaper som ska visas för varje resurs i Content Hub. Detta kan göras både för användargränssnittet för förhandsgranskning av resurser och för tillgångskort i sökresultat eller samlingar, vilket säkerställer att användarna ser den mest relevanta informationen utifrån kraven.
+Ja, administratörer kan konfigurera vilka egenskaper som ska visas för varje resurs i AEM Assets Content Hub. Detta kan göras både för användargränssnittet för förhandsgranskning av resurser och för tillgångskort i sökresultat eller samlingar, vilket säkerställer att användarna ser den mest relevanta informationen utifrån kraven.
 
-### Vilka filformat stöds för förhandsgranskning av resurser?
+### Vilka filformat stöds för förhandsgranskning av resurser i AEM Assets Content Hub?
 
-De filformat som stöds är JPEG och PNG för bilder, QuickTime, MP4 och MPEG för videor, TXT, DOC/DOCX och XML för dokument samt PDF för utskrift.
+De filformat som stöds i AEM Assets Content Hub är bland annat JPEG och PNG för bilder, QuickTime, MP4 och MPEG för videor, TXT, DOC/DOCX och XML för dokument samt PDF för tryckmedia.
 
 

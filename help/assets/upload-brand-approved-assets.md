@@ -4,9 +4,9 @@ description: Lär dig hur du överför varumärkesgodkända mediefiler till Cont
 role: User
 badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: f1be7cfc-1803-4c17-bb58-947104aa883c
-source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
+source-git-commit: 59f97fc6ded4274c27400f56b50b4a3329cc471a
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1128'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 [Content Hub-användare med behörighet att lägga till resurser](/help/assets/deploy-content-hub.md#onboard-content-hub-users-add-assets) kan lägga till resurser i Content Hub antingen från det lokala filsystemet eller importera resurser från OneDrive eller Dropbox-datakällor. Alla resurser visas på den översta nivån i Content Hub, oavsett vilken mappstruktur som finns i det lokala filsystemet eller datakällorna i OneDrive och Dropbox, vilket förbättrar sökfunktionerna.
 
->[!VIDEO](https://video.tv.adobe.com/v/3445379/?captions=swe&learn=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3432980/?learn=on){transcript=true}
 
 Resurserna som markerats som `Approved` i Assets as a Cloud Service är automatiskt tillgängliga i Content Hub. Mer information finns i [Godkänn resurser för Content Hub](/help/assets/approve-assets-content-hub.md).
 
@@ -81,27 +81,27 @@ Visningen av resurser som överförts med Content Hub beror på om du har [aktiv
 
 ## Frågor och svar {#faqs-content-hub-upload-assets}
 
-### Vilka typer av mediefiler kan jag överföra till Content Hub och varifrån kommer? {#asset-types-upload-to-content-hub}
+### Vilka typer av mediefiler kan jag överföra till AEM Assets Content Hub och varifrån kommer? {#asset-types-upload-to-content-hub}
 
-Content Hub-användare med rättigheter att lägga till resurser kan överföra varumärkesgodkända resurser från det lokala filsystemet. Alla överförda resurser, oavsett deras ursprungliga mappstruktur, visas på den översta nivån i Content Hub för att förbättra sökfunktionerna.
+AEM Assets Content Hub-användare med rättigheter att lägga till resurser kan överföra varumärkesgodkända resurser från det lokala filsystemet. Alla överförda resurser, oavsett deras ursprungliga mappstruktur, visas på den översta nivån i Content Hub för att förbättra sökfunktionerna.
 
-### Hur förbättrar Content Hub sökningen och organisationen av resurser? {#search-content-hub}
+### Hur förbättrar AEM Assets Content Hub sökningen och organisationen av resurser? {#search-content-hub}
 
-Content Hub förbättrar sökning och organisation av resurser genom att låta användarna definiera nyckeldetaljer för varje överföring, som kampanjnamn, nyckelord, kanaler, tidsram och region. Dessutom genereras automatiskt ytterligare egenskaper för varje resurs (till exempel filstorlek, format och upplösning) och Adobe AI används för att lägga till smarta taggar, vilket gör det enklare och snabbare att hitta relevanta resurser.
+AEM Assets Content Hub förbättrar sökning och organisation av resurser genom att användarna kan definiera nyckeldetaljer för varje överföring, som kampanjnamn, nyckelord, kanaler, tidsram och region. Dessutom genereras automatiskt ytterligare egenskaper för varje resurs (till exempel filstorlek, format och upplösning) och Adobe AI används för att lägga till smarta taggar, vilket gör det enklare och snabbare att hitta relevanta resurser.
 
-### Hur överför jag resurser från mitt lokala filsystem till Content Hub? {#upload-assets-content-hub}
+### Hur överför jag resurser från mitt lokala filsystem till AEM Assets Content Hub? {#upload-assets-content-hub}
 
-Om du vill överföra resurser från det lokala filsystemet klickar du på **Lägg till Assets** för att öppna dialogrutan för överföring. Du kan dra och släppa filer eller mappar, eller bläddra manuellt för att markera dem. Du måste gruppera dina resurser under ett kampanjnamn, och vi rekommenderar att du fyller i andra fält som nyckelord, kanaler, tidsram och region för att få bättre ordning. När du är klar klickar du på **Överför**, granskar informationen och bekräftar att du vill börja överföra.
+Om du vill överföra resurser från ditt lokala filsystem till AEM Assets Content Hub klickar du på **Lägg till Assets** för att öppna dialogrutan för överföring. Du kan dra och släppa filer eller mappar, eller bläddra manuellt för att markera dem. Du måste gruppera dina resurser under ett kampanjnamn, och vi rekommenderar att du fyller i andra fält som nyckelord, kanaler, tidsram och region för att få bättre ordning. När du är klar klickar du på **Överför**, granskar informationen och bekräftar att du vill börja överföra.
 
-### Hur fungerar godkännandeprocessen i Content Hub? {#asset-approval-content-hub}
+### Hur fungerar godkännandeprocessen i AEM Assets Content Hub? {#asset-approval-content-hub}
 
-Om du aktiverar alternativet för automatiskt godkännande blir resurser som överförts med Content Hub automatiskt tillgängliga. Om det är inaktiverat placeras överförda resurser i mappen **hydrated-assets** i Assets as a Cloud Service, och du måste redigera deras status manuellt till **Godkänd** för att kunna visa dem i Content Hub.
+Om du aktiverar alternativet för automatiskt godkännande blir resurser som överförts med AEM Assets Content Hub automatiskt tillgängliga. Om det är inaktiverat placeras överförda resurser i mappen **hydrated-assets** i Assets as a Cloud Service, och du måste redigera deras status manuellt till **Godkänd** för att kunna visa dem i Content Hub.
 
-### Kan jag konfigurera de fält som är obligatoriska eller valfria när jag överför resurser till Content Hub? {#available-fields-while-uploading-assets-to-content-hub}
+### Kan jag konfigurera de fält som är obligatoriska eller valfria när jag överför resurser till AEM Assets Content Hub? {#available-fields-while-uploading-assets-to-content-hub}
 
-Administratörer kan använda användargränssnittet för konfiguration för att definiera fält som är obligatoriska eller valfria när resurser överförs till Content Hub.
+Administratörer kan använda användargränssnittet för konfiguration för att definiera fält som är obligatoriska eller valfria när resurser överförs till AEM Assets Content Hub.
 
-### Vad ska jag göra om mina överförda resurser inte visas automatiskt i Content Hub? {#assets-do-not-display-in-content-hub}
+### Vad ska jag göra om mina överförda resurser inte visas automatiskt i AEM Assets Content Hub? {#assets-do-not-display-in-content-hub}
 
-Om resurserna inte visas automatiskt betyder det att växlingen för automatiskt godkännande är inaktiverad. Resurserna finns i mappen **hydrated-assets** i din Assets as a Cloud Service-miljö. Du måste redigera deras status gruppvis till **Godkänd** för att de ska visas i Content Hub.
+Om resurserna inte visas automatiskt i AEM Assets Content Hub betyder det att växlingen för automatiskt godkännande är inaktiverad. Resurserna finns i mappen **hydrated-assets** i din Assets as a Cloud Service-miljö. Du måste redigera deras status gruppvis till **Godkänd** för att de ska visas i Content Hub.
 

@@ -4,9 +4,9 @@ description: Lär dig hur du aktiverar attributbaserad åtkomstkontroll för att
 role: Admin
 badgeSaas: label="AEM Assets" type="Positive" tooltip="Gäller AEM Assets)."
 exl-id: 05f54b05-40b8-4a6c-af8f-5c3f7a2089d4
-source-git-commit: a641933d1049cd07ee8935672c8ef357a5bbf18c
+source-git-commit: 59f97fc6ded4274c27400f56b50b4a3329cc471a
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1407'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Några av fördelarna med attributbaserad åtkomstkontroll är:
 
 * Minskar antalet dubbletter - förbättrar materialets integritet. Dubbletter behövs i mappbaserade behörigheter när samma resurser delas med olika grupper.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475418/?captions=swe&learn=on&enablevpops){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3475413/?learn=on&enablevpops){transcript=true}
 
 ## Hur aktiverar jag attributbaserad åtkomstkontroll? {#enable-attribute-based-access-control}
 
@@ -114,7 +114,7 @@ Med den attributbaserade åtkomstkontrollen (ABAC) i AEM Assets Content Hub kan 
 
 Administratörer definierar åtkomstregler genom att skapa villkor som baseras på metadata för resurser, till exempel varumärke eller region, och länka dessa till specifika ID för användargrupper. Dessa regler använder logiska operatorer (AND, OR) och jämförelseoperatorer (är lika med, inte lika med) för att ange exakt vilka resurser som är synliga för vilka användargrupper.
 
-### Vilka är de största fördelarna med att använda ABAC jämfört med traditionella mappbaserade behörigheter?
+### Vilka är de största fördelarna med att använda ABAC jämfört med traditionella mappbaserade behörigheter i AEM Assets Content Hub?
 
 ABAC eliminerar beroendet av mappstrukturer för behörigheter, tillåter administratörer att överföra resurser och tilldela behörigheter retroaktivt samt minskar antalet duplicerade resurser som behövs. Detta förbättrar materialets integritet och förenklar behörighetshanteringen, särskilt när resurser måste delas med flera grupper.
 
@@ -130,7 +130,7 @@ ABAC-regler i AEM Assets Content Hub kan använda logiska operatorer som AND och
 
 ABAC är användbart för organisationer med stora team eftersom det möjliggör detaljerad regelbaserad åtkomst till resurser baserat på användarroller, regioner eller varumärken. Det ser till att användarna bara ser resurser som är relevanta för deras ansvarsområden, utan manuella behörighetstilldelningar eller överdrivet dubbelarbete.
 
-### Hur ska administratörer förbereda ABAC-kalkylbladet innan det skickas till Adobe Support?
+### Hur ska administratörer förbereda ABAC-kalkylbladet för AEM Assets Content Hub innan det skickas till Adobe Support?
 
 Administratörer bör skapa användargrupper i Adobe Admin Console, notera sina grupp-ID:n och tydligt definiera behörigheter och villkor för varje grupp i kalkylbladet. De ska se till att alla metadataegenskaper mappas korrekt till rätt scheman och använda kommentarskolumnen för att förtydliga affärsmetoden för varje regel, vilket gör det enklare för Adobe att validera och implementera reglerna.
 
