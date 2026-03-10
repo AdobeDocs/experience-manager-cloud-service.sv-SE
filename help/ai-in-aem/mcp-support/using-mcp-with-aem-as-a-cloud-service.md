@@ -4,9 +4,9 @@ description: Lär dig hur du använder Model Context Protocol med AEM as a Cloud
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: ddb7fc8c-affc-4374-8e08-d45d96017109
-source-git-commit: 2cbbb53c1bf5277ab54e6731152c0400b4e67aba
+source-git-commit: b3704dad066b66b103fdec849879f889e895c09d
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1761'
 ht-degree: 0%
 
 ---
@@ -142,7 +142,7 @@ Varje användare utför det här steget, eller en administratör för MCP-klient
 1. Verifiera identifierade verktyg
    * När programmet har autentiserats hittar det MCP-verktyg från servern. Du kan sedan börja fråga LLM om du vill utföra AEM-åtgärder.
 
-Nedan finns stegvisa guider för varje program som stöds:
+Nedan finns de program som stöds, varav några är länkar till steg-för-steg-guider:
 
 #### Chattprogram (webb och dator) {#setup-chat-applications}
 
