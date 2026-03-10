@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: 3a46db9c98fe634bf2d4cffd74b54771de748515
+source-git-commit: 15c49efa8ccb7d61fc506a0603b201c50a17edee
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1932'
 ht-degree: 0%
 
 ---
@@ -214,7 +214,7 @@ actions:
       op: tolower
 ```
 
-### Variabel {#variables}
+### Variabler {#variables}
 
 Du kan ange variabler under begärandeomformningen och sedan referera till dem senare i utvärderingssekvensen. Se [utvärderingsordningen](#order-of-evaluation) för mer information.
 
@@ -437,6 +437,10 @@ Anslutningar till originalen är endast SSL och använder port 443.
 | **forwardAuthorization** (valfritt, standardvärdet är false) | Om värdet är true skickas auktoriseringshuvudet från klientbegäran till serverdelen, annars tas auktoriseringshuvudet bort. |
 | **timeout** (valfritt, i sekunder är standardvärdet 60) | Antal sekunder som CDN ska vänta på att en backend-server ska leverera den första byten av en HTTP-svarstext. Det här värdet används också som en tidsgräns mellan byte till serverdelsservern. |
 
+>[!IMPORTANT]
+>
+>Värdet **domain** får inte innehålla `.adobeaemcloud.com`. Du kan inte proxyansluta direkt till en adobeaemcloud.com. Den här begränsningen skyddar mot oönskade frågeloopar. Använd i stället en [anpassad domän](#proxying-to-aemaacs) som är installerad i din AEMaaCS-miljö som serverdel för origo för att proxytrafik till din AEM as a Cloud Service-miljö.
+
 ### Proxyserver för anpassad domän till AEM statiska nivå {#proxy-custom-domain-static}
 
 Ursprungsväljare kan användas för att dirigera AEM-publiceringstrafik till statiskt AEM-innehåll som distribueras med [frontendpipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md). Användningsexempel är att använda statiska resurser på samma domän som sidan (t.ex. example.com/static) eller på en explicit annan domän (t.ex. static.example.com).
@@ -494,6 +498,41 @@ data:
 >[!NOTE]
 >
 >Eftersom det hanterade CDN-nätverket för Adobe används, måste du konfigurera push-ogiltigförklaring i **hanterat** läge genom att följa Edge Delivery Services [Setup invalidation documentation](https://www.aem.live/docs/byo-dns#setup-push-invalidation).
+
+
+### Proxyserver för AEMaaCS-miljö {#proxying-to-aemaacs}
+
+Du kan inte använda en `adobeaemcloud.com`-domän direkt som ursprung i CDN-konfigurationen. Detta nekas (domänen får inte innehålla `.adobeaemcloud.com`) för att skydda mot oönskade begäranslingor. Detta gäller också vid routning från en domän som är installerad för en Edge Delivery-plats.
+
+Om din anpassade domän (`www.example.com`) redan är installerad i en AEMaaCS-miljö dirigeras standardroutningen till AEM backend utan någon CDN-regel. Använd väljare för ursprung när du behöver dirigera miljööverskridande (till exempel från `pXXXX-eYYYY` till `pXXXX-eZZZZ`) eller från en Edge Delivery-webbplats till en AEMaaCS-miljö.
+
+Om du vill lägga ut trafik till din AEM as a Cloud Service-miljö i dessa fall (till exempel för att dirigera specifika sökvägar som `/graphql` till en serverdel) installerar du en anpassad domän i AEMaaCS-miljön och använder den anpassade domänen som ursprung i CDN-konfigurationen.
+
+**Exempel:** Om din AEM-publiceringsnivå kan nås på `publish-pXXXXX-eYYYYY.adobeaemcloud.com` ska du inte använda den domänen i `originSelectors`. Istället:
+
+1. Installera en anpassad domän i AEMaaCS-miljön (till exempel `aem-publish-origin.example.com`) som pekar på din publiceringstjänst.
+2. I CDN-konfigurationen definierar du ett ursprung med den anpassade domänen och dirigerar de önskade sökvägarna (till exempel `/graphql`) till den.
+
+```
+kind: CDN
+version: '1'
+data:
+  originSelectors:
+    rules:
+      - name: graphql-to-aem-publish
+        when:
+          allOf:
+            - reqProperty: domain
+              equals: www.example.com
+            - reqProperty: path
+              like: /graphql*
+        action:
+          type: selectOrigin
+          originName: aem-publish-origin
+    origins:
+      - name: aem-publish-origin
+        domain: aem-publish-origin.example.com
+```
 
 
 ## Serveromdirigeringar {#server-side-redirectors}
