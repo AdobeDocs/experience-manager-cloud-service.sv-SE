@@ -4,10 +4,11 @@ description: Användarna kan förhandsgranska blanketten innan den publiceras el
 topic-tags: author
 role: Admin, Developer, User
 feature: Adaptive Forms
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 72235277-6c34-4341-9a10-02afa753e7f5
-source-git-commit: 05548d56d791584781606b02839c5602b4469f7b
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
@@ -34,11 +35,11 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
   </tr>-->
   <tr>
    <td>PDF Form</td>
-   <td>Förhandsgranska och förhandsgranska PDF med data<br /> </td>
+   <td>PDF förhandsgranska och förhandsgranska med data<br /> </td>
   </tr>
   <tr>
    <td>Adaptiv form</td>
-   <td>Förhandsgranska HTML och HTML med data</td>
+   <td>HTML preview and HTML preview with Data</td>
   </tr>
   <!--<tr>
    <td>Form Template</td>

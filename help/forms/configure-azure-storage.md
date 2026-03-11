@@ -1,12 +1,13 @@
 ---
 title: Hur konfigurerar jag Azure-lagring?
-description: Lär dig hur du integrerar formulär med Azure-lagringsservern.
+description: Lär dig hur du integrerar formulär med Azure lagringsserver.
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 606383b3-293c-43d2-9ba0-5843c4e0caa8
-source-git-commit: 7b31a2ea016567979288c7a8e55ed5bf8dfc181d
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -47,7 +48,7 @@ Så här lägger du till [!DNL Azure] tjänster:
 
    ![Lägg till markerade tjänster](assets/select-services.png)
 
-1. Markera tjänsten och **[!UICONTROL Edit Properties]** på fliken **[!UICONTROL Services]**. Definiera tjänstens in- eller utdatamodellsobjekt baserat på tjänsten.
+1. Markera tjänsten och **[!UICONTROL Services]** på fliken **[!UICONTROL Edit Properties]**. Definiera tjänstens in- eller utdatamodellsobjekt baserat på tjänsten.
 
 1. Välj **[!UICONTROL Save]** om du vill spara formulärdatamodellen (FDM).
 
@@ -61,22 +62,22 @@ Så här lägger du till [!DNL Azure] tjänster:
      </tr>
      <tr>
       <td>Hämta blob från Azure</td>
-      <td>Hämta data som lagrats som en blob i Azure-lagringen med ett ID eller ett namn</td>
+      <td>Hämta data som lagras som en blob i Azure-lagring med ett ID eller ett namn</td>
      </tr>
      <tr>
-      <td>Hämta blob med binär URL från Azure</td>
+      <td>Hämta blob med binära URL:er från Azure</td>
       <td>Hämta data lagrade som en blob med URL för binärfiler i Azure-lagringsplatsen med ett ID eller ett namn</td>
      </tr>
      <tr>
       <td>Spara blob i Azure</td>
-      <td>Använd ett blob-ID för att spara data i Azure-lagringen</td>
+      <td>Använd ett blob-ID för att spara data i Azure-lagringsutrymme</td>
      </tr>
      <tr>
       <td>Uppdatera blob i Azure</td>
-      <td>Använd ett blob-ID för att uppdatera data i Azure-lagringen</td>
+      <td>Använd ett blob-ID för att uppdatera data i Azure-lagring</td>
      </tr>
      <tr>
-      <td>Hämta lista över blob-ID:n från Azure</td>
+      <td>Hämta lista med blob-ID:n från Azure</td>
       <td>Hämta en lista med blob-ID:n från Azure baserat på det nummer som har definierats i indatabegäran.</td>
      </tr>
      <tr>
@@ -98,11 +99,11 @@ Så här definierar du en objektegenskap för datamodell som en söknyckel:
 1. Växla alternativet **[!UICONTROL Search Key]** till PÅ-läge. Det här alternativet är bara tillgängligt för primära datatyper.
 1. Välj **[!UICONTROL Done]** och välj sedan **[!UICONTROL Save]** för att spara FDM (Form Data Model).
 
-När du har definierat egenskaper för datamodellsobjekt som söknycklar lagras hash-värdena i Azure-indextaggar och Base64-kodade värden lagras i Azure-metadata.
+När du har definierat objektegenskaper för datamodell som söknycklar lagras hash-värdena i Azure indextaggar och Base64-kodade värden lagras i Azure-metadata.
 
 >[!NOTE]
 >
->Endast 10 söknycklar tillåts per Azure-enhet eftersom Azure bara tillåter 10 taggar per blob och egenskapsvärden som markerats som söknycklar lagras i Azure-indextaggar efter hashning.
+>Endast 10 söknycklar tillåts per Azure-enhet eftersom Azure bara tillåter 10 taggar per blob och egenskapsvärden som markerats som söknycklar lagras i Azure indextaggar efter hashning.
 
 <!--
 

@@ -4,10 +4,11 @@ description: Asynkrona funktionsanrop i den visuella regelredigeraren
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: a240ba26-a6d8-4643-8acb-1d8812dac61f
-source-git-commit: 2cae8bb1050bc4538f4645d9f064b227fb947d75
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1344'
 ht-degree: 0%
 
 ---
@@ -53,7 +54,7 @@ I följande bild visas stegen som används för att använda regeltypen **[!UICO
 
 ![Arbetsflöde för att lägga till asynkrona funktioner](/help/forms/assets/workflow-to-add-async-func.png){width=50%, align=center}
 
-### 1. Skriv en anpassad funktion för den asynkrona åtgärden i JS-filen.
+### &#x200B;1. Skriv en anpassad funktion för den asynkrona åtgärden i JS-filen.
 
 >[!NOTE]
 >
@@ -99,7 +100,7 @@ function asyncOperationForOTPMatch(otp, callback) {
 
 Koden definierar funktionen `matchOTP()` som genererar ett löfte att validera ett engångslösenord asynkront. Den använder funktionen `asyncOperationForOTPMatch()` för att simulera matchningsprocessen för engångslösenord. Funktionen kontrollerar om angiven engångslösenord är lika med `111`. Om den angivna engångslösenordet är korrekt anropas återanropet med null för felet och ett objekt som anger att engångslösenordet är giltigt `({'valid':'true'})`. Om engångslösenordet inte är giltigt anropas återanropet med felobjektet `({'valid':'false'})` och null för resultatet.
 
-### 2. Konfigurera den asynkrona funktionen i regelredigeraren
+### &#x200B;2. Konfigurera den asynkrona funktionen i regelredigeraren
 
 Utför följande steg för att konfigurera asynkron funktion i regelredigeraren:
 

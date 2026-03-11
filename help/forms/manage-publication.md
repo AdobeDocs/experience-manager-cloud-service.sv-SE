@@ -6,10 +6,11 @@ feature: Adaptive Forms
 feature-set: Experience Manager Assets,Experience Manager Sites,Experience Manager, Experience Manager Forms, Experience Manager Cloud Manager
 role: User, Developer
 level: Intermediate
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 6ade40f1-bad5-4f5e-aa0e-84b7c6a82e02
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '925'
 ht-degree: 0%
 
 ---
@@ -53,7 +54,7 @@ När du har publicerat formuläret med alternativet **Publicera** och dess relat
    När du klickar på knappen **[!UICONTROL Unpublish]** visas dialogrutan **Avpublicera resurs**.
 1. Klicka på **[!UICONTROL Unpublish]** för att starta avpubliceringsprocessen
 
-   ![Dialogrutan Upprepa &#x200B;](/help/forms/assets/unpublish-asset.png)
+   ![Dialogrutan Upprepa ](/help/forms/assets/unpublish-asset.png)
 
    När formuläret och dess relaterade resurser har avpublicerats visas dialogrutan **Slutfört**.
 1. Klicka på **Stäng**.

@@ -4,17 +4,18 @@ description: I den här artikeln utforskas olika användningsexempel för regelr
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 062ed441-6e1f-4279-9542-7c0fedc9b200
-source-git-commit: f772a193cce35a1054f5c6671557a6ec511671a9
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1975'
+source-wordcount: '1981'
 ht-degree: 0%
 
 ---
 
 # Förbättringar och användningsfall i regelredigeraren
 
-<span class="preview"> Det här är förhandsversionsfunktioner som är tillgängliga via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features">förhandsutgåva</a>. Dessa förbättringar gäller även för Edge Delivery Services Forms.
+<span class="preview"> Det här är förhandsversionsfunktioner som är tillgängliga via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features">förhandsutgåva</a>. Dessa förbättringar gäller även för Edge Delivery Services Forms.
 
 I den här artikeln beskrivs de senaste förbättringarna av regelredigeraren i Adaptive Forms. Uppdateringarna är utformade för att hjälpa er att enklare definiera formulärbeteende utan att behöva skriva anpassad kod, och för att skapa mer dynamiska, responsiva och personaliserade formulärupplevelser.
 
@@ -124,7 +125,7 @@ Fältet **Total leveranskostnad** uppdateras dynamiskt för att återspegla båd
 >[!NOTE]
 >
 > Du kan också lägga till funktionen **Hämta variabelvärde** i villkoret När.
-> &#x200B;> ![Funktionen Hämta variabelvärde i När villkor &#x200B;](/help/forms/assets/when-get-variable.png){width=50%,höjd=50%, align=center}
+> ![Funktionen Hämta variabelvärde i När villkor ](/help/forms/assets/when-get-variable.png){width=50%,höjd=50%, align=center}
 
 På så sätt kan du göra dynamiska realtidsberäkningar utan att lägga till extra fält i formuläret, vilket gör strukturen ren och användarvänlig.
 

@@ -5,10 +5,11 @@ keywords: formulärbyggare, AEM-formulär, formulärskapare, skapa formulär, fo
 feature: Adaptive Forms, Core Components, Edge Delivery Services
 role: User, Developer, Admin
 level: Beginner
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: choose-form-builder-guide
-source-git-commit: ab84a96d0e206395063442457a61f274ad9bed23
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -92,7 +93,7 @@ Universell redigerare har två kraftfulla redigeringsmetoder för Edge Delivery 
 
 | **Funktion** | **Foundation** | **Core** | **Universell redigerare** | **Dokumentbaserad** |
 |-------------|----------------|----------|---------------------|-------------------|
-| **Datamodeller** | FDM, anpassad | FDM, anpassad | FDM, anpassad | Egen |
+| **Datamodeller** | FDM, anpassad | FDM, anpassad | FDM, anpassad | Anpassad |
 | **Skicka åtgärder** | Flera alternativ | Flera alternativ | Flera alternativ | Endast kalkylblad |
 | **Förifyll** | ✅ | ✅ | Via guide | ✅ |
 | **CAPTCHA** | Flera typer | reCAPTCHA, hCaptcha | reCAPTCHA Enterprise | reCAPTCHA Enterprise |
@@ -199,6 +200,6 @@ Om du vill ha personlig vägledning kan du kontakta AEM Forms implementeringstea
 ## Relaterade artiklar
 
 - [Jämförelse av formulärframtagning](/help/edge/docs/forms/authoring-a-form.md)
-- [AEM Forms Core Components - översikt](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE)
+- [AEM Forms Core Components - översikt](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)
 - [Edge Delivery Services for Forms - översikt](/help/edge/docs/forms/overview.md)
-- [Headless Adaptive Forms with Core Components](https://experienceleague.adobe.com/sv/docs/experience-manager-headless-adaptive-forms/using/tutorial/build-engaging-forms-using-core-components-and-headless-adaptive-forms-aem-forms-cloud-service)
+- [Headless Adaptive Forms with Core Components](https://experienceleague.adobe.com/en/docs/experience-manager-headless-adaptive-forms/using/tutorial/build-engaging-forms-using-core-components-and-headless-adaptive-forms-aem-forms-cloud-service)

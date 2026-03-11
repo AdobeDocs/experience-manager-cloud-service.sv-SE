@@ -4,10 +4,11 @@ description: Lär dig hur du konfigurerar skicka-åtgärden för det anpassade f
 keywords: Skicka data till Marketo, konfigurera skicka-åtgärd som Skicka till Marketo Engage
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 0683564b-1ac4-42b4-bc08-101c4fdef286
-source-git-commit: 1be7bafc1d93a65a81eeb2f7e86cac33cde7aa35
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '766'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 ![Arbetsflöde](/help/forms/assets/workflow-marketo-3.png)
 
-Adaptiv Forms-redigerare innehåller åtgärden **Skicka till Marketo Engage** som skickar adaptiva Forms-data till Adobe Marketo Engage för bearbetning. Du kan konfigurera ett befintligt adaptivt formulär så att data skickas till [Adobe Marketo Engage](https://experienceleague.adobe.com/sv/docs/marketo/using/home) när det skickas.
+Adaptiv Forms-redigerare innehåller åtgärden **Skicka till Marketo Engage** som skickar adaptiva Forms-data till Adobe Marketo Engage för bearbetning. Du kan konfigurera ett befintligt adaptivt formulär så att data skickas till [Adobe Marketo Engage](https://experienceleague.adobe.com/en/docs/marketo/using/home) när det skickas.
 
 Det finns ett antal färdiga skickningsåtgärder för att hantera formuläröverföringar. Du kan läsa mer om de här alternativen i artikeln [Åtgärd för att skicka anpassade formulär](/help/forms/configure-submit-actions-core-components.md).
 
@@ -97,7 +98,7 @@ När du har konfigurerat skicka-åtgärden för det adaptiva formuläret som **S
 
 ## Nästa steg
 
-Du kan också ansluta ett adaptivt formulär till [Munchkin-biblioteket](https://experienceleague.adobe.com/sv/docs/marketo/using/product-docs/administration/setup/munchkin) för att spåra antalet besök, klick och formuläröverföringar.
+Du kan också ansluta ett adaptivt formulär till [Munchkin-biblioteket](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/setup/munchkin) för att spåra antalet besök, klick och formuläröverföringar.
 
 ## Relaterade artiklar
 

@@ -1,12 +1,13 @@
 ---
 title: Hur integrerar man DocuSign med ett adaptivt formulär?
 description: Lär dig hur du använder DocuSign med ett adaptivt formulär för att samla in e-signaturer.
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: fb2e75d6-e454-4999-a079-f663af79051f
 feature: Adaptive Forms, Acrobat Sign
 role: User, Developer
-source-git-commit: ab84a96d0e206395063442457a61f274ad9bed23
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1419'
 ht-degree: 0%
 
 ---
@@ -120,7 +121,7 @@ Utför följande steg för att konfigurera en körklar anpassad sändningsåtgä
 
    När du har utfört de här stegen kan du visa en ny anpassad sändningsåtgärd, [Skicka med elektroniska DocuSign-signaturer](#enabledocusign), som är tillgänglig i listan över sändningsalternativ för ett adaptivt formulär och en [DocumentSign-molntjänstkonfiguration](#configure-docusign-with-aem-forms) i den lokala utvecklingsmiljön.
 
-1. Kompilera och [Distribuera koden till din [!DNL AEM Forms] as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=sv-SE#customer-releases).
+1. Kompilera och [Distribuera koden till din [!DNL AEM Forms] as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#customer-releases).
 
 ## Integrera [!DNL DocuSign] med [!DNL AEM Forms] {#configure-docusign-with-aem-forms}
 
@@ -140,7 +141,7 @@ När förutsättningarna är uppfyllda utför du följande steg för att integre
    1. Lägg till den URL som kopierades i föregående steg i rutan **[!UICONTROL Redirect URI]** och klicka på **[!UICONTROL Save]**.
    1. Anteckna Integrering och Hemliga nycklar.
 
-   Stegvis information om hur du konfigurerar OAuth-inställningar för ett [!DNL DocuSign]-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programmets &#x200B;](https://support.docusign.com/guides/ndse-admin-guide-api-and-keys) utvecklardokumentation.
+   Stegvis information om hur du konfigurerar OAuth-inställningar för ett [!DNL DocuSign]-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programmets ](https://support.docusign.com/guides/ndse-admin-guide-api-and-keys) utvecklardokumentation.
 
 1. Gå tillbaka till sidan **[!UICONTROL Create DocuSign Configuration]**. På fliken **[!UICONTROL Settings]** anger fältet **[!UICONTROL OAuth URL]** följande standard-URL:
 

@@ -3,11 +3,12 @@ title: Hur skickar jag data från ett anpassat formulär till Microsoft&reg; One
 description: Utforska den smidiga processen att ansluta AEM Forms till Microsoft&reg; OneDrive med åtgärden Skicka till OneDrive. Lär dig steg-för-steg-guiden för att konfigurera OneDrive och konfigurera överföringsåtgärder för effektiv lagring och hämtning av data
 keywords: AEM Forms OneDrive-integrering, Anslut till Microsoft OneDrive, Konfigurationsinställningar för OneDrive med AEM-formulär
 feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: dbfa4094-1b92-4a7c-a799-f66973d27054
 role: User, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '872'
 ht-degree: 1%
 
 ---
@@ -51,7 +52,7 @@ Så här ansluter du AEM Forms till din Microsoft® OneDrive-lagring:
    * Du kan hämta `Client ID` och `Client Secret` för din app från Microsoft® Azure-portalen.
    * Lägg till omdirigerings-URI som `https://[author-instance]/libs/cq/onedrive/content/configurations/wizard.html` i Microsoft® Azure-portalen. Ersätt `[author-instance]` med URL:en för din Author-instans.
    * Lägg till API-behörigheterna `offline_access` och `Files.ReadWrite.All` för att ge läs-/skrivbehörigheter.
-   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` för din app från Microsoft® Azure-portalen.
+   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` av din app från Microsoft® Azure-portalen.
 
    >[!NOTE]
    >

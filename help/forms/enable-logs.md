@@ -5,12 +5,13 @@ contentOwner: robhagat
 content-type: reference
 topic-tags: hTML5_forms
 feature: HTML5 Forms,Mobile Forms
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 2f574c98-550c-4b84-be1e-46a2700e7277
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 1496d7517d586c99c5f1001fff13d88275e91d09
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '661'
 ht-degree: 3%
 
 ---
@@ -28,7 +29,7 @@ Utför följande steg för att konfigurera serversidesloggar:
 
 1. Gå till `https://'[server]:[port]'/system/console/configMgr`. Leta reda på och öppna alternativet *Loggningskonfiguration för parenteser*. En dialogruta visas:
 
-   ![&#x200B; Dialogrutan Konfiguration av loggningslogg för parenteser &#x200B;](assets/logconfig.png)
+   ![ Dialogrutan Konfiguration av loggningslogg för parenteser ](assets/logconfig.png)
 
    Konfigurationsalternativet Loggningslogg för Apace Sling
 

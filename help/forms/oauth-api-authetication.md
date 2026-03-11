@@ -3,13 +3,14 @@ title: Hur konfigurerar jag OAuth Server-to-Server-autentisering?
 description: Lär dig konfigurera OAuth Server-till-Server-autentisering för Adobe Experience Manager Forms as a Cloud Service
 role: Admin, Developer, User
 feature: Adaptive Forms, APIs & Integrations
-source-git-commit: 43b648eb3984867fda35ee04de10b78dd836b481
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
+exl-id: 24fa5751-c006-4c39-bdc3-b46a4974638e
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
-
 
 # OAuth Server-till-server-autentisering
 
@@ -19,8 +20,8 @@ OAuth Server-till-Server-autentisering ger säker, tokenbaserad åtkomst till AE
 
 Kontrollera att följande krav är uppfyllda innan du börjar:
 
-* Kontrollera att du har [åtkomst till Adobe Developer Console](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/access-rights) för just den miljö du använder.
-* [Tilldela systemadministratörs- eller utvecklarrollen i Adobe Admin Console](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions) för att aktivera åtkomst till Adobe Developer Console.
+* Kontrollera att du har [åtkomst till Adobe Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/access-rights) för just den miljö du använder.
+* [Tilldela systemadministratörs- eller utvecklarrollen i Adobe Admin Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions) för att aktivera åtkomst till Adobe Developer Console.
 
 ## Hur skapar man en åtkomsttoken med hjälp av OAuth Server-till-Server-autentisering?
 
@@ -177,7 +178,7 @@ Generera åtkomsttoken manuellt i Adobe Developer Console:
 
 >[!TAB För produktion]
 
-Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
+Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
 
 **Nödvändiga autentiseringsuppgifter:**
 

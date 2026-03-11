@@ -1,13 +1,14 @@
 ---
 title: Hur integrerar man ett anpassat formulär med Microsoft&reg; Power Automate?
 description: Integrera ett anpassat formulär med Microsoft&reg; Power Automate.
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: a059627b-df12-454d-9e2c-cc56986b7de6
 keywords: koppla samman AEM-blanketter med automatiserad strömhantering, automatiserad strömhantering AEM Forms, integrera automatiserad strömhantering till adaptiva Forms, skicka data från adaptiva Forms till Power Automate
 feature: Adaptive Forms, Foundation Components, Core Components, Edge Delivery Services
 role: Admin, User, Developer
-source-git-commit: 64b6ce166baa892fcddd13c2e9c8b5e7e0053815
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1515'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/adaptive-forms-basic-authoring/forms-microsoft-power-automate-integration) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-basic-authoring/forms-microsoft-power-automate-integration) |
 | AEM as a Cloud Service | Den här artikeln |
 
 <span class="preview"> Om du använder GovCloud och behöver ansluta till en GCC-klientorganisation (Government Cloud Computing) skickar du ett e-postmeddelande från din officiella adress till aem-forms-ea@adobe.com för att begära åtkomst via tidig Adobe-program. </span>
@@ -103,11 +104,11 @@ Klicka på `Add permissions` om du vill spara behörigheterna.
    >När du skapar ett adaptivt formulär anger du behållarnamnet i fältet **[!UICONTROL Configuration Container]**.
 
 1. På konfigurationssidan väljer du **[!UICONTROL Create]** för att skapa [!DNL Microsoft® Power Automate Flow Service]-konfigurationen i AEM Forms.
-1. På sidan **[!UICONTROL Configure Dataverse Service for Microsoft® Power Automate]** anger du **[!UICONTROL Client ID]** (kallas även program-ID), **[!UICONTROL Client Secret]**, **[!UICONTROL OAuth URL]** och **[!UICONTROL Dynamic Environment URL]**. Använd klient-ID, klienthemlighet, OAuth URL och URL för dynamisk miljö för [Microsoft® Azure Active Directory Application](#ms-power-automate-application) som du skapade i föregående avsnitt. Använd alternativet Endpoints i användargränssnittet i Microsoft® Azure Active Directory för att hitta OAuth-URL
+1. På sidan **[!UICONTROL Configure Dataverse Service for Microsoft® Power Automate]** anger du **[!UICONTROL Client ID]** (kallas även program-ID), **[!UICONTROL Client Secret]**, **[!UICONTROL OAuth URL]** och **[!UICONTROL Dynamic Environment URL]**. Använd klient-ID, klienthemlighet, OAuth URL och URL för dynamisk miljö för [Microsoft® Azure Active Directory Application](#ms-power-automate-application) som du skapade i föregående avsnitt. Använd alternativet Endpoints i användargränssnittet i Microsoft® Azure Active Directory för att hitta OAuth URL
 
    ![Använd alternativet Slutpunkter i Microsoft Power Automate-programmets användargränssnitt för att hitta OAuth-URL:en](assets/endpoints.png)
 
-1. Välj **[!UICONTROL Connect]**. Logga in på ditt Microsoft® Azure-konto om du blir tillfrågad. Välj **[!UICONTROL Save]**.
+1. Välj **[!UICONTROL Connect]**. Logga in på ditt Microsoft® Azure-konto om du tillfrågas. Välj **[!UICONTROL Save]**.
 
 ### Skapa Microsoft® Power Automate Flow Service Cloud-konfiguration {#create-microsoft-power-automate-flow-cloud-configuration}
 

@@ -4,10 +4,11 @@ description: Generera, hantera och skydda dokument med AEM Forms Communication A
 Keywords: document generation, PDF manipulation, document security, batch processing, document conversion, PDF/A compliance
 feature: Adaptive Forms, APIs & Integrations, Document Services
 role: Admin, Developer, User
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: 43b648eb3984867fda35ee04de10b78dd836b481
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '2780'
+source-wordcount: '2786'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 > **Versionstillgänglighet**
 >
-> * **AEM 6.5**: [Översikt över AEM Document Services](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html?lang=sv-SE)
+> * **AEM 6.5**: [Översikt över AEM Document Services](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html)
 > * **AEM as a Cloud Service**: Den här artikeln
 
 ## Introduktion
@@ -87,9 +88,9 @@ Tabellen nedan visar skillnaden mellan formatet AFP och PDF:
 | **Utdatakontroll** | Finkornig kontroll över skrivarens layout | Visuell layout optimerad för skärm och utskrift |
 | **Teckensnitt och bilder** | Använder teckensnitt och resursreferenser. Återgivare måste tolka | Bäddar in teckensnitt och bilder direkt i filen |
 
-API:t för dokumentgenerering returnerar det genererade PDF-dokumentet eller AFP-dokumentet. Du kan också överföra de genererade PDF-filerna till Azure Blob Storage.
+API:t för dokumentgenerering returnerar det genererade PDF-dokumentet eller AFP-dokumentet. Du kan också överföra de genererade PDF-filerna till Azure Blob Storage (BLOB-lagring).
 
-<span class="preview"> Överför genererade PDF-filer med hjälp av dokumentgenererings-API:t till Azure Blob Storage-funktionen under [Tidigt Adobe-program](/help/forms/early-access-ea-features.md). Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
+<span class="preview"> Överför genererade PDF-filer med hjälp av dokumentgenererings-API:t till Azure blob-lagringsfunktionen under [Tidigt Adobe-program](/help/forms/early-access-ea-features.md). Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
 >
 >

@@ -4,10 +4,11 @@ description: PDF Preview in Interactive Communication Editor with Different Data
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 17b3fe2b-6a1d-4fe2-9a92-a55a50400824
-source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ Förgranska interaktiv kommunikation utan data, lokala data eller exempeldata fr
 
 +++&#x200B;2. Förhandsgranska med lokala JSON-data
 
-2.1. Förbered en strukturerad JSON-fil. Som referens kan du kopiera exempeldata från JSON-schemat [(FDM)](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model) som används för kommunikationen.
+2.1. Förbered en strukturerad JSON-fil. Som referens kan du kopiera exempeldata från JSON-schemat [(FDM)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model) som används för kommunikationen.
 
 2.2. Gå till **PDF Preview** > Använda lokala data i IC Editor.
 

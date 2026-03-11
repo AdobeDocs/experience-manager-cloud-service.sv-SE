@@ -5,10 +5,11 @@ feature: Adaptive Forms, Core Components, Edge Delivery Services
 role: User, Developer
 level: Beginner, Intermediate
 keywords: integrera API i regelredigeraren, anropa tjänstförbättringar
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: fc51f86d-e672-4513-b473-6700757a0c3d
-source-git-commit: 478b9c21e5b96dc31f5926a49864ea867e1ae86c
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
@@ -125,7 +126,7 @@ På samma sätt använder **Land för Passport-utfärdande** och **destinationsl
 
 >
 >
-> Du kan [hämta egenskapsvärden från en JSON-array genom att anropa ett API och använda en anpassad funktion &#x200B;](/help/forms/invoke-service-enhancements-rule-editor.md#retrieve-property-values-from-a-json-array). På så sätt kan du extrahera värden och binda dem direkt till formulärfält.
+> Du kan [hämta egenskapsvärden från en JSON-array genom att anropa ett API och använda en anpassad funktion ](/help/forms/invoke-service-enhancements-rule-editor.md#retrieve-property-values-from-a-json-array). På så sätt kan du extrahera värden och binda dem direkt till formulärfält.
 
 ## Implementera återförsöksmekanism för API-fel
 

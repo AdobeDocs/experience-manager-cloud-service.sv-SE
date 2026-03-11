@@ -3,13 +3,14 @@ title: Hur anpassar man automatiskt genererad dokumentmall för Adaptive Forms?
 description: Lär dig hur du hämtar, anpassar och överför den automatiskt genererade dokumentmallen (DoR) för Adaptive Forms med Adobe Forms Designer.
 feature: Adaptive Forms, Core Components, Foundation Components
 role: User, Developer
-source-git-commit: 51ec9ef76a8f3f9b7bf2cdc25b03f72e286f586f
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
+exl-id: 2416add3-0b9d-4a8d-a84d-d65c0762d8e8
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
-
 
 # Anpassa den automatiskt genererade dokumentmallen
 
@@ -126,4 +127,3 @@ Så här bekräftar du att den anpassade mallen används korrekt:
 * [Generera urkunder för adaptiva Forms (grundkomponenter)](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
 * [Basmall för ett postdokument](/help/forms/generate-document-of-record-core-components.md#base-template-of-a-document-of-record)
 * [Anpassa varumärkesinformationen i arkivdokumentet](/help/forms/generate-document-of-record-core-components.md#customize-the-branding-information-in-document-of-record)
-

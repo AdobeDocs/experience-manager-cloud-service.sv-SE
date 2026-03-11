@@ -2,11 +2,12 @@
 title: Hur lägger jag till stöd för nya språkområden i ett adaptivt formulär baserat på Foundation Components?
 description: För Adaptiv Forms kan du lägga till språkområden för fler språk förutom det som finns i kartongen.
 feature: Adaptive Forms, Foundation Components
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 4c7d6caa-1adb-4663-933f-b09129b9baef
 role: User, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
@@ -15,12 +16,12 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html) |
 | Kärnkomponenter | [Klicka här](supporting-new-language-localization-core-components.md) |
 | Foundation Components | Den här artikeln |
 
@@ -53,14 +54,14 @@ Så här lägger du till stöd för en ny språkinställning i den adaptiva Form
 1. [Lägg till språkstöd för ordlistan](#add-locale-support-for-the-dictionary)
 1. [Genomför ändringarna i databasen och distribuera pipeline](#commit-changes-in-repo-deploy-pipeline)
 
-#### 1. Klona databasen {#clone-the-repository}
+#### &#x200B;1. Klona databasen {#clone-the-repository}
 
 1. Navigera från kommandoraden till den plats där du vill klona Forms Cloud Service-databasen.
-1. Kör kommandot som du [hämtade från Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git). Det liknar `git clone https://git.cloudmanager.adobe.com/<my-org>/<my-program>/`.
+1. Kör kommandot som du [hämtade från Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git). Det liknar `git clone https://git.cloudmanager.adobe.com/<my-org>/<my-program>/`.
 1. Använd Git-användarnamnet och -lösenordet för att klona databasen.
-1. Öppna den klonade Forms Cloud Service-databasmappen i det redigeringsprogram du föredrar.
+1. Öppna den klonade databasmappen för Forms Cloud Service i det redigeringsprogram du föredrar.
 
-#### 2. Lägg till en språkinställning i tjänsten för guidelokalisering {#add-a-locale-to-the-guide-localization-service}
+#### &#x200B;2. Lägg till en språkinställning i tjänsten för guidelokalisering {#add-a-locale-to-the-guide-localization-service}
 
 1. Leta reda på filen `Guide Localization Service.cfg.json` och lägg till den språkinställning som du vill lägga till i listan över språkinställningar som stöds.
 
@@ -68,7 +69,7 @@ Så här lägger du till stöd för en ny språkinställning i den adaptiva Form
    >
    > Skapa en fil med namnet `Guide Localization Service.cfg.json`, om den inte finns.
 
-#### 3. Lägg till språknamnsspecifikt mappklientbibliotek {#add-locale-name-specific-folder}
+#### &#x200B;3. Lägg till språknamnsspecifikt mappklientbibliotek {#add-locale-name-specific-folder}
 
 1. Skapa mappen `etc/clientlibs` i mappen UI.content.
 1. Skapa sedan en mapp med namnet `locale-name` under `etc/clientlibs` som fungerar som behållare för xfa- och af-klienter.
@@ -98,7 +99,7 @@ I18N.js
      LogMessages.js
    ```
 
-#### 4. Lägg till språkstöd för ordlistan {#add-locale-support-for-the-dictionary}
+#### &#x200B;4. Lägg till språkstöd för ordlistan {#add-locale-support-for-the-dictionary}
 
 Utför bara det här steget om `<locale>` som du lägger till inte finns bland `en`, `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`.
 
@@ -115,23 +116,23 @@ Utför bara det här steget om `<locale>` som du lägger till inte finns bland `
    <filter root="/etc/languages"/>
    ```
 
-Innan du implementerar ändringarna i AEM Git-databasen måste du komma åt [Git-databasinformationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git).
+Innan du implementerar ändringarna i AEM Git-databasen måste du komma åt [Git-databasinformationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git).
 
-#### 5. Genomför ändringarna i databasen och distribuera pipelinen {#commit-changes-in-repo-deploy-pipeline}
+#### &#x200B;5. Genomför ändringarna i databasen och distribuera pipelinen {#commit-changes-in-repo-deploy-pipeline}
 
-Genomför ändringarna i GIT-databasen när du har lagt till stöd för nationella inställningar. Distribuera koden med hela stackpipeline. Lär dig [hur du konfigurerar en pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline) för att lägga till stöd för nya språk.
-När pipeline är klar visas den nya språkinställningen i AEM.
+Genomför ändringarna i GIT-databasen när du har lagt till stöd för nationella inställningar. Distribuera koden med hela stackpipeline. Lär dig [hur du konfigurerar en pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline) för att lägga till stöd för nya språk.
+När pipeline är klar visas det nya språkområdet i AEM-miljön.
 
 ### Använd tillagda nationella inställningar i Adaptiv Forms {#use-added-locale-in-af}
 
 Utför följande steg för att använda och återge ett adaptivt formulär med nyligen tillagda nationella inställningar:
 
-1. Logga in på AEM författarinstans.
+1. Logga in på din AEM-författarinstans.
 1. Gå till **Forms** > **Forms och dokument**.
 1. Välj ett anpassat formulär och klicka på guiden **Lägg till ordlista** och **Lägg till ordlista i översättningsprojekt** visas.
 1. Ange **Projektnamn** och välj **Målspråk** i listrutan i guiden **Lägg till ordlista i översättningsprojekt**.
 1. Klicka på **Klar** och kör det skapade översättningsprojektet.
-1. Markera ett anpassat formulär och klicka på **Förhandsgranska som HTML**.
+1. Välj ett anpassat formulär och klicka på **Förhandsgranska som HTML**.
 1. Lägg till `&afAcceptLang=<locale-name>` i URL:en för ett adaptivt formulär.
 1. Uppdatera sidan och Adaptiv form renderas i en angiven språkinställning.
 

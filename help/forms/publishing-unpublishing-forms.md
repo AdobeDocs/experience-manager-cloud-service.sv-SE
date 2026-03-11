@@ -8,17 +8,18 @@ feature: Adaptive Forms
 role: User
 hide: true
 hidefromtoc: true
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 9496e4f5-ed74-4b40-b8f9-17153170af66
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1300'
+source-wordcount: '1306'
 ht-degree: 0%
 
 ---
 
 # Publicera och avpublicera formulär och dokument{#publishing-and-unpublishing-forms-and-documents}
 
-Med [!DNL AEM Forms] kan du enkelt skapa, publicera och avpublicera formulär. Servern [!DNL AEM Forms] innehåller två instanser: Författare och Publish. Författarinstans används för att skapa och hantera formulärresurser och resurser. Publish-instans används för att hålla resurser och relaterade resurser tillgängliga för slutanvändare.
+Med [!DNL AEM Forms] kan du enkelt skapa, publicera och avpublicera formulär. Servern [!DNL AEM Forms] innehåller två instanser: Författare och Publicera. Författarinstans används för att skapa och hantera formulärresurser och resurser. Publiceringsinstansen används för att hålla resurser och relaterade resurser tillgängliga för slutanvändare.
 
 ## Resurser som stöds   {#supported-assets-nbsp}
 
@@ -30,7 +31,7 @@ Med [!DNL AEM Forms] kan du enkelt skapa, publicera och avpublicera formulär. S
 * Teman
 * Formulärmallar <!-- (XFA forms) -->
 * PDF forms
-* Dokument (dokument i PDF)
+* Dokument (platta PDF-dokument)
 * Formuläruppsättningar
 * Resurs (bilder, scheman och formatmallar)
 
@@ -41,7 +42,7 @@ När du markerar ett formulär och publicerar det publiceras även dess relatera
 Din adaptiva Forms kan använda vissa konfigurationer, inställningar och anpassningar som inte publiceras automatiskt. Vi rekommenderar att du publicerar eller aktiverar dessa resurser innan du publicerar ett adaptivt formulär.
 
 * Redigerbara adaptiva formulärmallar
-* Cloud Service för Adobe Sign, Typekit, reCAPTCHA och Form Data Model (FDM)
+* Cloud Service-konfigurationer för Adobe Sign, Typekit, reCAPTCHA och Form Data Model (FDM)
 * Andra konfigurationer av molntjänster aktiveras bara om användaren har administratörsbehörighet.
 * Anpassningar. Dessa omfattar, men är inte begränsade till:
 
@@ -57,16 +58,16 @@ Din adaptiva Forms kan använda vissa konfigurationer, inställningar och anpass
 En resurs kan ha följande lägen:
 
 * **Opublicerad:** En resurs som aldrig har publicerats (det opublicerade läget gäller endast för Forms-resurser. Resurser för korrespondenshantering har inte ett opublicerat läge.)
-* **Publicerad**: En resurs som har publicerats och är tillgänglig på Publish-instansen
+* **Publicerad**: En resurs som har publicerats och är tillgänglig på publiceringsinstansen
 * **Ändrad**: En resurs som har ändrats efter att ha publicerats
 
-## Publish en mediefil {#publish-an-asset}
+## Publicera en resurs {#publish-an-asset}
 
 1. Logga in på servern [!DNL AEM Forms].
 1. Använd något av följande för att välja och publicera en resurs.
 
    1. Flytta pekaren över en resurs och välj **[!UICONTROL Publish]** ![aem6forms_globe](assets/aem6forms_globe.pngasset.png).
-   1. Gör något av följande och välj sedan Publish:
+   1. Gör något av följande och välj sedan Publicera:
 
       * Om du är i kortvyn väljer du **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png) och väljer resursen. Resursen har valts.
       * Om du är i listvyn markerar du kryssrutan för en resurs. Resursen har valts.
@@ -77,7 +78,7 @@ En resurs kan ha följande lägen:
       >
       >Markera inte flera resurser. Det går inte att publicera flera resurser samtidigt.
 
-1. När Publish-processen startar visas en bekräftelsedialogruta med alla relaterade resurser och resurser. Välj **[!UICONTROL Publish]** i dialogrutan som innehåller relaterade resurser. Resursen publiceras och dialogrutan Publish Assets Success visas.
+1. När publiceringsprocessen startar visas en bekräftelsedialogruta med alla relaterade resurser och resurser. Välj **[!UICONTROL Publish]** i dialogrutan som innehåller relaterade resurser. Resursen publiceras och dialogrutan Publicera Assets Success visas.
 
    >[!NOTE]
    >
@@ -89,13 +90,13 @@ En resurs kan ha följande lägen:
 
    >[!NOTE]
    >
-   >För Forms Manager är Publish-åtgärden inaktiverad om användaren inte har behörighet att publicera resurserna i listan. En resurs som kräver extra behörigheter visas i rött.
+   >För Forms Manager är Publicera-åtgärden inaktiverad om användaren inte har behörighet att publicera resurserna i listan. En resurs som kräver extra behörigheter visas i rött.
 
-   När en resurs har publicerats kopieras resursens metadataegenskaper till Publish-instansen och resursens status ändras till Publicerad. Statusen för beroende resurser som publiceras ändras också till Publicerad.
+   När en resurs har publicerats kopieras resursens metadataegenskaper till publiceringsinstansen och resursens status ändras till Publicerad. Statusen för beroende resurser som publiceras ändras också till Publicerad.
 
    <!-- After publishing an asset, you can use the Forms Portal to display all the assets on a web page. For more information, see [Introduction to publishing forms on a portal](introduction-publishing-forms.md).-->
 
-## Publish all Correspondence Management Assets {#publish-all-the-correspondence-management-assets}
+## Publicera alla Correspondence Management Assets {#publish-all-the-correspondence-management-assets}
 
 Med [!DNL AEM Forms] kan du publicera alla Correspondence Management-resurser på en server på en gång. De publicerade resurserna innehåller alla Correspondence Management-resurser och relaterade beroenden.
 
@@ -104,21 +105,21 @@ Följ de här stegen för att publicera alla Correspondence Management-resurser 
 1. Logga in på servern [!DNL AEM Forms].
 1. Välj **Adobe Experience Manager** i det globala navigeringsfältet.
 1. Välj ![verktyg](assets/tools.png) och sedan **Forms**.
-1. Välj **Publish Correspondence Management Assets**.
+1. Välj **Publicera korrespondenshantering för Assets**.
 
    ![publish-cmp-assets](assets/publish-cmp-assets.png)
 
-   Assets-sidan Publish All Correspondence Management visas och innehåller information om den senaste gången Publish Correspondence Management Assets-processen gjordes.
+   Assets-sidan Publicera all korrespondenshantering visas och visar information om den senaste gången som Assets-processen för Publicera korrespondenshantering användes.
 
    ![publish-last-run-details](assets/publish-last-run-details.png)
 
-1. Välj **Publish** och välj **OK** i bekräftelsemeddelandet.
+1. Välj **Publicera** och välj **OK** i bekräftelsemeddelandet.
 
    När en gruppbearbetning är klar kan du visa information om den senaste körningen. Detta inkluderar information som administratörsinloggning och om batchkörningen lyckades eller misslyckades.
 
    >[!NOTE]
    >
-   >Publish-processen kan inte avbrytas när den väl har initierats. När Publish-åtgärden pågår ska du inte skapa, ta bort, ändra eller publicera något material eller initiera Assets-åtgärden Exportera all korrespondenshantering.
+   >Publiceringsprocessen kan inte avbrytas när den väl har initierats. När publiceringsåtgärden pågår ska du inte skapa, ta bort, ändra eller publicera några resurser eller initiera åtgärden Exportera all korrespondenshantering i Assets.
 
 ## Automatisera publicering och avpublicering för Forms &amp; Documents {#automate-publishing-and-unpublishing-for-forms-amp-documents}
 

@@ -6,14 +6,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 docset: aem65
 feature: HTML5 Forms,Mobile Forms
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 039afdf3-013b-41b2-8821-664d28617f61
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 81a6c2b942df0e72a0b7d359f29c615a44640396
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '2803'
+source-wordcount: '2809'
 ht-degree: 0%
 
 ---
@@ -37,7 +38,7 @@ Formuläruppsättningar stöds också i AEM Forms-appen, vilket gör att fältar
 
 Du kan koppla flera XDP-filer eller formulärmallar, som har skapats med Designer, till en formuläruppsättning. Formuläruppsättningar kan sedan användas för att selektivt återge XDP:er baserat på värden som användarna angett i de ursprungliga formulären och deras profiler.
 
-Använd [AEM Forms användargränssnitt](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/getting-started/introduction-managing-forms) för att hantera alla formulär, formuläruppsättningar och relaterade resurser.
+Använd [AEM Forms användargränssnitt](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/getting-started/introduction-managing-forms) för att hantera alla formulär, formuläruppsättningar och relaterade resurser.
 
 ### Skapa en formuläruppsättning {#create-a-form-set}
 
@@ -68,7 +69,7 @@ Så här skapar du en formuläruppsättning:
 
    * Formulärordning: Dra och släpp formulären för att ordna om dem. Formulärordningen definierar den ordning i vilken formulären visas för slutanvändaren i AEM Forms-appen och i en fristående återgivning.
    * Formuläridentifierare: Anger en unik identitet för de formulär som ska användas i berättigandeuttryck.
-   * Datarot: För varje formulär i formuläruppsättningen kan författaren konfigurera XPATH där data i det aktuella formuläret placeras i skickad XML. Som standard är värdet /. Om alla formulär i formuläruppsättningen är schemabundna och har samma XML-schema kan du ändra det här värdet. Vi rekommenderar att alla fält i formuläret har rätt databindning angiven i XDP. Om två fält i två olika formulär har samma gemensamma databindning, visar fältet i det andra formuläret förfyllda värden från det första formuläret. Bind inte två delformulär med samma interna innehåll till samma XML-nod. Mer information om XML-strukturen i formuläruppsättningen finns i [Förifyll XML för formuläruppsättningen](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/html5-forms/formset-in-aem-forms#prefill-xml-for-form-set).
+   * Datarot: För varje formulär i formuläruppsättningen kan författaren konfigurera XPATH där data i det aktuella formuläret placeras i skickad XML. Som standard är värdet /. Om alla formulär i formuläruppsättningen är schemabundna och har samma XML-schema kan du ändra det här värdet. Vi rekommenderar att alla fält i formuläret har rätt databindning angiven i XDP. Om två fält i två olika formulär har samma gemensamma databindning, visar fältet i det andra formuläret förfyllda värden från det första formuläret. Bind inte två delformulär med samma interna innehåll till samma XML-nod. Mer information om XML-strukturen i formuläruppsättningen finns i [Förifyll XML för formuläruppsättningen](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/html5-forms/formset-in-aem-forms#prefill-xml-for-form-set).
    * Kvalifikationsuttryck: Anger ett JavaScript-uttryck som utvärderar ett booleskt värde och anger om ett formulär i formuläruppsättningen kan fyllas i. Om värdet är false tillfrågas inte användaren och visas inte heller formuläret för att fyllas i. Uttrycket baseras vanligtvis på värdena i de fält som har hämtats före det här formuläret. Uttrycken innehåller även anrop till formuläruppsättningens API fs.valueOf för att extrahera de värden som användaren fyller i i ett fält i ett formulär i formuläruppsättningen:
 
    *fs.valueOf(&lt;Form Identifier>, &lt;fieldAs expression>) > &lt;value>*
@@ -77,7 +78,7 @@ Så här skapar du en formuläruppsättning:
 
    Dessutom kan författaren välja att ta bort ett formulär från formuläruppsättningen med ikonen Ta bort i det högra hörnet av varje rad eller lägga till en annan uppsättning formulär med ikonen **+** i verktygsfältet. Den här ikonen **+** dirigerar användaren tillbaka till föregående steg i guiden som användes för att välja formulär. De befintliga markeringarna behålls och eventuella ytterligare markeringar som görs måste läggas till i formuläruppsättningen med hjälp av ikonen Lägg till i formuläruppsättning på den sidan.
 
-   ![Formuläruppsättning: Konfigurera formulär &#x200B;](assets/createformset2.png)
+   ![Formuläruppsättning: Konfigurera formulär ](assets/createformset2.png)
 
    >[!NOTE]
    >

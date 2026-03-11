@@ -4,10 +4,11 @@ Description: This article explains how to send data from your Adaptive Form to a
 keywords: Ansluta SharePoint dokumentbibliotek till ett tilläggsformulär, Skicka till SharePoint, Skapa en SharePoint Document Library-konfiguration, Använd åtgärden Skicka till SharePoint i ett adaptivt formulär, AEM Forms Data Model SharePoint Document Library, Forms Data Model SharePoint Document Library, Integrate Forms Data Model för att SharePoint dokumentbiblioteket
 feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
 role: User, Developer
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: a00b4a93-2324-4c2a-824f-49146dc057b0
-source-git-commit: 1be7bafc1d93a65a81eeb2f7e86cac33cde7aa35
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -44,7 +45,7 @@ Så här ansluter du AEM Forms till din Microsoft® Sharepoint Document Library-
      >
      > Du kan också [konfigurera SharePoint-webbplatser med begränsad åtkomst](/help/forms/configure-sharepoint-site-limited-access.md) genom att använda behörighetsomfånget `Sites.Selected` i Microsoft Graph API. `Sites.Selected` är ett behörighetsområde i Microsoft Graph API som ger mer detaljerad och begränsad åtkomst till SharePoint webbplatser.
 
-   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` för din app från Microsoft® Azure-portalen.
+   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` av din app från Microsoft® Azure-portalen.
 
      >[!NOTE]
      >

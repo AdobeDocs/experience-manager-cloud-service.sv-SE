@@ -4,10 +4,11 @@ description: Lär dig konfigurera RESTful-webbtjänster, SOAP-baserade webbtjän
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
 level: Beginner
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: f913871da16b44d7a465e0fa00608835524ba7e3
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2203'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/configure-data-sources.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/configure-data-sources.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 ![Dataintegrering](do-not-localize/data-integeration.png)
@@ -40,8 +41,8 @@ Dataintegrering har stöd för autentiseringstyperna OAuth2.0([Auktoriseringskod
 
 Innan du konfigurerar relationsdatabaser med hjälp av webbkonsolkonfigurationen i [!DNL Experience Manager] måste du:
 
-* [Aktivera avancerade nätverk via molnhanterings-API:t](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html?lang=sv-SE) eftersom portar är inaktiverade som standard.
-* [Lägg till JDBC-drivrutinsberoenden i Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html?lang=sv-SE#mysql-driver-dependencies).
+* [Aktivera avancerade nätverk via molnhanterings-API:t](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html) eftersom portar är inaktiverade som standard.
+* [Lägg till JDBC-drivrutinsberoenden i Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html?lang=en#mysql-driver-dependencies).
 
 
 ### Steg för att konfigurera en relationsdatabas
@@ -60,7 +61,7 @@ Du kan konfigurera relationsdatabaser med hjälp av webbkonsolkonfigurationen f�
 
    **Var hittar du den här informationen?**
 
-   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git).
+   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git).
 
    När kommandot har slutförts visas en ny mapp som har skapats i din lokala katalog. Mappen får ett namn efter programmet.
 
@@ -116,7 +117,7 @@ git push
 
 >[!NOTE]
 >
-> Mer information finns i [SQL-anslutningar med JDBC DataSourcePool](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html?lang=sv-SE).
+> Mer information finns i [SQL-anslutningar med JDBC DataSourcePool](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html).
 
 <!--
 1. Go to [!DNL Experience Manager] web console at `https://server:host/system/console/configMgr`.
@@ -178,7 +179,7 @@ Alla molntjänstkonfigurationer i [!DNL Experience Manager] konsolideras i mappe
 Så här konfigurerar du mappen för molntjänstkonfigurationer:
 
 1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
-   * Mer information finns i dokumentationen för [Configuration Browser](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/configurations.html?lang=sv-SE).
+   * Mer information finns i dokumentationen för [Configuration Browser](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/configurations.html).
 1. Gör följande för att aktivera den globala mappen för molnkonfigurationer eller hoppa över det här steget för att skapa och konfigurera en annan mapp för molntjänstkonfigurationer.
 
    1. I **[!UICONTROL Configuration Browser]** markerar du mappen `global` och väljer **[!UICONTROL Properties]**.
@@ -207,8 +208,8 @@ RESTful-webbtjänster kan beskrivas med [Swagger-specifikationer](https://swagge
 1. Välj **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL RESTful Service]** i listrutan **[!UICONTROL Service Type]**, bläddra och välj en miniatyrbild för konfigurationen och välj **[!UICONTROL Next]**.
 1. Ange följande information för RESTful-tjänsten:
 
-   * Välj en URL eller fil i listrutan [!UICONTROL Swagger Source] och ange därför [!DNL Swagger URL] till definitionsfilen [!DNL &#x200B; Swagger] eller överför filen [!DNL Swagger] från det lokala filsystemet.
-   * Baserat på indata från [!DNL &#x200B; Swagger] Source är följande fält förifyllda med värden:
+   * Välj en URL eller fil i listrutan [!UICONTROL Swagger Source] och ange därför [!DNL Swagger URL] till definitionsfilen [!DNL  Swagger] eller överför filen [!DNL Swagger] från det lokala filsystemet.
+   * Baserat på indata från [!DNL  Swagger] Source är följande fält förifyllda med värden:
 
       * Schema: De överföringsprotokoll som används av REST API. Antalet schematyper som visas i den nedrullningsbara listan beror på scheman som definierats i källan [!DNL Swagger].
       * Värd: Domännamnet eller IP-adressen för värden som använder REST API. Det är ett obligatoriskt fält.
@@ -232,8 +233,8 @@ RESTful-webbtjänster kan beskrivas med [Swagger-specifikationer](https://swagge
 1. Välj **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL RESTful Service]** i listrutan **[!UICONTROL Service Type]**, bläddra och välj en miniatyrbild för konfigurationen och välj **[!UICONTROL Next]**.
 1. Ange följande information för RESTful-tjänsten:
 
-   * Välj en URL eller fil i listrutan [!UICONTROL Swagger Source] och ange därför [!DNL Swagger 3.0 URL] till definitionsfilen [!DNL &#x200B; Swagger] eller överför filen [!DNL Swagger] från det lokala filsystemet.
-   * Baserat på indata från [!DNL &#x200B; Swagger] Source visas anslutningsinformationen med målservern.
+   * Välj en URL eller fil i listrutan [!UICONTROL Swagger Source] och ange därför [!DNL Swagger 3.0 URL] till definitionsfilen [!DNL  Swagger] eller överför filen [!DNL Swagger] från det lokala filsystemet.
+   * Baserat på indata från [!DNL  Swagger] Source visas anslutningsinformationen med målservern.
    * Välj autentiseringstypen - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Grundläggande autentisering, API-nyckel eller Anpassad autentisering - för att få åtkomst till RESTful-tjänsten och ange därmed information för autentisering.
 
    Om du väljer **[!UICONTROL API Key]** som autentiseringstyp anger du värdet för API-nyckeln. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj något av dessa alternativ i listrutan **[!UICONTROL Location]** och ange namnet på huvudet eller frågeparametern i fältet **[!UICONTROL Parameter Name]** i enlighet med detta.
@@ -357,7 +358,7 @@ Ange egenskapen `importAllowlistPattern` för konfigurationen **[!UICONTROL Form
 }
 ```
 
-[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
+[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
 
 ## Konfigurera OData-tjänster {#config-odata}
 
@@ -389,7 +390,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en O
 <!--
 ## Configure Microsoft&reg; SharePoint List {#config-sharepoint-list}
 
-<span class="preview"> This is a pre-release feature and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
+<span class="preview"> This is a pre-release feature and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 To save data in a tabular form use, Microsoft&reg; SharePoint List. To configure a Microsoft SharePoint List in [!DNL Experience Manager] as a Cloud Service, do the following:
 

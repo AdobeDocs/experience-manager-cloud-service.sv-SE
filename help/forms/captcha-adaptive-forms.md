@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: adaptive_forms, author
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 3fdbe5a3-5c3c-474d-b701-e0182da4191a
-source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1674'
 ht-degree: 0%
 
 ---
@@ -19,12 +20,12 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/captcha-adaptive-forms.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/captcha-adaptive-forms.html) |
 | AEM as a Cloud Service | Den här artikeln |
 | Gäller för | Adaptiv form baserad på grundläggande komponenter. <br> [Klicka här](/help/forms/captcha-adaptive-forms-core-components.md) för anpassat formulär baserat på kärnkomponenter. |
 
@@ -61,7 +62,7 @@ Formulärförfattare kan använda tjänsten reCAPTCHA från Google för att impl
 
 1. Konfigurera molntjänsten för [!DNL reCAPTCHA Enterprise].
 
-   1. Gå till ![tools-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]** på författarinstansen av Experience Manager.
+   1. Gå till ![tools-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]** på din Experience Manager-författarinstans.
    1. Välj **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som du skapade och välj **[!UICONTROL Create]**.
    1. Välj version som [!DNL reCAPTCHA Enterprise] och ange namn, projekt-ID, platsnyckel och API-nyckel (hämtas i steg 2) för reCAPTCHA Enterprise-tjänsten.
    1. Välj nyckeltyp. Nyckeltypen ska vara densamma som den webbplatsnyckel som du konfigurerade i [Google Cloud-projektet](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin), till exempel **Checkbox-webbplatsnyckel** eller **Score-baserad webbplatsnyckel**.
@@ -90,7 +91,7 @@ När du har aktiverat tjänsten reCAPTCHA Enterprise kan den användas i anpassn
 
 1. Konfigurera molntjänsten för reCAPTCHA v2.
 
-   1. Gå till ![tools-1](assets/tools-1.png) > **Cloud Service** på AEM författarinstans.
+   1. Gå till ![tools-1](assets/tools-1.png) > **Cloud Services** på din AEM-författarinstans.
    1. Välj **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som du skapade och välj **[!UICONTROL Create]**.
    1. Välj version som [!DNL reCAPTCHA v2], ange namn, platsnyckel och hemlig nyckel för reCAPTCHA-tjänsten (hämtas i steg 1) och välj **[!UICONTROL Create]** för att skapa molntjänstkonfigurationen.
    1. I dialogrutan Redigera komponent anger du platsen och de hemliga nycklarna som fås i steg 1. Välj **[!UICONTROL Save Settings]** och välj sedan **OK** för att slutföra konfigurationen.
@@ -214,7 +215,7 @@ Så här använder du Google reCAPTCHA i en adaptiv form:
 
 >[!NOTE]
 > 
-> Välj inte **[!UICONTROL Default]** i listrutan för Captcha-tjänster eftersom AEM CAPTCHA-tjänsten är föråldrad.
+> Välj inte **[!UICONTROL Default]** i listrutan Captcha-tjänst eftersom standardtjänsten AEM CAPTCHA är inaktuell.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3422641/recaptcha-google-adaptive-forms/?quality=12&learn=on)
 
@@ -241,7 +242,7 @@ Du kan validera CAPTCHA i ett adaptivt formulär antingen när du skickar formul
 Så här validerar du en CAPTCHA automatiskt när du skickar in ett adaptivt formulär:
 
 1. Markera CAPTCHA-komponenten och välj ![cmpr](assets/configure-icon.svg) för att visa komponentegenskaperna.
-1. Välj **[!UICONTROL Validate CAPTCHA at form submission]** i avsnittet **[!UICONTROL Validate CAPTCHA]**.
+1. Välj **[!UICONTROL Validate CAPTCHA]** i avsnittet **[!UICONTROL Validate CAPTCHA at form submission]**.
 1. Välj ![Klar](assets/save_icon.svg) om du vill spara komponentegenskaperna.
 
 #### Validera CAPTCHA på användaråtgärder och villkor {#validate-captcha-user-action}
@@ -249,7 +250,7 @@ Så här validerar du en CAPTCHA automatiskt när du skickar in ett adaptivt for
 Så här validerar du en CAPTCHA baserat på villkor och användaråtgärder:
 
 1. Markera CAPTCHA-komponenten och välj ![cmpr](assets/configure-icon.svg) för att visa komponentegenskaperna.
-1. Välj **[!UICONTROL Validate CAPTCHA on a user action]** i avsnittet **[!UICONTROL Validate CAPTCHA]**.
+1. Välj **[!UICONTROL Validate CAPTCHA]** i avsnittet **[!UICONTROL Validate CAPTCHA on a user action]**.
 1. Välj ![Klar](assets/save_icon.svg) om du vill spara komponentegenskaperna.
 
 [!DNL Experience Manager Forms] tillhandahåller `ValidateCAPTCHA` API för att validera CAPTCHA med fördefinierade villkor. Du kan anropa API:t med en anpassad skickaåtgärd eller genom att definiera regler för komponenter i ett anpassat formulär.
@@ -344,7 +345,7 @@ Ange egenskapen **[!UICONTROL af.cloudservices.recaptcha.domain]** för konfigur
 }
 ```
 
-[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE#deployment-process) till din Cloud Service om du vill ange värden för en konfiguration.
+[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
 
 ## Se även {#see-also}
 

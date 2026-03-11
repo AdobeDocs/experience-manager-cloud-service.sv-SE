@@ -1,13 +1,14 @@
 ---
 title: Hur laddar man ned och installerar Forms Designer för att skapa dokumentmallar?
-description: Använd Forms Designer för att skapa XDP- och PDF-blankettmallar som fungerar som mall för ett arkivdokument.
+description: Använd Forms Designer för att skapa XDP- och PDF-blankettmallar som fungerar som en mall för ett arkivdokument.
 keywords: Installera Designer, installera Forms Designer, krav för installation av Forms Designer
 feature: Adaptive Forms, Forms Designer
 role: Admin, Developer, User
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: d6f1cb21-c48b-406d-8d47-482d7a1b4cc3
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '410'
 ht-degree: 1%
 
 ---
@@ -17,9 +18,9 @@ ht-degree: 1%
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | Den här artikeln |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/installing-configuring-designer.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/installing-configuring-designer.html) |
 
-Designer är ett lättanvänt grafiskt formulärdesignverktyg som gör det enklare att skapa XDP- och PDF-formulärmallar. Du kan utforma en formulärmall, definiera dess logik och uppfylla strikta lagstadgade krav. Ett XDP- och PDF-formulär fungerar som en dokumentmall i ett adaptivt format. Dessa formulärmallar skiljer sig från [adaptiva formulärmallar](template-editor.md).
+Designer är ett grafiskt formulärdesignverktyg som gör det enklare att skapa XDP- och PDF-formulärmallar. Du kan utforma en formulärmall, definiera dess logik och uppfylla strikta lagstadgade krav. Ett XDP- och PDF-formulär fungerar som en dokumentmall i ett adaptivt formulär. Dessa formulärmallar skiljer sig från [adaptiva formulärmallar](template-editor.md).
 
 ## Krav {#pre-requisites}
 

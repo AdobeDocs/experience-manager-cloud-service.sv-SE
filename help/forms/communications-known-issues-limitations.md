@@ -1,12 +1,13 @@
 ---
 title: Vad är överväganden, kända problem och bästa praxis i AEM Forms?
 description: Kända fel och metodtips för AEM Forms Communication API:er är viktiga.
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: e95615dd-e494-40cd-9cdf-6e9761ca3b3e
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: 975f767e75a268a1638227ae20a533f82724c80a
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1739'
 ht-degree: 0%
 
 ---
@@ -62,7 +63,7 @@ Om du vill sammanfoga data i den här formulärdesignen skapar du en XML-datakä
 
 Du bör använda en XDP-fil som indata för att få fullständig åtkomst till återgivningsfunktionerna i API:erna för kommunikation. Ibland kan en PDF-fil användas. Det finns dock vissa begränsningar när du använder en PDF-fil som indata:
 
-Ett PDF-dokument som inte innehåller en XFA-ström kan inte återges som PostScript, PCL eller ZPL. Kommunikations-API:er kan återge PDF-dokument med XFA-strömmar (d.v.s. formulär skapade i Designer) till laser- och etikettformat. Om PDF-dokumentet är signerat, certifierat eller innehåller användarrättigheter (som används med tjänsten AEM Forms Reader Extensions) kan det inte återges i dessa utskriftsformat.
+Ett PDF-dokument som inte innehåller en XFA-ström kan inte återges som PostScript, PCL eller ZPL. Kommunikations-API:er kan återge PDF-dokument med XFA-strömmar (d.v.s. formulär skapade i Designer) till laser- och etikettformat. Om PDF-dokumentet är signerat, certifierat eller innehåller användarrättigheter (används med tjänsten AEM Forms Reader Extensions) kan det inte återges i dessa utskriftsformat.
 
 
 ### Utskrivbara områden {#printable-areas}
@@ -84,7 +85,7 @@ Om du vill designa ett formulär som använder teckensnitt som finns i skrivaren
 
 Om ett teckensnitt är installerat på en klientdator är det tillgängligt i listrutan i Designer. Om teckensnittet inte är installerat måste du ange teckensnittsnamnet manuellt. Alternativet&quot;Ersätt ej tillgängliga teckensnitt permanent&quot; i Designer kan vara inaktiverat. I annat fall skrivs ersättningsteckensnittets namn till XDP-filen när XDP-filen sparas i Designer. Det innebär att det skrivarresidenta teckensnittet inte används.
 
-Det finns två typer av OpenType®-teckensnitt. En typ är ett TrueType OpenType®-teckensnitt som PCL stöder. Den andra är CFF OpenType®. PDF- och PostScript-utdata stöder inbäddade Type-1-, TrueType- och OpenType®-teckensnitt. PCL-utdata stöder inbäddade TrueType-teckensnitt.
+Det finns två typer av OpenType®-teckensnitt. En typ är ett TrueType OpenType®-teckensnitt som PCL stöder. Den andra är CFF OpenType®. Utdata från PDF och PostScript stöder inbäddade Type-1-, TrueType- och OpenType®-teckensnitt. PCL-utdata stöder inbäddade TrueType-teckensnitt.
 
 Type-1- och OpenType®-teckensnitt bäddas inte in i PCL-utdata. Innehåll som är formaterat med Type-1- och OpenType®-teckensnitt rastreras och genereras som en bitmappsbild som kan vara stor och långsammare att generera.
 
@@ -153,9 +154,9 @@ I följande tabell anges XCI-alternativ.
 | config/present/output/to | Styr platsen dit loggdata eller utdata skrivs. |
 | config/present/script/currentPage | Anger den inledande sidan när dokumentet öppnas. |
 | config/present/script/exclude | Informerar AEM Forms server-/Communications API:er om vilka händelser som ska ignoreras. |
-| config/present/pdf/linearized | Anger om utdatadokumentet för PDF är linjärt. |
+| config/present/pdf/linearized | Styr om utdata-PDF-dokumentet är linjärt. |
 | config/present/script/runScripts | Styr vilken uppsättning skript AEM Forms kör. |
-| config/present/pdf/tagged | Styr om taggar ska tas med i utdatadokumentet för PDF. Taggar i PDF är ytterligare information som ingår i ett dokument för att visa dokumentets logiska struktur. Taggar underlättar hjälpmedelsanvändningen och formateringen. Ett sidnummer kan till exempel taggas som en artefakt så att skärmläsaren inte omsluter den mitt i texten. Även om märkord gör ett dokument mer användbart, ökar de även storleken på dokumentet och bearbetningstiden för att skapa det. |
+| config/present/pdf/tagged | Styr om taggar ska tas med i utdata-PDF-dokumentet. Taggar i PDF-sammanhang är ytterligare information som ingår i ett dokument för att visa dokumentets logiska struktur. Taggar underlättar hjälpmedelsanvändningen och formateringen. Ett sidnummer kan till exempel taggas som en artefakt så att skärmläsaren inte omsluter den mitt i texten. Även om märkord gör ett dokument mer användbart, ökar de även storleken på dokumentet och bearbetningstiden för att skapa det. |
 | config/present/pdf/version | Anger vilken version av PDF-dokument som ska genereras. |
 
 
@@ -173,7 +174,7 @@ I följande tabell anges XCI-alternativ.
 
 ## Bästa praxis
 
-* Adobe rekommenderar att du har blobbbehållararkivet för datafiler i molnregionen som används av AEM Cloud Service.
+* Adobe rekommenderar att du lagrar datafiler i blobbehållaren i molnregionen som används av AEM Cloud-tjänsten.
 
 ## Frågor och svar {#faq}
 
@@ -181,7 +182,7 @@ I följande tabell anges XCI-alternativ.
 
 För tillfället kan du använda Microsoft Azure Storage för att spara indata och genererade dokument. Microsoft Azure-lagring innehåller olika alternativ för att [automatisera dataförflyttningsåtgärder](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10).
 
-**Ingår ett Microsoft Azure Storage-konto i Experience Manager Forms Cloud Service-licensen?**
+**Ingår ett Microsoft Azure-lagringskonto i licensen för Experience Manager Forms Cloud Service?**
 
 Microsoft Azure Storage-kontot är oberoende av Experience Manager Forms Cloud Service-licensen.
 
@@ -191,9 +192,9 @@ Indata och utdata sparas endast på Microsoft Azure Storage.
 
 **Är kommunikations-API:er bara tillgängliga för Experience Manager Forms Cloud Service? Kan jag få liknande funktionalitet i en lokal miljö?**
 
-Du kan använda AEM Forms Output-tjänsten för att kombinera en mall (XFA eller PDF) med kunddata för att generera dokument i PDF, PS-, PCL- och ZPL-format.
+Du kan använda AEM Forms Output-tjänsten för att kombinera en mall (XFA eller PDF) med kunddata för att generera dokument i PDF-, PS-, PCL- och ZPL-format.
 
-Jämfört med en lokal miljö ger Cloud Servicen ytterligare fördelar med automatisk skalning och kostnadseffektivitet.
+Jämfört med den lokala miljön ger Cloud Service ytterligare fördelar med automatisk skalning och kostnadseffektivitet.
 
 <!--**Where is data processed?**
 

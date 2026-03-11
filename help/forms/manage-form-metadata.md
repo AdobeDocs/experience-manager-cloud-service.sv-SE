@@ -2,11 +2,12 @@
 title: Hur hanterar vi metadata för AEM Forms?
 description: Metadata gör det enklare att kategorisera och ordna resurser och hjälper användare som letar efter en viss resurs.
 feature: Adaptive Forms, Foundation Components
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 8527246a-37f0-4d43-a49e-1c76c265514e
 role: User, Developer
-source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1717'
+source-wordcount: '1720'
 ht-degree: 0%
 
 ---
@@ -15,12 +16,12 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/manage-form-metadata.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/manage-form-metadata.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Metadata gör det enklare att kategorisera och ordna resurser och hjälper användare som letar efter en viss resurs.
@@ -39,7 +40,7 @@ Följande resurstyper stöds i [!DNL AEM Forms]:
 
 * Formulärmallar (XFA-formulär)
 * PDF forms
-* Dokument (flat PDF)
+* Dokument (platta PDF-filer)
 * Adaptiv Forms
 * Forms datamodell
 * XFS
@@ -71,7 +72,7 @@ Följande är en omfattande lista över metadataegenskaper som stöds i [!DNL AE
    <td><p>Ett skrivskyddat värde som anger resurstypen. Den kan ha något av följande värden:</p> 
     <ul> 
      <li>Formulärmall</li> 
-     <li>formulär PDF, formulär PDF (Acrobat) eller formulär PDF (signerat)</li> 
+     <li>PDF-formulär, PDF-formulär (Acrobat) eller PDF-formulär (signerat)</li> 
      <li>Dokument, dokument (signerat)</li> 
      <li>Adaptiv form</li> 
      <li>FDM (Form Data Model)</li>
@@ -113,17 +114,17 @@ Följande är en omfattande lista över metadataegenskaper som stöds i [!DNL AE
    <td>Ett skrivskyddat värde som anger när formuläret senast publicerades.</td> 
   </tr> 
   <tr> 
-   <td>Publish på/av-tid</td> 
+   <td>Publicera på-/avaktiveringstid</td> 
    <td>Alla utom resurser</td> 
    <td><p>Tidpunkt då formuläret schemaläggs att automatiskt publiceras/avpubliceras. Användaren anger det här värdet när metadata redigeras.</p> 
     <ul> 
-     <li>Både På- och Av-tid för Publish ska ligga efter aktuellt datum. </li> 
-     <li>Publish off time ska vara bortom Publish On-time. </li> 
+     <li>Både Publicera på- och Av-tid ska ligga efter aktuellt datum. </li> 
+     <li>Publiceringstiden för publicering ska vara längre än publiceringstiden i tid. </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td>Skicka URL</td> 
-   <td><p>Formulärmall</p> <p>PDF form</p> </td> 
+   <td><p>Formulärmall</p> <p>PDF-formulär</p> </td> 
    <td><p>Så här konfigurerar du en användardefinierad URL för att skicka formulärdata till en server.</p> <p>Skicka-URL kan konfigureras med någon av följande metoder, listade i prioritetsordning:</p> 
     <ul> 
      <li>Ange en skicka-URL direkt i en formulärmall genom att använda HTTP-knappen när du skapar ett XFA-formulär i AEM Forms Designer.</li> 
@@ -132,9 +133,9 @@ Följande är en omfattande lista över metadataegenskaper som stöds i [!DNL AE
     </ul> </td> 
   </tr> 
   <tr> 
-   <td>Återgivningsprofil för HTML</td> 
+   <td>HTML renderingsprofil</td> 
    <td>Formulärmall</td> 
-   <td>Den återgivningsprofil för HTML som används vid återgivning av en formulärmall i HTML-format.</td> 
+   <td>Den HTML-återgivningsprofil som används vid återgivning av en formulärmall i HTML-format.</td> 
   </tr> 
   <tr> 
    <td>Återgivningsformat</td> 
@@ -294,11 +295,11 @@ Ett verktyg (redigeringsprogram för metadatamatchning) tillhandahålls för att
 1. Klicka på en komponent som du just har dragit. Fyll i information för följande fält på fliken Inställningar som öppnas i den högra panelen:
 
    1. Ange en fältetikett som ska användas som visningsnamn ovanför fältet som placeras i schemat (till exempel: Avdelning)
-   1. Under Mappa till egenskapsfält kan du se det förfyllda värdet **./jcr:content/metadata/default&#39;**. Ändra **default** till ett önskat egenskapsnamn, som används för att lagra egenskapen i crx-databasen (till exempel: &#39;./jcr:content/metadata/dec&#39;)
+   1. Under Mappa till egenskapsfält kan du se det förfyllda värdet **./jcr:content/metadata/default**. Ändra **default** till ett önskat egenskapsnamn, som används för att lagra egenskapen i crx-databasen (till exempel: &#39;./jcr:content/metadata/avdelning&#39;)
 
       >[!NOTE]
       >
-      >Ändra inte prefixet &#39;./jcr:content/metadata/&#39; när den definierar sökvägen där egenskapen lagras.
+      >Ändra inte prefixet &#39;./jcr:content/metadata/&#39; som den definierar sökvägen där egenskapen lagras.
       >
       >Egenskapsnamnet måste också vara unikt för att du inte ska kunna skriva värden för två eller flera egenskaper på samma plats i databasen. Vi rekommenderar att du ändrar värdet &#39;default&#39;.
 

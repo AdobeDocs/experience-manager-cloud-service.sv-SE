@@ -4,10 +4,11 @@ description: Felsökning av installation och konfiguration av AEM Forms as a Clo
 contentOwner: khsingh
 feature: Adaptive Forms
 role: User
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 249ec8f2-4176-428a-bfcf-80b381ec7263
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
@@ -31,7 +32,7 @@ Aktivera alternativet **[!UICONTROL Forms]**:
 
    ![Välj alternativet Forms](assets/installation-configuration-select-forms-option.png)
 
-1. [Skapa](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=sv-SE#how-to-use) och [kör](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=sv-SE) både produktions- och icke-produktionspipelines.
+1. [Skapa](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) och [kör](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) både produktions- och icke-produktionspipelines.
 
 När pipelinen har skapats och distribuerats är alternativet **[!UICONTROL Forms]** på sidan **[!UICONTROL Navigation]**.
 

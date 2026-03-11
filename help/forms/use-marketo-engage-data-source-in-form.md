@@ -4,10 +4,11 @@ description: Lär dig hur du använder Marketo Engage-schema i Adaptiv Forms.
 keywords: Använd Marketo Engage datakälla i Adaptive Forms, Hur ansluter jag en Marketo-instansdatakälla till formuläret? , Ansluta ett formulär till Marketo.
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 4656ec65-f1ad-4e97-8d93-25933cdc7f7b
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---

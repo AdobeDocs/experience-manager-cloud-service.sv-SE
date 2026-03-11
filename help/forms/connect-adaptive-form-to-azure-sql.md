@@ -4,9 +4,11 @@ Description: Learn how to configure an Azure SQL Database connection in AEM Form
 Keywords: Azure SQL integration with AEM Forms, Connecting Adaptive Forms to Azure SQL Database, JDBC connection for Azure SQL in AEM Forms, Storing Adaptive Form data in Azure SQL
 feature: Adaptive Forms, Core Components
 role: User, Developer
-source-git-commit: e29f70aa1a8164787c7d310a05c24d7e501803e5
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
+exl-id: 111accf7-bf34-499c-832e-c001ea68f6d3
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -38,9 +40,9 @@ Att integrera Adaptiv Forms med Azure SQL ger flera fördelar:
   >
   > Navigera till: `Azure Portal → SQL Server → Security → Networking → Connectivity` om du vill aktivera **proxyanslutningen**.
 
-  ![Skapa Azure Db](/help/forms/assets/create-azure-db.png)
+  ![Skapa Azure DB](/help/forms/assets/create-azure-db.png)
 
-* Aktivera [Avancerade nätverk som konfigurerats med en dedikerad utgående IP](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/dedicated-egress-ip-address) för den skapade Azure-databasen.
+* Aktivera [Avancerade nätverk som konfigurerats med en dedikerad utgående IP](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/dedicated-egress-ip-address) för den skapade Azure-databasen.
 
   >[!NOTE]
   >
@@ -72,7 +74,7 @@ Till exempel: `portOrigin: 30433 → portDest: 1433`
 
    **Var hittar du den här informationen?**
 
-   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git).
+   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git).
 
    När kommandot har slutförts visas en ny mapp som har skapats i din lokala katalog. Mappen får ett namn efter programmet.
 
@@ -84,7 +86,7 @@ Inkludera [SQL-drivrutinsberoendet](https://central.sonatype.com/artifact/com.mi
 
 >[!NOTE]
 >
-> Om du vill ta med SQL-beroendet i ditt projekt kan du läsa avsnittet [SQL-drivrutinsberoenden](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool#mysql-driver-dependencies) .
+> Om du vill ta med SQL-beroendet i ditt projekt kan du läsa avsnittet [SQL-drivrutinsberoenden](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool#mysql-driver-dependencies) .
 
 **Steg 3: Lägg till JDBC-konfiguration**
 
@@ -136,7 +138,7 @@ git push
 
 **Steg 7: Skapa en formulärdatamodell (FDM)**
 
-När installationen av AEM och Azure är klar och kodändringarna har distribuerats:
+När installationen av AEM och Azure är klar och kodändringarna är klara:
 
 1. Gå till AEM Author instance.
 1. Navigera till **Verktyg** > **Forms** > **Dataintegreringar**.
@@ -157,7 +159,7 @@ När installationen av AEM och Azure är klar och kodändringarna har distribuer
 * Använd **hemlighetshantering** för att undvika hårdkodningslösenord i konfigurationsfiler.
 * Rotera databasens inloggningsuppgifter regelbundet och uppdatera konfigurationen på ett säkert sätt.
 * Övervaka JDBC-anslutningsloggar för fel och fördröjning.
-* Följ bästa praxis från Azure för att skydda SQL-databaser och brandväggskonfigurationer.
+* Följ Azure bästa praxis för att skydda SQL-databaser och brandväggskonfigurationer.
 * Undvik att använda privilegierade databaskonton för formuläråtkomst.
 
 ## Relaterade artiklar

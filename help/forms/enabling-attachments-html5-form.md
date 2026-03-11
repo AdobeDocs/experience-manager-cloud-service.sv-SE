@@ -5,12 +5,13 @@ content-type: reference
 topic-tags: hTML5_forms
 discoiquuid: 8eebfcd6-0597-44ed-b718-bf9a1baa6c12
 feature: HTML5 Forms,Mobile Forms
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 68912260-179a-4d1b-b944-0a1777c021ac
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 1496d7517d586c99c5f1001fff13d88275e91d09
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '371'
 ht-degree: 0%
 
 ---
@@ -29,7 +30,7 @@ Du kan överföra, förhandsgranska och skicka bilagor med HTML5-formulär. Som 
    | multiSelect | true eller false (true som standard) |
    | fileSizeLimit | Antal i MB (2 MB som standard). Exempel: 5. |
    | buttonText | Knapptext för popup-fönster (&quot;Bifoga&quot; som standard) |
-   | acceptera | kommaavgränsad lista över filtyper som ska accepteras (&quot;ljud/&ast;, video/&ast;, bild/&ast;, text/&ast;, .pdf&quot; som standard) |
+   | acceptera | kommaavgränsad lista över filtyper som ska accepteras (&quot;ljud/&amp;ast;, video/&amp;ast;, bild/&amp;ast;, text/&amp;ast;, .pdf&quot; som standard) |
 
    Till exempel:
 

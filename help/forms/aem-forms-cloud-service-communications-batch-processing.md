@@ -3,10 +3,11 @@ title: Skapa enkelt PDF i batch - Lär dig mer om konsten med batchbearbetning -
 description: Hur skapar man varumärkesorienterad och personaliserad kommunikation?
 feature: Adaptive Forms, APIs & Integrations
 role: Admin, Developer, User
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 542c8480-c1a7-492e-9265-11cb0288ce98
-source-git-commit: 5e3175cc4d96c89df4154ae42c5042cf9c2ca739
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1716'
 ht-degree: 0%
 
 ---
@@ -40,7 +41,7 @@ En gruppåtgärd är en process för att generera flera dokument av liknande typ
 
 ### Komponenter i en gruppåtgärd {#components-of-a-batch-operations}
 
-**Molnkonfiguration**: Med Experience Manager Cloud-konfigurationen kan du ansluta en Experience Manager-instans till kundägd Microsoft Azure-lagring. Här kan du ange autentiseringsuppgifter för ett kundägt Microsoft Azure-konto som du kan ansluta till.
+**Molnkonfiguration**: Med Experience Manager Cloud-konfigurationen kan du ansluta en Experience Manager-instans till kundägd Microsoft Azure-lagring. Här kan du ange autentiseringsuppgifter för det kundägda Microsoft Azure-kontot för att ansluta till det.
 
 **Konfiguration av batchdatalager (USC)**: Med batchdatakonfiguration kan du konfigurera en specifik instans av bloblagring för API:er för batchdata. Här kan du ange in- och utdataplatser i kundägd Microsoft Azure Blob-lagring.
 
@@ -73,7 +74,7 @@ Följande krävs för att använda batch-API:
 
 Innan du använder en gruppåtgärd:
 
-* Överför kunddata (XML-filer) till Microsoft Azure Blob Storage
+* Ladda upp kunddata (XML-filer) till Microsoft Azure Blob Storage
 * Skapa en molnkonfiguration
 * Skapa konfiguration för batchdatalager
 * Överför mallar och annat material till din Experience Manager Forms Cloud Service-instans
@@ -88,9 +89,9 @@ Skapa [containers](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage
 
 ### Skapa en molnkonfiguration {#create-a-cloud-configuration}
 
-Molnkonfigurationen ansluter din Experience Manager-instans till Microsoft Azure Storage. Så här skapar du en molnkonfiguration:
+Molnkonfigurationen kopplar din Experience Manager-instans till Microsoft Azure Storage. Så här skapar du en molnkonfiguration:
 
-1. Gå till Verktyg > Molntjänster > Azure Storage
+1. Gå till Verktyg > Molntjänster > Azure-lagring
 1. Öppna en mapp som är värd för konfigurationen och klicka på Skapa. Du använder mappen Global eller skapar en mapp.
 1. Ange namnet på konfigurationen och autentiseringsuppgifterna som ska anslutas till tjänsten. Du kan [hämta dessa autentiseringsuppgifter från din Microsoft Azure-lagringsportal](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 1. Klicka på Skapa.
@@ -107,8 +108,8 @@ Så här skapar du konfigurationen:
 1. Öppna en mapp som är värd för konfigurationen och klicka på Skapa. Du använder mappen Global eller skapar en mapp.
 1. Ange namn och namn på konfigurationen. I Lagring väljer du Microsoft Azure Storage.
 1. I Sökväg till lagringskonfiguration bläddrar du till och väljer den molnkonfiguration som innehåller autentiseringsuppgifter för det kundägda Azure-lagringskontot.
-1. Ange namnet på Azure Storage-behållaren och mappen som innehåller poster i Source-mappen.
-1. Ange sökvägen till Azure Storage-behållaren och mappen där de genererade dokumenten ska lagras i målmappen.
+1. I Source-mappen anger du namnet på Azure-lagringsbehållaren och den mapp som innehåller poster.
+1. I målmappen anger du sökvägen till Azure-lagringsbehållaren och den mapp där de genererade dokumenten ska lagras.
 1. Klicka på Skapa.
 
 Din Experience Manager-instans är nu ansluten till Microsoft Azure Storage och konfigurerad att hämta och skicka data till specifika platser på Microsoft Azure Storage.
@@ -148,7 +149,7 @@ Om du vill köra (köra) en grupp använder du `POST /config /[configName]/execu
 
 >[!NOTE]
 >
->Gör inga ändringar i motsvarande käll- och målmappar, datakällkonfiguration och Microsoft Azure Cloud-konfiguration medan batchen körs.
+>Gör inga ändringar i motsvarande käll- och målmappar, datakällkonfiguration och Microsoft Azure Cloud-konfiguration när gruppen körs.
 
 ### Kontrollera status för en batch {#status-of-a-batch}
 

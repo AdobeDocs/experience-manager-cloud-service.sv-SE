@@ -3,10 +3,11 @@ title: Taggar som stöds av HTML i Submission PDF (tidigare Dokumentation)
 description: Referenshandbok för märkordstaggar i HTML som stöds vid generering av en Submission PDF (tidigare Document of Record), inklusive återgivningsbeteende och tillgänglighetsaspekter.
 feature: Adaptive Forms
 role: Developer, User
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 8481b0dc-aae7-4bd2-acfe-1f1b6d747683
-source-git-commit: 0b112a5a1830fac9d0170771e052bbb2ef3cadbf
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---

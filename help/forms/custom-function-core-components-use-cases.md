@@ -4,10 +4,11 @@ description: Artikeln beskriver olika användningsfall för en anpassad funktion
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: df92b91e-f3b0-4a08-bd40-e99edc9a50a5
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2190'
 ht-degree: 0%
 
 ---
@@ -56,7 +57,7 @@ Se bilden nedan för att visa var alternativen i listrutan ställs in när du kl
 
 Låt oss lära oss hur anpassade funktioner använder fält och globala objekt med hjälp av ett `Contact Us`-formulär.
 
-![Kontakta oss &#x200B;](/help/forms/assets/contact-us-form.png)
+![Kontakta oss ](/help/forms/assets/contact-us-form.png)
 
 Lägg till följande kod i den anpassade funktionen enligt beskrivningen i avsnittet [create-custom-function](/help/forms/custom-function-core-component-create-function.md) för att ange formulärfältet som `Required`.
 

@@ -4,10 +4,11 @@ description: Artikeln beskriver olika användningsfall för en regelredigerare i
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 8191e113-f768-4b1e-a191-e3c722f19054
-source-git-commit: e10451553692b6ad957421783e176409b36b642b
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ Låt oss nu diskutera olika implementeringar för en regelredigerare.
 
 ## Ange fokus till en annan panel vid knappklickning om den första panelen är giltig
 
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 Med regelredigeraren kan du validera en panellayout, t.ex. Vågräta flikar, Lodräta flikar, Dragspel eller Guiden när du klickar på en knapp och ställer in fokus på ett formulärobjekt i en annan panel. Du kan använda den här funktionen för att förbättra formulärnavigeringen och användarupplevelsen.
 

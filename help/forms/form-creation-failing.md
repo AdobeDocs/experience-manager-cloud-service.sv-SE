@@ -3,10 +3,11 @@ title: Hur felsöker man fel vid formulärframtagning?
 description: Felsöka fel när formulär skapas i AEM Forms as a Cloud Service-miljö.
 feature: Adaptive Forms
 role: User
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 169ea727-0941-4a1d-bc33-d9fe208b27ab
-source-git-commit: 0b693cb51a96011235fa87a5899426c6b0c2509a
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
@@ -28,9 +29,9 @@ Problemet inträffar eftersom författaren publicerar formuläret utan att **fö
 Så här löser du problemet:
 
 1. Kontrollera att mallen som du använder i formuläret inte har `jcr:uuid` och andra systemgenererade skyddade egenskaper på sökvägen `<template-path>/initial/jcr:content node`.
-1. Publish mallen explicit med mallkonsolen.
+1. Publicera mallen explicit med mallkonsolen.
 1. När mallen har publicerats kan du testa att skapa nya formulär med hjälp av mallen.
-1. Om mallen som du använde uppdaterar i de kommande versionerna, Publish mallen igen (som i steg 2) för att förhindra problem med att skapa formulär.
+1. Om mallen som du använde uppdaterar i de kommande versionerna ska du publicera mallen igen (som i steg 2) för att förhindra problem med att skapa formulär.
 
 
 <!--

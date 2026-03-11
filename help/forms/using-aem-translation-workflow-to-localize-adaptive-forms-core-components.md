@@ -2,11 +2,12 @@
 title: Hur kan vi översätta en grundkomponentbaserad adaptiv form?
 description: Lär dig skapa en formulärdatamodell (FDM) i AEM Forms, testa modellen med exempeldata och tjänster och konfigurera olika alternativ för en modell.
 feature: Adaptive Forms, Core Components
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: ad46bf0f-e6ec-4c52-9695-5768a9968e16
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '844'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ Lokaliserade formulär hjälper er att nå en större publik över alla länder.
 
 ## Översätta ett anpassat formulär och dokument med hjälp av maskinöversättning {#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
 
-Maskinöversättningstjänsten översätter ditt innehåll omedelbart i Adaptiv form och [Postdokument](/help/forms/generate-document-of-record-core-components.md). AEM Forms as a Cloud Service är förkonfigurerat att använda en testversion av Microsoft Translator för maskinöversättning. Utför följande steg för att aktivera maskinöversättning för ditt adaptiva Forms och arkivdokument:
+Maskinöversättningstjänsten översätter ditt innehåll omedelbart i Adaptiv form och [Postdokument](/help/forms/generate-document-of-record-core-components.md). AEM Forms as a Cloud Service är förkonfigurerat för att använda en testversion av Microsoft Translator för maskinöversättning. Utför följande steg för att aktivera maskinöversättning för ditt adaptiva Forms och arkivdokument:
 
 1. Markera ett formulär i användargränssnittet för AEM Forms och välj alternativet **[!UICONTROL Add Dictionary]**.
 1. På skärmen Lägg till ordlista i översättningsprojekt finns alternativet **[!UICONTROL Project]**
@@ -27,7 +28,7 @@ Maskinöversättningstjänsten översätter ditt innehåll omedelbart i Adaptiv 
 1. I fältet **Målspråk** anger du en språkinställning (till exempel `German(de)`). Du kan ange flera språkinställningar. Formuläret översätts till alla språk som anges i fältet **Målspråk**. Klicka på **Klar**.
 1. Klicka på **Öppna projekt** i dialogrutan Lexikon tillagd.
 1. Klicka på det skapade projektet på skärmen Projekt. Klicka till exempel på **Referenswebbplats för myndigheter - tyska språkområdet**.
-1. Klicka på ikonen ![aem62forms_down](assets/aem62forms_downarrow.png) på panelen **Översättningsjobb** och klicka sedan på **Start** . Status för rutan ändras till Utkast. När översättningen är klar ändras statusen till **Godkänd**. Uppdatera sidan efter några minuter och kontrollera statusen.
+1. Klicka på ikonen **aem62forms_down** på panelen ![Översättningsjobb](assets/aem62forms_downarrow.png) och klicka sedan på **Start** . Status för rutan ändras till Utkast. När översättningen är klar ändras statusen till **Godkänd**. Uppdatera sidan efter några minuter och kontrollera statusen.
 
    ![Starta översättning](/help/forms/assets/adaptive-forms-core-components-start-translation.png)
 1. När statusen har ändrats till **Godkänd** på panelen **Översättningsjobb** klickar du på ikonen ![aem62forms_download](assets/aem62forms_downarrow.png) och sedan på **Fullständig** .
@@ -72,14 +73,14 @@ Utför följande steg för att lokalisera ett formulär och dess urkunder med pe
 1. Klicka på det skapade projektet på skärmen Projekt. Klicka till exempel på **Referenswebbplats för myndigheter - tyska språkområdet**.
 1. Klicka på **ellipserna** längst ned i rutan **Sammanfattning**. Skärmen Egenskaper för översättningsprojekt öppnas.
 1. Öppna fliken **[!UICONTROL Advanced]** högst upp på skärmen **Egenskaper för översättningsprojekt**. För **[!UICONTROL Translation field]** väljer du **[!UICONTROL Human Translation]**. Klicka på **Spara och stäng** längst upp på skärmen.
-1. Klicka på ikonen ![aem62forms_down](assets/aem62forms_downarrow.png) på panelen **Översättningsjobb** och klicka på **Exportera**. I dialogrutan Exportera klickar du på alternativet Hämta exporterad fil. Den hämtar en ZIP-fil.
+1. Klicka på ikonen **aem62forms_down** på panelen ![Översättningsjobb](assets/aem62forms_downarrow.png) och klicka på **Exportera**. I dialogrutan Exportera klickar du på alternativet Hämta exporterad fil. Den hämtar en ZIP-fil.
    ![Exportera översättningsfil](/help/forms/assets/adaptive-forms-core-components-start-translation-export.png)
 1. Extrahera den hämtade ZIP-filen. Den extraherade mappen har två filer:
    * translation_export_summary.xml
    * [form-fields-file].xml.
 1. Öppna [form-fields-file].xml för redigering. Lägg till översatta strängar och meddelanden för formulärfält. Spara och stäng filen.
 1. Zippa upp filerna som translation_export_summary.xml och [form-fields-file].xml.
-1. Klicka på ikonen ![aem62forms_down](assets/aem62forms_downarrow.png) på panelen **Översättningsjobb** och klicka på **Importera**. Markera arkivet som innehåller [form-fields-file].xml. med lokaliserade strängar och meddelanden för formulärfält.
+1. Klicka på ikonen **aem62forms_down** på panelen ![Översättningsjobb](assets/aem62forms_downarrow.png) och klicka på **Importera**. Markera arkivet som innehåller [form-fields-file].xml. med lokaliserade strängar och meddelanden för formulärfält.
 
    ![Importera översättningsfil](/help/forms/assets/adaptive-forms-core-components-start-translation-import.png)
 

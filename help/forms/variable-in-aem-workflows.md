@@ -1,32 +1,33 @@
 ---
-title: Hur lägger vi till variabler AEM arbetsflödesstegen?
+title: Hur lägger vi till variabler i AEM Workflow steps?
 description: Lär dig att skapa en variabel, ange ett värde för variabeln och använda den i  [!DNL AEM Forms] arbetsflödessteg.
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: d9139ea9-2f86-476c-8767-b36766790f2c
 feature: Adaptive Forms, Workflow
 role: Admin, User
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1916'
+source-wordcount: '1922'
 ht-degree: 0%
 
 ---
 
-# Variabler i Forms-centrerade AEM {#variables-in-aem-forms-workflows}
+# Variabler i Forms-centrerade AEM-arbetsflöden {#variables-in-aem-forms-workflows}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/variable-in-aem-workflows.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/variable-in-aem-workflows.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 En variabel i en arbetsflödesmodell är ett sätt att lagra ett värde baserat på dess datatyp. Du kan använda namnet på variabeln i vilket arbetsflödessteg som helst för att hämta värdet som lagras i variabeln. Du kan också använda variabelnamn för att definiera uttryck för att fatta beslut om routning.
 
-I AEM arbetsflödesmodeller kan du:
+I AEM Workflow Model kan du
 
 * [Skapa en variabel](variable-in-aem-workflows.md#create-a-variable) för en datatyp baserat på den informationstyp som du vill lagra i den.
-* [Ange ett värde för variabeln &#x200B;](variable-in-aem-workflows.md#set-a-variable) med hjälp av arbetsflödessteget Ange variabel.
-* [Använd variabeln &#x200B;](variable-in-aem-workflows.md#use-a-variable) i alla [!DNL AEM Forms] arbetsflödessteg för att hämta det lagrade värdet och i stegen ELLER Dela och Gå till för att definiera ett routningsuttryck.
+* [Ange ett värde för variabeln ](variable-in-aem-workflows.md#set-a-variable) med hjälp av arbetsflödessteget Ange variabel.
+* [Använd variabeln ](variable-in-aem-workflows.md#use-a-variable) i alla [!DNL AEM Forms] arbetsflödessteg för att hämta det lagrade värdet och i stegen ELLER Dela och Gå till för att definiera ett routningsuttryck.
 
-I följande video visas hur du kan skapa, ange och använda variabler i AEM arbetsflödesmodeller:
+I följande video visas hur du kan skapa, ange och använda variabler i AEM Workflow-modeller:
 
 >[!VIDEO](assets/variables_introduction_1_1.mp4)
 
@@ -34,10 +35,10 @@ Variabler är ett tillägg till det befintliga [MetaDataMap](https://helpx.adobe
 
 ## Skapa en variabel {#create-a-variable}
 
-Du skapar variabler med hjälp av avsnittet Variabler som är tillgängliga i arbetsflödesmodellens sidospak. AEM arbetsflödesvariabler har stöd för följande datatyper:
+Du skapar variabler med hjälp av avsnittet Variabler som är tillgängliga i arbetsflödesmodellens sidospak. AEM Workflow-variabler har stöd för följande datatyper:
 
 * **Primitiva datatyper**: Long, Double, Boolean, Date och String
-* **Komplexa datatyper**: [Dokument](https://helpx.adobe.com/se/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html), [XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html), [JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html) och Form Data Model-instans.
+* **Komplexa datatyper**: [Dokument](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html), [XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html), [JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html) och Form Data Model-instans.
 
 >[!NOTE]
 >
@@ -47,7 +48,7 @@ Använd datatypen ArrayList för att skapa variabelsamlingar. Du kan skapa en Ar
 
 Skapa en variabel:
 
-1. I en AEM går du till Verktyg ![Homerikon](assets/hammer-icon.svg) > Arbetsflöde > Modeller.
+1. I en AEM-instans går du till Verktyg ![Homerikon](assets/hammer-icon.svg) > Arbetsflöde > Modeller.
 1. Välj **[!UICONTROL Create]** och ange titeln och ett valfritt namn för arbetsflödesmodellen. Markera modellen och välj **[!UICONTROL Edit]**.
 1. Välj variabelikonen som är tillgänglig i sidosparken för arbetsflödesmodellen och välj **[!UICONTROL Add Variable]**.
 
@@ -157,7 +158,7 @@ Med ELLER-delning skapas en delning i arbetsflödet, varefter endast en gren är
 
 Du kan definiera routningsuttryck för en gren med en regeldefinition, ett ECMA-skript eller ett externt skript.
 
-Du kan använda variabler för att definiera routningsuttrycket med hjälp av uttrycksredigeraren. Mer information om hur du använder routningsuttryck för steget ELLER Dela finns i [ELLER Dela steg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html?lang=sv-SE#extending-aem?lang=sv-SE#or-split).
+Du kan använda variabler för att definiera routningsuttrycket med hjälp av uttrycksredigeraren. Mer information om hur du använder routningsuttryck för steget ELLER Dela finns i [ELLER Dela steg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem#or-split).
 
 I det här exemplet använder du [example 2](variable-in-aem-workflows.md#example2) för att ange värdet för variabeln **totalvalue** innan du definierar routningsuttrycket. Gren 1 är aktiv om värdet för variabeln **totalvalue** är större än 50000. På samma sätt kan du definiera en regel som gör grenen 2 aktiv om värdet för variabeln **totalvalue** är mindre än 50000.
 
@@ -173,13 +174,13 @@ Med **Gå till steg** kan du ange nästa steg i arbetsflödesmodellen som ska k�
 
 Ungefär som i steget ELLER Dela kan du definiera routningsuttryck för Gå till med hjälp av en regeldefinition, ett ECMA-skript eller ett externt skript.
 
-Du kan använda variabler för att definiera routningsuttrycket med hjälp av uttrycksredigeraren. Mer information om hur du använder routningsuttryck för steget Gå till finns i [Gå till steg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html?lang=sv-SE#extending-aem?lang=sv-SE#goto-step).
+Du kan använda variabler för att definiera routningsuttrycket med hjälp av uttrycksredigeraren. Mer information om hur du använder routningsuttryck för steget Gå till finns i [Gå till steg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem#goto-step).
 
 ![Gå till regel](assets/variables_goto_rule1_new.png)
 
 I det här exemplet anger Gå till-steget Granska kreditkortsansökan som nästa steg om värdet för variabeln **actiontaken** är lika med **Behöver mer information**.
 
-Mer exempel på hur du använder regeldefinitionen i steget Gå till finns i [Simulera en For-slinga](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html?lang=sv-SE#extending-aem?lang=sv-SE#simulateforloop).
+Mer exempel på hur du använder regeldefinitionen i steget Gå till finns i [Simulera en For-slinga](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem#simulateforloop).
 
 #### Forms-centrerade arbetsflödessteg {#forms-workflow-centric-workflow-steps}
 
@@ -285,4 +286,4 @@ Ta bort en variabel:
 
 ## Referenser {#references}
 
-Mer exempel på hur du använder variabler i [!DNL AEM Forms] arbetsflödessteg finns i [Variabler i AEM &#x200B;](https://helpx.adobe.com/experience-manager/kt/forms/using/authoring_variables_in_aem_forms-workflow1.html).
+Mer exempel på hur du använder variabler i [!DNL AEM Forms] arbetsflödessteg finns i [Variabler i AEM-arbetsflöden](https://helpx.adobe.com/experience-manager/kt/forms/using/authoring_variables_in_aem_forms-workflow1.html).

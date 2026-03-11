@@ -9,13 +9,14 @@ feature: Adaptive Forms
 role: User, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 937bd4653e454beea3111cfc7ef7b4bbc1ace193
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
+exl-id: 27c52969-1213-4fd3-8e16-988caafb4ad6
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
-
 
 # Koppla granskare som skickar in svar till ett formulär {#associating-submission-reviewers-with-a-form}
 
@@ -34,7 +35,7 @@ Om du vill associera en granskargrupp med ett formulär redigerar du metadatamod
 Så här redigerar du metadataschema:
 
 1. I redigeringsläget, under Experience Manager, klickar du på **Verktyg** > **Assets** > **Metadata Schemas**.
-1. Gå till **Forms** > **Forms redigerat i AEM.** på Forms-sidan Schema.
+1. Gå till **Forms** > **Forms som är skapad i AEM.** på Forms-sidan Schema.
 
    Sidans URL är:
 
@@ -60,13 +61,13 @@ Med användargrupper kan du associera olika uppsättningar av granskare med olik
 Innan du utför följande steg ska du läsa [Förutsättning](adding-reviewers-form.md#prerequisite).
 
 Om du vill skapa en grupp och lägga till medlemmar i den går du till **Verktyg** > **Åtgärder** > **Säkerhet** > **Grupper**.
-Mer information finns i [Användaradministration och -tjänster](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=sv-SE).
+Mer information finns i [Användaradministration och -tjänster](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
 Se till att du lägger till gruppen som du skapar som medlem i den körklara användargruppen: **forms-submission-reviewers**. Den här användargruppen levereras med [!DNL AEM Forms] och ser till att användare läggs till som granskare för överföring.
 
 Så här associerar du användargrupper med ett anpassat formulär:
 
 1. Gå till **Forms** > **Forms &amp; Documents** i redigeringsläget.
-1. Använd alternativet **Välj &#x200B;** för att välja ett anpassat formulär och klicka på **Visa egenskaper**.
+1. Använd alternativet **Välj **för att välja ett anpassat formulär och klicka på **Visa egenskaper**.
 1. Klicka på **Redigera** i fönstret Egenskaper för formuläret och klicka sedan på **AVANCERAT**.
 1. Ange gruppen i gruppfältet för granskare som ska skicka in och klicka på **Klar**.
 

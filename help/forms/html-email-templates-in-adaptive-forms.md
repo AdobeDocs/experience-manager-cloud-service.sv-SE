@@ -1,20 +1,22 @@
 ---
-title: HTML e-postmallar i adaptiv Forms på Forms as a Cloud Service
+title: HTML e-postmallar i Adaptiv Forms på Forms as a Cloud Service
 description: Lär dig använda e-postmallar med adaptiva formulär.
 feature: Adaptive Forms, Core Components
 role: User, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
+exl-id: 640130c0-e5d2-4af1-8ed9-c3bdde31d958
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
 
 # E-postmallar i Adaptiv Forms
 
-Med anpassningsbara Forms kan du använda e-postmallar för HTML och oformaterad text. Med HTML e-postmallar kan du skicka snygga, personliga och visuellt tilltalande e-postmeddelanden när ett formulär skickas. Dessa e-postmeddelanden kan anpassas med formulärdata och förbättras med olika e-posttaggar, som bilder och länkar. Med Adaptive Forms kan du antingen ladda upp en fil som innehåller en HTML-mall eller använda en vanlig textredigerare för att skapa mallarna.
+Med anpassningsbara Forms kan du använda HTML och e-postmallar med oformaterad text. Med HTML e-postmallar kan du skicka snygga, personliga och visuellt tilltalande e-postmeddelanden när ett formulär skickas. Dessa e-postmeddelanden kan anpassas med formulärdata och förbättras med olika e-posttaggar, som bilder och länkar. Med Adaptive Forms kan du antingen ladda upp en fil som innehåller en HTML-mall eller använda en vanlig textredigerare för att skapa mallarna.
 
 ![HTML e-postmallar](/help/forms/assets/html-email.png)
 
@@ -34,11 +36,11 @@ Här följer en kort översikt över de olika stegen:
 
 ## Konfigurera en HTML-mall för ett anpassat formulär
 
-Du kan konfigurera ett anpassat formulär så att ett e-postmeddelande skickas när det skickas med [**Skicka e-post**-åtgärden &#x200B;](/help/forms/configure-submit-action-send-email.md). Åtgärden innehåller två metoder för att konfigurera en HTML-mall:
+Du kan konfigurera ett anpassat formulär så att ett e-postmeddelande skickas när det skickas med [**Skicka e-post**-åtgärden ](/help/forms/configure-submit-action-send-email.md). Åtgärden innehåller två metoder för att konfigurera en HTML-mall:
 
-### Alternativ 1: Markera en fil som innehåller HTML-mallen
+### Alternativ 1: Välj en fil som innehåller HTML-mallen
 
-Innan du fortsätter kontrollerar du att du har överfört HTML-mallen till din AEM Forms-miljö.
+Innan du fortsätter bör du kontrollera att du har överfört HTML-mallen till din AEM Forms-miljö.
 
 1. Öppna det adaptiva formuläret för redigering.
 1. Gå till **Content Browser**, markera **Guide Container** och tryck på egenskapsikonen. En dialogruta med titeln `Adaptive Form Container` visas.
@@ -48,7 +50,7 @@ Innan du fortsätter kontrollerar du att du har överfört HTML-mallen till din 
 
 1. Aktivera alternativet **Använd extern mall**.
 1. Aktivera alternativet **Använd HTML-mall**.
-1. Klicka på mappikonen för alternativet Extern mallsökväg och bläddra för att välja mallen för HTML.
+1. Klicka på mappikonen för alternativet Extern mallsökväg och bläddra till den HTML-mall du vill använda.
 1. Klicka på **Klar** för att spara konfigurationen.
 
 Din HTML-mall har nu konfigurerats för det anpassade formuläret.
@@ -59,16 +61,16 @@ Din HTML-mall har nu konfigurerats för det anpassade formuläret.
 1. Gå till **Content Browser**, markera **Guide Container** och tryck på egenskapsikonen. En dialogruta med titeln `Adaptive Form Container` visas.
 1. Gå till fliken **Skicka** och välj åtgärden **Skicka e-post**.
 1. Aktivera alternativet **Använd HTML-mall**.
-1. Skriv eller klistra in HTML-koden direkt i rutan **E-postmall** .
+1. Skriv eller klistra in din HTML-kod direkt i rutan **E-postmall** .
 
 
 ## Konfigurera en vanlig textmall för ett anpassat formulär
 
-Du kan konfigurera ett anpassat formulär så att ett e-postmeddelande skickas när det skickas med [**Skicka e-post**-åtgärden &#x200B;](/help/forms/configure-submit-action-send-email.md). Åtgärden innehåller två metoder för att konfigurera en oformaterad textmall:
+Du kan konfigurera ett anpassat formulär så att ett e-postmeddelande skickas när det skickas med [**Skicka e-post**-åtgärden ](/help/forms/configure-submit-action-send-email.md). Åtgärden innehåller två metoder för att konfigurera en oformaterad textmall:
 
 ### Alternativ 1: Välj en fil som innehåller mallen
 
-Innan du fortsätter kontrollerar du att du har överfört HTML-mallen till din AEM Forms-miljö.
+Innan du fortsätter bör du kontrollera att du har överfört HTML-mallen till din AEM Forms-miljö.
 
 1. Öppna det adaptiva formuläret för redigering.
 1. Gå till **Content Browser**, markera **Guide Container** och tryck på egenskapsikonen. En dialogruta med titeln `Adaptive Form Container` visas.
@@ -94,9 +96,9 @@ Du kan inkludera formulärdata i e-postmallar med hjälp av platshållare. Dessa
 * ${email}: Värdet för fältet med namnet &quot;email&quot;.
 * ${message}: Värdet för fältet med namnet &quot;message&quot;.
 
-### E-postmall för HTML som exempel
+### Exempel på e-postmall för HTML
 
-Här är ett exempel på en HTML-e-postmall som använder platshållare för formulärdata:
+Här är ett exempel på en e-postmall från HTML som använder platshållare för formulärdata:
 
 ```HTML
     <!DOCTYPE html>
@@ -152,11 +154,11 @@ Här är ett exempel på en e-postmall med oformaterad text:
     Your Team
 ```
 
-## Bästa praxis för e-postmallar för HTML
+## Metodtips för HTML e-postmallar
 
 * Se till att formaten är textbundna för bättre kompatibilitet med e-postklienter.
 * Gör mallen responsiv för en bättre upplevelse på mobila enheter.
 * Använd verktyg som Litmus eller Email on Acid för att förhandsgranska din e-post i olika e-postklienter.
 * Kontrollera att platshållarnamnen matchar formulärfältsnamnen exakt.
-* Kontrollera om taggarna saknas eller är felaktiga i HTML-mallen.
+* Kontrollera om det finns taggar som saknas eller är felaktiga i HTML-mallen.
 * Kontrollera att sändningsåtgärden [Skicka e-post](/help/forms/configure-submit-action-send-email.md) är korrekt konfigurerad.

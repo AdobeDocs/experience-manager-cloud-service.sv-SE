@@ -3,10 +3,11 @@ title: Hur konfigurerar jag USC (Unified Storage Connector) för AEM Forms?
 description: Lär dig hantera USC (Unified Storage Connector) för AEM Forms. Använd USC (Unified Storage Connector) för att ansluta AEM Forms till externa datalagringsplatser.
 role: Admin, Developer, User
 feature: Adaptive Forms, Workflow
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: c93d0242-0c15-4d69-82a1-d6fcc7da4bae
-source-git-commit: c17e4e70fa8cec176c908983230b03f2899bc1ca
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -15,9 +16,9 @@ ht-degree: 0%
 
 Du kan använda USC (Unified Storage Connector) för att ansluta AEM Forms till externa datalagringsplatser.
 
-Du kan till exempel fylla i värden för fält i ett anpassat formulär och skicka det till ett AEM-arbetsflöde. Du kan konfigurera AEM-arbetsflöden ytterligare så att data lagras i en extern lagringsplats, till exempel Microsoft Azure-lagringsservern. Använd USC (Unified Storage Connector) för att skapa en anslutning mellan AEM-arbetsflöden och den externa lagringen.
+Du kan till exempel fylla i värden för fält i ett anpassat formulär och skicka det till ett AEM-arbetsflöde. Du kan konfigurera AEM Workflows så att data lagras i en extern lagringsplats, till exempel Microsoft Azure-lagringsservern. Använd USC (Unified Storage Connector) för att skapa en anslutning mellan AEM-arbetsflöden och den externa lagringen.
 
-## Koppla AEM-arbetsflöden till en Microsoft Azure-lagringsserver {#connect-workflows-with-azure}
+## Koppla samman AEM-arbetsflöden med en Microsoft Azure-lagringsserver {#connect-workflows-with-azure}
 
 Skapa en Azure-lagringskonfiguration och referera till den konfigurationen med hjälp av USC (Unified Storage Connector). Du kan sedan konfigurera AEM Workflow-modeller så att datalagringen görs externt för att ansluta dem till en Azure-lagringsserver.
 
@@ -39,7 +40,7 @@ Utför följande steg för att konfigurera USC (Unified Storage Connector) för 
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Unified Storage Connector]**.
 
-1. Välj **[!UICONTROL Azure]** i listrutan Lagring i avsnittet **[!UICONTROL Workflow]**.
+1. Välj **[!UICONTROL Workflow]** i listrutan Lagring i avsnittet **[!UICONTROL Azure]**.
 1. Ange [konfigurationssökvägen för Azure-lagringskonfigurationen](#create-azure-storage-configuration) i fältet **[!UICONTROL Storage Configuration Path]**.
 1. Välj **[!UICONTROL Publish]** och välj sedan **[!UICONTROL Save]** för att spara konfigurationen.
 
@@ -59,7 +60,7 @@ Utför följande steg för att konfigurera en AEM Workflow-modell för en extern
 
 ### Riktlinjer för AEM Workflows för extern datalagring {#guidelines-workflows-external-data-storage}
 
-Nedan följer några riktlinjer när du använder AEM Workflows och lagrar data till externa datalager, som Microsoft Azure-lagringsserver:
+Nedan följer några riktlinjer när du använder AEM Workflows och lagrar data till externa datalagringsplatser, t.ex. Microsoft Azure-lagringsserver:
 
 * Använd variabler för att lagra data när du definierar in- och utdatafiler och bilagor i arbetsflödesmodellstegen. Välj inte alternativen **[!UICONTROL Relative to Payload]** och **[!UICONTROL Available at an absolute path]**. Alternativen **[!UICONTROL Relative to Payload]** och **[!UICONTROL Available at an absolute path]** visas inte automatiskt när du [konfigurerar en AEM Workflow-modell för extern datalagring](#configure-workflow-external-data-storage).
 
@@ -74,4 +75,4 @@ Nedan följer några riktlinjer när du använder AEM Workflows och lagrar data 
 >* [Konfigurera datakällor för AEM Forms](/help/forms/configure-data-sources.md)
 >* [Konfigurera Azure-lagring för AEM Forms](/help/forms/configure-azure-storage.md)
 >* [Integrera Microsoft Dynamics 365](/help/forms/configure-msdynamics.md)
->  [Lägg till Forms Portal på en AEM Sites-sida &#x200B;](/help/forms/configure-forms-portal.md)
+>  [Lägg till Forms Portal på en AEM Sites-sida ](/help/forms/configure-forms-portal.md)

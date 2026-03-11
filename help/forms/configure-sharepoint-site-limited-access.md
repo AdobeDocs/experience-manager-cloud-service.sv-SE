@@ -4,10 +4,11 @@ description: Lär dig hur du konfigurerar SharePoint Site med begränsad åtkoms
 keywords: Hur man konfigurerar SharePoint Site med begränsad åtkomst?, Konfigurera SharePoint med begränsad åtkomst, Använda behörighetsområde för att begränsa åtkomst till SharePoint Site.
 feature: Adaptive Forms, Core Components
 role: User, Developer
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 3230bab2-c1aa-409d-9f01-c42cf88b1135
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -36,7 +37,7 @@ Fördelar med begränsad åtkomst till SharePoint Site:
 
 Följ stegen nedan för att konfigurera SharePoint Sites med begränsad åtkomst med hjälp av behörighetsområden:
 
-1. [Skapa ett program med &#x200B;](#create-an-application-with-the-limited-permission-in-the-azure-portal)
+1. [Skapa ett program med ](#create-an-application-with-the-limited-permission-in-the-azure-portal)
 1. [Ange auktoriseringsomfånget på AEM-instansen](#set-the-authorization-scope-at-aem-instance)
 
 ### Skapa ett program med begränsad behörighet i Azure-portalen
@@ -49,11 +50,11 @@ Mer information om hur du hämtar `Client ID`, `Client Secret` och `Tenant ID` f
 
 * Lägg till omdirigerings-URI som `https://[author-instance]/libs/cq/sharepoint/content/configurations/wizard.html` i Microsoft® Azure-portalen. Ersätt `[author-instance]` med URL:en för din Author-instans.
 * Lägg till behörighetsomfånget `offline_access` och `Sites.Selected` i Microsoft Graph API för att ge begränsad åtkomst till webbplatser.
-* För OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` för din app från Microsoft® Azure-portalen.
+* För OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` av din app från Microsoft® Azure-portalen.
 
-Om du vill använda API-behörigheten `Sites.Selected` måste du ha ett program som är registrerat i Azure-portalen med rätt behörigheter för SharePoint Online Sites. Installationen säkerställer att programmet har den behörighet som krävs för att interagera med SharePoint Site inom det definierade området, vilket ger den begränsade åtkomst som krävs.
+Om du vill använda API-behörigheten `Sites.Selected` måste du ha ett program som är registrerat på Azure-portalen med rätt behörigheter för SharePoint Online Sites. Installationen säkerställer att programmet har den behörighet som krävs för att interagera med SharePoint Site inom det definierade området, vilket ger den begränsade åtkomst som krävs.
 
-Mer information om hur du utvecklar program som använder [-behörigheter för SharePoint Online-platser finns i &#x200B;](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/develop-applications-that-use-sites-selected-permissions-for-spo/ba-p/3790476)bloggartikeln - Utveckla program som använder platser.Markerade behörigheter för SPO-webbplatser`Sites.Selected`.
+Mer information om hur du utvecklar program som använder [-behörigheter för SharePoint Online-platser finns i ](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/develop-applications-that-use-sites-selected-permissions-for-spo/ba-p/3790476)bloggartikeln - Utveckla program som använder platser.Markerade behörigheter för SPO-webbplatser`Sites.Selected`.
 
 ### Ange auktoriseringsomfånget på AEM-instansen
 
@@ -68,7 +69,7 @@ För att ge begränsad åtkomst till en Microsoft SharePoint Site är det viktig
 
 1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]** och **[!UICONTROL Client Secret]**. Mer information om hur du hämtar klient-ID och klienthemlighet finns i [Microsoft®-dokumentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
 
-1. Använd OAuth-URL som `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` för din app från Microsoft® Azure-portalen.
+1. Använd OAuth-URL som `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` av din app från Microsoft® Azure-portalen.
 
    >[!NOTE]
    >

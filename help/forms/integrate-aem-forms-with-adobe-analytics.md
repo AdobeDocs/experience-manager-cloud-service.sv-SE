@@ -3,12 +3,13 @@ title: Form Analytics with Adobe Analytics and AEM Forms - Complete Guide
 seo-title: "Form Analytics: Track Performance, Boost Conversions with Adobe Analytics & AEM Forms"
 description: En komplett guide till blankettanalys med Adobe Analytics och AEM Forms. Spåra formulärprestanda, analysera användarbeteenden, minska antalet användare som slutar svara och optimera konverteringarna.
 keywords: formuläranalys, spårning av formulärprestanda, analys av avbrutna formulär, konverteringsoptimering, analys av användarbeteende, Adobe Analytics-formulär, AEM Forms-analys
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 0730432e-75b8-4b35-a377-ae4a2bee6c9f
 feature: Adaptive Forms, Acrobat Sign
 role: User, Developer
-source-git-commit: ab84a96d0e206395063442457a61f274ad9bed23
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '7697'
+source-wordcount: '7703'
 ht-degree: 0%
 
 ---
@@ -70,7 +71,7 @@ Effektiv formuläranalys fokuserar på mätvärden som direkt påverkar affärsr
 
 **Avancerade beteendemått**
 
-- **Konverteringstrattanalys**: Användarresa via flerstegsformulär som visar förlopps- och bortfallsmönster
+- **Konvertering av Funnel-analys**: Användarresa via flerstegsformulär som visar förlopps- och bortfallsmönster
 - **Prestanda för enhet och webbläsare**: Tekniska faktorer som påverkar slutförandet i olika användarmiljöer
 - **Djup för användarengagemang**: Tid som har ägnats åt formulär, interaktionsmönster för fält och indikatorer för användaruppmärksamhet
 
@@ -323,7 +324,7 @@ Till skillnad från grundläggande verktyg för formuläranalys möjliggör Adob
 
 ### Spårningsfunktioner som är färdiga att användas
 
-AEM Forms integreras smidigt med [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=sv-SE) för att automatiskt hämta in och spåra prestandamått för dina publicerade formulär. Du kan övervaka beteendet för både autentiserade och anonyma användare utan ytterligare konfiguration.
+AEM Forms integreras smidigt med [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=en) för att automatiskt hämta in och spåra prestandamått för dina publicerade formulär. Du kan övervaka beteendet för både autentiserade och anonyma användare utan ytterligare konfiguration.
 
 Innan du implementerar formuläranalys bör du kontrollera att din [AEM Forms-miljö är korrekt konfigurerad](/help/forms/setup-forms-cloud-service.md) och du har [skapat dina adaptiva formulär](/help/forms/creating-adaptive-form-core-components.md) med hjälp av antingen Core Components eller [Foundation Components](/help/forms/creating-adaptive-form.md).
 
@@ -353,7 +354,7 @@ Förutom standardformulärhändelser möjliggör Adobe Analytics avancerad, anpa
 
 - **Affärsspecifika mått**: Definiera anpassade händelser med regelredigeraren för att spåra organisationsspecifika formulärinteraktioner
 - **Mappning av användarresor**: Skapa anpassade händelser för att spåra komplexa användarsökvägar via flerstegsformulär
-- **Konverteringsflödesanalys**: Ställ in anpassade händelser för att mäta specifika konverteringspunkter och släppningsfaser
+- **Konvertering av Funnel-analys**: Konfigurera anpassade händelser för att mäta specifika konverteringspunkter och utfallsfaser
 - **Integrationshändelser**: Spåra formulärinteraktioner med externa system och API:er
 
 ### Avancerade rapporteringsfunktioner
@@ -362,7 +363,7 @@ Adobe Analytics har funktioner för rapportering i enterpriseklass för att få 
 
 - **Real-Time Dashboards**: Övervaka formulärprestanda och användarinteraktioner när de inträffar
 - **Segmenteringsanalys**: Analysera formulärprestanda för olika användargrupper, trafikkällor och demografiska data
-- **Tratt Visualization**: Visualisera användarstatus via flerstegsformulär och identifiera optimeringsmöjligheter
+- **Funnel-visualisering**: Visualisera användarförloppet i flerstegsformulär och identifiera optimeringsmöjligheter
 - **Kohortanalys**: Spåra prestandaförbättringar för formulär över tid och mät optimeringseffekten
 - **Spårning mellan enheter**: Förstå hur användare interagerar med formulär på olika enheter och sessioner
 
@@ -465,12 +466,12 @@ Forms som läses in på mindre än 3 sekunder har 70 % högre slutförandegrad �
 - **Analys av användartyp**: Jämför prestanda mellan nya och returnerade användare
 - **Demografiska insikter**: Förstå hur olika användargrupper interagerar med formulär
 
-**Konverteringsflödeanalys**
+**Konvertera Funnel-analys**
 
 - **Formulärprogression i flera steg**: Spåra användarens framsteg med komplexa formulär
 - **Steg-för-steg-konvertering**: Mät slutförandegrad i varje formulärsteg
-- **Tratt Optimization**: Identifiera och åtgärda flaskhalsar i formulärutvecklingen
-- **Integrering av A/B-tester**: Jämför trattprestanda för olika formulärvarianter
+- **Funnel-optimering**: Identifiera och åtgärda flaskhalsar i formulärutvecklingen
+- **Integrering av A/B-tester**: Jämför funnel prestanda för olika formulärvarianter
 
 **Business Impact Metrics**
 
@@ -527,12 +528,12 @@ Innan du börjar implementera formuläranalysen måste du kontrollera att miljö
 Skapa:[!DNL Adobe Analytics]
 
 - En Adobe ID att logga in på [Adobe Experience Cloud](https://experience.adobe.com/#/home).
-- En [rapportserie](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html?lang=sv-SE).
+- En [rapportserie](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html).
 
 
 ### Installera AEM Forms och [!DNL Adobe Analytics] tillägg {#install-extensions}
 
-Så här konfigurerar du AEM Forms- och [Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=sv-SE)-tillägg:
+Så här konfigurerar du AEM Forms- och [Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)-tillägg:
 
 1. Logga in på Adobe Experience Cloud och välj ett namn för företaget.
 
@@ -676,7 +677,7 @@ Utför följande steg för att publicera konfigurationen:
 
 ## &#x200B;2. Konfigurera AEM Forms {#configure-aem-forms}
 
-Innan du skapar en Adobe Launch-konfiguration skapar du en [Adobe IMS-konfiguration med Adobe Launch som molnlösning](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=sv-SE).
+Innan du skapar en Adobe Launch-konfiguration skapar du en [Adobe IMS-konfiguration med Adobe Launch som molnlösning](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html).
 
 ### Skapa startkonfiguration för Adobe {#create-adobe-launch-configuration}
 
@@ -688,7 +689,7 @@ Så här skapar du en Adobe Launch-konfiguration:
 
 1. Ange en rubrik för konfigurationen i fältet **[!UICONTROL Title]**.
 
-1. Välj den [associerade Adobe IMS-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=sv-SE).
+1. Välj den [associerade Adobe IMS-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html).
 
 1. Välj namnet på företaget som användes när [Adobe Analytics](#Configure-adobe-analytics) konfigurerades.
 
@@ -708,7 +709,7 @@ Så här använder du konfigurationen [!DNL Adobe Launch] i ett befintligt adapt
 1. Välj **[!UICONTROL Save & Close]**. Det adaptiva formuläret har aktiverats för [!DNL Adobe Analytics].
 1. Publicera formuläret.
 
-När du har aktiverat [!DNL Adobe Analytics] för ett anpassat formulär kan du [validate](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html?lang=sv-SE#validate-the-page-view-beacon) om det finns ett lämpligt datahändelseflöde mellan AEM Forms och [!DNL Adobe Analytics]. Integreringen av AEM Forms med Adobe Analytics är klar. Nu kan du [konfigurera och visa rapporter i Adobe Analytics](#view-reports-adobe-analytics).
+När du har aktiverat [!DNL Adobe Analytics] för ett anpassat formulär kan du [validate](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html?lang=en#validate-the-page-view-beacon) om det finns ett lämpligt datahändelseflöde mellan AEM Forms och [!DNL Adobe Analytics]. Integreringen av AEM Forms med Adobe Analytics är klar. Nu kan du [konfigurera och visa rapporter i Adobe Analytics](#view-reports-adobe-analytics).
 
 ### Skapa regler för att hämta anpassade händelser (valfritt) {#capture-custom-events}
 
@@ -850,7 +851,7 @@ Att förstå hur man tolkar och agerar på data från formuläranalyser är avg�
 
 **Instrumentpanel för KPI (Key Performance Indicators)**
 
-- **Formulärkonverteringsfunktion**: Visa användarförlopp genom formulärslutförandeprocessen
+- **Formulärkonvertering Funnel**: Visualisera användarförloppet genom att fylla i formulär
 - **Avgränsningsanalys**: Identifiera specifika punkter där användare lämnar formulär ofullständiga
 - **Prestandatender**: Spåra ändringar av formulärprestanda över tid och identifiera mönster
 - **Jämförelseanalys**: Jämför prestanda i olika formulär, tidsperioder och användarsegment
@@ -916,7 +917,7 @@ Att förstå hur man tolkar och agerar på data från formuläranalyser är avg�
 
 >[!TIP]
 >
->Ytterligare felsökningsanvisningar finns i våra [felsökningsguider för AEM Forms &#x200B;](/help/forms/troubleshooting-installation-and-configuration.md) och [felsökning av formulärskapande](/help/forms/form-creation-failing.md).
+>Ytterligare felsökningsanvisningar finns i våra [felsökningsguider för AEM Forms ](/help/forms/troubleshooting-installation-and-configuration.md) och [felsökning av formulärskapande](/help/forms/form-creation-failing.md).
 
 **Konfigurationsproblem**
 
@@ -1021,7 +1022,7 @@ I det här omfattande avsnittet med vanliga frågor och svar behandlas vanliga f
 
 **F: Vad är skillnaden mellan formuläranalys och allmän webbplatsanalys?**
 
-S: Formuläranalys fokuserar specifikt på användarinteraktioner i formulär och ger detaljerade insikter om fältbeteende, slutförandemönster och punkter för att överge formulär. Allmän webbplatsanalys spårar sidvisningar och övergripande användarresor, men formuläranalyser ger detaljerade data om formulärspecifika användarupplevelser, valideringsfel, fältslutförandetider och konverteringstrattanalys i själva formulären.
+S: Formuläranalys fokuserar specifikt på användarinteraktioner i formulär och ger detaljerade insikter om fältbeteende, slutförandemönster och punkter för att överge formulär. Allmän webbplatsanalys spårar sidvisningar och övergripande användarresor, medan formuläranalyser ger detaljdata om formulärspecifika användarupplevelser, valideringsfel, fälttider och konvertering av funnel-analyser inom själva formulären.
 
 **F: Behöver jag teknisk expertis för att implementera formuläranalyser med Adobe Analytics?**
 
@@ -1043,7 +1044,7 @@ S: Ja, Adobe Analytics har stöd för domänövergripande formulärspårning gen
 
 **F: Hur hanterar jag formuläranalyser för flerstegs- eller guideliknande formulär?**
 
-S: Formulär i flera steg kräver specialkonfigurationer för att följa utvecklingen genom varje steg. Implementera anpassade händelser för stegvis komplettering, konfigurera trattanalys för att visualisera bortfallspunkter mellan steg och använd anpassade variabler för att spåra användarsökvägar i formulärguiden. Adobe Analytics tillhandahåller specifik vägledning för formulärspårning på flera sidor.
+S: Formulär i flera steg kräver specialkonfigurationer för att följa utvecklingen genom varje steg. Implementera anpassade händelser för stegvis komplettering, konfigurera funnel-analys för att visualisera bortfallspunkter mellan steg och använd anpassade variabler för att spåra användarsökvägar i formulärguiden. Adobe Analytics tillhandahåller specifik vägledning för formulärspårning på flera sidor.
 
 **F: Vad händer med analysdata om en användare fyller i ett formulär offline eller om JavaScript är inaktiverat?**
 
@@ -1083,7 +1084,7 @@ S: SPA-program kräver särskild konfiguration för formuläranalys eftersom tra
 
 **F: Vad ska jag göra om formuläranalys påverkar sidinläsningsprestanda?**
 
-S: Optimera analysimplementeringen genom att: läsa in analysskript asynkront, implementera lazy loading för icke-kritisk spårning, minska antalet anpassade variabler och händelser, använda effektiva regelkonfigurationer i Adobe Launch och övervaka Core Web Vitals för att säkerställa att analysen inte påverkar användarupplevelsen negativt.
+S: Optimera analysimplementeringen genom att: läsa in analysskript asynkront, implementera lat inläsning för icke-kritisk spårning, minska antalet anpassade variabler och händelser, använda effektiva regelkonfigurationer i Adobe Launch och övervaka Core Web Vitals för att säkerställa att analysen inte påverkar användarupplevelsen negativt.
 
 **F: Hur ser jag till att formuläranalyser följer sekretesslagstiftningen?**
 

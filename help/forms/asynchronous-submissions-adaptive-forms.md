@@ -4,20 +4,21 @@ description: Lär dig hur du konfigurerar asynkron överföring för Adaptive Fo
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 level: Intermediate
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 026f4920-f8f9-4b08-b1b0-af50229633d7
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '722'
 ht-degree: 0%
 
 ---
 
-# Konfigurera asynkron sändning av AEM Adaptiv Forms {#asynchronous-submission-of-adaptive-forms}
+# Konfigurera asynkron sändning av AEM Adaptive Forms {#asynchronous-submission-of-adaptive-forms}
 
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/asynchronous-submissions-adaptive-forms.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/asynchronous-submissions-adaptive-forms.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 
@@ -32,7 +33,7 @@ Läs vidare om du vill ha mer information om asynkron överföring i Adaptive Fo
 Så här konfigurerar du asynkron överföring för ett adaptivt formulär:
 
 1. I redigeringsläget Adaptivt formulär markerar du objektet Formulärbehållare och väljer ![cmpr1](assets/configure-icon.svg) för att öppna dess egenskaper.
-1. Aktivera **[!UICONTROL Use asynchronous submission]** i egenskapsavsnittet för **[!UICONTROL Submission]**.
+1. Aktivera **[!UICONTROL Submission]** i egenskapsavsnittet för **[!UICONTROL Use asynchronous submission]**.
 1. I avsnittet **[!UICONTROL On Submit]** väljer du något av följande alternativ för att skicka formulär.
 
    * **[!UICONTROL Redirect to URL]**: Omdirigerar till angiven URL eller sida när formulär skickas. Du kan ange en URL eller bläddra för att välja sökvägen till en sida i fältet **[!UICONTROL Redirect URL/Path]**.

@@ -4,10 +4,11 @@ Description: Learn how to send data from your Adaptive Form to a SharePoint stor
 keywords: Hur ansluter man SharePoint lista till ett tilläggsformulär?, Skicka till SharePoint, Skapa en SharePoint List Configuration, Använd åtgärden Skicka till SharePoint i ett adaptivt format, Ansluta ett adaptivt formulär till Microsoft&reg; SharePoint List.
 feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
 role: User, Developer
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 9ac3e7be-c6fa-4dbc-9aba-b81741ba6c55
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -34,7 +35,7 @@ Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lista:
    * Du kan hämta `Client ID` och `Client Secret` för din app från Microsoft® Azure-portalen.
    * Lägg till omdirigerings-URI som `https://[author-instance]/libs/cq/sharepointlist/content/configurations/wizard.html` i Microsoft® Azure-portalen. Ersätt `[author-instance]` med URL:en för din Author-instans.
    * Lägg till API-behörigheterna `offline_access` och `Sites.Manage.All` på fliken **Microsoft® Graph** för att ge läs-/skrivbehörigheter. Lägg till behörigheten `AllSites.Manage` på fliken **Sharepoint** om du vill fjärrinteragera med SharePoint-data.
-   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` för din app från Microsoft® Azure-portalen.
+   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` av din app från Microsoft® Azure-portalen.
 
      >[!NOTE]
      >

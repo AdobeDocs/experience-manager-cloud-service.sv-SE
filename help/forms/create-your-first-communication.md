@@ -5,10 +5,11 @@ feature: Release Information
 role: Admin
 hide: true
 hidefromtoc: true
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: c58ea216-7de0-40e1-9493-9ceb472e5ef8
-source-git-commit: a32e30ba71b2b9a4361080bd75deb0d9e61fdfa3
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -54,7 +55,7 @@ Anatomin innehåller data med följande indatalägen:
 
 ## Steg 2: Skapa formulärdatamodell
 
-Med en formulärdatamodell kan du koppla en interaktiv kommunikation till olika datakällor. Till exempel AEM användarprofil, RESTful-webbtjänster, SOAP webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med en interaktiv kommunikation för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms-dataintegrering](/help/forms/data-integration.md).
+Med en formulärdatamodell kan du koppla en interaktiv kommunikation till olika datakällor. Exempel: AEM användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med en interaktiv kommunikation för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms-dataintegrering](/help/forms/data-integration.md).
 
 ## Steg 3: Skapa fragment
 

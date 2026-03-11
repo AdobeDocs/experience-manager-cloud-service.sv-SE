@@ -4,10 +4,11 @@ description: Upptäck Interactive Communication Editor i AEM Forms. Lär dig vik
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 50709c68-8666-47da-8788-fad793d870e6
-source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -59,7 +60,7 @@ Funktionen för interaktiv kommunikation (IC) är tillgänglig via programmet f�
 ## Nästa steg
 
 [Skapa en interaktiv kommunikation](/help/forms/interactive-communication/create-interactive-communication.md)
-[Skapa en interaktiv kommunikationsmall &#x200B;](/help/forms/interactive-communication/create-interactive-communication-template.md)
+[Skapa en interaktiv kommunikationsmall ](/help/forms/interactive-communication/create-interactive-communication-template.md)
 [Skapa ett interaktivt kommunikationsfragment](/help/forms/interactive-communication/create-interactive-communication-fragment.md)
 
 <!-- 

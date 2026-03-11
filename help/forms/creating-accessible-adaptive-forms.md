@@ -4,11 +4,12 @@ description: AEM Forms innehåller verktyg för att skapa tillgänglig Adaptiv F
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 feature: Adaptive Forms, Foundation Components
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 3b5247fa-decb-40eb-a629-6d834976d33c
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1997'
+source-wordcount: '2003'
 ht-degree: 0%
 
 ---
@@ -44,17 +45,17 @@ ANDI fungerar med alla större webbläsare. Mer information om hur du konfigurer
 
 ### Hämta och installera temat Ultramarine-Accessible
 
-Temat Ultramarine-Accessible är ett referenstema. Det visar hur du åtgärdar färgkontrast och andra tillgänglighetsrelaterade problem i en adaptiv form. Adobe rekommenderar att du skapar ett anpassat tema för produktionsmiljön baserat på de format som din organisation har godkänt. Utför följande steg för att överföra temat till din AEM:
+Temat Ultramarine-Accessible är ett referenstema. Det visar hur du åtgärdar färgkontrast och andra tillgänglighetsrelaterade problem i en adaptiv form. Adobe rekommenderar att du skapar ett anpassat tema för produktionsmiljön baserat på de format som din organisation har godkänt. Så här överför du temat till din AEM-instans:
 
 1. Hämta temapaketet.
-1. Navigera till **[!UICONTROL Experience Manager]** > **[!UICONTROL Navigation]** ![Navigering](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms]** på din AEM.
-1. Välj **[!UICONTROL Create]** > **[!UICONTROL File Upload]**. Markera och överför filen x Ultramarine-Accessible-Theme.zip. Temat överförs till din AEM.
+1. Navigera till **[!UICONTROL Experience Manager]** > **[!UICONTROL Navigation]** ![Navigering](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms]** på din AEM-instans.
+1. Välj **[!UICONTROL Create]** > **[!UICONTROL File Upload]**. Markera och överför filen x Ultramarine-Accessible-Theme.zip. Temat överförs till din AEM-instans.
 
 ## Göra ett adaptivt formulär tillgängligt
 
 Du bör fokusera på fyra nyckelaspekter: tangentbordsnavigering, färgkontrast, meningsfull alternativ text för bilder och lämpliga etiketter för formulärkontroller för att göra ett adaptivt formulär tillgängligt. Gör så här för att göra din befintliga Adaptive Forms tillgänglig:
 
-### 1. Använd ett tillgängligt tema och utför ytterligare korrigeringar
+### &#x200B;1. Använd ett tillgängligt tema och utför ytterligare korrigeringar
 
 Använd temat Ultramarine-Accessible i din befintliga adaptiva form. Så här använder du temat:
 
@@ -93,7 +94,7 @@ När du har tillämpat ett tillgängligt tema utför du följande korrigeringar.
 
 1. Ta bort signaturfält för skript, om sådana finns i det adaptiva formuläret. Konfigurera det adaptiva formuläret så att det använder [!DNL Adobe Sign] för en sömlös digital signeringsupplevelse.
 
-### 2. Ange korrekta etiketter för formulärkontroller {#provide-proper-labels-for-form-controls}
+### &#x200B;2. Ange korrekta etiketter för formulärkontroller {#provide-proper-labels-for-form-controls}
 
 Etiketten eller titeln för en komponent identifierar vad formulärkomponenten representerar. Texten &quot;Förnamn&quot; anger till exempel att användaren måste ange sitt förnamn i ett textfält. För att skärmläsare ska kunna komma åt etiketten är den programmatiskt kopplad till en formulärkomponent. Formulärkontrollen kan även konfigureras med ytterligare hjälpmedelsinformation.
 
@@ -108,7 +109,7 @@ Så här använder du alternativet Hjälpmedel:
 
 ![Hjälpmedelsalternativ i formulärkomponenter](assets/accessibility-options.png)
 
-**Anpassad text** Formulärförfattare tillhandahåller innehållet i hjälpmedelsalternativet Egen text. Den här anpassade texten används i hjälpmedelstekniken, till exempel skärmläsare. Att använda inställningen Titel är det bästa alternativet i de flesta scenarier. Du bör endast skapa Reader-text för anpassad skärm när du inte kan använda rubriken eller en kort beskrivning.
+**Anpassad text** Formulärförfattare tillhandahåller innehållet i hjälpmedelsalternativet Egen text. Den här anpassade texten används i hjälpmedelstekniken, till exempel skärmläsare. Att använda inställningen Titel är det bästa alternativet i de flesta scenarier. Överväg att skapa Reader-text för anpassade skärmar endast när du inte kan använda rubriken eller en kort beskrivning.
 
 **Kort beskrivning** För de flesta komponenter visas den korta beskrivningen vid körning när användaren placerar pekaren över komponenten. Du kan ange det här alternativet i fältet för kort beskrivning under alternativet för hjälpinnehåll.
 
@@ -123,7 +124,7 @@ Så här använder du alternativet Hjälpmedel:
 >* Alternativknapp och kryssruta kan bara ha två alternativ för tillgänglighet: Anpassad text och Titel.
 >* För XFA-baserade adaptiva Forms ärvs hjälpmedelsalternativet från de hjälpmedelsalternativ som angetts i XDP. Verktygstips från XDP mappas till Short Description och Caption mappas till Title. De andra alternativen fungerar som de är.
 
-### 3. Ange textmotsvarigheter för bilder {#provide-text-equivalents-for-images}
+### &#x200B;3. Ange textmotsvarigheter för bilder {#provide-text-equivalents-for-images}
 
 Bilder kan förbättra förståelsen för vissa användare. För användare som använder skärmläsare minskar dock bilderna formulärets tillgänglighet. Om du väljer att använda bilder anger du textbeskrivningar för alla bilder.
 
@@ -133,7 +134,7 @@ Markera en bildkomponent och välj ![cmpr](assets/cmppr.png). Ange alternativ te
 
 ![Alternativ text för en bild](assets/image-properties.png)
 
-### 4. Ange tillräcklig färgkontrast {#provide-sufficient-color-contrast}
+### &#x200B;4. Ange tillräcklig färgkontrast {#provide-sufficient-color-contrast}
 
 Hjälpmedelsdesignen inbegriper att överväga ytterligare riktlinjer för färganvändning. Formulärförfattare kan använda färger för att förbättra formulärens utseende genom att markera olika formulärkomponenter. En felaktig användning av färg kan dock göra ett formulär svårt eller omöjligt att läsa av personer med olika funktioner.
 
@@ -143,7 +144,7 @@ Vi rekommenderar att du använder standardfärgerna för teckensnitt och bakgrun
 
 <!-- See [Creating custom themes for Adaptive Forms](creating-custom-adaptive-form-themes.md), for more information about changing the color contrast and theme for the Adaptive Forms. -->
 
-### 5. Kontrollera att formulärkontrollerna är tangentbordstillgängliga {#ensure-that-form-controls-are-keyboard-accessible}
+### &#x200B;5. Kontrollera att formulärkontrollerna är tangentbordstillgängliga {#ensure-that-form-controls-are-keyboard-accessible}
 
 Ett hjälpmedelsanpassat formulär kan fyllas i helt och hållet med bara tangentbordet eller en motsvarande indataenhet. Användare med nedsatt rörelseförmåga eller nedsatt syn har kanske inget annat val än att använda tangentbordet och många användare som kan använda en mus föredrar tangentbordsinmatning. Genom att använda de olika indatametoderna kan du inte bara skapa hjälpmedelsförberedda formulär, du kan också skapa formulär som bättre passar alla användares önskemål.
 

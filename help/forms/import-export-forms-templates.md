@@ -4,10 +4,11 @@ description: Lär dig att migrera adaptiva Forms, PDF forms, teman och andra st�
 topic-tags: forms-manager
 role: Admin, User
 feature: Adaptive Forms
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: f5105fb7-b8c0-4656-8095-b21d392746c0
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1031'
 ht-degree: 1%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 1%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/manage-administer-aem-forms/import-export-forms-templates) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/manage-administer-aem-forms/import-export-forms-templates) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Du kan flytta adaptiva Forms och relaterade resurser som adaptiva formulärteman, formulärdatamodell (FDM), adaptiva formulärmallar, fragment och PDF forms mellan [!DNL AEM Forms] instanser.
@@ -181,7 +182,7 @@ Så här söker du efter resursen:
 
    ![Söka efter resurser](/help/forms/assets/search-bar.png)
 
-Mer information och instruktioner om hur du använder sökfunktionen finns i [Sök](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=sv-SE).
+Mer information och instruktioner om hur du använder sökfunktionen finns i [Sök](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html).
 
 <!--
 ## Export or create a package {#export-a-workflow-application}

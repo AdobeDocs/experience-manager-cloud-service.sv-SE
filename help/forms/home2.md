@@ -8,10 +8,11 @@ feature: Adaptive Forms, Release Information
 hide: true
 hidefromtoc: true
 index: false
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 50d7ce19-7d76-4ea1-a54c-8ca0e5379982
-source-git-commit: eca09e1bf2ba4466f54e915e01218cc89cf5b116
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '2323'
+source-wordcount: '2329'
 ht-degree: 0%
 
 ---
@@ -57,7 +58,7 @@ Få exklusiv tillgång till de senaste innovationerna från AEM Forms innan de b
 **Gå med i programmet:**
 Bli en av de första som får tillgång till innovationer och hjälper till att forma framtiden för AEM Forms.
 
-[Begär åtkomst →](mailto:aem-forms-ea@adobe.com) | [Läs mer → &#x200B;](/help/forms/early-access-ea-features.md)
+[Begär åtkomst →](mailto:aem-forms-ea@adobe.com) | [Läs mer → ](/help/forms/early-access-ea-features.md)
 
 
 ## Kärnfunktioner {#core-capabilities}
@@ -83,7 +84,7 @@ Designa responsiva formulär genom dra-och-släpp-gränssnitt med [Core Componen
 Skapa formulär med välbekanta verktyg som Microsoft Excel via [Edge Delivery Services](/help/edge/docs/forms/overview.md) . Med den här metoden kan skribenter skapa högpresterande formulär utan tekniska kunskaper, samtidigt som man får enastående Google Lighthuse-poäng.
 
 **Mallar och teman**
-Snabba upp formulärframtagningen med färdiga [&#x200B; mallar &#x200B;](/help/forms/template-editor-core-components.md) som definierar struktur och ursprungligt innehåll. Använd enhetlig profilering med [teman](/help/forms/using-themes-in-core-components.md) som styr den visuella formateringen i flera formulär, vilket ger enhetlig design och minskar utvecklingstiden.
+Snabba upp formulärframtagningen med färdiga [ mallar ](/help/forms/template-editor-core-components.md) som definierar struktur och ursprungligt innehåll. Använd enhetlig profilering med [teman](/help/forms/using-themes-in-core-components.md) som styr den visuella formateringen i flera formulär, vilket ger enhetlig design och minskar utvecklingstiden.
 
 **Dataintegreringar**
 Koppla ihop blanketterna med datasystemen under konstruktionsfasen. [Formulärdatamodellen](/help/forms/create-form-data-models.md) har ett enhetligt gränssnitt för flera datakällor, vilket möjliggör [förifyllning](/help/forms/prepopulate-adaptive-form-fields.md), [valideringsregler](/help/forms/rule-editor-core-components.md) och smidigt dataflöde mellan formulär och affärssystem.
@@ -92,7 +93,7 @@ Koppla ihop blanketterna med datasystemen under konstruktionsfasen. [Formulärda
 Implementera [villkorsstyrd logik](/help/forms/rule-editor-core-components.md), progressiv visning och adaptiv validering som vägleder användarna genom komplexa processer. [Funktionen Spara och återuppta](/help/forms/save-core-component-based-form-as-draft.md) gör att användare kan fylla i formulär i flera sessioner.
 
 **HTML5 Forms**
-Återge XFA-baserade formulär som [&#x200B; HTML5-formulär &#x200B;](/help/forms/introductionhtml5.md) för mobila enheter och äldre webbläsare. HTML5 Forms ger en inbyggd mobilupplevelse utan plugin-program samtidigt som man bevarar blankettlogiken och valideringen från de ursprungliga XDP-mallarna.
+Återge XFA-baserade formulär som [ HTML5-formulär ](/help/forms/introductionhtml5.md) för mobila enheter och äldre webbläsare. HTML5 Forms ger en inbyggd mobilupplevelse utan plugin-program samtidigt som man bevarar blankettlogiken och valideringen från de ursprungliga XDP-mallarna.
 
 **Interaktiv kommunikation**
 Skapa dokumentcentrerad kommunikation som kontoutdrag, fakturor och meddelanden med en visuell redigerare. [Interaktiv kommunikation](/help/forms/interactive-communication/create-interactive-communication.md) kombinerar statiskt innehåll med dynamiska data för att generera personaliserad kommunikation i både tryck och digitala kanaler.
@@ -115,7 +116,7 @@ Definiera detaljerade behörigheter för att skapa, redigera och publicera formu
 Distribuera formulär via flera kanaler och kontaktytor för att nå användarna var de än är.
 
 **Flerkanalspublicering**
-Publicera formulär till [&#x200B; AEM Sites &#x200B;](/help/forms/embed-adaptive-form-aem-sites.md) , fristående webbsidor, mobilprogram eller [inbäddning i tredjepartssystem](/help/forms/embed-adaptive-form-core-components-external-web-page.md) . Med single-source-publicering får du en konsekvent upplevelse och kan samtidigt anpassa dig till olika kanalkrav.
+Publicera formulär till [ AEM Sites ](/help/forms/embed-adaptive-form-aem-sites.md) , fristående webbsidor, mobilprogram eller [inbäddning i tredjepartssystem](/help/forms/embed-adaptive-form-core-components-external-web-page.md) . Med single-source-publicering får du en konsekvent upplevelse och kan samtidigt anpassa dig till olika kanalkrav.
 
 **Lokalisering och Personalization**
 Leverera formulär på flera språk med [AEM arbetsflöden för översättning](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms-core-components.md), med stöd för både [vänster-till-höger- och höger-till-vänster-språk](/help/forms/right-left-languages.md). Integrera med Adobe Target för att personalisera formulärupplevelser baserat på användarsegment, beteende eller sammanhangsbaserade data.
@@ -134,7 +135,7 @@ Optimera blankettifyllnaden och maximera datakvaliteten.
 Forms anpassar sig automatiskt till olika skärmstorlekar och inmatningsmetoder. Touchoptimerade kontroller, tangentbordsnavigering och skärmläsarkompatibilitet säkerställer [tillgänglighet](/help/forms/creating-accessible-adaptive-forms.md) för alla användartyper.
 
 **Digitala signaturer**
-Integrera [&#x200B; Adobe Sign &#x200B;](/help/forms/working-with-adobe-sign.md) för juridiskt bindande e-signaturer i formulärupplevelsen. Användarna kan signera dokument utan att lämna formuläret, vilket effektiviserar godkännandeprocesserna och minskar avhoppsningen.
+Integrera [ Adobe Sign ](/help/forms/working-with-adobe-sign.md) för juridiskt bindande e-signaturer i formulärupplevelsen. Användarna kan signera dokument utan att lämna formuläret, vilket effektiviserar godkännandeprocesserna och minskar avhoppsningen.
 
 **Skicka åtgärder**
 Konfigurera [skicka-åtgärder](/help/forms/configure-submit-actions-core-components.md) för att definiera vad som händer när användare fyller i och skickar formulär. Skicka data via e-post, databaser, arbetsflöden eller externa system samtidigt som användarna får feedback och bekräftelse direkt.
@@ -163,7 +164,7 @@ Inbyggda mekanismer för återförsök och reservbearbetning säkerställer att 
 Koppla blanketterna till befintliga affärssystem och datakällor för smidigt informationsflöde.
 
 **Fördefinierade anslutningar**
-Inbyggd integrering med lösningarna [&#x200B; Salesforce](/help/forms/configure-salesforce.md), [&#x200B; Microsoft Dynamics](/help/forms/configure-msdynamics.md), [&#x200B; SharePoint](/help/forms/connect-forms-to-sharepoint-document-library.md) och Adobe Experience Cloud. Fördefinierade anslutningar minskar utvecklingstiden samtidigt som ni säkerställer tillförlitlig datasynkronisering.
+Inbyggd integrering med lösningarna [ Salesforce](/help/forms/configure-salesforce.md), [ Microsoft Dynamics](/help/forms/configure-msdynamics.md), [ SharePoint](/help/forms/connect-forms-to-sharepoint-document-library.md) och Adobe Experience Cloud. Fördefinierade anslutningar minskar utvecklingstiden samtidigt som ni säkerställer tillförlitlig datasynkronisering.
 
 **RESTful API-integrering**
 Anslut till valfri webbtillgänglig tjänst via RESTful API:er via [Skicka-åtgärder](/help/forms/configure-submit-action-restpoint.md) eller [dataintegrering](/help/forms/data-integration.md). Formulärdatamodellen förenklar integreringen och ger ett konsekvent gränssnitt oavsett den underliggande systemarkitekturen.
@@ -192,7 +193,7 @@ Generera rapporter om formuläranvändning, inskickningsvolymer och processeffek
 Lagra och hantera på ett säkert sätt inskickade blanketter och genererade dokument för långsiktig arkivering och regelefterlevnad.
 
 **Dokumentlagring**
-Lagra genererade dokument och inskickade formulär i AEM Digital Asset Management-system eller integrera med externa dokumentarkiv som [SharePoint](/help/forms/configure-submit-action-sharepoint.md), [OneDrive](/help/forms/configure-submit-action-onedrive.md) eller [Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md).
+Lagra genererade dokument och inskickade formulär i AEM Digital Asset Management-system eller integrera med externa dokumentarkiv som [SharePoint](/help/forms/configure-submit-action-sharepoint.md), [OneDrive](/help/forms/configure-submit-action-onedrive.md) eller [Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md) .
 
 **Efterlevnad och bevarande**
 Implementera datalagringspolicyer som uppfyller lagstadgade krav som GDPR, CCPA och HIPAA. [Automatiska arkiveringsprocesser](/help/forms/aem-forms-cloud-service-communications-batch-processing.md) säkerställer att dokumenten sparas under de perioder som krävs och att de säkert tas bort när det är lämpligt.
@@ -298,7 +299,7 @@ Med hjälp av formuläranalyser kan ni förstå antalet slutförda formulär, an
 Automatisering av formulärarbetsflöden skickar in material via godkännandeprocesser, tilldelar uppgifter till teammedlemmar och utlöser åtgärder i andra affärssystem. Detta eliminerar manuell behandling och säkerställer en konsekvent hantering av formulärdata.
 
 **Hur gör jag formulär tillgängliga för användare med funktionshinder?**
-[&#x200B; Hjälpmedelsförberedda formulär &#x200B;](/help/forms/creating-accessible-adaptive-forms.md) innehåller korrekt etikettering, tangentbordsnavigering, skärmläsarkompatibilitet och kompatibilitet med WCAG-riktlinjer. Detta garanterar att alla användare kan fylla i formulär oavsett vilken kapacitet eller hjälpmedelsteknik de har.
+[ Hjälpmedelsförberedda formulär ](/help/forms/creating-accessible-adaptive-forms.md) innehåller korrekt etikettering, tangentbordsnavigering, skärmläsarkompatibilitet och kompatibilitet med WCAG-riktlinjer. Detta garanterar att alla användare kan fylla i formulär oavsett vilken kapacitet eller hjälpmedelsteknik de har.
 
 **Vad kostar formulärbyggare?**
 Priserna för AEM Forms as a Cloud Service beror på era specifika behov, användningsvolym och behov av nya funktioner. Om du vill ha detaljerad prisinformation och diskutera en skräddarsydd lösning kontaktar du Adobe eller Adobe.

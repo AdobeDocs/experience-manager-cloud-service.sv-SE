@@ -8,13 +8,14 @@ feature: Adaptive Forms
 role: User
 hide: true
 hidefromtoc: true
-source-git-commit: 937bd4653e454beea3111cfc7ef7b4bbc1ace193
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
+exl-id: 59ae0eed-d832-4f46-9f99-7bcca9f82306
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
-
 
 # XFA-stöd i XDP-baserad Adaptive Forms{#xfa-support-in-xdp-based-adaptive-forms}
 
@@ -267,4 +268,3 @@ Följande tabell visar hur XFA-valideringar mappas till valideringar i Adaptive 
 >[!NOTE]
 >
 >Du kan inte åsidosätta den obligatoriska egenskapen för alternativknappen Adaptiv form och kryssrutegruppen som är bundna till XFA-kontrollknappar.
-

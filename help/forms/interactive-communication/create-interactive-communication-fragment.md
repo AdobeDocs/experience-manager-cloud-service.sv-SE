@@ -4,10 +4,11 @@ description: Skapa interaktiva kommunikationsfragment i AEM Forms för att skapa
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: d1c62f32-372b-475a-9258-67c2276e79f3
-source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -37,7 +38,7 @@ Så här skapar du ett interaktivt kommunikationsfragment:
 
 1. När du väljer Interactive Communication Fragment visas en skärm där du definierar viktiga fragmentdetaljer som titel, namn, beskrivning, datamodell (en strukturerad representation av backend-data) och taggar.
 
-   Mer information finns i [Konfigurationshandboken för datamodellen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models).
+   Mer information finns i [Konfigurationshandboken för datamodellen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models).
 
    ![Sök efter IC Docu](/help/forms/interactive-communication/assets/createfrgmnt.png)
 
@@ -51,4 +52,4 @@ Genom att skapa interaktiva kommunikationsfragment kan du säkerställa en enhet
 ## Nästa steg
 
 [Skapa en interaktiv kommunikation](/help/forms/interactive-communication/create-interactive-communication.md)
-[Skapa en interaktiv kommunikationsmall &#x200B;](/help/forms/interactive-communication/create-interactive-communication-template.md)
+[Skapa en interaktiv kommunikationsmall ](/help/forms/interactive-communication/create-interactive-communication-template.md)

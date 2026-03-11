@@ -3,18 +3,19 @@ title: Jämför två distinkta adaptiva former.
 description: Jämför två olika formulär baserade på fält, innehåll och formulärkomponenter.
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Adaptive Forms, Core Components
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: ce4ad231-a766-4ab0-8649-20cf16bf54ce
 role: User, Developer, Admin
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
 # Jämför adaptiv Forms {#compare-two-forms}
 
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 När formulärförfattare behöver jämföra två olika formulär baserat på fält, innehåll och formulärkomponenter, jämför de de två formulären. Formulärets författare måste se till att de två formulären finns i samma katalog eller mapp för att kunna jämföra dem. Utför följande steg för att jämföra två olika adaptiva formulär:
 

@@ -5,10 +5,11 @@ contentOwner: Khushwant Singh
 docset: CloudService
 role: Admin, Developer, User
 feature: Adaptive Forms, Core Components
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 198f6f76-1134-4818-89a0-6ddc84ff956c
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '978'
 ht-degree: 0%
 
 ---
@@ -18,22 +19,22 @@ ht-degree: 0%
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | Den här artikeln |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html) |
 
 
-Du kan [bädda in anpassningsbara formulär på en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md) eller på en webbsida som är värd utanför AEM. Det inbäddade adaptiva formuläret fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att stanna kvar i sitt sammanhang för andra element på webbsidan och interagera med formuläret samtidigt.
+Du kan [bädda in anpassningsbara formulär på en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md) eller på en webbsida som ligger utanför AEM. Det inbäddade adaptiva formuläret fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att stanna kvar i sitt sammanhang för andra element på webbsidan och interagera med formuläret samtidigt.
 
 ## Förutsättningar {#prerequisites}
 
 Utför följande steg innan du bäddar in ett anpassat formulär på en extern webbplats
 
-* Publish det adaptiva formulär som ska bäddas in i publiceringsinstansen på AEM Forms-servern.
+* Publicera det adaptiva formulär som ska bäddas in i publiceringsinstansen på AEM Forms-servern.
 * Skapa eller identifiera en webbsida på din webbplats som värd för det adaptiva formuläret. Kontrollera att webbsidan kan [läsa jQuery-filer från ett CDN](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) eller ha en lokal kopia av jQuery inbäddad. jQuery krävs för att återge ett anpassat formulär.
-* När AEM server och webbsida finns i olika domäner utför du de steg som anges i avsnittet [aktivera AEM Forms för att skicka adaptiva formulär till en korsdomänwebbplats](#cross-site).
+* När AEM-servern och webbsidan finns i olika domäner utför du de steg som anges i avsnittet [aktivera AEM Forms för att skicka adaptiva formulär till en korsdomänwebbplats](#cross-site).
 
 ## Bädda in anpassat formulär {#embed-adaptive-form}
 
-Du kan bädda in ett anpassat formulär genom att infoga några rader med JavaScript på webbsidan. API:t i koden skickar en HTTP-begäran till AEM för adaptiva formulärresurser och injicerar det adaptiva formuläret i den angivna formulärbehållaren.
+Du kan bädda in ett anpassat formulär genom att infoga några rader med JavaScript på webbsidan. API:t i koden skickar en HTTP-begäran till AEM-servern för adaptiva formulärresurser och injicerar det adaptiva formuläret i den angivna formulärbehållaren.
 
 Så här bäddar du in det anpassade formuläret:
 
@@ -95,7 +96,7 @@ Så här bäddar du in det anpassade formuläret:
 
 1. I den inbäddade koden:
 
-   * Ändra värdet för variabeln *options.path* med sökvägen för den anpassningsbara formulärets publicerings-URL. Om AEM körs på en kontextsökväg kontrollerar du att URL:en innehåller kontextsökvägen. Ange alltid det fullständiga namnet på det adaptiva formuläret inklusive tillägget.   Ovanstående kod och adaptiv kod finns till exempel på samma AEM formulärserver, så exemplet använder kontextsökvägen för adaptiv form /content/forms/af/locbasic.html.
+   * Ändra värdet för variabeln *options.path* med sökvägen för den anpassningsbara formulärets publicerings-URL. Om AEM-servern körs på en kontextsökväg kontrollerar du att URL:en innehåller kontextsökvägen. Ange alltid det fullständiga namnet på det adaptiva formuläret inklusive tillägget.   Koden ovan och adaptiv kod finns till exempel på samma AEM-formulärserver, så i exemplet används en sammanhangsbaserad sökväg med adaptiv form /content/forms/af/locbasic.html.
    * CSS_Selector är CSS-väljaren för den formulärbehållare där det adaptiva formuläret är inbäddat. Klassen .customafsection css är till exempel CSS-väljaren i exemplet ovan.
 
 Det anpassningsbara formuläret är inbäddat på webbsidan. Observera följande i den inbäddade adaptiva formen:
@@ -109,9 +110,9 @@ Det anpassningsbara formuläret är inbäddat på webbsidan. Observera följande
 
 ## Exempel på topologi {#sample-topology}
 
-Den externa webbsidan som bäddar in det adaptiva formuläret skickar begäranden till AEM server, som vanligtvis ligger bakom brandväggen i ett privat nätverk. För att säkerställa att förfrågningarna dirigeras säkert till AEM bör du konfigurera en omvänd proxyserver.
+Den externa webbsidan som bäddar in det adaptiva formuläret skickar förfrågningar till AEM-servern, som vanligtvis ligger bakom brandväggen i ett privat nätverk. För att säkerställa att förfrågningarna dirigeras till AEM-servern på ett säkert sätt bör du konfigurera en omvänd proxyserver.
 
-Låt oss titta på ett exempel på hur du kan konfigurera en omvänd Apache 2.4-proxyserver utan dispatcher. I det här exemplet kommer du att vara värd för AEM server med `/forms`-kontextsökväg och mappa `/forms` för den omvända proxyn. Den ser till att alla förfrågningar om `/forms` på Apache-servern dirigeras till AEM. Den här topologin hjälper till att minska antalet regler i dispatcherlagret eftersom alla förfrågningar som har prefixet `/forms` till AEM server minskar.
+Låt oss titta på ett exempel på hur du kan konfigurera en omvänd Apache 2.4-proxyserver utan dispatcher. I det här exemplet kommer du att vara värd för AEM-servern med kontextsökvägen `/forms` och mappningen `/forms` för den omvända proxyn. Den ser till att alla förfrågningar om `/forms` på Apache-servern dirigeras till AEM-instansen. Den här topologin hjälper till att minska antalet regler i dispatcherlagret som alla begäranden som har prefixet `/forms` till AEM-servern.
 
 1. Öppna konfigurationsfilen `httpd.conf` och avkommentera följande kodrader. Du kan också lägga till de här kodraderna i filen.
 
@@ -127,9 +128,9 @@ Låt oss titta på ett exempel på hur du kan konfigurera en omvänd Apache 2.4-
    ProxyPassReverse /forms https://[AEM_Instance]/forms
    ```
 
-   Ersätt `[AEM_Instance]` med den AEM serverns publicerings-URL i reglerna.
+   Ersätt `[AEM_Instance]` med AEM-serverns publicerings-URL i reglerna.
 
-Om du inte monterar AEM server på en kontextbana är proxyreglerna i Apache-lagret som följer:
+Om du inte monterar AEM-servern på en kontextbana, kommer proxyreglerna i Apache-lagret att vara som följer:
 
 ```text
 ProxyPass /content https://<AEM_Instance>/content
@@ -152,17 +153,17 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 Tänk på följande när du bäddar in ett anpassat formulär på en webbsida:
 
-* Kontrollera att formateringsreglerna som definieras i webbsidans CSS inte är i konflikt med formulärobjektets CSS. För att undvika konflikterna kan du återanvända webbsidans CSS i det adaptiva formulärtemat med AEM klientbibliotek. Mer information om hur du använder klientbibliotek i adaptiva formulärteman finns i [Teman i AEM Forms](/help/forms/using-themes-in-core-components.md).
+* Kontrollera att formateringsreglerna som definieras i webbsidans CSS inte är i konflikt med formulärobjektets CSS. För att undvika konflikterna kan du återanvända webbsidans CSS i det adaptiva formulärtemat med hjälp av AEM klientbibliotek. Mer information om hur du använder klientbibliotek i adaptiva formulärteman finns i [Teman i AEM Forms](/help/forms/using-themes-in-core-components.md).
 * Låt formulärbehållaren på webbsidan använda hela fönsterbredden. Det ser till att CSS-reglerna som konfigurerats för mobila enheter fungerar utan ändringar. Om formulärbehållaren inte får hela fönsterbredden måste du skriva anpassad CSS så att formuläret kan anpassas till olika mobila enheter.
 * Använd `[getData](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html)` API för att hämta XML- eller JSON-representationen av formulärdata i klienten.
 * Använd `[unloadAdaptiveForm](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html)` API för att ta bort det adaptiva formuläret från HTML DOM.
-* Ange huvudet för åtkomstkontrollens ursprung när du skickar svar från AEM server.
+* Ange huvudet för åtkomstkontrollens ursprung när du skickar svar från AEM-servern.
 
 ## Möjliggör för AEM Forms att skicka adaptiva formulär till en domänövergripande webbplats {#cross-site}
 
-1. Gå till Configuration Manager för webbkonsolen på `https://'[server]:[port]'/system/console/configMgr` AEM publiceringsinstans.
+1. På AEM publiceringsinstans går du till AEM Web Console Configuration Manager på `https://'[server]:[port]'/system/console/configMgr`.
 1. Leta reda på och öppna konfigurationen för **Refererarfilter för Apache Sling**.
-1. I fältet Tillåtna värdar anger du den domän där webbsidan finns. Det gör att värddatorn kan göra POST-förfrågningar till AEM. Du kan också använda reguljära uttryck för att ange en serie externa programdomäner.
+1. I fältet Tillåtna värdar anger du den domän där webbsidan finns. Det gör att värden kan göra POST-begäranden till AEM-servern. Du kan också använda reguljära uttryck för att ange en serie externa programdomäner.
 
 <!--
 

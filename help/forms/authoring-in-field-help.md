@@ -1,5 +1,5 @@
 ---
-title: Hur lägger jag till hjälptext AEM adaptiva Forms-fält?
+title: Hur lägger man till hjälptext för AEM Adaptive Forms-fält?
 description: Med AEM Forms kan du lägga till sammanhangsberoende hjälp i anpassade formulärfält och paneler, som text eller multimedia, inklusive videor.
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
@@ -7,13 +7,14 @@ feature: Adaptive Forms, Foundation Components
 role: User
 hide: true
 hidefromtoc: true
-source-git-commit: d661f869f1264e4a2317692ab6fd22263c89e072
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
+exl-id: 9abc6e42-3b53-4dca-bd6a-ced5cf6c6ac4
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
-
 
 # Sammanhangsberoende hjälp för formulärfält{#authoring-in-context-help-for-form-fields}
 

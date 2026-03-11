@@ -3,10 +3,11 @@ title: Hur sparar man det grundläggande komponentbaserade adaptiva formuläret 
 description: Lär dig spara grundkomponentbaserade adaptiva formulär som utkast. Vill du också veta hur du använder komponenten Utkast och inskickningar för att lista utkast och inskickade ansökningar för inloggade användare?
 feature: Adaptive Forms, Core Components
 exl-id: c0653bef-afeb-40c1-b131-7d87ca5542bc
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 role: User, Developer
-source-git-commit: 5b55a280c5b445d366c7bf189b54b51e961f6ec2
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1291'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Spara formulär som utkast och lista dem på sidan Webbplatser
 
-<!--This article provides information about the Auto-save feature, which is currently available as a pre-release feature. The pre-release feature is accessible only through our [pre-release channel](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/prerelease#new-features).-->
+<!--This article provides information about the Auto-save feature, which is currently available as a pre-release feature. The pre-release feature is accessible only through our [pre-release channel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/prerelease#new-features).-->
 
 Tänk dig en användare som börjar fylla i ett formulär men behöver göra en paus och returnera det senare. AEM har ett `save-as-draft`-alternativ som gör att användaren kan spara formuläret som ett utkast för framtida slutförande. För att underlätta detta tillhandahåller AEM Forms Portal-komponenten **Utkast och inskickat material** som finns i kartongen och som visar utkast och inskickade data på AEM Sites sidor. Komponenten listar formulär som har sparats som utkast för senare ifyllnad samt de som har skickats in. Endast inloggade användare kan redigera sina utkast eller visa sina skickade formulär. Om en anonym användare navigerar genom listan med formulär med komponenten **Sök efter och visa** och sparar ett formulär som ett utkast, visas det utkastet inte med komponenten **Utkast och överföringar** . Om du vill visa utkast och inskickade formulär måste användarna vara inloggade när de skickas.
 
@@ -22,19 +23,19 @@ Tänk dig en användare som börjar fylla i ett formulär men behöver göra en 
 
 ## Krav
 
-* [Konfigurera Azure Storage och Unified Storage Connector för Forms Portal-komponenten för utkast och överföringar](#configure-azure-storage-and-unified-storage-connector-for-drafts--submissions-forms-portal-component)
+* [Konfigurera Forms Portal-komponenten Azure Storage och Unified Storage Connector för utkast och överföringar](#configure-azure-storage-and-unified-storage-connector-for-drafts--submissions-forms-portal-component)
 
-### Konfigurera Azure Storage och Unified Storage Connector för Forms Portal-komponenten för utkast och överföringar
+### Konfigurera Forms Portal-komponenten Azure Storage och Unified Storage Connector för utkast och överföringar
 
-Komponenten **Utkast och överföringar** behöver en lagringskonfiguration för att kunna spara och visa utkast på AEM Sites-sidan. Unified Storage Connector erbjuder ett ramverk för att länka AEM till extern lagring. Om du vill spara formuläret som ett utkast måste du se till att du har ett Azure-lagringskonto och en åtkomstnyckel för att auktorisera åtkomst till lagringskontot [!DNL Azure]. När du har ett Azure-lagringskonto och åtkomstnyckeln gör du följande för att skapa en Azure Storage-konfiguration:
+Komponenten **Utkast och överföringar** behöver en lagringskonfiguration för att kunna spara och visa utkast på AEM Sites-sidan. Unified Storage Connector erbjuder ett ramverk för att länka AEM till extern lagring. Om du vill spara formuläret som ett utkast måste du se till att du har ett Azure-lagringskonto och en åtkomstnyckel för att auktorisera åtkomst till lagringskontot [!DNL Azure]. Så här skapar du en Azure-lagringskonfiguration när du har ett Azure-lagringskonto och en åtkomstnyckel:
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Azure Storage]**.
 
-   ![Val av Azure-lagringskort](/help/forms/assets/save-form-as-draft-azure-card.png)
+   ![Val av lagringskort för Azure](/help/forms/assets/save-form-as-draft-azure-card.png)
 
 1. Välj en konfigurationsmapp för att skapa konfigurationen och välj **[!UICONTROL Create]**.
 
-   ![Välj Azure Storage Configuration-mapp](/help/forms/assets/save-form-as-draft-select-config-folder.png)
+   ![Välj Azure-lagringskonfigurationsmapp](/help/forms/assets/save-form-as-draft-select-config-folder.png)
 
 1. Ange en rubrik för konfigurationen i fältet **[!UICONTROL Title]**.
 1. Ange namnet på lagringskontot [!DNL Azure] i fälten **[!UICONTROL Azure Storage Account]** och **[!UICONTROL Azure Access Key]**.
@@ -49,7 +50,7 @@ Komponenten **Utkast och överföringar** behöver en lagringskonfiguration för
    >
    > Du kan hämta **[!UICONTROL Azure Storage Account]** och **[!UICONTROL Azure Access Key]** från [Microsoft Azure-portalen](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal).
 
-   När du har skapat Azure Storage-konfigurationen konfigurerar du Unified Storage Connector för Forms Portal enligt följande:
+   När du har skapat Azure Storage Configuration konfigurerar du Unified Storage Connector för Forms Portal enligt följande:
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Unified Storage Connector]**.
 

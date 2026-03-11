@@ -5,12 +5,13 @@ contentOwner: Khushwant Singh
 docset: CloudService
 role: Admin, Developer, User
 feature: Adaptive Forms, Core Components
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 32a574e2-faa9-4724-a833-1e4c584582cf
 hide: true
 hidefromtoc: true
-source-git-commit: 37799555babb15809409ec5cda8a1c46ceff24f2
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '206'
 ht-degree: 2%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 2%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 ## Tillgång till adaptiva Forms Core-komponenter
@@ -32,8 +33,8 @@ För **AEM 6.5 Forms** - och **AEM 6.5 LTS Forms** -miljöer är adaptiva Forms 
 
 Följ de relevanta guiderna:
 
-- För AEM 6.5 Forms: [Aktivera adaptiva Forms Core-komponenter i AEM 6.5 Forms](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=sv-SE).
-- För AEM 6.5 LTS Forms: [Aktivera adaptiva Forms Core-komponenter i AEM 6.5 LTS Forms](https://experienceleague.adobe.com/sv/docs/experience-manager-65-lts/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components).
+- För AEM 6.5 Forms: [Aktivera adaptiva Forms Core-komponenter i AEM 6.5 Forms](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html).
+- För AEM 6.5 LTS Forms: [Aktivera adaptiva Forms Core-komponenter i AEM 6.5 LTS Forms](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components).
 
 **Obs!** Om några steg för att aktivera adaptiva Forms Core-komponenter i äldre AEM 6.5-miljöer är otydliga eller om det finns miljöspecifika krav måste du klargöra dessa krav innan du försöker aktivera.
 

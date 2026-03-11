@@ -6,11 +6,12 @@ role: User, Developer, Admin
 features: core components
 hide: true
 hidefromtoc: true
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: ee71a576-96a7-4c81-b3a3-1d678f010cba
 feature: Adaptive Forms, Core Components
-source-git-commit: 16b1e7ffa4e3812e9207bb283c63029939f7d14e
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1042'
 ht-degree: 0%
 
 ---
@@ -94,7 +95,7 @@ Så här installerar du AEM Modernize Tools i din lokala AEM Forms-miljö:
        mvn clean install 
    ```
 
-![Installationsavbildningen &#x200B;](/help/forms/assets/aem-modernize-install-steps.png) har slutförts
+![Installationsavbildningen ](/help/forms/assets/aem-modernize-install-steps.png) har slutförts
 
 När installationen är klar blir AEM verktyg för modernisering tillgängliga för din miljö.
 
@@ -165,5 +166,5 @@ Nu ser du att den adaptiva formen som bygger på Foundation Components omvandlas
 
 ## Bästa praxis {#best-practices}
 
-* Kontrollera att dina Foundation Components-baserade formulär bara använder de komponenter som har motsvarande [Core Components](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/introduction#available-components-a-breakdown-by-component-type) tillgängliga. Om du använder Foundation Components som inte har någon motsvarande Core Component (Grundläggande komponent) konverteras inte Foundation Component (Grundläggande komponent). Därför fungerar den inte korrekt när du redigerar ett formulär
+* Kontrollera att dina Foundation Components-baserade formulär bara använder de komponenter som har motsvarande [Core Components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction#available-components-a-breakdown-by-component-type) tillgängliga. Om du använder Foundation Components som inte har någon motsvarande Core Component (Grundläggande komponent) konverteras inte Foundation Component (Grundläggande komponent). Därför fungerar den inte korrekt när du redigerar ett formulär
 * Kontrollera att reglerna som konverterar Foundation Components till Core Components är formaterade i XML.

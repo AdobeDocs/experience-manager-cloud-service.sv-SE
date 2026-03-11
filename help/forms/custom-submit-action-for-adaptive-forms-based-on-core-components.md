@@ -4,10 +4,11 @@ description: Lär dig hur du skapar en anpassad Skicka-åtgärd för en anpassad
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Intermediate
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: a369b585-d148-4b5a-8afe-d5673ea865d0
-source-git-commit: 03e46bb43e684a6b7057045cf298f40f9f1fe622
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1138'
 ht-degree: 0%
 
 ---
@@ -47,7 +48,7 @@ I bilden nedan visas stegen för att skapa en anpassad skickaåtgärd för ett a
 
    **Var hittar du den här informationen?**
 
-   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git).
+   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git).
 
    **Projektet är klart!**
 
@@ -180,7 +181,7 @@ Skapa en ny fil med namnet `customsubmitaction` i mappen `.content.xml`.
        }
    ```
 
-   ![Anpassad skickaåtgärd &#x200B;](/help/forms/assets/custom-submit-action-service.png)
+   ![Anpassad skickaåtgärd ](/help/forms/assets/custom-submit-action-service.png)
 
 1. Spara ändringarna.
 
@@ -214,9 +215,9 @@ Skapa en ny fil med namnet `customsubmitaction` i mappen `.content.xml`.
 
    1. Distribuera den uppdaterade koden:
 
-      Utlös en distribution av koden via den [befintliga pipelinen för hela stacken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline). Den genererar och distribuerar automatiskt den uppdaterade koden med det nya stödet för åtgärden Skicka.
+      Utlös en distribution av koden via den [befintliga pipelinen för hela stacken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline). Den genererar och distribuerar automatiskt den uppdaterade koden med det nya stödet för åtgärden Skicka.
 
-      Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline).
+      Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline).
 
       ![Molndistribution](/help/forms/assets/custom-submit-action-cloud-deployment.png)
 

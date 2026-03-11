@@ -3,10 +3,11 @@ title: Hur konfigurerar jag Microsoft Dynamics 365 ur kartongen med formulärdat
 description: Lär dig hur du integrerar Microsoft Dynamics 365 med Adaptive Forms.
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: 29ee324c-cd4c-403b-bb3d-b1eda8e8ad88
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -108,7 +109,7 @@ Utför följande steg för att konfigurera molntjänstkonfigurationen [!DNL Micr
 
 1. Välj **[!UICONTROL Authentication Type]** som **OAuth2.0**.
 1. Ange **klient-ID** (kallas program-ID) och **klienthemlighet** för det anslutna programmet.
-Du kan hämta **klient-ID** och **klienthemlighet** från Azure Active Directory-programmet.
+Du kan hämta **klient-ID** och **klienthemlighet** från Azure Active Directory-program.
 
    ![Klient-ID och klienthemlighet](/help/forms/assets/dynamics-azure-app-resgistration.png)
 
@@ -159,4 +160,4 @@ Du kan sedan använda alternativet [Skicka med FDM (Form Data Model)](/help/form
 >
 >* [Konfigurera datakällor för AEM Forms](/help/forms/configure-data-sources.md)
 >* [Konfigurera Azure-lagring för AEM Forms](/help/forms/configure-azure-storage.md)
->  [Lägg till Forms Portal på en AEM Sites-sida &#x200B;](/help/forms/configure-forms-portal.md)
+>  [Lägg till Forms Portal på en AEM Sites-sida ](/help/forms/configure-forms-portal.md)

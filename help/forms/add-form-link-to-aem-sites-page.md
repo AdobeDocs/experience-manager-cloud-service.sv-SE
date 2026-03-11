@@ -3,10 +3,11 @@ title: Hur lägger man till formulärlänkar på AEM Sites-sidan med Länka Form
 description: Lär dig hur du lägger till formulärlänkar på AEM Sites-sidan.
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: a55d0776-8827-46cc-9625-5d6f5f6bda3b
-source-git-commit: 5b55a280c5b445d366c7bf189b54b51e961f6ec2
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---

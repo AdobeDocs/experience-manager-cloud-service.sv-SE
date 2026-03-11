@@ -3,13 +3,14 @@ title: Hantera formulärversioner i Forms Manager
 description: Lär dig att skapa och hantera versioner av adaptiva Forms, formulärfragment, teman och andra resurser i användargränssnittet för Forms Manager.
 feature: Adaptive Forms, Core Components, Foundation Components
 role: User, Developer, Admin
-source-git-commit: 52d6e8163ef24d362287cbedf54c2977fff9c87b
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
+exl-id: cd2c6e15-99a6-4b4e-bfd1-8291a2001ebe
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
-
 
 # Hantera formulär-Assets-versioner i användargränssnittet för Forms Manager
 

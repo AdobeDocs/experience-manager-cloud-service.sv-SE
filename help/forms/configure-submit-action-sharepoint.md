@@ -3,11 +3,12 @@ title: Hur skickar man data till SharePoint när man skickar in ett adaptivt for
 description: Lär dig hur du skickar data från ditt adaptiva formulär till en SharePoint-lagringsplats som en SharePoint-lista eller ett dokumentbibliotek när du skickar formuläret.
 keywords: Hur ansluter man SharePoint lista till ett tilläggsformulär?, Hur man ansluter SharePoint dokumentbibliotek till ett tilläggsformulär, Skicka till SharePoint, Skapa en konfiguration för SharePoint dokumentbibliotek, Använd åtgärden Skicka till SharePoint i ett adaptivt formulär, Ansluta ett adaptivt formulär till Microsoft&reg; SharePoint List.
 feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
+badgeSaas: label="AEM Forms" type="Positive" tooltip="Gäller AEM Forms)."
 exl-id: e925a750-5fb5-4950-afd3-78551eec985d
 role: User, Developer
-source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
+source-git-commit: 89b0f2a8ca9d2f60365a5c3962b0b4e826f79b3e
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
