@@ -4,9 +4,9 @@ description: Med innehållskopieringsverktyget kan användare kopiera muterbart 
 exl-id: 5883e4bc-9861-498e-bd35-32ff03d901cc
 feature: Developing
 role: Admin, Developer
-source-git-commit: 86205946b7c4b7173448eca728f4495ab7e35064
+source-git-commit: bcd32fd359024abde5fb18ec4f3b8b3e2aa910cc
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1574'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,14 @@ När en innehållsuppsättning har skapats kan du använda den för att kopiera 
 1. (Valfritt) Om du vill kan du ange följande:
 
    * **Inkludera åtkomstkontrollistor** - Välj om du vill kopiera innehållets åtkomstkontrollbehörighet tillsammans med innehållet.
-   * **Rensa** - Välj det här alternativet om du vill ta bort det befintliga innehållet på målet innan du startar importen, så att du kan börja från en ren skiffer och undvika konflikter med befintligt innehåll. Om du låter **Rensa** vara avmarkerat importerar Cloud Manager det nya innehållet ovanpå det befintliga målinnehållet. Ett bekräftelsemeddelande visas innan rensningen börjar och Cloud Manager loggar rensningsåtgärden och importinformationen för spårbarhet.
+   * **Rensa** - Välj det här alternativet om du vill ta bort det befintliga innehållet på målet innan du startar importen, så att du kan börja från ett rent läge och undvika konflikter med befintligt innehåll. Om du låter **Rensa** vara avmarkerat importerar Cloud Manager det nya innehållet ovanpå det befintliga målinnehållet. Ett bekräftelsemeddelande visas innan rensningen börjar och Cloud Manager loggar rensningsåtgärden och importinformationen för spårbarhet.
+     ![Kopierar innehåll](assets/content_copy_wipe-destination.png)
+      * När du väljer alternativet **Rensa mål före import** och klickar på **Kopiera** visas ett popup-fönster med en varning där du har alternativen för att:
+         * **Avbryt** (i det här fallet startar inte flödet **Kopiera innehåll**)
+         * **Bekräfta** (flödet **Kopiera innehåll** startas och innehållet på målet rensas)
+           ![Kopierar innehåll](assets/content-copy-wipe-destination-warning.png)
+
+      * Om du inte väljer **Radera mål före import** kommer flödet **Kopiera innehåll** att fungera som tidigare.
 
 1. Klicka på **Kopiera**.
 
