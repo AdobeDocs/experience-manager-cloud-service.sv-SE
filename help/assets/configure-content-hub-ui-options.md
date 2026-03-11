@@ -2,9 +2,9 @@
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
 exl-id: e9e22862-9bcd-459a-bcf4-7f376a0b329a
-source-git-commit: 30dc2465aacf9d586755a1aa69cc473f237d0103
+source-git-commit: 1b7cbf4e66a57dd86b04122ecb6b79eb59b3f02a
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2817'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Med Experience Manager Assets kan administratörer konfigurera de alternativ som
 
 * Alla anpassade länkar som du behöver inkludera på Content Hub förutom resurser, samlingar och insikter.
 
->[!VIDEO](https://video.tv.adobe.com/v/3472950/?captions=swe&learn=on&enablevpops){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3472917/?learn=on&enablevpops){transcript=true}
 
 ## Förutsättningar {#prerequisites-configuration-ui}
 
@@ -80,11 +80,11 @@ Som administratör hanterar du följande konfigurationsalternativ för dina anv�
 
 Du kan konfigurera metadatafält som visas för användarna när du överför eller importerar resurser till Content Hub-portalen, till exempel kampanjnamn, nyckelord, kanaler, tidsram, region och så vidare. Gör så här:
 
-1. Klicka på [&#x200B; i användargränssnittet för &#x200B;](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Import]**.
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Import]**.
 
 1. Klicka på **[!UICONTROL Add metadata]**.
 
-1. Ange en etikett för egenskapen, mappa den till en egenskap med hjälp av fältet **[!UICONTROL Metadata]** och välj indatatypen för de nya metadata för resursen.
+1. Ange en etikett för egenskapen, mappa den till en egenskap med hjälp av fältet **[!UICONTROL Metadata]** och välj lämplig indatatyp för de nya metadata för resursen. Indatatypsetiketterna uppdateras för att anpassas till Adobe Experience Manager (AEM). De tillgängliga indatatyperna är Text, Taggar, Datum, Nummer, Listruta, Flervärdestext, Smarta taggar och Smarta färgtaggar. För vissa metadatafält (xcm:colorDistribution, xcm:machineKeywords) tilldelas indatatypen automatiskt och kan inte ändras.
 
 1. Klicka på växlingsknappen **[!UICONTROL Required field]** för att göra det nya metadatafältet obligatoriskt att ange för användare när nya resurser överförs.
 
@@ -98,7 +98,7 @@ Klicka på växlingsknappen **[!UICONTROL Auto-approval]** om du vill att alla r
 
 Klicka på **[!UICONTROL Save]** när du har gjort alla ändringar för att tillämpa ändringarna.
 
-![Överföringsinformation för konfigurationsgränssnittet på Content Hub](/help/assets/assets/import-content-hub1.png)
+![Överföringsinformation för konfigurationsgränssnittet på Content Hub](assets/filter-new.png)
 
 Metadata är aktiverade i konfigurationsanvändargränssnittet på sidan för överföring av resurser:
 ![Överför metadata på Content Hub](assets/add-assets-for-approval1.png)
@@ -107,13 +107,10 @@ Metadata är aktiverade i konfigurationsanvändargränssnittet på sidan för ö
 
 I Content Hub kan administratörer konfigurera filter som visas när de söker efter resurser. Utför följande steg för att lägga till ett nytt filter:
 
-1. Klicka på [&#x200B; i användargränssnittet för &#x200B;](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Filters]**.
-
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Filters]**.
 1. Klicka på **[!UICONTROL Add filters]**.
-
-1. Ange en etikett för filtret, mappa det till en egenskap med fältet **[!UICONTROL Metadata]** och välj indatatypen för det nya filtret.
+1. Ange en etikett för filtret, mappa det till en egenskap med fältet **[!UICONTROL Metadata]** och välj lämplig indatatyp för det nya filtret. Indatatypsetiketterna uppdateras för att anpassas till Adobe Experience Manager (AEM). De tillgängliga indatatyperna är Text, Taggar, Datum, Nummer, Listruta, Flervärdestext, Smarta taggar och Smarta färgtaggar. För vissa metadatafält (xcm:colorDistribution, xcm:machineKeywords) tilldelas indatatypen automatiskt och kan inte ändras.
 1. Klicka på **[!UICONTROL Confirm]**. Det nya filtret visas i listan över befintliga filter.
-
 1. Klicka på **[!UICONTROL Save]** om du vill använda ändringarna så att det nya filtret visas på söksidan när du filtrerar resurser.
 
    >[!NOTE]
@@ -121,7 +118,7 @@ I Content Hub kan administratörer konfigurera filter som visas när de söker e
    >Det nya filtret visas bara på söksidan om det finns minst en resurs i databasen som matchar filtervillkoren.
 
 På samma sätt kan du klicka på ikonen ![Redigera](assets/do-not-localize/edit_icon.svg), som finns bredvid varje tillgängligt filter, för att redigera etiketterna eller klicka på ikonen Ta bort för att ta bort befintliga filter. Klicka på **[!UICONTROL Save]** när du har gjort alla ändringar för att tillämpa ändringarna.
-![Gränssnittsfilter för konfiguration på Content Hub](assets/configuration-filter1.png)
+![Gränssnittsfilter för konfiguration på Content Hub](assets/add-filters.png)
 
 De filter som är aktiverade i konfigurationsanvändargränssnittet visas på söksidan:
 ![Sök på Content Hub](assets/content-hub-filters1.png)
@@ -130,13 +127,13 @@ De filter som är aktiverade i konfigurationsanvändargränssnittet visas på s�
 
 Om du vill aktivera sökning av flera resurser samtidigt i [!DNL Content Hub] ska du utföra följande steg:
 
-1. Klicka på [&#x200B; i användargränssnittet för &#x200B;](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Filters]**.
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Filters]**.
 
 1. Klicka på ikonen ![Redigera](assets/do-not-localize/edit_icon.svg)som finns bredvid varje tillgängligt filter.
 
 1. Aktivera växlingen **[!UICONTROL Bulk Search]**. Standardavgränsarna `[ , | \t | \r\n | \r | \n ]` visas automatiskt. Dessutom kan du lägga till ytterligare avgränsare. Om du vill göra det anger du avgränsare i indatarutan avgränsade med `pipe symbol (|)`.
 
-   ![Konfiguration för masssökning](assets/bulk-search-configuration.png)
+   ![Konfiguration för masssökning](assets/edit-filter-new.png)
 
 1. Klicka på **[!UICONTROL Confirm]** om du vill spara ändringarna. Se [Masssökning i Content Hub](search-assets-content-hub.md#bulk-search) in action.
 
@@ -144,18 +141,17 @@ Om du vill aktivera sökning av flera resurser samtidigt i [!DNL Content Hub] sk
 
 Du kan också konfigurera resursegenskaperna som visas för varje resurs, till exempel filnamn, titel, format, storlek och så vidare. Gör så här:
 
-1. Klicka på [&#x200B; i användargränssnittet för &#x200B;](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Asset details]**.
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Asset details]**.
 
 1. Klicka på **[!UICONTROL Add metadata]**.
-
-1. Ange en etikett för egenskapen, mappa den till en egenskap med hjälp av fältet **[!UICONTROL Metadata]** och välj indatatypen för de nya metadata för resursen.
+1. Ange en etikett för egenskapen, mappa den till en egenskap med hjälp av fältet **[!UICONTROL Metadata]** och välj lämplig indatatyp för de nya metadata för resursen. Indatatypsetiketterna uppdateras för att anpassas till Adobe Experience Manager (AEM). De tillgängliga indatatyperna är Text, Taggar, Datum, Nummer, Listruta, Flervärdestext, Smarta taggar och Smarta färgtaggar. För vissa metadatafält (xcm:colorDistribution, xcm:machineKeywords) tilldelas indatatypen automatiskt och kan inte ändras.
 1. Klicka på **[!UICONTROL Confirm]**. De nya metadata visas i listan över befintliga resursegenskaper.
 
 1. Klicka på **[!UICONTROL Save]** för att tillämpa ändringarna så att den nya egenskapen visas på sidan med resursinformation.
 
 På samma sätt kan du klicka på ikonen ![Redigera](assets/do-not-localize/edit_icon.svg), som finns bredvid varje tillgänglig egenskap, för att redigera etiketterna eller klicka på ikonen Ta bort för att ta bort alla befintliga resursdetaljer. Klicka på **[!UICONTROL Save]** när du har gjort alla ändringar för att tillämpa ändringarna.
 
-![Information om användargränssnittsresurser för konfiguration på Content Hub](assets/configuration-asset-details.png)
+![Information om användargränssnittsresurser för konfiguration på Content Hub](assets/asset-detailsn.png)
 
 De egenskaper som är aktiverade i konfigurationsanvändargränssnittet visas på sidan Resursinformation:
 
@@ -178,7 +174,7 @@ På samma sätt klickar du på ![redigera](/help/assets/assets/edit-content-hub.
 
 Administratörer kan definiera metadatafält som söks igenom när en användare anger ett sökvillkor i Content Hub. Utför följande steg:
 
-1. Klicka på [&#x200B; i användargränssnittet för &#x200B;](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Add metadata]**.
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Add metadata]**.
 
 1. Ange metadatafältet och klicka på **[!UICONTROL Confirm]**.
 
@@ -191,7 +187,7 @@ På samma sätt kan du klicka på ikonen ![Redigera](assets/do-not-localize/edit
 
 Som administratör anpassar du din [!DNL Content Hub]-portal så att den uppfyller dina varumärkeskrav.
 ![återställ standard](/help/assets/assets/reset-default-content-hub.png)
-På sidan ![&#x200B; Varumärkning &#x200B;](/help/assets/assets/ColorPalette.svg) **[!UICONTROL Branding]** använder du avsnitten **[!UICONTROL Banner]**, **[!UICONTROL Colors]** och **[!UICONTROL Banner image]** för att utföra följande anpassningar:
+På sidan ![ Varumärkning ](/help/assets/assets/ColorPalette.svg) **[!UICONTROL Branding]** använder du avsnitten **[!UICONTROL Banner]**, **[!UICONTROL Colors]** och **[!UICONTROL Banner image]** för att utföra följande anpassningar:
 
 1. [Ändra logotypbilden från avsnittet [!UICONTROL Logo image]](#Change-the-logo-image)
 1. [Ändra banderollbilden från avsnittet [!UICONTROL Banner image]](#Change-the-banner-image)
@@ -244,7 +240,7 @@ Utgångna mediefiler visas inte i Content Hub som standard.
 
 Gör så här:
 
-1. Klicka på [&#x200B; i användargränssnittet för &#x200B;](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Asset Visibility]**.
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Asset Visibility]**.
 
 1. Aktivera alternativet **[!UICONTROL Visible]** i avsnittet **[!UICONTROL Allow users to view expired assets]** för att göra alla förfallna resurser synliga på Content Hub.
 
@@ -264,11 +260,11 @@ Om synligheten för utgångna resurser är aktiverad markeras även resurser som
 
 ### Återgivningar {#renditions-content-hub}
 
-Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
+Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
 
 Gör så här:
 
-Klicka på [&#x200B; i användargränssnittet för &#x200B;](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Renditions]**. Följande alternativ är tillgängliga:
+Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Renditions]**. Följande alternativ är tillgängliga:
 
 * Aktivera växlingsknappen [!UICONTROL Enable availability of renditions] för att göra alla återgivningar synliga på Content Hub.
 
@@ -282,7 +278,7 @@ Mer information om hur du visar och hämtar återgivningar i Content Hub finns i
 
 Du kan även lägga till anpassade flikar utöver standardflikarna **[!UICONTROL All Assets]**, **[!UICONTROL Collections]** och **[!UICONTROL Insights]** på Content Hub-portalen precis nedanför banderollen. Gör så här:
 
-1. Klicka på [&#x200B; i användargränssnittet för &#x200B;](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Custom Links]**.
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Custom Links]**.
 
 1. Klicka på **[!UICONTROL Add link]**.
 
@@ -302,7 +298,7 @@ Den anpassade länken visas som en ny flik bredvid fliken Insikter på Content H
 
 Administratörer kan definiera användarbehörigheter när de skapar samlingar. Så här aktiverar du de här inställningarna:
 
-1. Klicka på [&#x200B; i användargränssnittet för &#x200B;](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Collections]**.
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Collections]**.
 
 1. Aktivera växlingsknappen **[!UICONTROL Enable Public Link]** för att tillåta att offentliga länkar skapas som externa användare kan använda för att komma åt och hämta resurser utan att logga in på Content Hub.
 
