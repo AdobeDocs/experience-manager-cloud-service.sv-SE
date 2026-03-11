@@ -40,7 +40,7 @@ Du kan hämta referensdokumentation för Java™ API från [!DNL Maven Central R
    1. Öppna filen index.html för att visa API-referensdokumentationen.
 
 * **Var kan jag få [!DNL JavaScript™] API-referens för Adaptiv Forms?**
-Du kan hämta [!DNL JavaScript™] API-referensdokumentation från [!DNL  Maven Central Repository]. Så här hämtar du:
+Du kan hämta [!DNL JavaScript™] API-referensdokumentation från [!DNL &#x200B; Maven Central Repository]. Så här hämtar du:
    1. Öppna [[!DNL Maven Central Repository]](https://mvnrepository.com/artifact/com.adobe.aem/aem-forms-sdk-api).
    1. Leta upp och öppna sidan som innehåller den senaste versionen av [!DNL Experience Manager Forms] SDK.
    1. Klicka på alternativet Visa alla om du vill visa alla filer.
@@ -85,7 +85,7 @@ Formulärdatamodellen (FDM) har ingen metod för att använda anpassade certifik
 
 * **Kan jag använda Forms Portal-åtgärden Adaptiv Forms?**
 
-  Du kan ändra din befintliga adaptiva Forms så att den använder [Skicka till REST-slutpunkt](configuring-submit-actions.md#submit-to-rest-endpoint), [Skicka e-post](configuring-submit-actions.md#send-email), [Skicka med hjälp av formulärdatamodell ](configuring-submit-actions.md#submit-using-form-data-model) och [Anropa ett AEM-arbetsflöde](configuring-submit-actions.md#invoke-an-aem-workflow) Skicka-åtgärder. Forms Portal och Forms Portal har ännu inte släppts. Håll ett öga på månadsversionsinformationen om vilka funktioner som är tillgängliga.
+  Du kan ändra din befintliga adaptiva Forms så att den använder [Skicka till REST-slutpunkt](configuring-submit-actions.md#submit-to-rest-endpoint), [Skicka e-post](configuring-submit-actions.md#send-email), [Skicka med hjälp av formulärdatamodell &#x200B;](configuring-submit-actions.md#submit-using-form-data-model) och [Anropa ett AEM-arbetsflöde](configuring-submit-actions.md#invoke-an-aem-workflow) Skicka-åtgärder. Forms Portal och Forms Portal har ännu inte släppts. Håll ett öga på månadsversionsinformationen om vilka funktioner som är tillgängliga.
 
 * **Kan jag använda [!DNL AEM Forms]-appen med [!DNL AEM Forms] as a Cloud Service?**
 
@@ -95,7 +95,7 @@ Formulärdatamodellen (FDM) har ingen metod för att använda anpassade certifik
 Forms Portal, appen [!DNL AEM Forms] , integrationen med Adobe Analytics och integrationen med Adobe Target ingår inte i den första GA-versionen. Information om de nya funktionerna finns i månadsversionskommentarerna.
 
 * **Jag har utformat ett [JSON-schema för att skapa ett anpassat formulär](adaptive-form-json-schema-form-model.md). JSON-schemat definierar händelser för vissa komponenter i adaptiva formulär. Har AEM Forms as a Cloud Service stöd för event?**
-Skapa det adaptiva formuläret baserat på JSON-schemat i Experience Manager 6.5 Forms-miljön och använd [ migreringsverktyget ](migrate-to-forms-as-a-cloud-service.md) för att migrera sådana adaptiva Forms till AEM Forms as a Cloud Service. Verktyget konverterar sådana händelser till klientbibliotek och du kan fortsätta använda Adaptive Forms med händelser i en Cloud Service-miljö.
+Skapa det adaptiva formuläret baserat på JSON-schemat i Experience Manager 6.5 Forms-miljön och använd [&#x200B; migreringsverktyget &#x200B;](migrate-to-forms-as-a-cloud-service.md) för att migrera sådana adaptiva Forms till AEM Forms as a Cloud Service. Verktyget konverterar sådana händelser till klientbibliotek och du kan fortsätta använda Adaptive Forms med händelser i en Cloud Service-miljö.
 
 <!-- 
 

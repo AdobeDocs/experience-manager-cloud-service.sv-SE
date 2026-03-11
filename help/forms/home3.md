@@ -49,7 +49,7 @@ Få exklusiv tillgång till de senaste innovationerna från AEM Forms:
 - **🔗Direkt API-integrering** - Anslut till API:er utan konfiguration av formulärdatamodell
 - **📊Forms-optimering** - Förbättrade AI-baserade prestandaanalyser och konverteringar
 
-[Begär åtkomst →](mailto:aem-forms-ea@adobe.com) | [Läs mer → ](/help/forms/early-access-ea-features.md)
+[Begär åtkomst →](mailto:aem-forms-ea@adobe.com) | [Läs mer → &#x200B;](/help/forms/early-access-ea-features.md)
 
 ## 📋 Skapa och redigera formulär {#form-creation}
 

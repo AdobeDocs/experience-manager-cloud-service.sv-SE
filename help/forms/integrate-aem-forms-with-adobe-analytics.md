@@ -917,7 +917,7 @@ Att förstå hur man tolkar och agerar på data från formuläranalyser är avg�
 
 >[!TIP]
 >
->Ytterligare felsökningsanvisningar finns i våra [felsökningsguider för AEM Forms ](/help/forms/troubleshooting-installation-and-configuration.md) och [felsökning av formulärskapande](/help/forms/form-creation-failing.md).
+>Ytterligare felsökningsanvisningar finns i våra [felsökningsguider för AEM Forms &#x200B;](/help/forms/troubleshooting-installation-and-configuration.md) och [felsökning av formulärskapande](/help/forms/form-creation-failing.md).
 
 **Konfigurationsproblem**
 

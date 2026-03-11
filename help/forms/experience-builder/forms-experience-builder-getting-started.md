@@ -63,9 +63,9 @@ Skapa formulär med naturliga språkbeskrivningar av era behov.
 **Exempel:**
 
     Skapa ett formulär för kundfeedback med:
-    - Produktklassificering (1-5 stjärnor)
-    - Kommentarsfält för detaljerad feedback
-    - E-post från kund (valfritt)
+    &#x200B;- Produktklassificering (1-5 stjärnor)
+    &#x200B;- Kommentarsfält för detaljerad feedback
+    &#x200B;- E-post från kund (valfritt)
 
 >[!VIDEO](https://video.tv.adobe.com/v/3473104)
 
@@ -131,9 +131,9 @@ Inkludera ytterligare funktioner:
 
     Lägg till två listrutor
     
-    - queryType med alternativ: General question, &quot;Support Request&quot;, &quot;Sales Inquiry&quot;, &quot;Partnership&quot;
+    &#x200B;- queryType med alternativ: General question, &quot;Support Request&quot;, &quot;Sales Inquiry&quot;, &quot;Partnership&quot;
     
-    - EmergencyLevel med alternativ (Low, Medium, High)
+    &#x200B;- EmergencyLevel med alternativ (Low, Medium, High)
 
 
 ![En listrutekomponent har lagts till med hjälp av naturliga språkuppmaningar i formulärupplevelseverktyget](/help/forms/assets/forms-experience-builder-contact-us-form-add-dropdown.png)
@@ -167,9 +167,9 @@ Använd `@fieldName` för att referera till specifika fält:
 
 Beskriv vad du vill ha på engelska:
 
-    - Lägg till ett avsnitt för företagsinformation 
-    - Skapa en listruta för avdelningsval
-     - Inkludera en filöverföring för CV
+    &#x200B;- Lägg till ett avsnitt för företagsinformation 
+    &#x200B;- Skapa en listruta för avdelningsval
+     &#x200B;- Inkludera en filöverföring för CV
 
 ### Bygg stegvis {#build-incrementally}
 
@@ -189,53 +189,53 @@ Börja enkelt och lägg till komplexitet gradvis:
 **Grundläggande kontaktformulär:**
 
     Skapa ett kontaktformulär med:
-    - Namn (obligatoriskt)
-    - E-post (obligatoriskt, validerat)
-    - Listrutan Ämne (Allmänt, Support, Försäljning, Partnerskap)
-    - Meddelande (obligatoriskt, flerradigt)
+    &#x200B;- Namn (obligatoriskt)
+    &#x200B;- E-post (obligatoriskt, validerat)
+    &#x200B;- Listrutan Ämne (Allmänt, Support, Försäljning, Partnerskap)
+    &#x200B;- Meddelande (obligatoriskt, flerradigt)
 
 **Formulär för kundfeedback:**
 
     Skapa ett formulär för kundfeedback med:
-    - Produktklassificering (1-5 stjärnor)
-    - Kommentarsfält för detaljerad feedback
-    - E-post från kund (valfritt)
+    &#x200B;- Produktklassificering (1-5 stjärnor)
+    &#x200B;- Kommentarsfält för detaljerad feedback
+    &#x200B;- E-post från kund (valfritt)
 
 ### Registrerings- och introduktionsformulär {#registration-onboarding-forms}
 
 **Användarregistrering:**
 
     Skapa ett användarregistreringsformulär med:
-    - Personlig information (namn, e-postadress, telefon)
-    - Kontoinställningar (nyhetsbrev, meddelanden)
-    - Villkor för godkännande
-    - Lösenordsskapande med styrkevalidering
+    &#x200B;- Personlig information (namn, e-postadress, telefon)
+    &#x200B;- Kontoinställningar (nyhetsbrev, meddelanden)
+    &#x200B;- Villkor för godkännande
+    &#x200B;- Lösenordsskapande med styrkevalidering
 
 **Anställningskoncern:**
 
     Skapa ett formulär för anställdas introduktion med:
-    - Personlig information och kontaktinformation
-    - Anställningsinformation och startdatum
-    - Dokumentöverföringar (CV, ID, skatteformulär)
-    - Val av förmåner och inställningar
+    &#x200B;- Personlig information och kontaktinformation
+    &#x200B;- Anställningsinformation och startdatum
+    &#x200B;- Dokumentöverföringar (CV, ID, skatteformulär)
+    &#x200B;- Val av förmåner och inställningar
 
 ### Undersöknings- och bedömningsformulär {#survey-assessment-forms}
 
 **Kundnöjdhetsundersökning:**
 
     Skapa en kundnöjdhetsundersökning med:
-    - Samlat omdöme (skala 1-10)
-    - Kategoribetyg (produkt, tjänst, support)
-    - Öppen feedback-sektion
-     - Demografisk information (valfritt)
+    &#x200B;- Samlat omdöme (skala 1-10)
+    &#x200B;- Kategoribetyg (produkt, tjänst, support)
+    &#x200B;- Öppen feedback-sektion
+     &#x200B;- Demografisk information (valfritt)
 
 **Kompetensbedömning:**
 
     Skapa ett formulär för kompetensbedömning med:
-    - Kompetenskategorier med kunskapsnivåer 
-     - Upplevelsevaraktighet för varje kompetens
-    - Certifierings- och utbildningsinformation
-    - Självutvärdering och mål
+    &#x200B;- Kompetenskategorier med kunskapsnivåer 
+     &#x200B;- Upplevelsevaraktighet för varje kompetens
+    &#x200B;- Certifierings- och utbildningsinformation
+    &#x200B;- Självutvärdering och mål
 
 ## Testning och validering {#testing-validation}
 
