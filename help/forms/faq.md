@@ -29,7 +29,7 @@ Ja, du kan skapa ett XFA-baserat adaptivt formulär på en Cloud Service-instans
 * **Kan jag migrera innehåll från en lokal eller [!DNL Adobe-Managed Services] lokal miljö till [!DNL Forms] as a Cloud Service-miljö?**
 Ja, du kan migrera din egen kod, ditt innehåll och dina resurser från On-Premise- eller [!DNL Adobe-Managed Services] -miljöer till [!DNL Forms] as a Cloud Service-miljö. Mer information finns i [Migrera till Forms as a Cloud Service](migrate-to-forms-as-a-cloud-service.md).
 
-<!-- You can use package manager or Experience Manager UI to [export and import Forms and related assets](import-export-forms-templates.md), use the migration utility to make your existing assets compatible with [!DNL Forms] as a Cloud Service, use the [Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=en#best-practices-analyzer) tool to find the features and APIs that require changes and updated before migration, and use the [Content Transfer Tools](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/moving/home.html) to move your custom code without refactoring it. -->
+<!-- You can use package manager or Experience Manager UI to [export and import Forms and related assets](import-export-forms-templates.md), use the migration utility to make your existing assets compatible with [!DNL Forms] as a Cloud Service, use the [Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=sv-SE#best-practices-analyzer) tool to find the features and APIs that require changes and updated before migration, and use the [Content Transfer Tools](https://docs.adobe.com/content/help/sv-SE/experience-manager-cloud-service/moving/home.html) to move your custom code without refactoring it. -->
 
 * **Var kan jag få AEM [!DNL Forms] as a Cloud Service [!DNL Java™] API-referensdokumentation?**
 Du kan hämta referensdokumentation för Java™ API från [!DNL Maven Central Repository]. Så här hämtar du:
@@ -59,7 +59,7 @@ Ja, du kan skapa Adaptiv Forms för att ta fram schemakompatibla data.
 Custom parameters are planned for an upcoming release. -->
 
 * **Kan jag cachelagra skyddat innehåll?**
-Cachelagring av funktioner för skyddat innehåll är inaktiverat som standard. Om du vill aktivera funktionen kan du utföra instruktionerna på [Cachelagra skyddat innehåll](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html).
+Cachelagring av funktioner för skyddat innehåll är inaktiverat som standard. Om du vill aktivera funktionen kan du utföra instruktionerna på [Cachelagra skyddat innehåll](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=sv-SE).
 
 * **Jag har ett lokaliserat adaptivt formulär. Återger det inte en lokaliserad version? Vad kan vara orsaken och hur kan jag lösa den?**
 
@@ -105,7 +105,7 @@ Skapa det adaptiva formuläret baserat på JSON-schemat i Experience Manager 6.5
 
   You can get started with Adobe Experience Manager easily with just a few steps:
 
-  1. Generate the Service credentials: Use Adobe Experience Manager Developer Console to [generate](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?#generate-service-credentials) the service credentials.  
+  1. Generate the Service credentials: Use Adobe Experience Manager Developer Console to [generate](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE&#generate-service-credentials) the service credentials.  
   
   1. Setup your connection: Add your service credentials to the Adobe Experience Manager Connector. You can get crdential from service credential JSON and copy these credential details to your one-time connection setup:
 

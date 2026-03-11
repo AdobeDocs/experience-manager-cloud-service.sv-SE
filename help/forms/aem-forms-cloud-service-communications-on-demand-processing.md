@@ -36,7 +36,7 @@ Kontrollera att du har de behörigheter och behörigheter som krävs innan du b�
 
 >[!NOTE]
 >
-> Mer information om hur du tilldelar roller och beviljar åtkomst till användare finns i artikeln [Lägg till användare och roller](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles).
+> Mer information om hur du tilldelar roller och beviljar åtkomst till användare finns i artikeln [Lägg till användare och roller](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/users-and-roles).
 
 **Git-databasåtkomst**
 
@@ -123,7 +123,7 @@ Observera din AEM URL-instans på informationssidan **Miljö** .
 
 >[!NOTE]
 >
-> Information om hur du får åtkomst till AEM Cloud-tjänstmiljön och AEM Forms Endpoint finns i [Hantera miljödokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html).
+> Information om hur du får åtkomst till AEM Cloud-tjänstmiljön och AEM Forms Endpoint finns i [Hantera miljödokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE).
 
 ### Steg 2: Klona Git-databas
 
@@ -262,7 +262,7 @@ Generera åtkomsttoken manuellt i Adobe Developer Console:
 
 >[!TAB För produktion]
 
-Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
+Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
 
 **Nödvändiga autentiseringsuppgifter:**
 

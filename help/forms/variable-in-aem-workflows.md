@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/variable-in-aem-workflows.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/variable-in-aem-workflows.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 En variabel i en arbetsflödesmodell är ett sätt att lagra ett värde baserat på dess datatyp. Du kan använda namnet på variabeln i vilket arbetsflödessteg som helst för att hämta värdet som lagras i variabeln. Du kan också använda variabelnamn för att definiera uttryck för att fatta beslut om routning.
@@ -38,7 +38,7 @@ Variabler är ett tillägg till det befintliga [MetaDataMap](https://helpx.adobe
 Du skapar variabler med hjälp av avsnittet Variabler som är tillgängliga i arbetsflödesmodellens sidospak. AEM Workflow-variabler har stöd för följande datatyper:
 
 * **Primitiva datatyper**: Long, Double, Boolean, Date och String
-* **Komplexa datatyper**: [Dokument](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html), [XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html), [JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html) och Form Data Model-instans.
+* **Komplexa datatyper**: [Dokument](https://helpx.adobe.com/se/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html), [XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html), [JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html) och Form Data Model-instans.
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ Med ELLER-delning skapas en delning i arbetsflödet, varefter endast en gren är
 
 Du kan definiera routningsuttryck för en gren med en regeldefinition, ett ECMA-skript eller ett externt skript.
 
-Du kan använda variabler för att definiera routningsuttrycket med hjälp av uttrycksredigeraren. Mer information om hur du använder routningsuttryck för steget ELLER Dela finns i [ELLER Dela steg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem#or-split).
+Du kan använda variabler för att definiera routningsuttrycket med hjälp av uttrycksredigeraren. Mer information om hur du använder routningsuttryck för steget ELLER Dela finns i [ELLER Dela steg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html?lang=sv-SE#extending-aem?lang=sv-SE#or-split).
 
 I det här exemplet använder du [example 2](variable-in-aem-workflows.md#example2) för att ange värdet för variabeln **totalvalue** innan du definierar routningsuttrycket. Gren 1 är aktiv om värdet för variabeln **totalvalue** är större än 50000. På samma sätt kan du definiera en regel som gör grenen 2 aktiv om värdet för variabeln **totalvalue** är mindre än 50000.
 
@@ -174,13 +174,13 @@ Med **Gå till steg** kan du ange nästa steg i arbetsflödesmodellen som ska k�
 
 Ungefär som i steget ELLER Dela kan du definiera routningsuttryck för Gå till med hjälp av en regeldefinition, ett ECMA-skript eller ett externt skript.
 
-Du kan använda variabler för att definiera routningsuttrycket med hjälp av uttrycksredigeraren. Mer information om hur du använder routningsuttryck för steget Gå till finns i [Gå till steg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem#goto-step).
+Du kan använda variabler för att definiera routningsuttrycket med hjälp av uttrycksredigeraren. Mer information om hur du använder routningsuttryck för steget Gå till finns i [Gå till steg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html?lang=sv-SE#extending-aem?lang=sv-SE#goto-step).
 
 ![Gå till regel](assets/variables_goto_rule1_new.png)
 
 I det här exemplet anger Gå till-steget Granska kreditkortsansökan som nästa steg om värdet för variabeln **actiontaken** är lika med **Behöver mer information**.
 
-Mer exempel på hur du använder regeldefinitionen i steget Gå till finns i [Simulera en For-slinga](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem#simulateforloop).
+Mer exempel på hur du använder regeldefinitionen i steget Gå till finns i [Simulera en For-slinga](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html?lang=sv-SE#extending-aem?lang=sv-SE#simulateforloop).
 
 #### Forms-centrerade arbetsflödessteg {#forms-workflow-centric-workflow-steps}
 

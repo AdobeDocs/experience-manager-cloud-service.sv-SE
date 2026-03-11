@@ -17,7 +17,7 @@ ht-degree: 1%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/oauth2-client-credentials-flow-for-server-to-server-integration.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/oauth2-client-credentials-flow-for-server-to-server-integration.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Adobe Experience Manager (AEM) Forms-integrering med Salesforce gör att man kan effektivisera processerna genom att koppla blankettgenereringen och blanketthanteringen till Salesforce. Om du kopplar ett adaptivt formulär till Salesforce kan du utbyta data på ett smidigt sätt mellan de två plattformarna. När användare skickar formulär synkroniseras data automatiskt med Salesforce. Det säkerställer att all kundinformation är aktuell och centraliserad inom systemet.
@@ -41,7 +41,7 @@ Innan du anger kommunikation mellan ett Salesforce-program och en AEM-miljö:
 
 * Skapa en [Salesforce-ansluten app med OAuth 2.0-klientautentiseringsflöde](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) och en API-användare för din organisation och hämta konsumentnyckeln och konsumenthemligheten för appen.
 
-* Kontrollera att Swagger-filen är rätt konfigurerad för att matcha organisationens API:er. Du kan också välja att [skapa en Swagger-fil](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html) från början, som är anpassad för användning i din AEM-miljö.
+* Kontrollera att Swagger-filen är rätt konfigurerad för att matcha organisationens API:er. Du kan också välja att [skapa en Swagger-fil](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html?lang=sv-SE) från början, som är anpassad för användning i din AEM-miljö.
 
 
 ## Konfigurera Salesforce-program med OAuth 2.0 Client Credential-flöde {#steps-to-create-aem-datasource-configuration}
