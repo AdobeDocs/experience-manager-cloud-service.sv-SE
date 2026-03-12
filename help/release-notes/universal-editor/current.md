@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2026.03.05
-description: Det här är versionsinformationen för version 2026.03.05 av Universal Editor.
+title: Versionsinformation om Universal Editor 2026.03.12
+description: Detta är versionsinformationen för version 2026.03.12 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 2148c2399c1d5121de155d512dba7eeed3315a31
+source-git-commit: ef6e65a72eaa5e7e8b15f8ec096cd43351bc2674
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '151'
 ht-degree: 1%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2026.03.05 {#release-notes}
+# Versionsinformation om Universal Editor 2026.03.12 {#release-notes}
 
-Detta är versionsinformationen för den 5 mars 2026-utgåvan av Universal Editor.
+Detta är versionsinformationen för den 12 mars 2026-utgåvan av Universal Editor.
 
 >[!TIP]
 >
@@ -26,8 +26,7 @@ Detta är versionsinformationen för den 5 mars 2026-utgåvan av Universal Edito
 
 ## Nyheter {#what-is-new}
 
-* [Komponentväljaren](/help/sites-cloud/authoring/universal-editor/authoring.md#adding-components) har en ny design.
-* [En färgväljare](/help/sites-cloud/authoring/universal-editor/authoring.md#formatting-options) för textredigeraren är nu tillgänglig.
+* Komponenter kan nu läggas till via [snabbmenyn](/help/sites-cloud/authoring/universal-editor/authoring.md#context-menu) med behållare.
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -37,5 +36,4 @@ Om du är intresserad av att testa de kommande funktionerna som listas nedan och
 
 ## Andra förbättringar {#other-improvements}
 
-* Justering, textriktning och indragsalternativ är nu [aktiverade som standard i RTE](/help/implementing/universal-editor/configure-rte.md), förutsatt att backend-funktionen har stöd för dem.
-* Flikar återges nu när du använder ett innehållsfragment med Open API- och UI-schema.
+* Ett problem har korrigerats där underelementen för dokumentredigering inte följer nthChild-reglerna.
