@@ -4,9 +4,9 @@ description: Lär dig hur du använder Model Context Protocol med AEM as a Cloud
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: ddb7fc8c-affc-4374-8e08-d45d96017109
-source-git-commit: b3704dad066b66b103fdec849879f889e895c09d
+source-git-commit: 6fccf4f197fbfd38aa6a84422dc347b02d03061d
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1786'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,8 @@ De specifika verktyg som visas av varje MCP-server kan utvecklas över tid. I pr
 ```
 
 MCP-klienten använder MCP-protokollet för att hämta verktygslistan och scheman som LLM sedan kan använda.
+
+Se självstudiekursen [Content MCP Server ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/mcp-servers/accelerate-content-operations-with-aem-mcp-server) och [Cloud Manager MCP Server Video](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/mcp-servers/cloud-manager) för mer information om deras funktioner och hur de används.
 
 ## MCP-program som stöds {#supported-mcp-applications}
 
