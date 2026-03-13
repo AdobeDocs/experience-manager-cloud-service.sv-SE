@@ -6,9 +6,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 1de2a860d96397863312f62b3c3c73e6deddd9d8
+source-git-commit: 57ea90c922b073828b4aede15bf2dd499ebbf0c2
 workflow-type: tm+mt
-source-wordcount: '2990'
+source-wordcount: '3002'
 ht-degree: 0%
 
 ---
@@ -166,7 +166,7 @@ Om du markerar ett fält som är relaterat till ett innehållsfragment läses in
 
 Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet på egenskapspanelen.
 
-Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** &#x200B;](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
+Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** ](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
 
 >[!TIP]
 >
@@ -186,9 +186,15 @@ Beroende på arbetsflödets behov kan du behöva redigera innehållsfragmentet i
 
    ![Markera en komponent som ska läggas till i en behållare](assets/ue-add-component.png)
 
-1. Välj sedan ikonen Lägg till på egenskapspanelen.
+1. Sedan kan du antingen:
 
-   ![Välj ikonen Lägg till](assets/add-icon.png)
+   * Välj ikonen **Lägg till** på egenskapspanelen.
+
+     ![Välj ikonen Lägg till](assets/add-icon.png)
+
+   * Välj alternativet **Lägg till** på snabbmenyn.
+
+     ![Lägg till på snabbmenyn](assets/add-from-context-menu.png)
 
 1. Dialogrutan för komponentväljaren öppnas.
    * Använd den vänstra kolumnen för att filtrera komponenter efter kategori eller använd sökningen för att filtrera efter namn.
@@ -207,21 +213,28 @@ Komponenten infogas i behållaren och kan redigeras i redigeraren.
 ### Duplicera komponenter i behållare {#duplicating-components}
 
 1. Markera en komponent i en behållare med [innehållsträdet](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode) eller redigeraren.
-1. Välj sedan ikonen **Duplicera** på egenskapspanelen.
 
-   ![Markera en komponent som ska läggas till i en behållare](assets/ue-duplicate-component.png)
-1. Komponenten dupliceras och infogas under den markerade komponenten.
+1. Sedan kan du antingen:
 
-Komponenten infogas i behållaren och kan redigeras i redigeraren.
+   * Markera ikonen **Duplicera** på egenskapspanelen.
+
+     ![Markera en komponent som ska läggas till i en behållare](assets/ue-duplicate-component.png)
+
+   * Välj alternativet **Duplicera** på snabbmenyn.
+
+     ![Duplicera från snabbmenyn](assets/duplicate-from-context-menu.png)
+
+Komponenten dupliceras och infogas under den markerade komponenten.
 
 ### Ta bort komponenter från behållare {#deleting-components}
 
-1. Markera en behållarkomponent i [innehållsträdet](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode) eller i redigeraren.
-1. Markera ikonen för avfasning för behållaren för att expandera dess innehåll i innehållsträdet.
-1. Markera sedan en komponent i behållaren i innehållsträdet.
-1. Välj ikonen Ta bort på egenskapspanelen.
+1. Markera en komponent i en behållare i [innehållsträdet](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode) eller i redigeraren.
+1. Sedan kan du antingen:
+   * Markera ikonen **Ta bort** på egenskapspanelen.
 
-   ![Tar bort en komponent](assets/ue-delete-component.png)
+     ![Tar bort en komponent](assets/ue-delete-component.png)
+   * Välj alternativet **Ta bort** på snabbmenyn.
+     ![Ta bort från snabbmenyn](assets/delete-from-context-menu.png)
 
 Den markerade komponenten har tagits bort.
 
@@ -276,7 +289,7 @@ Komponenterna ordnas om både i innehållsträdet och i redigeraren.
 Välj Ångra eller Gör om för att ångra eller göra om den senaste redigeringen i redigeraren.
 
 ![Ångra-ikon](assets/undo.png)
-![Ikonen Gör om &#x200B;](assets/redo.png)
+![Ikonen Gör om ](assets/redo.png)
 
 * Ångra och göra om kan göras för redigeringar som görs i sitt sammanhang, redigeringar som görs via panelen Egenskaper samt för att lägga till, duplicera, flytta och ta bort block.
 * Ångra och gör om är begränsat till den aktuella webbläsarsessionen.
@@ -292,24 +305,26 @@ Du kan kopiera och klistra in komponenter som finns i [behållare.](/help/implem
 Kopiera och klistra in kan finnas på samma webbläsarflik eller mellan webbläsarflikar, förutsatt att flikarna redan är öppna. Du kan inte kopiera ett objekt och sedan öppna en ny webbläsarflik för att klistra in det.
 
 ![Kopiera ikon](assets/copy.png)
-![Ikonen Klistra in &#x200B;](assets/paste.png)
+![Ikonen Klistra in ](assets/paste.png)
 
 1. Markera en komponent i redigeraren eller i innehållsträdet.
-1. Ikonen **Kopiera** visas på egenskapspanelen i [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-panel) Tryck eller klicka på den.
-1. Ikonen **Klistra in** visas på egenskapspanelen.
+1. Sedan kan du antingen:
+   * Klicka på ikonen **Kopiera** på [egenskapspanelen.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-panel)
+     ![Kopiera från panel](assets/copy-from-panel.png)
+   * Välj alternativet **Kopiera** på snabbmenyn.
+     ![Kopiera från snabbmeny](assets/copy-from-context-menu.png)
 1. Markera komponenten _efter_ som du vill klistra in den kopierade komponenten.
-1. Tryck eller klicka på Klistra in.
-1. Den kopierade komponenten klistras in _efter_ den markerade komponenten.
+1. Sedan kan du antingen:
+   * Tryck eller klicka på **Klistra in** på egenskapspanelen.
+     ![Klistra in från panelen](assets/paste-from-panel.png)
+   * Välj **Klistra in** på snabbmenyn.
+     ![Klistra in från snabbmenyn](assets/paste-from-context-menu.png)
+
+Den kopierade komponenten klistras in _efter_ den markerade komponenten.
 
 >[!TIP]
 >
 >Använd snabbtangenten `Command-C` eller `Command-V` för att kopiera respektive klistra in.
-
-## Sammanhangsalternativ {#context-options}
-
-När du redigerar på plats kommer redigeraren att erbjuda sammanhangsberoende alternativ med en högerklickning, som att duplicera, ta bort eller kopiera komponenter.
-
-![Snabbalternativmeny](assets/context-options-menu.png)
 
 ## Förhandsgranska innehåll {#previewing-content}
 
