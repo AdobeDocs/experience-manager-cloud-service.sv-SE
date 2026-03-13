@@ -4,9 +4,9 @@ description: Läs om hur Experience Modernization Agent tar in nya webbplatser i
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: c23a6f55-2ba8-4290-b7e8-06cad5de0fc8
-source-git-commit: 0aaa9904b3011adc3f3e3b01bfee8ee3e96f12e2
+source-git-commit: 84fed5a82d6c23cd51d9796eb644121c6ef06a29
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -18,29 +18,29 @@ Läs om hur Experience Modernization Agent tar in webbplatser i Edge Delivery Se
 
 ## Introduktion {#introduction}
 
-[Som en del av varumärkesutvecklingsagenten](/help/ai-in-aem/agents/brand-experience/overview.md) låser Experience Modernization Agent upp hela värdet av Edge Delivery Services (inklusive AEM-redigering) genom att göra webbplatsmigreringar och den pågående utvecklingen snabb och smidig.
+[Som en del av Brand Experience Agent](/help/ai-in-aem/agents/brand-experience/overview.md) snabbar Experience Modernization Agent upp introduktionen till Edge Delivery Services genom att automatisera webbplatsmigreringar och grundläggande platskonfiguration.
 
-Det kombinerar [kunskaper om webbplatsskapande och migrering](#creation-migration) för inledande webbplatsintroduktion och [funktioner för blockutveckling](#block-development) för kontinuerlig upplevelseutveckling (formatuppdateringar, mallförbättringar, skapande av landningssidor). Dessutom erbjuder den [Experience Modernization Console](#console) som en AI-stödd utvecklingsmiljö som du kan använda direkt. Även om användare kan hantera agenten direkt via konsolen behåller utvecklarna full kontroll över vad som skickas.
+Det kombinerar [kunskaper om webbplatsskapande och migrering](#creation-migration) för inledande webbplatsintroduktion och [funktioner för blockutveckling](#block-development) för att stödja arbetsflöden för webbplatsskapande och migrering. Dessutom erbjuder den [Experience Modernization Console](#console) som en webbaserad AI-assisterad utvecklingsmiljö som är tillgänglig direkt för dig. Även om användare kan hantera agenten direkt via konsolen behåller utvecklarna full kontroll över vad som skickas.
 
-För att komplex migrering ska lyckas erbjuder Adobe dessutom [AOE-leveransmodellen &#x200B;](#delivery-model). Det här alternativet kan användas som en accelerator eller som en taktisk tjänst för att hjälpa till att frigöra specifika projektutmaningar.
+För komplexa eller högprioriterade migreringar erbjuder Adobe leveransmodellen [Agentic Outcome Engineer (AOE) ](#aoe-delivery), en konstruktionsledd tjänst som är utformad för att leverera produktionsklara Edge Delivery-webbplatser med Experience Modernization Agent.
 
 ## Fördelar {#benefits}
 
 Agenten för upplevelsemodernisering snabbar upp tiden för att värdera [Edge Delivery Services](/help/edge/overview.md) och ger dig möjlighet att anpassa ditt varumärkes webbupplevelse.
 
-* **Hög hastighet**: AI-automatisering hanterar repetitivt migreringsarbete (innehållsimport, blockmappning, designsystemprogram), komprimerar månader av arbete till veckor
-* **Kostnadseffektivt**: Automatisering hanterar repetitivt arbete och frigör professionella tjänster för värdefulla uppgifter som integreringar och strategiska beslut
+* **Hög hastighet**: AI-automatisering hanterar repetitivt migreringsarbete (innehållsimport, blockmappning, designsystemprogram), komprimering av migreringstidslinjer jämfört med traditionella strategier
+* **Effektivitetsfokuserad**: Automatisering minskar repetitiva arbetsmoment och ger team möjlighet att fokusera på implementeringsarbete med högre värde
 * **Tillgänglig för alla**: Naturliga språkbegäranden gör webbplatsändringar tillgängliga för mindre tekniska användare, med direktförhandsvisning för att omedelbart validera ändringar
 * **Företagsstyrning**: Utvecklare har fullständig behörighet över vad som händer i granskningsarbetsflöden som är integrerade med GitHub
-* **Kontinuerligt värde**: Agenten stöder pågående webbplatsutveckling, inklusive formatuppdateringar, mallförbättringar och skapande av landningssidor
+* **Flexibilitet efter migrering**: Gör det möjligt för team att utöka och förfina migrerade webbplatser med Edge Delivery Services-mönster
 
 ## Kompetens för att skapa och migrera webbplatser {#creation-migration}
 
 Adobe Experience Modernization Agent ger färdigheter för att skapa nya Edge Delivery Services-webbplatser och migrera befintliga webbplatser. Alla nya Edge Delivery Services-sajter och migrationer uppmuntras för att dra nytta av dessa färdigheter.
 
 * Snabbare framtagning och migrering av webbplatser från månader till veckor eller dagar, vilket dramatiskt minskar time-to-value för användning av Edge Delivery Services
-* Omvandlar webbplatser från alla CMS-, AEM- eller designsystem (som Figma) till produktionsklara Edge Delivery Services-projekt
-* Ger alla utfästelser från Edge Delivery Services: AI-beredskap för autentiska funktioner, snabba prestanda (Core Web Vitals optimized), tillgänglighet (WCAG 2.1 AA), responsiv design över alla brytpunkter samt content+code-flexibilitet
+* Stöd för migrering från ett stort antal CMS-plattformar, äldre AEM-system eller designsystem (som Figma) till produktionskompatibla Edge Delivery Services-projekt
+* Stöder bästa praxis för prestanda, tillgänglighet och responsiv design som är anpassad efter Edge Delivery Services riktlinjer
 
 Detaljerade kunskaper är bland annat sidmigrering, bulkimport, designextrahering, navigeringsinställningar och webbscraping.
 
@@ -56,11 +56,11 @@ Detaljerade funktioner omfattar blockutveckling, innehållsmodellering, identifi
 
 ## Experience Modernization Console {#console}
 
-Agenten för Experience Modernization tillhandahåller en AI-assisterad utvecklingsmiljö för Edge Delivery Services som visas som ett webbgränssnitt på [`aemcoder.adobe.io`.](https://aemcoder.adobe.io)
+Experience Modernization Agent tillhandahåller en webbaserad AI-assisterad utvecklingsmiljö för Edge Delivery Services som visas som ett webbgränssnitt på [`aemcoder.adobe.io`.](https://aemcoder.adobe.io)
 
 * Konsolen kräver ingen lokal konfiguration för att användare ska kunna börja fråga efter ändringar direkt på det naturliga språket.
 * Utför snabbt rutinuppgifter för upplevelseutveckling samtidigt som du förhandsgranskar dem via AEM direktförhandsgranskning och synkroniserar materialet med AEM.
-* Företagsstyrning används eftersom utvecklarna behåller full kontroll över vad som levereras via vanliga GitHub-gransknings- och godkännandeprocesser.
+* Konsolen har stöd för företagsstyrning via GitHub-standardarbetsflöden för granskning.
 
 Självbetjäningskonsolen för Experience Modernization är vanligtvis tillgänglig. Intresserade användare kan begära åtkomst för att få en smidig introduktionsupplevelse.
 
@@ -69,9 +69,9 @@ Kom igång med Experience Modernization Console!
 * Om du moderniserar webbplatsen genom att ange dokumentredigering som mål [kommer du igång här.](/help/ai-in-aem/agents/brand-experience/modernization/getting-started.md)
 * Om du moderniserar webbplatsen genom att skapa för AEM [kommer du igång här.](/help/ai-in-aem/agents/brand-experience/modernization/getting-started-aem-authoring.md)
 
-## Leveransmodell {#delivery-model}
+## Digital Outcome Engineer (AOE) Delivery {#aoe-delivery}
 
-För komplexa migreringar eller accelererade resultat erbjuder Adobe leveransmodellen&quot;Agentic Outcome Engineer&quot; (AOE). Detta är en valfri tjänst där Adobe tekniker utför AI-verktygen åt dig. Mer information om leveransmodellen finns i dokumentet [Leveransmodell för Experience Modernization Agent.](/help/ai-in-aem/agents/brand-experience/modernization/delivery-model.md)
+För komplexa migreringar eller accelererade resultat erbjuder Adobe AOE-leverans (Agentic Outcome Engineer). Detta är en valfri tjänst där Adobe tekniker utför Experience Modernization Agent åt dig och kombinerar AI-automatisering med expertvägledning för att leverera produktionsklara resultat i stor skala. Mer information om AOE-leverans finns i dokumentet [AOE Delivery of the Experience Modernization Agent.](/help/ai-in-aem/agents/brand-experience/modernization/aoe-delivery.md)
 
 Om du är intresserad av AOE-modellen för nästa migrering:
 
@@ -82,7 +82,7 @@ Om du är intresserad av AOE-modellen för nästa migrering:
 
 Följande användningsfall kräver ytterligare implementeringsinsatser utöver kompetensen hos agenten för upplevelsemodernisering.
 
-Skrapningsverktyget har inte stöd för följande källor.
+Skrapningsskickligheten stöder inte följande källor.
 
 * Intranät eller skyddade källor som innehåll bakom autentisering, VPN eller brandväggar som inte är tillgängliga
 * Komplext dynamiskt innehåll, t.ex. innehåll som kräver avancerad användarinteraktion, visas i DOM.

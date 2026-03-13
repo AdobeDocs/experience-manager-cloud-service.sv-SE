@@ -4,9 +4,9 @@ description: Lär dig de första stegen för att snabbt bli produktiv med Experi
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: 612c211e-43bf-47dc-89a8-9995a960e4d7
-source-git-commit: 0aaa9904b3011adc3f3e3b01bfee8ee3e96f12e2
+source-git-commit: 283608acebab0704532ee2a2d856f248a818f671
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Komma igång med agenten för upplevelsemodernisering {#getting-started}
 
-Lär dig de första stegen för att snabbt bli produktiv med Experience Modernization Agent med Experience Modernization Console.
+Lär dig de första stegen för att komma igång med Experience Modernization Agent och Experience Modernization Console.
 
 >[!NOTE]
 >
->Om du är intresserad av att använda Experience Modernization Console kan du begära åtkomst för att få en smidig introduktionsupplevelse.
+>Om du är intresserad av att använda Experience Modernization Console kan du begära åtkomst via din kontohanterare för att säkerställa en smidig introduktionsupplevelse.
 
 ## Förbered en Edge Delivery GitHub-databas {#prepare-repo}
 
