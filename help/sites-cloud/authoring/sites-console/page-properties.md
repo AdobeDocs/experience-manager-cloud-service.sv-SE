@@ -94,7 +94,7 @@ På-/avaktiveringstiden för en sida är ett praktiskt sätt att tillfälligt d�
 * **I tid** - Det datum och den tidpunkt då den publicerade sidan visas (återges) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
 
    * Om den redan är [publicerad](/help/sites-cloud/authoring/sites-console/publishing-pages.md) är den här sidan tillgänglig på publiceringsinstansen, men den behåller vilande (dold) tills återgivningen sker vid den angivna tidpunkten.
-   * Om den inte publiceras och [konfigureras för automatisk replikering ](/help/operations/replication.md#on-and-off-times-trigger-configuratio) publiceras sidan automatiskt och återges sedan vid den angivna tidpunkten.
+   * Om den inte publiceras och [konfigureras för automatisk replikering &#x200B;](/help/operations/replication.md#on-and-off-times-trigger-configuratio) publiceras sidan automatiskt och återges sedan vid den angivna tidpunkten.
    * Om sidan inte är publicerad och inte konfigurerad för automatisk replikering publiceras den inte automatiskt. Därför visas 404 när ett försök görs att komma åt sidan.
 
 * **Fråntid** - Ungefär som och ofta används i kombination med **På tid**, definierar detta den tidpunkt då den publicerade sidan döljs i publiceringsmiljön.
@@ -242,7 +242,7 @@ Den här fliken visas bara för sidor som fungerar som utkast. Utkast fungerar s
 
 ## Live Copy {#live-copy}
 
-Den här fliken visas bara för sidor som har konfigurerats som live-kopior. Precis som med [utkast är ](#blueprint) Live-kopior en del av [Multi Site Management (Hantering av flera webbplatser).](/help/sites-cloud/administering/msm/overview.md)
+Den här fliken visas bara för sidor som har konfigurerats som live-kopior. Precis som med [utkast är &#x200B;](#blueprint) Live-kopior en del av [Multi Site Management (Hantering av flera webbplatser).](/help/sites-cloud/administering/msm/overview.md)
 
 * **Synkronisera** - Synkronisera Live-kopia med utkast, med lokala ändringar
 * **Återställ** - Återställ Live Copy till läget för utkast och ta bort lokala ändringar
