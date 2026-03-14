@@ -29,11 +29,11 @@ Om du vill se en interaktiv, köpbar video in action väljer du [Livesändningar
 
 * Om du vill pausa videon och öppna snabbvyn för produkten väljer du miniatyrbilden. Välj till exempel miniatyrbilden Kitchenaid i videon om du vill se en 360-graderssnurra över blandaren, eller zooma in om du vill se blandningsinformationen.
 
-Se även [Använd interaktiv video med dynamiska media](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/interactive-videos#dynamic-media)
+Se även [Använd interaktiv video med dynamiska media](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/dynamicmedia/interactive-videos#dynamic-media)
 
 <!-- 
 
-There was a link here that showed the video frame of an interactive video and when the reader selected the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html. This must now call a new interactive video
+There was a link here that showed the video frame of an interactive video and when the reader selected the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html?lang=sv-SE. This must now call a new interactive video
 
 -->
 
