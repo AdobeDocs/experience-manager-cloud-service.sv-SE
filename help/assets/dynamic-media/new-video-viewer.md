@@ -29,7 +29,7 @@ Nya Video Viewer är avsedd för organisationer som behöver en förbättrad och
 
 > **OBS!**
 >
-> Nya Video Viewer har en begränsad tillgänglighet. Du kan aktivera det genom att skapa en [supportanmälan](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
+> Nya Video Viewer har en begränsad tillgänglighet. Du kan aktivera det genom att skapa en [supportanmälan](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
 
 
 ## Så här fungerar nya Video Viewer {#how-it-works}
@@ -174,7 +174,7 @@ Adobe rekommenderar att du validerar meddelandets ursprung för att se till att 
 
 Video Engagement Report innehåller analysstatistik för videoklipp som spelats upp med nya Video Viewer i Dynamic Media. Rapporten levererar aggregerade resultatdata för den angivna månaden och stöder månadsrapportering.
 
-Rapporter skapas på begäran. Om du vill begära en rapport skapar du en [supportanmälan](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) och anger följande information:
+Rapporter skapas på begäran. Om du vill begära en rapport skapar du en [supportanmälan](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) och anger följande information:
 
 * Rapportmånad - Ange den månad som rapporten krävs för (till exempel januari 2026).
 * E-postadress för leverans - e-postadress till gruppen (rekommenderas) eller den person som ska leverera rapporten
