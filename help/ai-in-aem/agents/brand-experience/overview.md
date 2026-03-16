@@ -4,7 +4,7 @@ description: Läs om hur Brand Experience Agent snabbar upp moderniseringen och 
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: e6cd421a-8791-4fe3-b284-9b3beae996fd
-source-git-commit: baf12e49dadc7b25f5169279a52d5712380445de
+source-git-commit: fc304f3e63c38006bf678abc797ccb17dcd8db39
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Brand Experience Agent snabbar upp moderniseringen och utvecklingen av digitala upplevelser genom att automatisera innehållsuppdateringar, webbplatsomvandling och teknisk felsökning, vilket gör att varumärkena kontinuerligt kan förbättra och anpassa sig i samma hastighet som AI.
 
-## Jobb {#jobs}
+## Agenter {#agents}
 
 Varumärkesupplevelseagenten levererar resultaten via följande agenter, som var och en specialiserar sig på en specifik uppsättning jobb:
 
@@ -54,7 +54,7 @@ Med Experience Modernization slipper ni friktionen från storskalig webbplatsmig
 
 ### Kommunikationsskapande {#communication-creation}
 
-[Kommunikationsjobbet &#x200B;](/help/ai-in-aem/agents/brand-experience/experience-production/communication-creation.md) skapar interaktiv kommunikation med hjälp av naturliga språkuppmaningar och genererar automatiskt personaliserad, datadriven korrespondens för utskrift (i PDF-format). Jobbet nås via AI Assistant.
+[Kommunikationsjobbet ](/help/ai-in-aem/agents/brand-experience/experience-production/communication-creation.md) skapar interaktiv kommunikation med hjälp av naturliga språkuppmaningar och genererar automatiskt personaliserad, datadriven korrespondens för utskrift (i PDF-format). Jobbet nås via AI Assistant.
 
 ## Utvecklingsagent för Experience {#experience-development}
 
