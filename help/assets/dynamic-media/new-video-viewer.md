@@ -1,14 +1,13 @@
 ---
 title: Ny videovisare
-description: Nya Video Viewer i Dynamic Media ger en förbättrad videouppspelningsupplevelse med bättre prestanda, tillgänglighet och konfigureringsbarhet.
+description: Nya Video Viewer i Dynamic Media ger en förbättrad videouppspelning
 role: User
-source-git-commit: f069e2cfaaa3c82a1d2391403b23f1ccf1ec2866
+source-git-commit: 1ee4f1352a0fe1e8d1f2fd7b79555ad4144bb02c
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
-
 
 # Nytt visningsprogram för video i Dynamic Media {#new-video-viewer-dynamic-media}
 
@@ -29,7 +28,7 @@ Nya Video Viewer är avsedd för organisationer som behöver en förbättrad och
 
 > **OBS!**
 >
-> Nya Video Viewer har en begränsad tillgänglighet. Du kan aktivera det genom att skapa en [supportanmälan](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+> Nya Video Viewer har en begränsad tillgänglighet. Du kan aktivera det genom att skapa en [supportanmälan](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 
 ## Så här fungerar nya Video Viewer {#how-it-works}
@@ -74,7 +73,7 @@ Utför följande steg om du vill förhandsgranska den nya videovisaren från sid
 3. Klicka på **Visare** i den vänstra panelen.
 4. Välj **Video (ny)** på panelen **Visare**.
 5. Klicka på **URL** för att kopiera förhandsgranskningslänken.
-   ![Kopiera URL](/help/assets/assets/Copy-url1.jpg)
+   ![Kopiera URL](assets/Copy-url1.jpg)
 
 ## Använda den nya videovisningsprogrammet på webbplatser {#use-in-sites}
 
@@ -90,7 +89,7 @@ Utför följande steg för att lägga till en video med komponenten Dynamic Medi
 4. Klicka på komponenten för att öppna resursväljaren.
 5. Välj en videoresurs.
 
-![Dra komponenten Dynamic Media](/help/assets/assets/drag-component.jpeg)
+![Dra komponenten Dynamic Media](assets/drag-component.jpeg)
 
 ### Konfigurera visningsprogrammet
 
@@ -98,13 +97,13 @@ Gör så här för att konfigurera visningsförinställningen:
 
 1. Markera komponenten **Dynamiska media** på sidan.
 2. Klicka på **Konfigurera** i komponentens verktygsfält.
-   ![Öppna inställningar för dynamiska media](/help/assets/assets/configure-asset.png)
+   ![Öppna inställningar för dynamiska media](assets/configure-asset.png)
 
 3. I dialogrutan **Dynamiska mediainställningar** väljer du **Video (ny)** i listrutan **Visningsförinställning**.
-   ![Välj visningsförinställning för video (ny)](/help/assets/assets/viewer-preset.jpeg)
+   ![Välj visningsförinställning för video (ny)](assets/viewer-preset.jpeg)
 
 4. Ange eventuella nödvändiga modifierare i fältet **Visningsredigerare** (till exempel `autoplay=true&muted=true`).
-   ![Granskningsmodifierare](/help/assets/assets/additional-modifiers.jpeg)
+   ![Granskningsmodifierare](assets/additional-modifiers.jpeg)
 
 5. Spara ändringarna.
 
@@ -174,7 +173,7 @@ Adobe rekommenderar att du validerar meddelandets ursprung för att se till att 
 
 Video Engagement Report innehåller analysstatistik för videoklipp som spelats upp med nya Video Viewer i Dynamic Media. Rapporten levererar aggregerade resultatdata för den angivna månaden och stöder månadsrapportering.
 
-Rapporter skapas på begäran. Om du vill begära en rapport skapar du en [supportanmälan](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) och anger följande information:
+Rapporter skapas på begäran. Om du vill begära en rapport skapar du en [supportanmälan](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) och anger följande information:
 
 * Rapportmånad - Ange den månad som rapporten krävs för (till exempel januari 2026).
 * E-postadress för leverans - e-postadress till gruppen (rekommenderas) eller den person som ska leverera rapporten
