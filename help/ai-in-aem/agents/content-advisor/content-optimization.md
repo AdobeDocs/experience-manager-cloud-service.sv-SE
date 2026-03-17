@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsoptimeringsagenten för att fö
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: 896fc25b-7f60-47b8-9264-2ef6b85d954c
-source-git-commit: a9f1ed92e3ca05be6f4db578a814330004100b3e
+source-git-commit: 45c547a0a7372e5ebe23bd6b816798cd3b225872
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Du kommer åt innehållsoptimeringsagenten i AEM via AI Assistant. Logga in på 
 
 ## Vanliga användningsfall och exempelfrågor {#use-cases-prompts}
 
-Använd agenten för innehållsoptimering genom att söka efter rätt resurser via agenten för innehållsidentifiering i [.](/help/ai-in-aem/agents/content-advisor/discovery.md) När de relevanta bilderna visas kan användarna generera optimerade eller kanalspecifika varianter för en eller flera resurser direkt från sökresultatet. Detta arbetsflöde ger högkvalitativa indata och konsekvent bättre optimeringsresultat. [Se den fullständiga listan över tillgängliga optimeringar](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/) för mer information.
+Använd agenten för innehållsoptimering genom att söka efter rätt resurser via agenten för innehållsidentifiering i [.](/help/ai-in-aem/agents/content-advisor/discovery.md) När de relevanta bilderna visas kan användarna generera optimerade eller kanalspecifika varianter för en eller flera resurser direkt från sökresultatet. Användarna kan också generera varianter genom att ange resursens UUID eller resurssökväg i prompten, utan att behöva göra en tidigare sökning. Detta arbetsflöde ger högkvalitativa indata och konsekvent bättre optimeringsresultat. [Se den fullständiga listan över tillgängliga optimeringar](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/) för mer information.
 
 * **Skapa återgivning med hög upplösning**
 

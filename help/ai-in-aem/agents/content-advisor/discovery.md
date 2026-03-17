@@ -4,9 +4,9 @@ description: Lär dig hur du kan använda agenten för innehållsidentifiering f
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: 676300cd-b799-4c53-a58e-043e58a2cbc5
-source-git-commit: a9f1ed92e3ca05be6f4db578a814330004100b3e
+source-git-commit: 45c547a0a7372e5ebe23bd6b816798cd3b225872
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '2066'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Innehållsidentifieringsagent {#discovery-agent}
 
-Som en del av AEM [Content Advisor-agenten](/help/ai-in-aem/agents/content-advisor/overview.md) levererar innehållsidentifieringsagenten AEM-innehåll på begäran via naturliga, konversationsmoment för en smidig, klickfri identifieringsupplevelse. Programmet söker på ett intelligent sätt i Assets, Content Fragments och Adaptive Forms för att leverera relevant material som bilder, videor, PDF-dokument, artiklar och formulärmallar. Med det naturliga språket kan du söka efter innehåll utan att behöva skapa komplexa frågor eller använda filter i AEM Assets-gränssnittet. Baserat på din uppmaning returnerar agenten kuraterade resultat tillsammans med metadata för resursen och URL:er för leverans, som är klara att bäddas in i andra program.
+Som en del av AEM [Content Advisor-agenten](/help/ai-in-aem/agents/content-advisor/overview.md) levererar innehållsidentifieringsagenten AEM-innehåll på begäran via naturliga, konversationsmoment för en smidig, klickfri identifieringsupplevelse. Programmet söker på ett intelligent sätt i Assets, Content Fragments, AEM Sites pages och Adaptive Forms för att leverera relevant material som bilder, videor, PDF-dokument, artiklar och formulärmallar. Med det naturliga språket kan du söka efter innehåll utan att behöva skapa komplexa frågor eller använda filter i AEM Assets-gränssnittet. Baserat på din uppmaning returnerar agenten kuraterade resultat tillsammans med metadata för resursen och URL:er för leverans, som är klara att bäddas in i andra program.
 
 Några av fördelarna med innehållsidentifieringsagenten är:
 
-* **Identifiering av enhetligt innehåll**: Få tillgång till alla typer av AEM-innehåll, som bilder, videor, PDF-dokument, artiklar och formulär från ett enda konversationsgränssnitt.
+* **Identifiering av enhetligt innehåll**: Få tillgång till alla typer av AEM-innehåll, som bilder, videor, PDF-dokument, artiklar, sidor och formulär från ett enda konversationsgränssnitt.
 
 * **Snabbare kampanjplanering**: Samla snabbt in bilder och formulär för marknadsföringskampanjer i e-postmeddelanden, på webben och i sociala kanaler.
 
@@ -38,12 +38,15 @@ Några av fördelarna med innehållsidentifieringsagenten är:
 
 Agenten för innehållsidentifiering tillhandahåller följande färdigheter:
 
-* **Identifiering av naturligt språkinnehåll**\
-  Med hjälp av agenten för innehållsidentifiering kan användare hitta relevanta resurser, innehållsfragment och anpassningsbara formulär i Adobe Experience Manager (AEM) med enkla, naturliga språkkommandon - inga komplexa sökfrågor krävs.
+* **Identifiering av naturligt språkinnehåll**
 
-* **Taggbaserad resursidentifiering**
+  Med Content Discovery-agenten kan användarna hitta relevanta resurser, innehållsfragment, adaptiva formulär och AEM Sites-sidor i Adobe Experience Manager (AEM) med enkla, naturliga språkkommandon - inga komplexa sökfrågor krävs.
 
-  Agenten för innehållsidentifiering använder naturliga språkinställningar för att hitta resurser som är kopplade till särskilda taggar i AEM-databasen, vilket gör att användare snabbt kan komma åt innehåll som är organiserat eller inte organiserat enligt organisationens taxonomi.
+* **Metadatabaserad resursidentifiering**
+
+  Innehållsidentifieringsagenten använder naturliga språkuppmaningar för att hitta resurser baserat på metadata som är tillgängliga för resurser i AEM. Användare kan identifiera resurser med hjälp av metadata som taggar, e-post-ID för författare eller utgivare, publicerade eller ändrade datum, MIME-typ, resurstyp, status, anpassade metadataegenskaper som definieras i metadataformulär i Assets-vyn eller administratörsvyn, osv. En fullständig lista finns i [Vanliga användningsfall och Exempelfrågor](#use-cases-prompts).
+
+  Du kan också kombinera flera metadatafilter i en enda dialogruta för att förfina sökresultaten.
 
 * **Mappbaserad innehållsidentifiering:**\
   Agenten för innehållsidentifiering kan identifiera resurser genom att tolka naturliga språkuppmaningar som refererar till mappnamn i AEM. Användarna kan bara ange mappen när de uppmanas till det, utan att navigera i databasen manuellt, vilket avsevärt minskar antalet klick som behövs för att hitta rätt innehåll.
@@ -78,22 +81,51 @@ Kontakta Adobe Support om du vill ha information om MCP-slutpunkten för åtkoms
 
 ### Assets {#discovery-agent-use-cases-assets}
 
-**Taggbaserad resursidentifiering**
+**Metadatabaserad resursidentifiering**
 
-Agenten för innehållsidentifiering använder naturliga språkinställningar för att hitta resurser som är kopplade till särskilda taggar i AEM-databasen, vilket gör att användare snabbt kan komma åt innehåll som är organiserat enligt organisationens taxonomi.
+Innehållsidentifieringsagenten använder naturliga språkuppmaningar för att hitta resurser baserat på metadata som är tillgängliga för resurser i AEM. Användare kan identifiera resurser med hjälp av följande metadataegenskaper: Taggar, Skapad med e-post-ID, Ändrad med e-post-ID, Publicerad med e-post-ID, Skapad den, Publicerat den, MIME-typ, Resurstyp, Status, Filformat, Bildstorlek, Bildhöjd och flera metadatafilter i ett och samma fönster.
 
-Exempelfråga:
+Innehållsidentifieringsagenten söker även efter de anpassade egenskaper som finns i metadatascheman för administratörsvyn och metadataformulär för Assets-vyn. Du kan ändra dina uppmaningar i enlighet med detta för att söka efter värden som är tillgängliga i de anpassade resursegenskaperna.
 
-Visa bilder som har taggats `office` i mappen `WKND`.
+>[!NOTE]
+>
+>Indexera relevanta anpassade metadataegenskaper för att förbättra identifieringsprestanda. Med indexerade egenskaper kan agenten hämta matchande innehåll snabbare när användarna tar med dessa egenskaper i sina uppmaningar.
+
+
+Exempeluppmaningar:
+
+* **Sök baserat på taggar**: Visa bilder som taggats `office` i mappen `WKND`.
+* **Sök baserat på filformat, resurstyp, objektstatus och publicerat med e-post-ID**: Visa bilder i `.PNG`-format som är `approved` och `published by <user email ID>`.
+* **Sök baserat på filformat, resurstyp, resursstatus och Skapat med e-post-ID**: Visa videoklipp i `.mp4`-format som har godkänts och `created by <user email ID>`.
+* **Sök baserat på filformat, resurstyp, resursstatus och Skapad**: Visa bilder i `.PNG`-format som har skapats efter 1 januari 2025 och `published by <user email ID>`
+* **Sök baserat på MIME-typ, Skapad och Publicerad av e-post-ID**: Visa `image/jpeg` som skapats efter `January 1, 2025` och `published by <user email ID>`.
+* **Sök baserat på filformat och anpassade metadataegenskaper**: Visa bilder i `.JPEG`-format som har `Product SKU ID as <SKU value>`.
+
+* **Sök efter resurser som saknar metadata**: Visa resurser som skapats de senaste 90 dagarna med `<Name of metadata property including custom properties>` är tomma.
+
+* **Sök efter resurser med hjälp av filstorlek, bildbredd och bildhöjd**: Visa bilder som är större än 5 MB med en bredd som är större än 2 000 pixlar och en höjd som är större än 1 200 pixlar.
+
 
 **Mappbaserad innehållsidentifiering:**\
-Agenten för innehållsidentifiering kan identifiera resurser genom att tolka naturliga språkuppmaningar som refererar till mappnamn i AEM. Användarna kan bara ange mappen när de uppmanas till det, utan att navigera i databasen manuellt, vilket avsevärt minskar antalet klick som behövs för att hitta rätt innehåll.
+Innehållsidentifieringsagenten kan identifiera resurser genom att tolka naturliga språkuppmaningar som refererar till mappnamn i AEM. Användarna kan bara ange mappen när de uppmanas till det, utan att navigera i databasen manuellt, vilket avsevärt minskar antalet klick som behövs för att hitta rätt innehåll.
 
 Exempeluppmaningar:
 
 * Finns det några svgs i mappen `WKND`?
 * Visa resurser som ändrats efter `Nov 1 2025` i mappen `WKND`.
 * Lista `lifestyle` bilder i mappen `WKND`.
+
+**Ytterligare frågor för att aktivera mappbaserad innehållsidentifiering**
+
+När ett mappnamn ingår i en fråga (utan den fullständiga resurssökvägen) söker Content Discovery-agenten först efter en matchande mapp på rotsökvägen `/content/dam/<folder-name>`.
+
+Om ingen matchande mapp hittas på rotnivå föreslår agenten alternativa mappsökvägar där det angivna mappnamnet finns i databasen. Detta gör att användarna snabbt kan hitta rätt plats utan att behöva bläddra i mappstrukturen manuellt.
+
+Sökvägen `/content/dam/<folder-name>` hittades till exempel inte. Menade du en av de här?
+
+* Alternativ 1
+
+* Alternativ 2
 
 **Formatbaserad resursidentifiering**
 
@@ -111,9 +143,37 @@ Exempelfråga:
 
 Visa resurser med personer i liggande orientering.
 
+**Expanderar sökresultat**
+
+Innehållsidentifieringsagenten returnerar de 20 mest relevanta resultaten per innehållstyp för att få en fråga. Om ytterligare matchande resultat är tillgängliga kan användare begära nästa uppsättning genom att ange en uppföljningsfråga som `show me more`. Agenten hämtar sedan nästa uppsättning resultat från den ursprungliga sökningen, vilket gör att användarna kan utforska större resultatuppsättningar utan att behöva förfina frågan.
+
+**Söker efter liknande resurser**
+
+Med Content Discovery Agent kan användare hitta resurser som liknar ett specifikt resultat som returneras i sökresultaten. När agenten visar de översta resultaten för en fråga kan du begära liknande resurser genom att referera till positionen för ett objekt i resultatlistan. En uppmaning som `find assets similar to the 3rd result` instruerar agenten att identifiera och returnera andra relevanta tillgångar som hör till objektet. Detta hjälper användarna att snabbt identifiera relaterat innehåll utan att skapa en ny sökfråga.
+
+**Sorterar sökresultat**
+
+Med hjälp av innehållsidentifieringsagenten kan användare sortera sökresultat direkt i de naturliga språkinställningarna. Användare kan ange sorteringsvillkor som ändringsdatum, skapat datum eller resursnamn och välja stigande eller fallande ordning.
+
+Exempeluppmaningar:
+
+* Hitta bilder i bergen sorterade efter ändringsdatum i fallande ordning (visar de senast ändrade resurserna först).
+
+* Visa bergbilder sorterade efter namn i stigande ordning (visar bildnamnen med bokstaven A först följt av B osv.).
+
+### AEM Sites sidor {#content-discovery-agent-aem-sites-pages}
+
+Med Content Discovery-agenten kan man snabbt hitta relevanta AEM Sites-sidor genom att tolka naturliga språkuppmaningar som hänvisar till sidämnen, kampanjer eller andra kontextuella nyckelord. Agenten utför en fulltextsökning baserad på nyckelorden i uppmaningen för att identifiera matchande sidor i AEM-databasen, vilket eliminerar behovet av att bläddra bland webbplatsstrukturen manuellt.
+
+Exempelfrågor:
+
+* Hitta alla AEM Sites-sidor för sommarkampanjen.
+
+* Hitta AEM Sites-sidor med temat Kaffe.
+
 ### Innehållsfragment {#discovery-agent-use-cases-content-fragments}
 
-Agenten för innehållsidentifiering hjälper användarna att snabbt hitta rätt innehållsfragment genom att tolka naturliga språkreferenser till kampanjnamn, produktvarumärken, publiceringsstatus och nyligen skapade aktiviteter. Det gör att teamen kan identifiera kampanjklara fragment och visa varumärkesspecifikt innehåll, utan att behöva bläddra bland mappar eller använda flera filter i AEM manuellt.
+Med Content Discovery Agent kan användarna snabbt hitta rätt innehållsfragment genom att tolka naturliga språkreferenser till kampanjnamn, produktvarumärken, publiceringsstatus och nyligen skapade aktiviteter. Det gör att teamen kan identifiera kampanjklara fragment och visa varumärkesspecifikt innehåll, utan att behöva bläddra bland mappar eller använda flera filter i AEM manuellt.
 
 Exempeluppmaningar:
 
@@ -127,7 +187,7 @@ Exempeluppmaningar:
 
 ### Forms {#discovery-agent-use-cases-forms}
 
-Agenten för innehållsidentifiering hjälper dig att snabbt hitta adaptiva formulär med hjälp av naturliga språkuppmaningar. Den söker igenom formulärinnehåll och metadata för att hitta matchningar baserat på nyckelord från dina uppmaningar. Det innebär att du kan identifiera relevanta formulär även om söktermerna inte finns i formulärets titel eller beskrivning.
+Med Content Discovery Agent kan du snabbt hitta anpassningsbara formulär med hjälp av naturliga språkuppmaningar. Den söker igenom formulärinnehåll och metadata för att hitta matchningar baserat på nyckelord från dina uppmaningar. Det innebär att du kan identifiera relevanta formulär även om söktermerna inte finns i formulärets titel eller beskrivning.
 
 Exempeluppmaningar:
 
@@ -175,4 +235,8 @@ Ange kortfattade detaljer i dina naturliga språkfrågor så att agenten kan ret
 
 ## Begränsningar {#limitations-discovery-agent}
 
-Agenten för innehållsidentifiering stöder endast dimensionsbaserade uppmaningar för formaten image och SVG. Exempel: `Find images wider than 1080px`.
+* Content Discovery Agent stöder endast dimensionsbaserade uppmaningar för bild- och SVG-formattyper. Exempel: `Find images wider than 1080px`.
+
+* Content Hub-administratörer har åtkomst till Content Discovery Agent via Content Hub-portalen, men resultaten hämtas bara från AEM författarinstans. Content Hub Limited-användare kan för närvarande inte utnyttja Content Discovery Agent (kommer snart).
+
+* Funktionen Sök efter liknande fungerar bara för bilder med [förbättringarna Smarta taggar](/help/assets/ai-generated-metadata-assets-view.md).
