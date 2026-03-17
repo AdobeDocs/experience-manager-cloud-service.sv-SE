@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 2a7b83b99547637e02ec7cef9c92c5dd794a9adc
+source-git-commit: b83d8736d47778ed133e0cc07207e02e581bbc69
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '635'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 24893, som offentliggjordes den 17 mars 2026. Den tidigare underhållsversionen var version 24678.
 
-Funktionsaktiveringen i 2026.3.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2026.3.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-24893}
 
@@ -29,7 +29,7 @@ Funktionsaktiveringen i 2026.3.0 kommer att innehålla alla funktioner som finns
 * GRANITE-57035: Använd Bouncy Castle som standardsäkerhetsprovider.
 * GRANITE-59249: Undvik att registrera en säkerhetsprovider i JVM.
 * GRANITE-61564: Visningsinställningar på `/security/users.html` kan inte öppnas för administratörer.
-* GRANITE-64748: OIDC: konfigurerbar sling.oauth-request-key-cookie-utgånget.
+* GRANITE-64748: OIDC: konfigurerbar `sling.oauth-request-key`-cookie upphör att gälla.
 * SITES-39767: Stöd för ett enda värde via request attribute (CSP).
 * SKYOPS-129301: Ange API:erna jar javadoc-kompatibilitetsnivån till 17.
 * GRANITE-64962: Uppdatera Apache Jackrabbit Oak till 1.92.0.
@@ -59,7 +59,7 @@ Funktionsaktiveringen i 2026.3.0 kommer att innehålla alla funktioner som finns
 * GUIDES-37781: När du tilldelar en användare till en granskningsåtgärd visas alla användare i listrutan i stället för endast de som är kopplade till de valda projekten, vilket resulterar i ogiltiga användaralternativ.
 * GUIDES-39385: När du öppnar en rapport för en karta uppstår en fördröjning i inläsningen av filterpanelen.
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ### Kända fel {#known-issues-24893}
 
@@ -78,8 +78,8 @@ AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan f�
 | Teknik | Version | Länk |
 |---|---|---|
 | AEM Oak | 1.92.0 | [Oak 1.92.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.92.0/index.html) |
-| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 &#x200B;](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
+| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 ](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Apache HTTP-server | 2.4.66 | [Apache HTTP 2.4.66](https://apache.googlesource.com/httpd/+/refs/tags/2.4.66/CHANGES) |
 | Grundläggande komponenter i AEM | 2.30.4 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
-| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
+| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
