@@ -4,9 +4,9 @@ description: Lär dig de första stegen för att snabbt bli produktiv med Experi
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: 612c211e-43bf-47dc-89a8-9995a960e4d7
-source-git-commit: 283608acebab0704532ee2a2d856f248a818f671
+source-git-commit: 22a8260bf760ca4501813348c90bfc96c74e2224
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1110'
 ht-degree: 0%
 
 ---
@@ -47,8 +47,8 @@ Konsolen frågar efter en databas när du loggar in första gången.
 
 1. Klicka på **Anslut databas**.
 1. Då öppnas appen AEM Code Connector på en ny webbläsarflik. Klicka på **Auktorisera AEM Code Connector**.
-1. Gå tillbaka till konsolen, välj **Ägare**, **Databas** och **Grenval** och klicka på **Checka ut till arbetsyta**.
-   ![Ansluter till GitHub-projekt](assets/connect-to-github-project.png)
+1. I konsolen anger du webbplatsens URL för förhandsgranskning. Du kan hämta URL:en för förhandsgranskning genom att förhandsgranska alla dokument på webbplatsen eller genom att skapa dem från en gren, ett platsnamn och en organisation. Systemet hämtar det associerade Github-projektet automatiskt, i vissa fall måste du även ange github-koordinaterna.
+   ![Ansluter till GitHub-projekt](assets/connect-site-and-github.png)
 1. När du uppmanas att **Ersätt befintlig arbetsyta** klickar du på **Ersätt arbetsyta**.
    ![Ersätt befintlig arbetsyta](assets/replace-existing-workspace.png)
 
