@@ -4,9 +4,9 @@ description: Lär dig hur du använder Model Context Protocol med AEM as a Cloud
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: ddb7fc8c-affc-4374-8e08-d45d96017109
-source-git-commit: 6fccf4f197fbfd38aa6a84422dc347b02d03061d
+source-git-commit: 3b935114d543a0bf99f3c03a2840942862396216
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1716'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ De specifika verktyg som visas av varje MCP-server kan utvecklas över tid. I pr
 
 MCP-klienten använder MCP-protokollet för att hämta verktygslistan och scheman som LLM sedan kan använda.
 
-Se självstudiekursen [Content MCP Server &#x200B;](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/ai/mcp-servers/accelerate-content-operations-with-aem-mcp-server) och [Cloud Manager MCP Server Video](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/ai/mcp-servers/cloud-manager) för mer information om deras funktioner och hur de används.
+Se självstudiekursen [Content MCP Server ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/mcp-servers/accelerate-content-operations-with-aem-mcp-server) och [Cloud Manager MCP Server Video](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/mcp-servers/cloud-manager) för mer information om deras funktioner och hur de används.
 
 ## MCP-program som stöds {#supported-mcp-applications}
 
@@ -99,27 +99,20 @@ Konfigurering av MCP för AEM inbegriper två huvuddelar:
 1. **Konfiguration i varje MCP-klientprogram** så att programmet vet hur man ansluter till AEM MCP-servrar och utför OAuth-inloggning
 1. **Markera MCP-servern** innan du börjar fråga, så att MCP-klienten vet att den ska använda den.
 
+Stegvisa guider som täcker båda stegen är tillgängliga för:
+
+* [Anthropic Claude](/help/ai-in-aem/mcp-support/setup-claude.md)
+* [OpenAI ChatGPT](/help/ai-in-aem/mcp-support/setup-chatgpt.md)
+* [Markör](/help/ai-in-aem/mcp-support/setup-cursor.md)
+* [Microsoft Copilot Studio](/help/ai-in-aem/mcp-support/setup-microsoft-copilot-studio.md)
+
 ### AEM Configuration {#aem-configuration}
 
 Som standard styr de behörigheter som enskilda användare har i AEM åtkomsten till AEM MCP-servrar. När en användare autentiserar via ett MCP-klientprogram tillämpar MCP-verktygen samma åtkomstregler som för manuella åtgärder i AEM. En användare kan bara utföra åtgärder som de redan har behörighet att utföra.
 
 #### Tillåtna MCP-klientprogram {#permitted-mcp-client-applications}
 
-Följande MCP-klientprogram tillåts som standard:
-
-* Anthropic Claude
-* Anthropic Claude Code
-* Kod för ökning
-* Öka indrag
-* Cline
-* Markör
-* GitHub Copilot
-* Kiro
-* Microsoft Copilot Studio
-* OpenAI ChatGPT
-* OpenAI Codex
-* OpenAI Codex CLI
-* Windsurf
+Alla program som listas under [MCP-program som stöds](#supported-mcp-applications) tillåts som standard.
 
 #### Begränsar MCP-servrar {#restricting-mcp-servers}
 
@@ -144,29 +137,7 @@ Varje användare utför det här steget, eller en administratör för MCP-klient
 1. Verifiera identifierade verktyg
    * När programmet har autentiserats hittar det MCP-verktyg från servern. Du kan sedan börja fråga LLM om du vill utföra AEM-åtgärder.
 
-Nedan finns de program som stöds, varav några är länkar till steg-för-steg-guider:
-
-#### Chattprogram (webb och dator) {#setup-chat-applications}
-
-* [Anthropic Claude](/help/ai-in-aem/mcp-support/setup-claude.md)
-* [OpenAI ChatGPT](/help/ai-in-aem/mcp-support/setup-chatgpt.md)
-
-#### Utvecklingsverktyg (IDE-tillägg, datorprogram, CLI) {#setup-developer-tools}
-
-* Anthropic Claude Code (CLI, JetBrains, VS Code, Cursor)
-* Förenklingskod (CLI, JetBrains, VS-kod, markör)
-* Öka indrag för skrivbordsapp
-* Cline (JetBrains, VS Code, Cursor)
-* [Markör](/help/ai-in-aem/mcp-support/setup-cursor.md)
-* GitHub Copilot (VS-kod)
-* Kiro (datorprogram, CLI)
-* OpenAI Codex (datorprogram)
-* OpenAI Codex CLI
-* Windsurf
-
-#### Enterprise Platforms {#setup-enterprise-platforms}
-
-* [Microsoft Copilot Studio](/help/ai-in-aem/mcp-support/setup-microsoft-copilot-studio.md)
+Se [MCP-program som stöds](#supported-mcp-applications) för en fullständig lista över program som stöds.
 
 ## Autentisering {#authentication}
 
@@ -207,9 +178,7 @@ Några exempel på scenarier:
    * Uppdatera befintliga fragment när kampanjmeddelanden ändras.
 
 * **Assets-hantering**
-   * Importera resurser
-   * Hitta befintliga resurser
-   * Publicera resurser.
+   * Importera resurser med statuskontroll
 
 ### Exempel på arbetsflöden {#example-workflows}
 
