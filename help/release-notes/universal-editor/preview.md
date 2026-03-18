@@ -4,9 +4,9 @@ description: Det här är versionsinformationen för förhandsversionen av Unive
 feature: Release Information
 role: Admin
 exl-id: e8d031aa-4676-4e45-977b-e5dffcc404c4
-source-git-commit: 0abd8b05a5afdbcb2e90dcb36b3a77df71054ccc
+source-git-commit: bbf371dbf8102611345f2d289a3eaba56ee1d87c
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -38,3 +38,7 @@ Versionsinformationen **preview** är praktisk så att du vet vilka ändringar s
 * När du tar bort en bild lämnas inte längre tomma bildtaggar när du använder DA som back end.
 * Klasser i block hanteras nu korrekt när DA används som back end-komponent.
 * Open API sparar nu fjärrresurser som objekt.
+
+## Kommande brytningsändring {#breaking-change}
+
+* Alla tillägg bör uppdateras till `@adobe/uix-guest` >= `1.1.7` för att förbättra stabiliteten.
