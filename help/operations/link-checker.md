@@ -3,13 +3,13 @@ title: Länkkontroll
 description: Lär dig hur funktionen Länkkontroll hjälper författare genom att validera länkar när de läggs till i innehåll och vilka konfigurationsalternativ den erbjuder.
 feature: Operations
 role: Admin
-source-git-commit: cc8e242715faaef5cda25b428c315947ec3d7e06
+exl-id: f5f71e2f-69e3-44f9-812d-71fe417896f8
+source-git-commit: 08771212329423a2bf182ff2cdaf63be8cc37f80
 workflow-type: tm+mt
 source-wordcount: '998'
 ht-degree: 0%
 
 ---
-
 
 # Länkkontroll {#link-checker}
 
@@ -36,7 +36,7 @@ Länkkontrollen verifierar både [interna länkar](#internal) och [externa länk
 Interna länkar är länkar till annat innehåll i din AEM-databas. Du kan lägga till interna länkar med hjälp av sökvägsväljaren, textredigeraren eller en anpassad komponent. Till exempel:
 
 * Du skapar sidan `/content/wknd/us/en/adventures/ski-touring`
-* Den sidan innehåller en länk till `/content/wknd/us/en/adventures/extreme-ironing` i en [textkomponent.](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/wcm-components/text)
+* Den sidan innehåller en länk till `/content/wknd/us/en/adventures/extreme-ironing` i en [textkomponent.](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/text)
 
 Interna länkar valideras så snart innehållsförfattaren lägger till en sådan länk på en sida. Om länken blir ogiltig:
 
@@ -52,7 +52,7 @@ Interna länkar valideras så snart innehållsförfattaren lägger till en såda
 Externa länkar är länkar till innehåll utanför din AEM-databas. Externa länkar kan läggas till med RTF-redigeraren eller med en anpassad komponent. Till exempel:
 
 * Du skapar sidan `/content/wknd/us/en/adventures/ski-touring`
-* Den sidan innehåller en länk till `https://bunwarmerthermalunderwear.com` i en [textkomponent.](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/wcm-components/text)
+* Den sidan innehåller en länk till `https://bunwarmerthermalunderwear.com` i en [textkomponent.](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/text)
 
 Externa länkar valideras för syntax och genom att deras tillgänglighet kontrolleras. Den här kontrollen utförs asynkront med ett konfigurerbart intervall. Om länkkontrollen hittar en ogiltig extern länk:
 
@@ -69,10 +69,10 @@ Extern länkkontroll använder flera tjänster och om du förstår hur de funger
 
 1. När en innehållsförfattare sparar en länk till en sida aktiveras en händelsehanterare.
 1. Händelsehanteraren går igenom allt innehåll under `/content` och söker efter nya eller uppdaterade länkar och lägger till dem i ett cacheminne för länkkontrollen.
-1. CQ Link Checker-tjänsten **för** dagen körs sedan regelbundet för att kontrollera om posterna i cachen har giltig syntax.
+1. **Adobe AEM Link Checker Service** körs sedan regelbundet för att kontrollera om posterna i cachen har giltig syntax.
 1. Syntaxvaliderade länkar visas sedan i fönstret [External Link Checker.](#external-using) Men de kommer att vara i läget **Väntande**.
-1. CQ Link Checker-aktiviteten **Day** körs sedan regelbundet för att validera länkarna genom att ringa ett GET-samtal.
-1. CQ Link Checker-aktiviteten **Day CQ** uppdaterar sedan posterna i fönstret [External Link Checker](#external-using) med resultatet av GET-anropen.
+1. **Adobe AEM Link Checker Task** körs sedan regelbundet för att validera länkarna genom att ringa ett GET-samtal.
+1. **Adobe AEM Link Checker Task** uppdaterar sedan posterna i fönstret [External Link Checker](#external-using) med resultaten från GET-anropen.
 
 ### Använda extern länkkontroll {#external-using}
 
@@ -109,12 +109,12 @@ Alla andra ikoner i fönstret External Link Checker är inaktiva.
 
 Länkkontrollen är automatiskt tillgänglig i körklart läge i AEM. Det finns dock flera OSGi-konfigurationer som kan ändras för att ändra dess beteende:
 
-* **Dag CQ Link Checker Info Storage Service** - Den här tjänsten definierar storleken på cache-minnet för Länkkontroll i databasen.
-* **Dagens CQ Link Checker-tjänst** - Den här tjänsten utför asynkron kontroll av syntaxen för externa länkar.
+* **Adobe AEM Link Checker Info Storage Service** - Den här tjänsten definierar storleken på cache-minnet för Länkkontroll i databasen.
+* **Adobe AEM Link Checker Service** - Den här tjänsten utför asynkron kontroll av syntaxen för externa länkar.
    * Du kan bland annat definiera kontrollperioden och vilka typer av länkar som ignoreras av kontrollfunktionen.
-* **Day CQ Link Checker Task** - Den här tjänsten utför GET-validering av externa länkar.
+* **Adobe AEM Link Checker Task** - Den här tjänsten utför GET-validering av externa länkar.
    * Det gör att olika definitioner av intervall kan kontrollera dåliga och bra länkar bland andra alternativ.
-* **Dag CQ Link Checker Transformer** - Den här tjänsten konverterar länkar baserat på en användardefinierad regeluppsättning.
+* **Adobe AEM Link Checker Transformer** - Den här tjänsten konverterar länkar baserat på en användardefinierad regeluppsättning.
 
 Mer information om hur du ändrar OSGi-inställningar finns i dokumentet [Konfigurera OSGi](/help/implementing/deploying/configuring-osgi.md).
 
@@ -123,7 +123,7 @@ Mer information om hur du ändrar OSGi-inställningar finns i dokumentet [Konfig
 Du kan välja att inaktivera länkkontrollen helt. Så här gör du:
 
 1. Öppna OSGi-konsolen.
-1. Redigera **dagars CQ Link Checker-transformator**
+1. Redigera **Adobe AEM Link Checker Transformer**
 1. Markera de alternativ som du vill inaktivera:
    * **Inaktivera kontroll** - för att inaktivera validering av länkar
    * **Inaktivera omskrivning** - för att inaktivera länktomformningar
