@@ -4,9 +4,9 @@ description: Lär dig hur du kan använda konfigurationspipelines för att distr
 feature: Operations
 role: Admin
 exl-id: bd121d31-811f-400b-b3b8-04cdee5fe8fa
-source-git-commit: 66ea803dbf8e8b12fecf6256a88c94c2ca6fa112
+source-git-commit: 882d7de9aeae22777e1e02cbf78438e95db11e9a
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1491'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ eller
     cdn.yaml
 ```
 
-Mappnamnen och filnamnen under `/config` är godtyckliga. YAML-filen måste dock innehålla ett giltigt [`kind`-egenskapsvärde &#x200B;](#configurations).
+Mappnamnen och filnamnen under `/config` är godtyckliga. YAML-filen måste dock innehålla ett giltigt [`kind`-egenskapsvärde ](#configurations).
 
 Konfigurationer distribueras vanligtvis till alla miljöer. Om alla egenskapsvärden är identiska för varje miljö räcker det med en YAML-fil. Det är dock vanligt att egenskapsvärden skiljer sig åt mellan olika miljöer, till exempel när en lägre miljö testas.
 
@@ -221,13 +221,11 @@ data:
 
 Om du inkluderar metadatafältet *envTypes* bör bara värdet **prod** användas (det går också bra att utelämna metadatafältet envTypes). Endast värdet *publish* ska användas för **tier** reqProperty.
 
-## Hemliga miljövariabler {#secret-env-vars}
+## Konfigurationshemligheter  {#secret-in-configuration}
 
-Så att känslig information inte behöver lagras i källkontrollen stöder konfigurationsfiler Cloud Manager-miljövariabler av typen **secrets**. För vissa konfigurationer, inklusive vidarebefordran av loggar, är hemliga miljövariabler obligatoriska för vissa egenskaper.
+Så att känslig information inte behöver lagras i källkontrollen stöder konfigurationsfiler referenskretsar från Config-pipeline-variabler eller från miljövariabler. För vissa konfigurationer, inklusive loggvidarebefordran, är hemliga variabler obligatoriska för vissa egenskaper. Mer information om hur du använder hemligheter i CDN-konfigurationen finns i [Konfigurera CDN-autentiseringsuppgifter och autentisering](/help/implementing/dispatcher/cdn-credentials-authentication.md).
 
-Observera att hemliga miljövariabler används för publiceringsleveransprojekt. Se avsnittet Hemliga rörvariabler för Edge Delivery Services-projekt.
-
-Följande kodutdrag är ett exempel på hur den hemliga miljövariabeln `${{SPLUNK_TOKEN}}` används i konfigurationen.
+Följande kodutdrag är ett exempel på hur den hemliga variabeln `${{SPLUNK_TOKEN}}` används i konfigurationen.
 
 ```
 kind: "LogForwarding"
@@ -241,12 +239,22 @@ data:
       index: "AEMaaCS"
 ```
 
-Mer information om hur du använder miljövariabler finns i [Cloud Manager miljövariabler](/help/implementing/cloud-manager/environment-variables.md).
 
-## Hemliga pipeline-variabler {#secret-pipeline-vars}
 
-Använd Cloud Manager pipeline-variabler av typen **secrets** för Edge Delivery Services Projects så att känslig information inte behöver lagras i källkontrollen. *Använd*-valrutan bör använda alternativet **distribuera**.
+### Hemliga pipeline-variabler {#secret-pipeline-vars}
 
-Syntaxen är identisk med fragmentet som visades i föregående avsnitt.
+**Det** som du föredrar är att använda Cloud Manager-pipeline-variabler av typen **secrets**, så känslig information behöver inte lagras i källkontrollen. **Använd**-valrutan bör använda alternativet **distribuera**.
 
 Mer information om hur du använder pipeline-variabler finns i [Förloppsvariabler i Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md).
+
+
+### Hemliga miljövariabler {#secret-env-vars}
+
+Använd hemliga miljövariabler när du vill ha olika hemliga värden per miljö.
+
+Mer information om hur du använder miljövariabler finns i [Cloud Manager miljövariabler](/help/implementing/cloud-manager/environment-variables.md).
+
+>[!NOTE]
+>Att använda hemliga miljövariabler är mer krångligt och innefattar strikt disciplin: miljövariabler distribueras inte tillsammans med config-pipeline. Du måste distribuera dem innan du kör pipeline, och du får inte ta bort dem medan pipeline-konfigurationen fortfarande refererar till dem. Det är därför vi föredrar slutprodukter.
+
+
