@@ -4,9 +4,9 @@ description: Lär dig hur du använder Model Context Protocol med AEM as a Cloud
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: ddb7fc8c-affc-4374-8e08-d45d96017109
-source-git-commit: 3b935114d543a0bf99f3c03a2840942862396216
+source-git-commit: 3f65f818ae3dd70030a56c04982a037536575ddd
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '1719'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Många Adobe Experience Manager-team (AEM) arbetar nu i Integrated Development E
 Med AEM MCP-integrering kan olika personer samarbeta kring samma innehåll:
 
 * **Utvecklare** kan ordna innehållsoperationer och arbetsflöden från sina IDE- eller chattprogram
-* **Personer som arbetar med innehåll** och innehållsarkitekter kan hantera webbplatser, innehållsfragment och resurser med hjälp av AI, och kan samtidigt stanna kvar i AEM befintliga behörighetsmodell.
+* **Personer som arbetar med innehåll** och innehållsarkitekter kan hantera webbplatser och innehållsfragment samt importera resurser med hjälp av AI, samtidigt som de ligger kvar i AEM befintliga behörighetsmodell.
 
 >[!IMPORTANT]
 >
@@ -52,8 +52,8 @@ AEM visar MCP-servrar som HTTP-slutpunkter. Slutpunkterna som anges nedan är re
 
 | **MCP-server** | **Slutpunkt** | **Beskrivning** |
 |---|---|----------------------------------------------------------------------------------------------------------------------|
-| **Innehåll** | `/content` | Alla lågnivååtgärder för innehåll, inklusive skapa, läsa, uppdatera och ta bort (CRUD) för sidor, fragment och resurser. |
-| **Innehåll (skrivskyddat)** | `/content-readonly` | Skrivskyddade innehållsåtgärder (Hämta, Lista/Sök) för sidor, fragment och resurser. |
+| **Innehåll** | `/content` | Innehållsåtgärder som att skapa, läsa, uppdatera och ta bort (CRUD) för sidor och innehållsfragment samt resursimport. |
+| **Innehåll (skrivskyddat)** | `/content-readonly` | Skrivskyddade innehållsåtgärder (Hämta, Lista/Sök) för sidor och innehållsfragment. |
 | **Cloud Manager** | `/cloudmanager` | Hantera Cloud Manager-enheter som program, miljöer, databaser och rörledningar som också kan aktiveras. <br><br>*Den här MCP-servern är nu i **beta**. Om du vill begära åtkomst skickar du ett e-postmeddelande till [aemcs-mcp-feedback@adobe.com](mailto:aemcs-mcp-feedback@adobe.com) med en beskrivning av ditt användningsfall.* |
 
 De specifika verktyg som visas av varje MCP-server kan utvecklas över tid. I praktiken kan du be ditt MCP-aktiverade program att hitta verktyg via en uppmaning som:
@@ -64,7 +64,7 @@ De specifika verktyg som visas av varje MCP-server kan utvecklas över tid. I pr
 
 MCP-klienten använder MCP-protokollet för att hämta verktygslistan och scheman som LLM sedan kan använda.
 
-Se självstudiekursen [Content MCP Server &#x200B;](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/ai/mcp-servers/accelerate-content-operations-with-aem-mcp-server) och [Cloud Manager MCP Server Video](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/ai/mcp-servers/cloud-manager) för mer information om deras funktioner och hur de används.
+Se självstudiekursen [Content MCP Server ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/mcp-servers/accelerate-content-operations-with-aem-mcp-server) och [Cloud Manager MCP Server Video](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/mcp-servers/cloud-manager) för mer information om deras funktioner och hur de används.
 
 ## MCP-program som stöds {#supported-mcp-applications}
 
@@ -177,7 +177,7 @@ Några exempel på scenarier:
    * Skapa nya fragment
    * Uppdatera befintliga fragment när kampanjmeddelanden ändras.
 
-* **Assets-hantering**
+* **Resursimport**
    * Importera resurser med statuskontroll
 
 ### Exempel på arbetsflöden {#example-workflows}
