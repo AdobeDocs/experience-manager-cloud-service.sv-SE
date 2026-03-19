@@ -4,12 +4,13 @@ description: Lär dig hur du konfigurerar RTF-redigeraren i Universell redigerar
 feature: Developing
 role: Admin, Developer
 exl-id: 350eab0a-f5bc-49c0-8e4d-4a36a12030a1
-source-git-commit: 39137052e9fa409f7f5494be53fa7693aaa60b17
+source-git-commit: 0ed57393afaf9af3258dacdcb043487f4a098e03
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 0%
 
 ---
+
 
 # Konfigurera RTE för Universal Editor {#configure-rte}
 

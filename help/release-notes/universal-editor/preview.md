@@ -4,9 +4,9 @@ description: Det här är versionsinformationen för förhandsversionen av Unive
 feature: Release Information
 role: Admin
 exl-id: e8d031aa-4676-4e45-977b-e5dffcc404c4
-source-git-commit: bbf371dbf8102611345f2d289a3eaba56ee1d87c
+source-git-commit: e8231cd1c2d432e75268b1439fd585d19a406449
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Versionsinformation om förhandsvisning i Universal Editor {#preview}
 
-Det här är versionsinformationen för **förhandsvisningsversionen** av den universella redigeraren. De här funktionerna är för närvarande tillgängliga i den universella redigerarens **förhandsvisningsmiljö**. Dessa funktioner är planerade att lanseras den 12 mars 2026.
+Det här är versionsinformationen för **förhandsvisningsversionen** av den universella redigeraren. De här funktionerna är för närvarande tillgängliga i den universella redigerarens **förhandsvisningsmiljö**. Dessa funktioner är planerade att lanseras den 26 mars 2026.
 
 Versionsinformationen **preview** är praktisk så att du vet vilka ändringar som kommer att göras i den universella redigeraren och kan testa dem genom att [växla till förhandsvisningsversionen.](/help/sites-cloud/authoring/universal-editor/navigation.md#user-properties)
 
@@ -28,17 +28,10 @@ Versionsinformationen **preview** är praktisk så att du vet vilka ändringar s
 
 ## Kommande funktioner {#upcoming-features}
 
-* Objekten i den högra listen kan nu komprimeras på hemskärmen.
-* Resursväljaren har nu stöd för filterdefinitioner.
-* Om det inte finns några tillgängliga åtgärder för det markerade objektet visas inte längre en skiftnyckel för att komma åt åtgärder på snabbmenyn.
+* Konfiguration av dokumentredigeringsresurser visas nu via en konfigurationsslutpunkt.
+* En tilläggspunkt har lagts till på snabbmenyn.
+* En ny anpassad arbetsflödesikon har lagts till i Extensibility DynamicIcon-systemet för att visa ett djup/ytligt avbrytningsläge i gränssnittet.
 
 ## Kommande förbättringar {#upcoming-improvements}
 
-* Om det finns en modell-/filter-/komponentdefinition uppdateras den när du växlar från ett program till ett annat i redigeraren.
-* När du tar bort en bild lämnas inte längre tomma bildtaggar när du använder DA som back end.
-* Klasser i block hanteras nu korrekt när DA används som back end-komponent.
-* Open API sparar nu fjärrresurser som objekt.
-
-## Kommande brytningsändring {#breaking-change}
-
-* Alla tillägg bör uppdateras till `@adobe/uix-guest` >= `1.1.7` för att förbättra stabiliteten.
+* Ett problem har korrigerats med dokumentredigeringsklasser som inte fungerar med multifält eftersom en sträng förväntas.
