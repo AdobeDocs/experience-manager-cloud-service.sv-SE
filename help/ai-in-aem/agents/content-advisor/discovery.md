@@ -4,9 +4,9 @@ description: Lär dig hur du kan använda agenten för innehållsidentifiering f
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: 676300cd-b799-4c53-a58e-043e58a2cbc5
-source-git-commit: 45c547a0a7372e5ebe23bd6b816798cd3b225872
+source-git-commit: 10a4b44fde65ae865d2e6d908e9e442752326fcd
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2073'
 ht-degree: 0%
 
 ---
@@ -99,7 +99,7 @@ Exempeluppmaningar:
 * **Sök baserat på filformat, resurstyp, resursstatus och Skapat med e-post-ID**: Visa videoklipp i `.mp4`-format som har godkänts och `created by <user email ID>`.
 * **Sök baserat på filformat, resurstyp, resursstatus och Skapad**: Visa bilder i `.PNG`-format som har skapats efter 1 januari 2025 och `published by <user email ID>`
 * **Sök baserat på MIME-typ, Skapad och Publicerad av e-post-ID**: Visa `image/jpeg` som skapats efter `January 1, 2025` och `published by <user email ID>`.
-* **Sök baserat på filformat och anpassade metadataegenskaper**: Visa bilder i `.JPEG`-format som har `Product SKU ID as <SKU value>`.
+* **Sök baserat på filformat och anpassade metadataegenskaper**: Visa bilder i `.JPEG`-format som har `Product SKU ID = <SKU value>` (måste ha metadataegenskapen = värdeformat).
 
 * **Sök efter resurser som saknar metadata**: Visa resurser som skapats de senaste 90 dagarna med `<Name of metadata property including custom properties>` är tomma.
 
