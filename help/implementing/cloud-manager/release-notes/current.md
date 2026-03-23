@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2026.3.0 i Adobe Experience Manager as a Clou
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: eb3e826e27e14b8b1da534440f11d43e973130ec
+source-git-commit: 2556f606db8b74bce25cd504a183abdc43e31227
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '731'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Nästa planerade version är torsdagen den 2 april 2026.
   Se även [Kopiera innehåll](/help/implementing/developing/tools/content-copy.md#copy-content).
 
 * **Stöd för UI-utbyggbarhet i AEM Experience Hub**
-Stöd för gränssnittstillägg i [&#x200B; AEM Experience Hub &#x200B;](https://experience.adobe.com/experiencemanager) är nu aktiverat, vilket gör att utvecklare kan utöka gränssnittet med anpassade funktioner och widgetar som skapats med Adobe App Builder.
+Stöd för gränssnittstillägg i [ AEM Experience Hub ](https://experience.adobe.com/experiencemanager) är nu aktiverat, vilket gör att utvecklare kan utöka gränssnittet med anpassade funktioner och widgetar som skapats med Adobe App Builder.
 
   Mer information finns i [AEM Experience Hub](https://developer.adobe.com/uix/docs/services/aem-experience-hub/).
 
@@ -95,7 +95,9 @@ I dialogrutan **Lägg till/redigera pipeline**, under fliken **Source-kod**, fin
 * **Fullständigt bygge** - Skapar alla moduler i databasen vid varje körning.
 * **Smart Build** - Skapar bara moduler som ändrats sedan den senaste implementeringen, vilket förkortar den totala byggtiden.
 
-Du styr vilka pipelines som använder **Smart build**. Under betaversionen visas det här alternativet endast för **kodkvalitet**- och **dev-distribution**-pipelines.
+Du styr vilka pipelines som använder **Smart build**. Under betaversionen visas det här alternativet endast för pipelines med **kodkvalitet** och **fullständig stackdistribution**.
+
+Se [Om att använda Smart Build i en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#about-smart-build) och [Lägg till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#full-stack-code)
 
 Intresserad? Mejla [beta_quickbuild_cmpipelines@adobe.com](mailto:beta_quickbuild_cmpipelines@adobe.com) med ditt Adobe OrgID och program-ID.
 
