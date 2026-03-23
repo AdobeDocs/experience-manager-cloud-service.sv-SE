@@ -5,7 +5,7 @@ exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: a254afed91dce2cd58df8762a6dbe39680fe9e5c
+source-git-commit: 7e9e6e98638b099c5d6f9820cb6f675afe44bfaf
 workflow-type: tm+mt
 source-wordcount: '2464'
 ht-degree: 0%
@@ -310,7 +310,7 @@ En ny flik öppnas i webbläsaren med inloggningssidan till **Developer Console*
 
 Endast en användare med rollen **Utvecklare** har åtkomst till **Developer Console**. För sandlådeprogram har dock alla användare med åtkomst till sandlådeprogrammet åtkomst till **Developer Console**.
 
-Mer information finns i [Vilolägen och Fristående sandlådemiljöer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs#hibernation).
+Mer information finns i [Vilolägen och Fristående sandlådemiljöer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs#hibernation).
 
 Det här alternativet är också tillgängligt på fliken **Miljö** i fönstret **Översikt** när du klickar på ![Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i en enskild miljö.
 

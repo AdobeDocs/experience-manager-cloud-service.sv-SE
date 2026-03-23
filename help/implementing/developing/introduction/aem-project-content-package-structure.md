@@ -4,18 +4,18 @@ description: Läs om hur du definierar paketstrukturer för distribution till Ad
 exl-id: 38f05723-5dad-417f-81ed-78a09880512a
 feature: Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: fcc4b08c177effee2351229e40d3a4f866626eb8
 workflow-type: tm+mt
-source-wordcount: '2859'
-ht-degree: 3%
+source-wordcount: '2857'
+ht-degree: 2%
 
 ---
 
-# AEM projektstruktur
+# AEM Project-struktur
 
 >[!TIP]
 >
->Bekanta dig med grundläggande [AEM Project Archetype-användning](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) och plugin-programmet [FileVault Content Maven](/help/implementing/developing/tools/maven-plugin.md) när den här artikeln bygger på dessa inlärningar och begrepp.
+>Bekanta dig med grundläggande [AEM Project Archetype-användning](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/overview#) och plugin-programmet [FileVault Content Maven](/help/implementing/developing/tools/maven-plugin.md) när den här artikeln bygger på dessa inlärningar och begrepp.
 
 I den här artikeln beskrivs de ändringar som krävs för Adobe Experience Manager Maven-projekt som är AEM as a Cloud Service-kompatibla genom att säkerställa att de respekterar delningen av ändringsbart och oföränderligt innehåll. Beroenden skapas också för att skapa icke-konfliktskapande, deterministiska distributioner, och de paketeras i en distributionsbar struktur.
 
@@ -29,9 +29,9 @@ Den paketstruktur som beskrivs i det här dokumentet är kompatibel med **både*
 >
 >Konfigurationerna som beskrivs i det här dokumentet tillhandahålls av [AEM Project Maven Archetype 24 eller senare](https://github.com/adobe/aem-project-archetype/releases).
 
-## Mutable kontra Immutable Areas of the Repository {#mutable-vs-immutable}
+## Variabla kontra oföränderliga områden i databasen {#mutable-vs-immutable}
 
-Områdena `/apps` och `/libs` i AEM betraktas som **oföränderliga** eftersom de inte kan ändras (skapa, uppdatera, ta bort) efter att AEM har startats (dvs. vid körning). Alla försök att ändra ett oföränderligt område vid körning misslyckas.
+Områdena `/apps` och `/libs` i AEM är **oföränderliga**. När AEM har startats kan du inte skapa, uppdatera eller ta bort innehåll i dessa områden under körning. Alla försök att ändra ett oföränderligt område vid körning misslyckas.
 
 Allt annat i databasen, `/content`, `/conf`, `/var`, `/etc`, `/oak:index`, `/system`, `/tmp` och så vidare, är alla **muterbara** områden, vilket innebär att de kan ändras under körning.
 
@@ -39,11 +39,11 @@ Allt annat i databasen, `/content`, `/conf`, `/var`, `/etc`, `/oak:index`, `/sys
 >
 >Precis som i tidigare versioner av AEM bör `/libs` inte ändras. Endast AEM produktkod kan distribueras till `/libs`.
 
-### Oak Index {#oak-indexes}
+### Oak index {#oak-indexes}
 
-Oak-index (`/oak:index`) hanteras av AEM as a Cloud Service distributionsprocess. Orsaken är att Cloud Manager måste vänta tills ett nytt index har distribuerats och indexerats om fullständigt innan det går över till den nya kodbilden.
+AEM as a Cloud Service distributionsprocess hanterar Oak-index (`/oak:index`). Orsaken är att Cloud Manager måste vänta tills ett nytt index har distribuerats och indexerats om fullständigt innan det går över till den nya kodbilden.
 
-Även om Oak-index kan ändras vid körning måste de därför distribueras som kod så att de kan installeras innan några ändringsbara paket installeras. Därför är `/oak:index`-konfigurationer en del av kodpaketet och inte en del av innehållspaketet [&#x200B; enligt beskrivningen nedan](#recommended-package-structure).
+Även om Oak-index kan ändras vid körning måste de därför distribueras som kod så att de kan installeras innan några ändringsbara paket installeras. Därför är `/oak:index`-konfigurationer en del av kodpaketet och inte en del av innehållspaketet [ enligt beskrivningen nedan](#recommended-package-structure).
 
 >[!TIP]
 >
@@ -57,12 +57,12 @@ I det här diagrammet visas en översikt över den rekommenderade projektstruktu
 
 Den rekommenderade programdistributionsstrukturen är följande:
 
-### Kodpaket / OSGi Bundles
+### Kodpaket/OSGi-paket
 
 + OSGi-paketfilen genereras och bäddas in direkt i hela projektet.
 
 + Paketet `ui.apps` innehåller all kod som ska distribueras och endast distribueras till `/apps`. Vanliga element i paketet `ui.apps` innehåller, men är inte begränsade till:
-   + [Komponentdefinitioner och HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=sv-SE)-skript
+   + [Komponentdefinitioner och HTML](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/overview#)-skript
       + `/apps/my-app/components`
    + JavaScript och CSS (via [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md))
       + `/apps/my-app/clientlibs`
@@ -72,7 +72,7 @@ Den rekommenderade programdistributionsstrukturen är följande:
       + `/apps/settings`
    + ACL-listor (behörigheter)
       + Alla `rep:policy` för alla sökvägar under `/apps`
-   + [Förkompilerade paketerade skript](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/precompiled-bundled-scripts.html?lang=sv-SE)
+   + [Förkompilerade paketerade skript](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/precompiled-bundled-scripts#)
 
 >[!NOTE]
 >
@@ -88,35 +88,35 @@ Den rekommenderade programdistributionsstrukturen är följande:
       + `/content`, `/content/dam` och så vidare.
    + Styrda taggar för taxonomier
       + `/content/cq:tags`
-   + Äldre noder (helst migrera dessa noder till platser som inte är-/osv.)
+   + Äldre `etc`-noder (helst migrera dessa noder till platser som inte är/osv)
       + `/etc`
 
 ### Behållarpaket
 
-+ Paketet `all` är ett behållarpaket som ENDAST innehåller distributionsbara artefakter, den OSGI-paketerade JAR-filen, `ui.apps`, `ui.config` och `ui.content`-paket som inbäddade. Paketet `all` får inte ha **något eget innehåll eller någon egen kod**, utan i stället delegera all distribution till databasen till dess underpaket eller OSGi-paketera JAR-filer.
++ Paketet `all` är ett behållarpaket. Det innehåller endast distributionsbara artefakter som bäddas in: OSGi-paketets JAR-fil och `ui.apps`-, `ui.config`- och `ui.content`-paketen. Paketet `all` får inte ha **något eget innehåll eller någon egen kod**, utan i stället delegera all distribution till databasen till dess underpaket eller OSGi-paketera JAR-filer.
 
   Paket inkluderas nu med Maven [FileVault-pluginens inbäddade konfiguration](#embeddeds) i stället för `<subPackages>` -konfigurationen.
 
-  För komplexa Experience Manager-distributioner kan det vara önskvärt att skapa flera projekt/paket för `ui.apps`, `ui.config` och `ui.content` som representerar specifika webbplatser eller klientorganisationer i AEM. Om du gör det ser du till att delningen mellan ändringsbart och icke ändringsbart innehåll respekteras och att de nödvändiga innehållspaketen och OSGi-paketets JAR-filer bäddas in som delpaket i `all`-behållarinnehållspaketet.
+  För komplexa Experience Manager-distributioner kan det vara önskvärt att skapa flera projekt/paket för `ui.apps`, `ui.config` och `ui.content` som representerar specifika webbplatser eller klientorganisationer i AEM. Om du använder den här metoden bör du respektera uppdelningen mellan muterbart och oföränderligt innehåll. Bädda också in de nödvändiga innehållspaketen och OSGi-paketerade JAR-filer som delpaket i `all`-behållarinnehållspaketet.
 
   En innehållsstruktur för en komplex distribution kan till exempel se ut så här:
 
    + Innehållspaketet `all` bäddar in följande paket för att skapa en enda distributionsartefakt
       + `common.ui.apps` distribuerar kod som krävs av **både** plats A och plats B
-      + `site-a.core` OSGi bundle Jar krävs av webbplats A
+      + `site-a.core` OSGi-paket Jar krävs av webbplats A
       + `site-a.ui.apps` distribuerar kod som krävs av plats A
       + `site-a.ui.config` distribuerar OSGi-konfigurationer som krävs för plats A
       + `site-a.ui.content` distribuerar innehåll och konfiguration som krävs av plats A
-      + `site-b.core` OSGi bundle Jar krävs av webbplats B
+      + `site-b.core` OSGi-paket Jar krävs av webbplats B
       + `site-b.ui.apps` distribuerar kod som krävs av plats B
       + `site-b.ui.config` distribuerar OSGi-konfigurationer som krävs av plats B
       + `site-b.ui.content` distribuerar innehåll och konfiguration som krävs av plats B
 
 + Paketet `ui.config` innehåller alla [OSGi-konfigurationer](/help/implementing/deploying/configuring-osgi.md):
-   + Betraktad kod och hör till OSGi-paket, men innehåller inte vanliga innehållsnoder. Därför markeras det som ett behållarpaket
+   + Betraktad kod som tillhör OSGi-paket men inte innehåller vanliga innehållsnoder. Därför markeras den som ett behållarpaket
    + Organisationsmapp som innehåller körlägesspecifika OSGi-konfigurationsdefinitioner
       + `/apps/my-app/osgiconfig`
-   + Vanlig OSGi-konfigurationsmapp som innehåller standardkonfigurationer för OSGi som gäller för alla AEM as a Cloud Service-måldistributionsmål
+   + En gemensam OSGi-konfigurationsmapp som innehåller standardkonfigurationer för OSGi som gäller för alla AEM as a Cloud Service-måldistributionsmål
       + `/apps/my-app/osgiconfig/config`
    + Kör lägesspecifika OSGi-konfigurationsmappar som innehåller standardkonfigurationer för OSGi som gäller för alla AEM as a Cloud Service-måldistributionsmål
       + `/apps/my-app/osgiconfig/config.<author|publish>.<dev|stage|prod>`
@@ -135,7 +135,7 @@ Om andra AEM-projekt, som i sig själva består av sina egna kod- och innehålls
 Ett AEM-projekt som innehåller två AEM-program från en leverantör kan se ut så här:
 
 + Innehållspaketet `all` bäddar in följande paket för att skapa en enda distributionsartefakt
-   + `core` OSGi bundle Jar krävs för AEM-programmet
+   + `core` OSGi bundles Jar krävs för AEM-programmet
    + `ui.apps` distribuerar kod som krävs för AEM-programmet
    + `ui.config` distribuerar OSGi-konfigurationer som krävs av AEM-programmet
    + `ui.content` distribuerar innehåll och konfiguration som krävs för AEM-programmet
@@ -151,13 +151,13 @@ Paket ska märkas med sin deklarerade pakettyp. Pakettyper gör det lättare att
 + Innehållspaket (mutable) måste ange `packageType` till `content`.
 
 
-Mer information finns i [dokumentationen för Apache Jackrabbit FileVault - Package Maven Plugin &#x200B;](https://jackrabbit.apache.org/filevault-package-maven-plugin/package-mojo.html#packageType), [Pakettyper för Apache Jackrabbit](https://jackrabbit.apache.org/filevault/packagetypes.html) och [konfigurationsfragmentet för FileVault Maven](#marking-packages-for-deployment-by-adoube-cloud-manager) nedan.
+Mer information finns i [dokumentationen för Apache Jackrabbit FileVault - Package Maven Plugin ](https://jackrabbit.apache.org/filevault-package-maven-plugin/package-mojo.html#packageType), [Pakettyper för Apache Jackrabbit](https://jackrabbit.apache.org/filevault/packagetypes.html) och [konfigurationsfragmentet för FileVault Maven](#marking-packages-for-deployment-by-adoube-cloud-manager) nedan.
 
 >[!TIP]
 >
 >Se avsnittet [POM XML-kodfragment](#xml-package-types) nedan för ett fullständigt fragment.
 
-## Markera paket för distribution av Adobe Cloud Manager {#marking-packages-for-deployment-by-adoube-cloud-manager}
+## Markera paket för distribution med Adobe Cloud Manager {#marking-packages-for-deployment-by-adoube-cloud-manager}
 
 Som standard skördar Adobe Cloud Manager alla paket som produceras av Maven-bygget. Eftersom behållarpaketet (`all`) är en enda distributionsartefakt som innehåller alla kod och innehållspaket, måste du se till att **endast** behållarpaketet (`all`) distribueras. För att säkerställa detta måste andra paket som genereras av Maven-bygget markeras med FileVaults Maven-pluginkonfiguration `<properties><cloudManagerTarget>none</cloudManageTarget></properties>` för innehållspaket.
 
@@ -169,7 +169,7 @@ Som standard skördar Adobe Cloud Manager alla paket som produceras av Maven-byg
 
 Repo Init innehåller instruktioner, eller skript, som definierar JCR-strukturer, från vanliga nodstrukturer som mappträd till användare, tjänstanvändare, grupper och ACL-definition.
 
-De viktigaste fördelarna med Repo Init är att de har implicit behörighet att utföra alla åtgärder som definieras av deras skript. Sådana skript anropas tidigt under driftsättningens livscykel för att säkerställa att alla nödvändiga JCR-strukturer finns när tidskoden körs.
+De största fördelarna med Repo Init är att de har implicita behörigheter att utföra alla åtgärder som definieras av deras skript. Sådana skript anropas tidigt under driftsättningens livscykel och säkerställer att alla nödvändiga JCR-strukturer finns när koden körs.
 
 Repo Init-skript som finns i `ui.config`-projektet som skript kan och bör användas för att definiera följande muterbara strukturer:
 
@@ -179,11 +179,11 @@ Repo Init-skript som finns i `ui.config`-projektet som skript kan och bör anvä
 + Grupper
 + ACL:er
 
-Repo Init-skript lagras som `scripts` poster i `RepositoryInitializer` OSGi-fabrikskonfigurationer. Därför kan de vara implicit inriktade på körning, vilket möjliggör skillnader mellan AEM Author och AEM Publish Services Repo Init-skript, och till och med mellan miljöer (Dev, Stage och Prod).
+Repo Init-skript lagras som `scripts` poster i `RepositoryInitializer` OSGi-fabrikskonfigurationer. Körningsläget kan implicit rikta in sig på dem. Med den här målgruppsanpassningen kan du skilja på Repo Init-skript mellan AEM Author och AEM Publish Services, eller till och med mellan Dev-, Stage- och Prod-miljöer.
 
-Repo Init OSGi-konfigurationer skrivs bäst i [`.config` OSGi-konfigurationsformatet &#x200B;](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-config-1) eftersom de har stöd för flera rader, vilket är ett undantag till de bästa sätten att använda [`.cfg.json` för att definiera OSGi-konfigurationer](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-cfgjson-1).
+Repo Init OSGi-konfigurationer skrivs bäst i [`.config` OSGi-konfigurationsformatet ](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-config-1) eftersom de har stöd för flera rader, vilket är ett undantag till de bästa sätten att använda [`.cfg.json` för att definiera OSGi-konfigurationer](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-cfgjson-1).
 
-När du definierar användare och grupper betraktas bara grupper som en del av programmet och de är integrerade i dess funktion. Du definierar fortfarande användare och grupper för organisation vid körning i AEM. Om ett anpassat arbetsflöde till exempel tilldelar arbete till en namngiven grupp, definierar du den gruppen med hjälp av Repo Init i AEM-programmet. Men om grupperingen bara är organisatorisk, till exempel&quot;Wendy&#39;s Team&quot; och&quot;Sean&#39;s Team&quot;, är de här grupperna bäst definierade och hanterade vid körning i AEM.
+När du definierar Användare och grupper betraktas bara grupper som en del av programmet och de är en väsentlig del av dess funktion. Du definierar fortfarande användare och grupper för organisation vid körning i AEM. Om ett anpassat arbetsflöde till exempel tilldelar arbete till en namngiven grupp, definierar du den gruppen med hjälp av Repo Init i AEM-programmet. Men om grupperingen bara är organisatorisk, till exempel&quot;Wendy&#39;s Team&quot; och&quot;Sean&#39;s Team&quot;, är de här grupperna bäst definierade och hanterade vid körning i AEM.
 
 >[!TIP]
 >
@@ -193,7 +193,7 @@ Det fullständiga språket för Repo Init-skript finns i [dokumentationen för A
 
 >[!TIP]
 >
->Se avsnittet [Kodfragment för inledande &#x200B;](#snippet-repo-init) nedan för ett fullständigt kodavsnitt.
+>Se avsnittet [Kodfragment för inledande ](#snippet-repo-init) nedan för ett fullständigt kodavsnitt.
 
 ## Databasstrukturpaket {#repository-structure-package}
 
@@ -211,7 +211,7 @@ Innehållspaket (`<packageType>content</packageType>`) **kräver inte** det här
 
 ## Bädda in delpaket i behållarpaketet{#embeddeds}
 
-Innehåll eller kodpaket placeras i en speciell &quot;side-car&quot;-mapp och kan användas för installation på antingen AEM-författare, AEM-publicering eller båda med hjälp av plugin-programmets `<embeddeds>`-konfiguration för FileVault Maven. Använd inte `<subPackages>`-konfigurationen.
+Innehåll eller kodpaket placeras i en särskild underordnad mapp. Använd FileVault Maven-plugin-programmets `<embeddeds>`-konfiguration för att rikta in dem mot installation på AEM Author, AEM Publish eller båda. Använd inte `<subPackages>`-konfigurationen.
 
 Vanliga användningsfall är:
 
@@ -228,25 +228,25 @@ Om du vill ange AEM-författare, AEM publicerar eller båda, bäddas paketet in 
 Bryter ned den här mappstrukturen:
 
 + Mappen **på första nivån måste vara** `/apps`.
-+ Mappen på den andra nivån representerar programmet med `-packages` efter mappnamnet. Det finns ofta bara en mapp på andra nivån som alla underpaket är inbäddade i, men hur många mappar på andra nivån som helst kan skapas för att bäst representera programmets logiska struktur:
++ Mappen på den andra nivån representerar programmet med `-packages` efter mappnamnet. Det finns ofta bara en mapp på andra nivån som alla underpaket är inbäddade i, men hur många mappar på andra nivån som helst kan skapas för att representera programmets bästa logiska struktur:
    + `/apps/my-app-packages`
    + `/apps/my-other-app-packages`
    + `/apps/vendor-packages`
 
   >[!WARNING]
   >
-  >Delpaketets inbäddade mappar namnges med suffixet `-packages`. Namngivningen säkerställer att distributionskoden och innehållspaketen **inte** distribueras till målmapparna för alla underpaket `/apps/<app-name>/...` vilket leder till destruktiv och cyklisk installation.
+  >Delpaketets inbäddade mappar namnges med suffixet `-packages`. Detta namn garanterar att distributionskoden och innehållspaketen **inte** distribueras till målmapparna för alla underpaket under `/apps/<app-name>/...`. På så sätt förhindras destruktiv och cyklisk installation.
 
 + Mappen på den tredje nivån måste vara antingen
   `application`, `content` eller `container`
    + Mappen `application` innehåller kodpaket
    + Mappen `content` innehåller innehållspaket
-   + Mappen `container` innehåller alla [extra programpaket](#extra-application-packages) som kan ingå i AEM-programmet.
+   + Mappen `container` innehåller alla [extra programpaket](#extra-application-packages) som kanske inte ingår i AEM-programmet.
 Det här mappnamnet motsvarar [pakettyperna](#package-types) för paketen som det innehåller.
 + Mappen på den fjärde nivån innehåller underpaketen och måste vara någon av:
    + `install` så att du kan installera på **både** AEM-författare och AEM-publicering
    + `install.author` så att du installerar **only** på AEM-författaren
-   + `install.publish` så att du installerar **endast** i AEM-publicering
+   + `install.publish` så att du installerar **only** i AEM Publish
 Endast `install.author` och `install.publish` stöds som mål. Andra körningslägen **stöds inte**.
 
 En distribution som innehåller AEM-författare och publicerar specifika paket kan till exempel se ut så här:
@@ -301,7 +301,7 @@ Ett betydande undantag från den här allmänna regeln är om det oföränderlig
 
 De vanligaste mönstren för innehållspaketberoenden är:
 
-### Enkla distributionspaketberoenden {#simple-deployment-package-dependencies}
+### Beroenden för enkla distributionspaket {#simple-deployment-package-dependencies}
 
 I det enkla fallet anges att det `ui.content`-ändringsbara innehållspaketet ska vara beroende av det `ui.apps`-oföränderliga kodpaketet.
 
@@ -322,7 +322,7 @@ Komplexa driftsättningar bygger vidare på det enkla fallet och ställer in ber
 
 ## Lokal utveckling och driftsättning {#local-development-and-deployment}
 
-Projektstrukturerna och organisationen som beskrivs i den här artikeln är **fullständigt kompatibla** lokala AEM-utvecklingsinstanser.
+Projektstrukturerna och organisationen som beskrivs i den här artikeln är **fullständigt kompatibla** med AEM-instanser för lokal utveckling.
 
 ## POM XML-kodfragment {#pom-xml-snippets}
 
@@ -332,11 +332,11 @@ Nedan följer Maven `pom.xml`-konfigurationsfragment som kan läggas till i Mave
 
 Kod- och innehållspaket, som distribueras som underpaket, måste deklarera pakettypen **application** eller **content**, beroende på vad de innehåller.
 
-#### Behållarpakettyper {#container-package-types}
+#### Typ av behållarpaket {#container-package-types}
 
 Behållarprojektet `all/pom.xml` **deklarerar inte** en `<packageType>`.
 
-#### Kodpakettyper (ej ändringsbara) {#immutable-package-types}
+#### Pakettyper för kod (ej ändringsbar) {#immutable-package-types}
 
 Kodpaket måste ange `packageType` till `application`.
 
@@ -392,7 +392,7 @@ I `ui.content/pom.xml` deklarerar byggkonfigurationsdirektivet `<packageType>con
 
 ### Markera paket för distribution av Adobe Cloud Manager {#cloud-manager-target}
 
-I alla projekt som genererar ett paket, **utom** för behållarprojektet (`all`), lägger du till `<cloudManagerTarget>none</cloudManagerTarget>` i `<properties>`-konfigurationen för plugin-deklarationen `filevault-package-maven-plugin` för att vara säker på att de **inte** distribueras av Adobe Cloud Manager. Behållarpaketet (`all`) ska vara ett enskilt paket som distribueras via Cloud Manager, vilket i sin tur bäddar in all nödvändig kod och alla nödvändiga innehållspaket.
+I varje projekt som genererar ett paket, **utom** för behållarprojektet (`all`), lägger du till `<cloudManagerTarget>none</cloudManagerTarget>` i `<properties>`-konfigurationen för plugin-deklarationen för `filevault-package-maven-plugin` för att vara säker på att Adobe Cloud Manager inte** distribuerar dem. Behållarpaketet (`all`) ska vara ett enskilt paket som distribueras via Cloud Manager, vilket i sin tur bäddar in all nödvändig kod och alla nödvändiga innehållspaket.
 
 ```xml
 ...
@@ -414,7 +414,8 @@ I alla projekt som genererar ett paket, **utom** för behållarprojektet (`all`)
 
 ### Repo Init{#snippet-repo-init}
 
-Repo Init-skript som innehåller Repo Init-skript definieras i OSGi-fabrikskonfigurationen `RepositoryInitializer` via egenskapen `scripts`. Eftersom dessa skript definieras i OSGi-konfigurationer kan de enkelt omfångas i körningsläge med hjälp av det vanliga `../config.<runmode>`-mappsemantik.
+Repo Init-skript som innehåller Repo Init-skript definieras i OSGi-fabrikskonfigurationen `RepositoryInitializer` via egenskapen `scripts`. Eftersom du definierar dessa skript i OSGi-konfigurationer kan du enkelt omfång genom att använda körningsläget med hjälp av det vanliga `../config.<runmode>`-mappsemantiken.
+
 
 Eftersom skript vanligtvis är flerradsdeklarationer är det enklare att definiera dem i filen `.config` än det JSON-baserade `.cfg.json`-formatet.
 
@@ -548,11 +549,11 @@ I `all` (`filter.xml`) för projektet `all/src/main/content/jcr_root/META-INF/va
 
 Om flera `/apps/*-packages` används i de inbäddade målen måste alla räknas upp här.
 
-### Maven Repositories från tredje part {#xml-3rd-party-maven-repositories}
+### Maven-databaser från tredje part {#xml-3rd-party-maven-repositories}
 
 >[!WARNING]
 >
->Om du lägger till fler Maven-databaser kan det ta längre tid att bygga maven när ytterligare Maven-databaser kontrolleras för beroenden.
+>Om du lägger till fler Maven-databaser kan Maven-byggtider förlängas när ytterligare Maven-databaser kontrolleras för beroenden.
 
 I reaktorprojektets `pom.xml` lägger du till eventuella nödvändiga direktiv från tredje part för databasen Maven. Den fullständiga `<repository>`-konfigurationen bör vara tillgänglig från tredjepartsprovidern för databas.
 
@@ -590,7 +591,7 @@ I `ui.content/pom.xml` lägger du till följande `<dependencies>`-direktiv i plu
       <dependencies>
         <!-- Declare the content package dependency in the ui.content/pom.xml on the ui.apps project -->
         <dependency>
-            <groupId${project.groupId}</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>my-app.ui.apps</artifactId>
             <version>${project.version}</version>
         </dependency>
