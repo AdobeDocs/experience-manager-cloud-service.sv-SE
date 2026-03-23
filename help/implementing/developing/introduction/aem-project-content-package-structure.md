@@ -43,7 +43,7 @@ Allt annat i databasen, `/content`, `/conf`, `/var`, `/etc`, `/oak:index`, `/sys
 
 AEM as a Cloud Service distributionsprocess hanterar Oak-index (`/oak:index`). Orsaken är att Cloud Manager måste vänta tills ett nytt index har distribuerats och indexerats om fullständigt innan det går över till den nya kodbilden.
 
-Även om Oak-index kan ändras vid körning måste de därför distribueras som kod så att de kan installeras innan några ändringsbara paket installeras. Därför är `/oak:index`-konfigurationer en del av kodpaketet och inte en del av innehållspaketet [ enligt beskrivningen nedan](#recommended-package-structure).
+Även om Oak-index kan ändras vid körning måste de därför distribueras som kod så att de kan installeras innan några ändringsbara paket installeras. Därför är `/oak:index`-konfigurationer en del av kodpaketet och inte en del av innehållspaketet [&#x200B; enligt beskrivningen nedan](#recommended-package-structure).
 
 >[!TIP]
 >
@@ -151,7 +151,7 @@ Paket ska märkas med sin deklarerade pakettyp. Pakettyper gör det lättare att
 + Innehållspaket (mutable) måste ange `packageType` till `content`.
 
 
-Mer information finns i [dokumentationen för Apache Jackrabbit FileVault - Package Maven Plugin ](https://jackrabbit.apache.org/filevault-package-maven-plugin/package-mojo.html#packageType), [Pakettyper för Apache Jackrabbit](https://jackrabbit.apache.org/filevault/packagetypes.html) och [konfigurationsfragmentet för FileVault Maven](#marking-packages-for-deployment-by-adoube-cloud-manager) nedan.
+Mer information finns i [dokumentationen för Apache Jackrabbit FileVault - Package Maven Plugin &#x200B;](https://jackrabbit.apache.org/filevault-package-maven-plugin/package-mojo.html#packageType), [Pakettyper för Apache Jackrabbit](https://jackrabbit.apache.org/filevault/packagetypes.html) och [konfigurationsfragmentet för FileVault Maven](#marking-packages-for-deployment-by-adoube-cloud-manager) nedan.
 
 >[!TIP]
 >
@@ -181,7 +181,7 @@ Repo Init-skript som finns i `ui.config`-projektet som skript kan och bör anvä
 
 Repo Init-skript lagras som `scripts` poster i `RepositoryInitializer` OSGi-fabrikskonfigurationer. Körningsläget kan implicit rikta in sig på dem. Med den här målgruppsanpassningen kan du skilja på Repo Init-skript mellan AEM Author och AEM Publish Services, eller till och med mellan Dev-, Stage- och Prod-miljöer.
 
-Repo Init OSGi-konfigurationer skrivs bäst i [`.config` OSGi-konfigurationsformatet ](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-config-1) eftersom de har stöd för flera rader, vilket är ett undantag till de bästa sätten att använda [`.cfg.json` för att definiera OSGi-konfigurationer](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-cfgjson-1).
+Repo Init OSGi-konfigurationer skrivs bäst i [`.config` OSGi-konfigurationsformatet &#x200B;](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-config-1) eftersom de har stöd för flera rader, vilket är ett undantag till de bästa sätten att använda [`.cfg.json` för att definiera OSGi-konfigurationer](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-cfgjson-1).
 
 När du definierar Användare och grupper betraktas bara grupper som en del av programmet och de är en väsentlig del av dess funktion. Du definierar fortfarande användare och grupper för organisation vid körning i AEM. Om ett anpassat arbetsflöde till exempel tilldelar arbete till en namngiven grupp, definierar du den gruppen med hjälp av Repo Init i AEM-programmet. Men om grupperingen bara är organisatorisk, till exempel&quot;Wendy&#39;s Team&quot; och&quot;Sean&#39;s Team&quot;, är de här grupperna bäst definierade och hanterade vid körning i AEM.
 
@@ -193,7 +193,7 @@ Det fullständiga språket för Repo Init-skript finns i [dokumentationen för A
 
 >[!TIP]
 >
->Se avsnittet [Kodfragment för inledande ](#snippet-repo-init) nedan för ett fullständigt kodavsnitt.
+>Se avsnittet [Kodfragment för inledande &#x200B;](#snippet-repo-init) nedan för ett fullständigt kodavsnitt.
 
 ## Databasstrukturpaket {#repository-structure-package}
 
