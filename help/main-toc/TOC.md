@@ -1261,7 +1261,7 @@ ht-degree: 3%
          + [Publish Adaptive Forms with Edge Delivery Services](/help/edge/docs/forms/universal-editor/publish-forms.md)
          + [Create Custom Components for an EDS Form](/help/edge/docs/forms/universal-editor/create-custom-component.md)
          + [Felsökning 403 Otillåtna fel vid inskickning av Edge Delivery Services-formulär](/help/forms/troubleshooting-403-forbidden-edge-delivery-form-submission.md)
-         + [](/help/edge/docs/forms/universal-editor/create-lead-object-using-api-integration.md)
+         + [&#128279;](/help/edge/docs/forms/universal-editor/create-lead-object-using-api-integration.md)
          + Listruta för överlappande {#cascading-drop-down-list}
             + [Introduktion](/help/edge/docs/forms/cascading-drop-down-list/introduction.md)
             + [Skapa API-integrering](/help/edge/docs/forms/cascading-drop-down-list/create-api-integration.md)
@@ -1537,7 +1537,7 @@ ht-degree: 3%
          + [SecurBank-exempelapp](/help/implementing/universal-editor/securbank.md)
       + [Headless Experience Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html)
       + Hybrid- och SPA-utveckling {#hybrid}
-         + [](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+         + [&#128279;](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
          + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
          + [Borttagning av SPA-redigerare](/help/implementing/developing/hybrid/spa-editor-deprecation.md)
          + [Introduktion och genomgång av SPA](/help/implementing/developing/hybrid/introduction.md)
