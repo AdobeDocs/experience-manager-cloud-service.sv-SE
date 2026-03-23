@@ -15,7 +15,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->Bekanta dig med grundläggande [AEM Project Archetype-användning](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/overview#) och plugin-programmet [FileVault Content Maven](/help/implementing/developing/tools/maven-plugin.md) när den här artikeln bygger på dessa inlärningar och begrepp.
+>Bekanta dig med grundläggande [AEM Project Archetype-användning](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/overview#) och plugin-programmet [FileVault Content Maven](/help/implementing/developing/tools/maven-plugin.md) när den här artikeln bygger på dessa inlärningar och begrepp.
 
 I den här artikeln beskrivs de ändringar som krävs för Adobe Experience Manager Maven-projekt som är AEM as a Cloud Service-kompatibla genom att säkerställa att de respekterar delningen av ändringsbart och oföränderligt innehåll. Beroenden skapas också för att skapa icke-konfliktskapande, deterministiska distributioner, och de paketeras i en distributionsbar struktur.
 
@@ -62,7 +62,7 @@ Den rekommenderade programdistributionsstrukturen är följande:
 + OSGi-paketfilen genereras och bäddas in direkt i hela projektet.
 
 + Paketet `ui.apps` innehåller all kod som ska distribueras och endast distribueras till `/apps`. Vanliga element i paketet `ui.apps` innehåller, men är inte begränsade till:
-   + [Komponentdefinitioner och HTML](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/overview#)-skript
+   + [Komponentdefinitioner och HTML](https://experienceleague.adobe.com/sv/docs/experience-manager-htl/content/overview#)-skript
       + `/apps/my-app/components`
    + JavaScript och CSS (via [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md))
       + `/apps/my-app/clientlibs`
@@ -72,7 +72,7 @@ Den rekommenderade programdistributionsstrukturen är följande:
       + `/apps/settings`
    + ACL-listor (behörigheter)
       + Alla `rep:policy` för alla sökvägar under `/apps`
-   + [Förkompilerade paketerade skript](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/precompiled-bundled-scripts#)
+   + [Förkompilerade paketerade skript](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/precompiled-bundled-scripts#)
 
 >[!NOTE]
 >
