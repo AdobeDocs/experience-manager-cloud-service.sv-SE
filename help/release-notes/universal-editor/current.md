@@ -4,9 +4,9 @@ description: Detta är versionsinformationen för version 2026.03.19 av Universa
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 8d9d162ec5bba99afb1ae86252a49a9880be4e68
+source-git-commit: 048e86fe7930173bb33de9252607e2910520b575
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '195'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Detta är versionsinformationen för den 19 mars 2026-utgåvan av Universal Edit
 
 * Objekten i egenskaperna är nu komprimerade när du går tillbaka till [hemskärmen.](/help/sites-cloud/authoring/universal-editor/navigation.md#home-button)
 * [Resursväljaren](/help/implementing/universal-editor/configure-assets-selector.md) har nu stöd för [filterdefinitioner.](/help/implementing/universal-editor/filtering.md)
-* Om det inte finns några tillgängliga åtgärder för det markerade objektet visar [inte längre snabbmenyn](/help/sites-cloud/authoring/universal-editor/authoring.md#context-menu) en förvrängning för att komma åt åtgärder.
+* Om det inte finns några tillgängliga åtgärder för det valda objektet visar [snabbmenyn](/help/sites-cloud/authoring/universal-editor/authoring.md#context-menu) nu ett meddelande som anger det.
 
 ## Andra förbättringar {#other-improvements}
 
