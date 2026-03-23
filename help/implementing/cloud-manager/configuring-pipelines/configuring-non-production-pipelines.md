@@ -6,7 +6,7 @@ exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: 2556f606db8b74bce25cd504a183abdc43e31227
+source-git-commit: 8391980183b8c5a91046e01474200b9eaf8e0546
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 0%
@@ -210,7 +210,7 @@ Den prestandaökning som kan uppnås med Smart Build beror på flera faktorer, b
 * Kodändringarnas frekvens och omfattning.
 * Distributionen av beroenden mellan moduler.
 
-I allmänhet förbättras projekt med många oberoende moduler mest.
+I allmänhet kan projekt med många oberoende moduler se den största förbättringen.
 
 ### Cacheavanmälan per modul{#smart-build-cache-optout}
 
