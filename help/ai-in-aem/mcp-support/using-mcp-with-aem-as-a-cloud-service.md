@@ -4,9 +4,9 @@ description: Lär dig hur du använder Model Context Protocol med AEM as a Cloud
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: ddb7fc8c-affc-4374-8e08-d45d96017109
-source-git-commit: 3f65f818ae3dd70030a56c04982a037536575ddd
+source-git-commit: 6c2061cd6e6aee26c32935f4d33417a1f945665d
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ De specifika verktyg som visas av varje MCP-server kan utvecklas över tid. I pr
 
 MCP-klienten använder MCP-protokollet för att hämta verktygslistan och scheman som LLM sedan kan använda.
 
-Se självstudiekursen [Content MCP Server &#x200B;](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/ai/mcp-servers/accelerate-content-operations-with-aem-mcp-server) och [Cloud Manager MCP Server Video](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/ai/mcp-servers/cloud-manager) för mer information om deras funktioner och hur de används.
+Se självstudiekursen [Content MCP Server ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/mcp-servers/accelerate-content-operations-with-aem-mcp-server) och [Cloud Manager MCP Server Video](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/mcp-servers/cloud-manager) för mer information om deras funktioner och hur de används.
 
 ## MCP-program som stöds {#supported-mcp-applications}
 
@@ -82,7 +82,7 @@ AEM MCP-servrar är utformade för att fungera med en definierad uppsättning MC
 * Öka indrag för skrivbordsapp
 * Cline (JetBrains, VS Code, Cursor)
 * Markör
-* GitHub Copilot (VS-kod)
+* GitHub Copilot (JetBrains, VS Code)
 * Kiro (datorprogram, CLI)
 * OpenAI Codex (datorprogram)
 * OpenAI Codex CLI
@@ -104,6 +104,7 @@ Stegvisa guider som täcker båda stegen är tillgängliga för:
 * [Anthropic Claude](/help/ai-in-aem/mcp-support/setup-claude.md)
 * [OpenAI ChatGPT](/help/ai-in-aem/mcp-support/setup-chatgpt.md)
 * [Markör](/help/ai-in-aem/mcp-support/setup-cursor.md)
+* [JetBrains med GitHub Copilot](/help/ai-in-aem/mcp-support/setup-jetbrains-copilot.md)
 * [Microsoft Copilot Studio](/help/ai-in-aem/mcp-support/setup-microsoft-copilot-studio.md)
 
 ### AEM Configuration {#aem-configuration}
