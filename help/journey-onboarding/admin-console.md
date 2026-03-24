@@ -4,7 +4,7 @@ description: När du har förstått de förberedelser som krävs för att komma 
 exl-id: 0ccce328-a356-4ba9-b7fe-f67abc25b924
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 8ed13eb6f476bab07da07549a83ab9ac16bdea72
+source-git-commit: 9f237747f19ee537fbc51f39e935472c6a023328
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 0%
@@ -88,7 +88,7 @@ Grattis, systemadministratör!
 
 1. Klicka på [Adobe Experience Cloud](https://experience.adobe.com/#/@foundationinternal/home) för att öppna Experience Hub hemsida.
 
-1. Klicka på **Admin Console**&#x200B;[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
+1. Klicka på **Admin Console**[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
 
 ## Adobe Identity Management System {#ims}
 
@@ -110,7 +110,7 @@ På fliken kan du skapa och hantera ärenden, chatta direkt med Adobe kundsuppor
 
 Nu när du har läst det här dokumentet bör du:
 
-* Förstå vad och vad Adobe ID är.
+* Förstå vad en Adobe ID är.
 * Du kan logga in på Admin Console.
 * Lär dig hur du granskar dina behörigheter som systemadministratör med Admin Console.
 * Se hur du kontaktar Adobe support.
@@ -121,8 +121,8 @@ Du är redo att fortsätta din introduktionsresa genom att lära dig hur du [til
 
 Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
-* [Admin Console Overview](https://helpx.adobe.com/se/enterprise/using/admin-console.html) - en omfattande översikt över Admin Console
+* [Admin Console Overview](https://helpx.adobe.com/enterprise/using/admin-console.html) - en omfattande översikt över Admin Console
 * [Skapa eller uppdatera din Adobe ID](https://helpx.adobe.com/ca/manage-account/using/create-update-adobe-id.html#HowtocreateorupdateyourAdobeID) - Lär dig hur du skapar en Adobe ID, ändrar den och hanterar flera Adobe ID:n.
-* [SAML 2.0-autentiseringshanterare](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/security/saml-2-0-authenticationhandler#) - AEM levereras med en SAML-autentiseringshanterare. Hanteraren ger stöd för SAML 2.0 Authentication Request Protocol (Web-SSO-profil) med HTTP POST-bindning.
-* [Administrativa roller](https://helpx.adobe.com/se/enterprise/using/admin-roles.html) - Med Adobe Admin Console kan organisationer definiera en flexibel administrativ hierarki som möjliggör detaljerad hantering av åtkomst och användning av Adobe-produkter.
-* [Support- och expertsessioner](https://helpx.adobe.com/se/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.html) - Lär dig hur du kommer åt supportalternativen på Admin Console, hanterar dina supportärenden, schemalägger en expertsession och mycket annat.
+* [SAML 2.0-autentiseringshanterare](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/saml-2-0-authenticationhandler#) - AEM levereras med en SAML-autentiseringshanterare. Hanteraren ger stöd för SAML 2.0 Authentication Request Protocol (Web-SSO-profil) med HTTP POST-bindning.
+* [Administrativa roller](https://helpx.adobe.com/enterprise/using/admin-roles.html) - Med Adobe Admin Console kan organisationer definiera en flexibel administrativ hierarki som möjliggör detaljerad hantering av åtkomst och användning av Adobe-produkter.
+* [Support- och expertsessioner](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.html) - Lär dig hur du kommer åt supportalternativen på Admin Console, hanterar dina supportärenden, schemalägger en expertsession och mycket annat.
