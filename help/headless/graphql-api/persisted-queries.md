@@ -4,10 +4,10 @@ description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Mana
 feature: Headless, Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
 role: Admin, Developer
-source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
+source-git-commit: 8e962dc399f12277432243bda401f16eddad7087
 workflow-type: tm+mt
 source-wordcount: '1952'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -68,7 +68,7 @@ GraphiQL IDE är den **föredragna** metoden för beständiga frågor. Så här 
 
    ```shell
    $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query" \
        -d \
@@ -114,7 +114,7 @@ GraphiQL IDE är den **föredragna** metoden för beständiga frågor. Så här 
 
    ```shell
    $ curl -X POST \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query" \
        -d \
@@ -140,7 +140,7 @@ GraphiQL IDE är den **föredragna** metoden för beständiga frågor. Så här 
 
    ```shell
    $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-wrapped" \
        -d \
@@ -153,7 +153,7 @@ GraphiQL IDE är den **föredragna** metoden för beständiga frågor. Så här 
 
    ```shell
    $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
        -d \
@@ -166,7 +166,7 @@ GraphiQL IDE är den **föredragna** metoden för beständiga frågor. Så här 
 
    ```shell
    $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-parameters" \
        -d \
@@ -337,7 +337,7 @@ Dessa kan skrivas över:
 
 * [från GraphQL IDE](#http-cache-headers-graphiql-ide)
 
-* [&#x200B; på nivån för beständig fråga](#cache-persisted-query-level). Detta innebär att frågan skickas till AEM med cURL i kommandoradsgränssnittet och att den beständiga frågan publiceras.
+* [ på nivån för beständig fråga](#cache-persisted-query-level). Detta innebär att frågan skickas till AEM med cURL i kommandoradsgränssnittet och att den beständiga frågan publiceras.
 
 * [med Cloud Manager-variabler](#cache-cloud-manager-variables)
 
