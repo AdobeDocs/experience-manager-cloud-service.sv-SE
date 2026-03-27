@@ -15,7 +15,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/themes.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/themes.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Theme Editor i Adobe Experience Manager (AEM) Forms är ett visuellt gränssnitt där du kan skapa och anpassa teman för din adaptiva Forms utan att behöva skriva kod manuellt. Ett tema definierar utseendet på formulärkomponenter och paneler, inklusive bakgrundsfärger, teckensnittsformat, kanter, dimensioner och mellanrum. När du använder ett tema återspeglas de angivna formaten i motsvarande komponenter, och du kan återanvända samma tema i flera adaptiva Forms.
@@ -208,7 +208,7 @@ Du kan definiera olika format för olika enhetsstorlekar så att temat är respo
 
    ![Enhetsemulatorn i temeredigeraren - linjaler och enhetsalternativ (Skrivbord, Surfplatta, iPad, Mindre skärm)](/help/forms/assets/custom-theme-emulator.png)
 
-Samma tema kan därför ha olika mellanrum, teckenstorlekar eller layoutrelaterade format per enhet, vilket matchar [AEM 6.5 Theme Editor-beteendet](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/themes.html) för responsiv formatering.
+Samma tema kan därför ha olika mellanrum, teckenstorlekar eller layoutrelaterade format per enhet, vilket matchar [AEM 6.5 Theme Editor-beteendet](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/themes.html?lang=sv-SE) för responsiv formatering.
 
 ## Använd avancerade CSS-åsidosättningar {#use-advanced-css-overrides}
 
