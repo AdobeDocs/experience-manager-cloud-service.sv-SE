@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2026.03.19
-description: Detta är versionsinformationen för version 2026.03.19 av Universal Editor.
+title: Versionsinformation om Universal Editor 2026.03.26
+description: Detta är versionsinformationen för version 2026.03.26 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 048e86fe7930173bb33de9252607e2910520b575
+source-git-commit: abbc43adbe64149098c049810482d37f76034eab
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '146'
 ht-degree: 1%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2026.03.19 {#release-notes}
+# Versionsinformation om Universal Editor 2026.03.26 {#release-notes}
 
-Detta är versionsinformationen för den 19 mars 2026-utgåvan av Universal Editor.
+Detta är versionsinformationen för den 26 mars 2026-utgåvan av Universal Editor.
 
 >[!TIP]
 >
@@ -22,21 +22,14 @@ Detta är versionsinformationen för den 19 mars 2026-utgåvan av Universal Edit
 
 >[!TIP]
 >
->Den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service finns på [den här sidan](/help/release-notes/release-notes-cloud/release-notes-current.md).
+>Den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service finns på [den här sidan.](/help/release-notes/release-notes-cloud/release-notes-current.md)
 
 ## Nyheter {#what-is-new}
 
-* Objekten i egenskaperna är nu komprimerade när du går tillbaka till [hemskärmen.](/help/sites-cloud/authoring/universal-editor/navigation.md#home-button)
-* [Resursväljaren](/help/implementing/universal-editor/configure-assets-selector.md) har nu stöd för [filterdefinitioner.](/help/implementing/universal-editor/filtering.md)
-* Om det inte finns några tillgängliga åtgärder för det valda objektet visar [snabbmenyn](/help/sites-cloud/authoring/universal-editor/authoring.md#context-menu) nu ett meddelande som anger det.
+* [Resurskonfigurationen för dokumentredigering](https://docs.da.live/administrators/guides/setup-aem-assets#setup-aem-assets) visas nu via en konfigurationsslutpunkt.
+* [En tilläggspunkt](/help/implementing/universal-editor/extending.md#extending-ui) har lagts till på snabbmenyn.
+* En ny anpassad arbetsflödesikon har lagts till i Extensibility DynamicIcon-systemet för att visa avbrytningsläget djup/grund i användargränssnittet.
 
 ## Andra förbättringar {#other-improvements}
 
-* Om det finns en modell-/filter-/komponentdefinition uppdateras den när du växlar från ett program till ett annat i redigeraren.
-* När du tar bort en bild lämnas inte längre tomma bildtaggar när du använder DA som back end.
-* Klasser i block hanteras nu korrekt när DA används som back end-komponent.
-* Open API sparar nu fjärrresurser som objekt.
-
-## Brytningsändring {#breaking-change}
-
-* Alla tillägg bör uppdateras till `@adobe/uix-guest` >= `1.1.7` för att förbättra stabiliteten.
+* Ett problem har korrigerats med dokumentredigeringsklasser som inte fungerar med multifält eftersom en sträng förväntas.

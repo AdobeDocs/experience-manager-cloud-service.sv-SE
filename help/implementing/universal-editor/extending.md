@@ -4,9 +4,9 @@ description: Lär dig mer om de olika alternativen för att utöka funktionerna 
 feature: Developing
 role: Admin, Developer
 exl-id: 2f487fa5-57a7-477a-ad68-590e6cc12f4e
-source-git-commit: 9adf2bc4f9f25ee7fc0a39b0f1a3ae9e45fce7d2
+source-git-commit: abbc43adbe64149098c049810482d37f76034eab
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
@@ -50,14 +50,17 @@ Om du vill utforska möjligheterna att skapa egna tillägg kan du läsa följand
 
 >[!TIP]
 >
->Om du föredrar att lära dig som exempel kan du titta i självstudiekursen [AEM UI extensibility](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview). Även om den fokuserar på att utöka konsolen för innehållsfragment är begreppen för att implementera ett UI-tillägg i den universella redigeraren desamma.
+>Om du föredrar att lära dig som exempel kan du titta i självstudiekursen [AEM UI extensibility](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview). Även om den fokuserar på att utöka konsolen för innehållsfragment är begreppen för att implementera ett UI-tillägg i den universella redigeraren desamma.
 
 [Med Extension Manager i AEM Sites](https://developer.adobe.com/uix/docs/extension-manager/) kan du aktivera eller inaktivera tillägg per instans, få åtkomst till Adobe förstahandstillägg, inklusive de för Universal Editor, och mycket annat.
 
-## Tilläggspunkter {#extension-points}
+### Tilläggspunkter {#extension-points}
 
-Förutom UI-utbyggbarhet erbjuder den universella redigeraren många andra flexibla tilläggspunkter som möjliggör smidig integrering av anpassade affärskrav.
+En fullständig lista över tilläggspunkter som är tillgängliga i det universella redigeringsgränssnittet finns i Adobe Developer-dokumentationen [The Universal Editor Extension Points.](https://developer.adobe.com/uix/docs/services/aem-universal-editor/api/)
+
+## Ytterligare resurser {#additional-resources}
+
+Förutom UI-utbyggbarhet erbjuder den universella redigeraren andra anpassningsalternativ som möjliggör smidig integrering av anpassade affärskrav.
 
 * **[Block](https://www.aem.live/developer/block-collection)**: I enkelt JSON-format kan projekt justera blocken och UE-funktionerna som är tillgängliga för att skapa innehåll.
-* **[Anpassat användargränssnitt](#extending-ui)**: Tillägg kan visa nödvändigt gränssnitt i sidopaneler eller modala dialogrutor.
 * **[Händelser](/help/implementing/universal-editor/events-universal-editor.md)**: Tillägg tar emot händelser om författarens åtgärder och val på sidan för att svara korrekt.
