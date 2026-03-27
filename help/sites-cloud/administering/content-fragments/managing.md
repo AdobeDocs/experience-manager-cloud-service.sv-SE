@@ -6,7 +6,7 @@ role: User, Developer
 badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
 solution: Experience Manager Sites
-source-git-commit: a3dd861d005cab9010a449ddcd8420ae043a4907
+source-git-commit: bafb253be9b3834e1b77047dab52928ba84752a6
 workflow-type: tm+mt
 source-wordcount: '3342'
 ht-degree: 0%
@@ -271,7 +271,7 @@ Så här öppnar du fragmentet för redigering:
    * Skapar en kopia av det markerade innehållsfragmentet på dess plats.
    * Skapar kopior av alla fragment som det valda fragmentet refererar till.
 
-     De [platser som refererade fragment kopieras till &#x200B;](#locations-that-the-referenced-fragments-are-copied-to) beror på vilket alternativ du väljer:
+     De [platser som refererade fragment kopieras till ](#locations-that-the-referenced-fragments-are-copied-to) beror på vilket alternativ du väljer:
 
       * **Kopiera till den markerade mappen**
 När du väljer det här alternativet kopieras de refererade fragmenten till samma plats som det ursprungliga markerade fragmentet.
@@ -443,7 +443,7 @@ Efter publiceringen uppdateras fragmentets status och visas i redigeraren och ko
 
 >[!NOTE]
 >
->När du [publicerar en sida som använder fragmentet &#x200B;](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
+>När du [publicerar en sida som använder fragmentet ](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
 
 ## Avpublicera ett fragment {#unpublishing-a-fragment}
 
@@ -533,7 +533,7 @@ Så här checkar du in ett fragment i:
 1. Välj **Checka in** i verktygsfältet.
 1. Bekräfta åtgärden **Checka in**.
 
-## Tvingad (administratör) incheckning {#forced-adminstrator-check-in}
+### Tvingad (administratör) incheckning {#forced-adminstrator-check-in}
 
 Det kan hända att den användare som har checkat ut ett innehållsfragment inte är tillgänglig för att checka in fragmentet.
 
