@@ -83,11 +83,11 @@ I [Aktivera och konfigurera associerat gränssnitt](/help/forms/interactive-comm
 
 ![Interaktiva kommunikationsinställningar - arbetsflödeskonfiguration för associerat gränssnitt](/help/forms/assets/associate-ui-configure-workflow.png)
 
-När **Externalisera arbetsflödets datalagring** är aktiverat konfigurerar du den externa användaren så att arbetsflödesdata lagras i din externa lagring (till exempel Azure). Se [Gör arbetsflödesdata externt](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/create-aem-workflow/externalize-workflow.html).
+När **Externalisera arbetsflödets datalagring** är aktiverat konfigurerar du den externa användaren så att arbetsflödesdata lagras i din externa lagring (till exempel Azure). Se [Gör arbetsflödesdata externt](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/create-aem-workflow/externalize-workflow.html?lang=sv-SE).
 
 ## Se även
 
 - [Associera gränssnittet i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/associate-ui-in-interactive-communication-editor.md)
 - [Aktivera och konfigurera associerat gränssnitt för interaktiv kommunikation](/help/forms/interactive-communication/enable-configure-associate-ui.md)
 - [Integrera associerat gränssnitt i ditt program](/help/forms/interactive-communication/invoke-associate-ui.md)
-- [Externalisera arbetsflödesdata](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/create-aem-workflow/externalize-workflow.html)
+- [Externalisera arbetsflödesdata](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/create-aem-workflow/externalize-workflow.html?lang=sv-SE)
