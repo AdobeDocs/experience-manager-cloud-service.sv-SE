@@ -6,9 +6,9 @@ role: User, Developer
 badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
 solution: Experience Manager Sites
-source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
+source-git-commit: a3dd861d005cab9010a449ddcd8420ae043a4907
 workflow-type: tm+mt
-source-wordcount: '2943'
+source-wordcount: '3342'
 ht-degree: 0%
 
 ---
@@ -93,17 +93,20 @@ Då sorteras hela tabellen efter den kolumnen. Sortering är bara tillgängligt 
 
 Huvudpanelen/den högra panelen (tabellvyn) i konsolen innehåller en rad information om dina innehållsfragment. Vissa objekt har också direkta länkar till ytterligare åtgärder och/eller information:
 
+* **Titel**
+   * En hänglåsikon anger att fragmentet är [utcheckat](#check-out-and-check-in) och låst av en användare. Om du väljer hänglåsikonen visas information om kontot som har checkat ut fragmentet.
+   * Ikonen (i) ger snabb åtkomst till ytterligare, fragmentspecifik information i den högra panelen.
 * **Namn**
    * Tillhandahåller en länk för att öppna fragmentet i redigeraren.
 * **Modell**
    * Endast information.
-   * Kan användas för [snabb filtrering](#fast-filtering)
+   * Kan användas för [snabb filtrering](#fast-filtering).
 * **Mapp**
    * Tillhandahåller en länk för att öppna mappen i konsolen.
 Vid hovring över mappnamnet visas JCR-sökvägen.
 * **Status**
    * Endast information.
-   * Kan användas för [snabb filtrering](#fast-filtering)
+   * Kan användas för [snabb filtrering](#fast-filtering).
 * **Förhandsgranska**
    * Endast information:
       * **In sync**: Content Fragment is in-sync on the **Author** and **Preview** services.
@@ -187,8 +190,8 @@ Om du markerar ett visst fragment öppnas ett verktygsfält som fokuserar på de
 * **[Ersätt](#find-and-replace)**
 * **Flytta**
 * **Byt namn**
+* **[Checka ut och checka in](#check-out-and-check-in)**
 * **[Ta bort](#deleting-a-fragment)** (endast tillgängligt för opublicerade fragment)
-
 
 >[!NOTE]
 >
@@ -268,7 +271,7 @@ Så här öppnar du fragmentet för redigering:
    * Skapar en kopia av det markerade innehållsfragmentet på dess plats.
    * Skapar kopior av alla fragment som det valda fragmentet refererar till.
 
-     De [platser som refererade fragment kopieras till &#x200B;](#locations-that-the-referenced-fragments-are-copied-to) beror på vilket alternativ du väljer:
+     De [platser som refererade fragment kopieras till ](#locations-that-the-referenced-fragments-are-copied-to) beror på vilket alternativ du väljer:
 
       * **Kopiera till den markerade mappen**
 När du väljer det här alternativet kopieras de refererade fragmenten till samma plats som det ursprungliga markerade fragmentet.
@@ -440,7 +443,7 @@ Efter publiceringen uppdateras fragmentets status och visas i redigeraren och ko
 
 >[!NOTE]
 >
->När du [publicerar en sida som använder fragmentet &#x200B;](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
+>När du [publicerar en sida som använder fragmentet ](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
 
 ## Avpublicera ett fragment {#unpublishing-a-fragment}
 
@@ -481,6 +484,64 @@ Innan du ersätter en produkt kontrolleras valideringskriterierna och du informe
 >Om du väljer fler än 20 innehållsfragment visas meddelandet **Det går inte att söka efter och ersätta**.
 
 ![Bekräfta ersättning](assets/cf-managing-confirm-replace.png)
+
+## Checka ut och Checka in {#check-out-and-check-in}
+
+Med AEM kan du
+
+* [checka ut](#check-out-a-content-fragment) ett innehållsfragment, så att andra användare inte kan arbeta med fragmentet
+* [checka in](#check-in-a-content-fragment) innehållsfragment, så att andra användare kan fortsätta arbeta med fragmentet
+
+När du checkar ut ett fragment är det låst (`jcr:lock`). En hänglåsikon i kolumnen **Titel** indikerar ett låst fragment. Om du väljer hänglåsikonen visas information om det konto som har checkat ut fragmentet.
+
+Du kan redigera, publicera, avpublicera, flytta eller ta bort ett låst fragment. Andra användare kan inte utföra någon av dessa åtgärder på fragmentet förrän du checkar in fragmentet, men de kan ändå ändra metadata för det låsta fragmentet.
+
+Den här funktionen hjälper till att förhindra konflikter när flera användare samarbetar vid redigering av fragment.
+
+>[!NOTE]
+>
+>Om du vill kunna checka ut/in ett innehållsfragment måste du ha skrivbehörighet.
+
+>[!CAUTION]
+>
+>Det går att ta bort en mapp som innehåller ett utcheckat innehållsfragment.
+>
+>Innan du tar bort en mapp kontrollerar du att den inte innehåller några innehållsfragment (eller andra digitala resurser) som är utcheckade av användare.
+
+>[!NOTE]
+>
+>Eftersom innehållsfragment lagras internt som Assets är den här funktionen nära kopplad till [in- och utcheckningsfiler i Experience Manager DAM](/help/assets/check-out-and-submit-assets.md).
+
+### Checka ut ett innehållsfragment {#check-out-a-content-fragment}
+
+Så här checkar du ut ett fragment:
+
+1. Gå till innehållets fragmentplats i konsolen **Innehållsfragment**.
+1. Markera fragmentet.
+1. Välj **Checka ut** i verktygsfältet.
+1. Bekräfta åtgärden **Checka ut**.
+
+   * En hänglåsikon i kolumnen **Titel** anger att fragmentet är låst och endast kan redigeras av dig.
+   * Om en annan användare öppnar fragmentet för redigering visas ett meddelande om att det är skrivskyddat.
+
+### Checka in ett innehållsfragment {#check-in-a-content-fragment}
+
+Så här checkar du in ett fragment i:
+
+1. Gå till innehållets fragmentplats i konsolen **Innehållsfragment**.
+1. Markera fragmentet.
+1. Välj **Checka in** i verktygsfältet.
+1. Bekräfta åtgärden **Checka in**.
+
+## Tvingad (administratör) incheckning {#forced-adminstrator-check-in}
+
+Det kan hända att den användare som har checkat ut ett innehållsfragment inte är tillgänglig för att checka in fragmentet.
+
+I sådana fall kan en administratör utföra åtgärden **Checka in**.
+
+>[!NOTE]
+>
+>Se även Assets [Tvingad incheckning](/help/assets/check-out-and-submit-assets.md#forced-check-in).
 
 ## Ta bort ett fragment {#deleting-a-fragment}
 

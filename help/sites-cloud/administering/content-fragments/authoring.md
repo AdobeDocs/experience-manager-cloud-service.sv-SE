@@ -6,9 +6,9 @@ role: User, Developer
 badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
+source-git-commit: 2807f3e0890bc291d4005b70c303659f7a3f643e
 workflow-type: tm+mt
-source-wordcount: '2799'
+source-wordcount: '2839'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,7 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
      >[!WARNING]
      >
      >Den ursprungliga redigeraren öppnas på samma flik. Vi rekommenderar inte att båda redigerarna är öppna samtidigt.
+   * Alla varningar som är giltiga för fragmentet och ditt konto. Om du till exempel inte har rätt behörighet att redigera fragmentet, eller om en annan användare har [checkat ut](/help/sites-cloud/administering/content-fragments/managing.md#check-out-and-check-in), har du bara läsbehörighet för fragmenten.
 
 * vänster panel: visar **[Variationer](#variations)** för innehållsfragmentet och dess **fält**:
    * dessa länkar kan användas för att [navigera i strukturen för innehållsfragment](#navigate-structure)
@@ -272,7 +273,7 @@ Då öppnas fältet Flera rader i helskärmsläge och:
 
   >[!CAUTION]
   >
-  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**&#x200B;till variationen*.
+  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**till variationen*.
   >
   >Det går inte att överföra ändringar *från en variation till **Main*** som ett alternativ.
 
