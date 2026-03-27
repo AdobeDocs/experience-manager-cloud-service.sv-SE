@@ -4,9 +4,9 @@ description: Lär dig hur du använder Model Context Protocol med AEM as a Cloud
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: ddb7fc8c-affc-4374-8e08-d45d96017109
-source-git-commit: 6c2061cd6e6aee26c32935f4d33417a1f945665d
+source-git-commit: 07c3f271ad288f3eed7207dfb4f324c96c5b0b8e
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1704'
 ht-degree: 0%
 
 ---
@@ -52,9 +52,9 @@ AEM visar MCP-servrar som HTTP-slutpunkter. Slutpunkterna som anges nedan är re
 
 | **MCP-server** | **Slutpunkt** | **Beskrivning** |
 |---|---|----------------------------------------------------------------------------------------------------------------------|
-| **Innehåll** | `/content` | Innehållsåtgärder som att skapa, läsa, uppdatera och ta bort (CRUD) för sidor och innehållsfragment samt resursimport. |
-| **Innehåll (skrivskyddat)** | `/content-readonly` | Skrivskyddade innehållsåtgärder (Hämta, Lista/Sök) för sidor och innehållsfragment. |
-| **Cloud Manager** | `/cloudmanager` | Hantera Cloud Manager-enheter som program, miljöer, databaser och rörledningar som också kan aktiveras. <br><br>*Den här MCP-servern är nu i **beta**. Om du vill begära åtkomst skickar du ett e-postmeddelande till [aemcs-mcp-feedback@adobe.com](mailto:aemcs-mcp-feedback@adobe.com) med en beskrivning av ditt användningsfall.* |
+| **Innehåll** | `/content` | Alla lågnivååtgärder för innehåll, inklusive skapa, läsa, uppdatera och ta bort (CRUD) för sidor, fragment och resurser. |
+| **Innehåll (skrivskyddat)** | `/content-readonly` | Skrivskyddade innehållsåtgärder (Hämta, Lista/Sök) för sidor, fragment och resurser. |
+| **Cloud Manager** | `/cloudmanager` | Hantera Cloud Manager-enheter som program, miljöer, databaser och rörledningar som också kan aktiveras. |
 
 De specifika verktyg som visas av varje MCP-server kan utvecklas över tid. I praktiken kan du be ditt MCP-aktiverade program att hitta verktyg via en uppmaning som:
 
@@ -64,7 +64,7 @@ De specifika verktyg som visas av varje MCP-server kan utvecklas över tid. I pr
 
 MCP-klienten använder MCP-protokollet för att hämta verktygslistan och scheman som LLM sedan kan använda.
 
-Se självstudiekursen [Content MCP Server &#x200B;](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/ai/mcp-servers/accelerate-content-operations-with-aem-mcp-server) och [Cloud Manager MCP Server Video](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/ai/mcp-servers/cloud-manager) för mer information om deras funktioner och hur de används.
+Se självstudiekursen [Content MCP Server ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/mcp-servers/accelerate-content-operations-with-aem-mcp-server) och [Cloud Manager MCP Server Video](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/mcp-servers/cloud-manager) för mer information om deras funktioner och hur de används.
 
 ## MCP-program som stöds {#supported-mcp-applications}
 
