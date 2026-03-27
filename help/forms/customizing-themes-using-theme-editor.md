@@ -95,7 +95,7 @@ När du öppnar ett tema i Theme Editor visas två huvudområden:
 
 ### Verktygsfältet Arbetsyta {#canvas-toolbar}
 
-![Verktygsfältet för arbetsytan i temaredigeraren med alternativen Växla sida vid sida, Ångra, Gör om, Emulator, Redigera/Förhandsgranska och Tema ](/help/forms/assets/custom-theme-toolbar-utilities.png)
+![Verktygsfältet för arbetsytan i temaredigeraren med alternativen Växla sida vid sida, Ångra, Gör om, Emulator, Redigera/Förhandsgranska och Tema &#x200B;](/help/forms/assets/custom-theme-toolbar-utilities.png)
 
 Från vänster till höger:
 * **A: Växla sidopanel**: Visa eller dölj sidofältet för väljare. Använd det här alternativet om du vill maximera förhandsvisningsområdet för formuläret när du vill fokusera på arbetsytan, eller visa sidofältet igen när du behöver markera eller formatera komponenter.
@@ -139,7 +139,7 @@ När en komponent är markerad visas de tillgängliga formategenskaperna i sidof
 
 * **[!UICONTROL Dimensions & Position]**: Styr justering, storlek, utfyllnad, marginal, bredd, höjd och Z-index.
 * **[!UICONTROL Text]**: Konfigurera teckensnittsfamilj, vikt, färg, storlek, radhöjd, justering, teckenavstånd, textdekoration och omformning. En fullständig lista över CSS-textegenskaper som stöds finns i [MDN CSS-textdokumentationen](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text).
-* **[!UICONTROL Background]**: Ange en bakgrundsfärg, bild eller övertoning. Se [MDN CSS-bakgrunder ](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders).
+* **[!UICONTROL Background]**: Ange en bakgrundsfärg, bild eller övertoning. Se [MDN CSS-bakgrunder &#x200B;](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders).
 * **[!UICONTROL Border]**: Definiera kantlinjebredd, stil, radie och färg.
 * **[!UICONTROL Effects]**: Lägg till opacitet, blandningslägen och skuggor.
 
