@@ -70,7 +70,7 @@ När Associate View (Associera vy) har aktiverats för IC måste du aktivera **T
 Om du vill köra ett AEM-arbetsflöde när användare skickar eller uppdaterar data från det associerade användargränssnittet konfigurerar du följande:
 
 1. I **Inställningar för interaktiv kommunikation** väljer du **Arbetsflöde** i den vänstra panelen (under Associera egenskaper).
-1. Aktivera **Konfigurera arbetsflöde för uppdatering** ****.
+1. Aktivera **Konfigurera arbetsflöde för uppdatering** **&#x200B;**.
 1. I **Välj arbetsflödesmodell** väljer du den arbetsflödesmodell för AEM som ska köras (till exempel `conversionWorkflow` eller en sökväg som `/var/workflow/models/submit-workflow-1`).
 1. Du kan också ange **Meddelande om slutfört arbetsflöde** (visas för användaren när arbetsflödet har slutförts).
 1. Du kan också ange **URL:en för omdirigering** om du vill skicka användaren till en viss sida efter överföringen.
